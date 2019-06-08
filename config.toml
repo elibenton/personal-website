@@ -1,0 +1,30 @@
+baseurl = "https://www.elibenton.co"
+title = "Eli Benton Cohen"
+theme = "dimension"
+enableRobotsTXT = true
+disableKinds=["RSS","taxonomy", "taxonomyTerm"]
+
+[params]
+  description = ""
+  logo = ""
+  copyright = "Eli Cohen 2019"
+
+[[params.social]]
+  medium = "github"
+  icon = "icon fas fa-github"
+  link = "https://github.com/elibenton"
+
+[[params.social]]
+  medium = "linkedin"
+  icon = "icon fas fa-linkedin"
+  link = "https://www.linkedin.com/in/elibcohen/"
+
+[[params.social]]
+  medium = "medium"
+  icon = "icon fas fa-medium"
+  link = "https://medium.com/@elibenton"
+  
+[[params.social]]
+  medium = "resume"
+  icon = "icon fas fa-file-alt"
+  link = "/CohenEli_Resume_Feb2019.pdf"

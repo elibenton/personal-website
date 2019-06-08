@@ -1,0 +1,43 @@
+h1 {
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+#main article {
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+hr {
+  margin: 0;
+  margin-bottom: 2.5rem;
+}
+
+#header > * {}
+  #header > *:before {
+    width: 0px;
+  }
+
+#header .logo {
+  border: solid 0px #ffffff;
+}
+
+#header .content .inner {
+  padding: 0rem 0rem;
+  max-height: 40rem;
+  overflow: hidden; 
+}
+
+/* BG */
+  #bg:before {
+    -moz-transition: background-color 1.5s ease-in-out;
+    -webkit-transition: background-color 1.5s ease-in-out;
+    -ms-transition: background-color 1.5s ease-in-out;
+    transition: background-color 1.5s ease-in-out;
+    -moz-transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+    -ms-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+    background-image: linear-gradient(to top, rgba(17, 19, 23, 0.25), rgba(17, 19, 23, 0.25));}
+
+#header {
+  background-image: none;}
