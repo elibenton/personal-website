@@ -69,13 +69,13 @@ const MetaContainer = styled.div`
   }
 `
 
-const PostImage = styled.img`
-  object-fit: cover;
-  width: calc(100% - 20px);
-  max-height: 66px;
-  border-radius: 2px;
-  margin-right: 20px;
-`
+// const PostImage = styled.img`
+//   object-fit: cover;
+//   width: calc(100% - 20px);
+//   max-height: 66px;
+//   border-radius: 2px;
+//   margin-right: 20px;
+// `
 
 const PostLink = styled(Link)`
   text-decoration: none;
