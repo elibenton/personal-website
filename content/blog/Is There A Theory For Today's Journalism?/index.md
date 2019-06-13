@@ -1,7 +1,7 @@
 ---
 title: "Is There A Theory For Today's Journalism?"
 description: "An academic exploration of how modern news media intersects the disciplines of
-political science and technology studies."
+political science and technology studies"
 date: 2019-01-17
 location: "Claremont, California, US"
 cover-image: ""
@@ -32,10 +32,9 @@ as well. By establishing a baseline, I can both contextualize current works in
 history and track how my beliefs at the end of the project have changed from
 where they are now.
 
-*****
+---
 
-> **Lippmann, Walter. Public Opinion. New York: Harcourt, Brace, and Company,
-> 1922.**
+> **Lippmann, Walter. Public Opinion. New York: Harcourt, Brace, and Company, 1922.**
 
 Walter Lippmann’s book is perhaps most famous for formalizing the definition of
 the word *stereotype. *But just by flipping through the chapters, its easy to
@@ -59,8 +58,8 @@ more likely, since the very beginning.
 > of Mass Media. New York: Pantheon Books, 1988.**
 
 Chomsky and Herman’s work was, in some ways, based off of Lippmann’s. In fact,
-the title is a direct reference to another of Lippmann’s works, *Liberty and The
-News*, in which he wondered “whether government by consent can survive in a time
+the title is a direct reference to another of Lippmann’s works, _Liberty and The
+News_, in which he wondered “whether government by consent can survive in a time
 when the manufacture of consent is an unregulated private enterprise.” Lippmann
 was reflecting on propaganda in the aftermath of World War I. Herman and Chomsky
 pick up that question, by developing their own propaganda model for the late
@@ -69,12 +68,12 @@ pick up that question, by developing their own propaganda model for the late
 1.  Profit orientation of the dominant mass-media firms
 2.  Advertising as the primary income source of the mass media
 3.  Reliance on sourcing information from the same government, business, and experts
-being reported on
-1.  “Flak”, i.e. negative response as a means of disciplining the media
-1.  Anti-communism as a national religion and control mechanism (since updated to
-anti-terrorism)
+    being reported on
+4.  “Flak”, i.e. negative response as a means of disciplining the media
+5.  Anti-communism as a national religion and control mechanism (since updated to
+    anti-terrorism)
 
-By reading both *Public Opinion* and *Manufacturing Consent* in tandem, I hope
+By reading both _Public Opinion_ and _Manufacturing Consent_ in tandem, I hope
 to continue the work of thinking through the politics of information transfer in
 the current day.
 
@@ -92,21 +91,21 @@ medium is always another medium.” One such sequence is:
 
 > Speech ⇨ Words ⇨ Print ⇨ Telegraph
 
-By this, he means the telegraph *contains* printed material, which itself
+By this, he means the telegraph _contains_ printed material, which itself
 contains words, which is the vehicle for speech. Words allow for speech to be
 immortalized; the printing press expands degree to which words are spread; and
 the telegraph eliminates any barrier of time or space. At each step, he points
 out, there is a “change in scale, pace, or pattern.” Aside from that, however,
 nothing is different; the content itself is of no import.
 
-While beginning to read *Understanding* *Media*, the concept that keeps coming
+While beginning to read _Understanding_ _Media_, the concept that keeps coming
 to mind is one I learned in computer science: recursion, or the idea that a
 thing can only be understood when defined in terms of itself. Remember, to
 McLuhan, any medium’s content is just another medium (tellingly, the word
-*media* is the plural of *medium*, analogous to data/datum). This produces a
+_media_ is the plural of _medium_, analogous to data/datum). This produces a
 kind of “onion peel” layering effect that goes all the way down. What’s at the
 center (or to return to the computer science metaphor “the base case”)? Well
-it’s in the title of the book: *Understanding Media, The Extensions of Man.*
+it’s in the title of the book: _Understanding Media, The Extensions of Man._
 
 <span class="figcaption_hack">A magnetic telegraph device, the technological advancement that forever changed
 journalism in the 1830's.</span>
@@ -124,19 +123,19 @@ of journalism reflects deeper political concepts: the individual, the state, and
 conceptions of knowledge.
 
 The book is normative in its aims, trying to figure out what journalism can and
-*should* be. It rests on the thesis that “the press always takes the form and
+_should_ be. It rests on the thesis that “the press always takes the form and
 coloration of the social and political structures within which it operates.” The
 authors see journalism as a direct reflection of politics, the “system of social
 control whereby the relations of individuals and institutions are adjusted.”
 
 If I am to make the argument that journalism is an inherently political topic,
-*Four Theories* is the evidence to cite. I am also intrigued by the possibility
+_Four Theories_ is the evidence to cite. I am also intrigued by the possibility
 of adding two more theories, to see if corollaries of the
 libertarian/authoritarian dichotomy still make sense for the digital age.
 
 <span class="figcaption_hack">Does this dichotomy have contemporary application?</span>
 
-*****
+---
 
 If there is one “unequivocal truth” to be deduced from reading these four books,
 it’s that 2019 is not journalism's first crisis. If we’ll allow ourselves a
@@ -148,11 +147,11 @@ against fiction. They laid bare the difficulties in holding up a standard of
 objective truth and showed the processes by which the notion has come to exist.
 That process is one of construction, not discovery. ◆
 
-* [Media](https://medium.com/tag/media?source=post)
-* [Journalism](https://medium.com/tag/journalism?source=post)
-* [Technology](https://medium.com/tag/technology?source=post)
-* [Book Review](https://medium.com/tag/book-review?source=post)
-* [History](https://medium.com/tag/history?source=post)
+- [Media](https://medium.com/tag/media?source=post)
+- [Journalism](https://medium.com/tag/journalism?source=post)
+- [Technology](https://medium.com/tag/technology?source=post)
+- [Book Review](https://medium.com/tag/book-review?source=post)
+- [History](https://medium.com/tag/history?source=post)
 
 ### [Eli Benton Cohen](https://medium.com/@elibenton)
 
