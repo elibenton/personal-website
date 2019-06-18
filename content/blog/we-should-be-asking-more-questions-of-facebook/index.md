@@ -8,7 +8,8 @@ country: "United States"
 cover-image: ""
 color: "yellow"
 
-type: "Published Work"
+type: "published"
+publication: "The Student Life"
 tags:
   - Politics of Technology
   - Facebook

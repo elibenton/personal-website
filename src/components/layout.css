@@ -10,7 +10,6 @@ body {
   box-sizing: border-box;
   /* max-width: 1440px; */
   background-color: white;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 767px) {
