@@ -8,36 +8,36 @@ body {
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   background-color: white;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   html {
     text-rendering: optimizeLegibility;
   }
 }
 
 a {
-  color: #9161ff;
-  text-decoration: underline;
+  color: #323232;
+  text-decoration: underline solid #323232;
 }
 
 a:hover,
 a:active {
+  color: #ffd666;
   text-decoration: none;
 }
-
 em {
   font-style: italic;
 }
-
 b {
   font-style: bold;
 }
 
 ::selection {
-  background: #ffe87c;
+  background: #ffd666;
 }
 
 ul {
@@ -69,16 +69,17 @@ h2 {
   font-size: 28px;
   line-height: 32px;
   letter-spacing: 0.3px;
+  /* text-transform: uppercase; */
   margin-top: 45px;
   margin-bottom: 0;
 }
-
 h3 {
   font-family: "Roboto Condensed", "Helvetica Condensed", "Helvetica Neue",
     Helvetica, sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -87,9 +88,9 @@ h4 {
   font-size: 13px;
   line-height: 1.5em;
   letter-spacing: 1.4px;
+  text-transform: uppercase;
   margin: 0;
 }
-
 h5 {
   font-family: Helvetica Neue, Helvetica, Roboto, sans-serif;
   font-weight: bold;
@@ -118,17 +119,16 @@ blockquote {
 
 /* Styles for blog post */
 
-.blog-post-body > div {
+/* .blog-post-body > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 50%;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-}
+} */
 
 .blog-post-body div p > img {
   max-height: 350px;
@@ -144,8 +144,42 @@ blockquote {
   align-self: flex-start;
 }
 
-.blog-post-body h2 {
-  margin-left: -10%;
+.blog-post-body p {
+  font-size: 18px;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
+}
+
+.gatsby-resp-image-wrapper {
+  left: -55% !important;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.gatsby-resp-image-figcaption {
+  left: -55% !important;
+  position: relative;
+  text-align: right;
+  padding-bottom: 4em;
+}
+
+@media not screen and (min-width: 1000px) {
+  .gatsby-resp-image-wrapper {
+    left: 0% !important;
+  }
+  .gatsby-resp-image-figcaption {
+    left: 0% !important;
+    position: relative;
+    text-align: left;
+    padding-bottom: 1em;
+  }
+}
+
+figcaption {
+  font-family: Helvetica Neue, Helvetica, Roboto, sans-serif;
+  letter-spacing: -0.2px;
+  color: gray;
+  font-size: 14px;
 }
 
 .author-head-img {
@@ -154,6 +188,7 @@ blockquote {
   margin-right: 20px;
   user-select: none;
   filter: drop-shadow(1px 3px 2px #eee);
+  text-transform: uppercase;
 }
 
 /*aimed at social media icons on netlify CMS*/

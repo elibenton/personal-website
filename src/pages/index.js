@@ -5,10 +5,9 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
-`
+import Spacer from "../utils/spacer"
+import Color from "../utils/colors"
+import Line from "../utils/line"
 
 const BlogTitle = styled.div`
   display: flex;
@@ -54,6 +53,12 @@ const PostTitle = styled.h2`
   margin: 0;
   margin-bottom: 15px;
 
+  @media not all and (hover: none) {
+    &:hover {
+      color: ${props => Color(props.color)};
+    }
+  }
+
   @media screen and (max-width: 767px) {
     text-align: left;
   }
@@ -69,14 +74,6 @@ const MetaContainer = styled.div`
   }
 `
 
-// const PostImage = styled.img`
-//   object-fit: cover;
-//   width: calc(100% - 20px);
-//   max-height: 66px;
-//   border-radius: 2px;
-//   margin-right: 20px;
-// `
-
 const PostLink = styled(Link)`
   text-decoration: none;
 `
@@ -85,6 +82,7 @@ const MetaText = styled.h4`
   color: #999;
   text-align: right;
   margin-top: 2px;
+  margin-bottom: 10px;
   @media screen and (max-width: 767px) {
     text-align: left;
   }
@@ -107,15 +105,14 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={"Home"} />
-        <StyledLink to="/">
-          <BlogTitle>
-            <BlogName>{siteTitle}</BlogName>
-            <BlogDescription>{siteDescription}</BlogDescription>
-          </BlogTitle>
-        </StyledLink>
-
+        <BlogTitle>
+          <BlogName>{siteTitle}</BlogName>
+          <BlogDescription>{siteDescription}</BlogDescription>
+        </BlogTitle>
+        <Spacer height={50} />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const color = node.frontmatter.color
           return (
             <Wrapper>
               <Row>
@@ -126,18 +123,19 @@ class BlogIndex extends React.Component {
                   sm={8}
                   mdOffset={0}
                   md={5}
-                  lgOffset={3}
-                  lg={4}
+                  lgOffset={2}
+                  lg={5}
                 >
                   <MetaContainer key={node.fields.slug}>
                     <PostMetaTextContainer>
+                      <MetaText>{node.frontmatter.date}</MetaText>
                       <PostLink to={node.fields.slug}>
-                        <PostTitle>{title}</PostTitle>
+                        <PostTitle color={color}>{title}</PostTitle>
                       </PostLink>
                       <MetaText>
-                        {node.frontmatter.date}
+                        {node.frontmatter.city}
                         <br />
-                        {node.frontmatter.location}
+                        {node.frontmatter.country}
                       </MetaText>
                     </PostMetaTextContainer>
                   </MetaContainer>
@@ -150,8 +148,9 @@ class BlogIndex extends React.Component {
                   mdOffset={0}
                   md={5}
                   lgOffset={0}
-                  lg={3}
+                  lg={4}
                 >
+                  <Line color={Color(color)} />
                   <Excerpt
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
@@ -187,8 +186,10 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            location
+            city
+            country
             description
+            color
           }
         }
       }

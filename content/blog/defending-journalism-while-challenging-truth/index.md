@@ -1,0 +1,173 @@
+---
+title: "Defending Journalism While Challenging Truth"
+description: "The capstone project of all politics majors at Pomona College is creating a
+book list of 12 works. The collection is supposed to encapsulate one’s
+understanding about a topic in politics. I chose to explore journalism, and more
+specifically, modern journalism’s collision course with the digitally-networked
+reality of the current era."
+
+date: 2019-02-23
+city: "Claremont, California"
+country: "United States"
+cover-image: ""
+color: "yellow"
+
+type: ""
+tags:
+- fun
+
+attachment: ""
+---
+
+Having selected the works, written the essays _(some of which have been altered
+for publication in previous
+[posts](https://medium.com/@elibenton/post-truth-journalism-fits-a-post-technology-america-ef841b471ad))_,
+and presented to a general audience, the only unfinished aspect is defending my
+arguments against a panel of Pomona professors this coming Thursday. In
+preparation, I’ll rehash my original twelve works and discuss developing
+thoughts over the past two months.
+
+## Original List
+
+### Attempts at Journalistic Theory
+
+- _Public Opinion_ by **Walter Lippmann** (1922)
+- _Four Theories of The Press_ by **Fred Siebert** et al. (1956)
+- _Manufacturing Consent_ by **Edward Herman** and **Noam Chomsky** (1988)
+- _Blog Theory_ by **Jodi Dean** (2011)
+
+### The American Problem
+
+- _Democracy in America_ by **Alexis de Tocqueville** (1835–1840)
+- _Pieces of A Man_ by **Gil Scott-Heron** (1971)
+- _Political Fictions_ by **Joan Didion**(2002)
+- _These Truths_ by **Jill Lepore** (2018)
+
+### The Uneasy Marriage of Technology and Politics
+
+- _The 480_ by **Eugene Burdick** (1964)
+- _Understanding Media: The Extensions of Man_ by **Marshal McLuhan** (1964)
+- _Kill All Normies_ by **Angela Nagle** (2017)
+- _Twitter and Tear Gas_ by **Zeynep Tufekci** (2018)
+
+The very idea of a “theory of journalism” is an unwieldy one. There is a trove
+of literature on journalistic ethics, but that is only a small sub-category of
+what I would want to explore. Looked at historically, journalistic ethics is a
+mere blip in millennia long history of political writing, a feeble attempt at
+professionalization in the 1880’s when the modern scientific university was
+beginning to take hold. Attempting a real theory begets questions far more
+ambiguous, those relating to words, ideas, and most vexingly, truth. These
+epistemological questions far outpaced my ability to glean answers. That being
+said, based on these twelve works, I can provide different ideas of how truth is
+defined and what role, if any, journalists can involve themselves in the process
+of constructing it.
+
+*Public Opinion *is concerned with a beautifully philosophical concern in the
+constitutive ideas of “fiction.” By fiction, Lippmann does not mean lies but
+representations of environment, the “portraiture which arises spontaneously in
+people’s minds.” Lippmann goes to great length to discuss the quantity and
+variety of impediments that exist between an individual and an occurrence that
+happen outside their immediate experience. He talks about the imprecision of
+encoding the telegraph, the meager time available in an average person’s day,
+the limited vocabulary which we must use to describe our impossibly complex
+world. He also discusses stereotypes, a concept this books is largely credited
+with formalizing and popularizing. His acknowledgement of the interplay between
+interpretation and experience feels relevant even today, when so much of our
+communication is in symbols, images, and references. Most cogently, Lippmann’s
+stereotype can be defined: “we do not see then define, we define and then see.”
+
+The political implications he draws from this are many. In a self-contained
+community, like that envisaged by James Madison in his 1791 work also titled
+_Public Opinion_, the only real disagreement would be in judgements about the
+same set of facts. Neither source of information nor source of morals would have
+to be independently verified because it would already be assumed to be the same.
+The chief end of intellectual training would be “the power to draw deductions
+from a premise, rather than the ability to find the premise” and “truth could be
+obtained by liberty within these limits.”
+
+Lippmann unequivocally believed such a bucolic world did not exist in America in
+1922, if it ever had. Without a so-called self-contained community, he was
+nervous that truth would never simply emerge. There would be no way to rectify
+all various accounts, opinions, and stereotypes of both those who make the news
+and those who read it.
+
+> “News and truth are not the same thing, and must be clearly distinguished.”
+>
+> **-- Walter Lippmann**
+
+For Lippmann, the function of news was to bring the public’s attention to a
+particular topic or occurrence. It simply was not capable of making sense of it.
+On the other hand, the function of truth was to discover facts, put them into
+conversation with one another, and make a workable narrative from them. Lippmann
+did not think newspapers had the capacity to work with this kind of truth.
+
+![Walter Lippmann in 1914](./1.jpeg)
+
+It’s a dispiriting and humbling diagnosis for journalism, one that called for
+its minimized importance in political systems. “At it’s best the press is a
+servant and guardian of institutions; at its worst it is a means by which a few
+exploit social disorganization to their own ends… It is no substitute for
+institutions,” Lippmann wrote.
+
+Ironically, however, his solutions — given 100 years of scrutiny — have proven
+even more disheartening. While many of Lippmann’s observations were spot on, he
+had less success in prescribing treatment. He was, like many political scholars
+at the time, enamored by the new quantitative abilities of the time, the
+professionalization of politics into a “social science.” In his book’s final
+section, “Organized Intelligence,” Lippmann posits some remedies — and they are
+dull: government research, industrial auditing, budgeting. They _must_ be dull.
+Dullness is what breaks through the distracting melodrama of our personal
+stereotypes, which perennially distract and mislead us.
+
+Lippmann was writing at the advent of the radio. Further technological
+developments, including movies, television, computers, and the internet would
+continue to augment the power of mass media. Advertisers would increase their
+influence over the media’s business model. With increased ability to quantify
+and understand what readers enjoyed and which stories sold, the “Miltonian”
+notion of truth emerging from a web of opinions by its own virtue was starting
+to seem permanently debunked. It would have to be expedient, entertaining, and
+profitable. The deck was being stacked too heavily against truth’s favor. The
+idea of “emergent truth” is what _Four Theories of the Press_ called the
+Libertarian Model, and it predominated in the West since the Enlightenment.
+Lippmann’s critiques were, in small part, the final nail in the coffin.
+
+The response was the Social Responsibility model. If Newton’s laws of physics
+were the scientific antecedent to the libertarian ideas, then Darwin and
+Einstein precipitated the social responsibility paradigm. The American
+Constitution was a Newtonian machine; it would perfectly balance human forces
+against one another and harness the resulting kinetic energy to power itself.
+
+<span class="figcaption_hack">Siebert Et al.’s four theories, simplified, with their attributes.</span>
+
+Einstein’s Theory of Relativity was far less universal; everything could change
+depending on one’s vantage point. Politically, your abilities and perceptions
+were dependent on what you could see and what you already knew to look for. This
+was Lippmann’s stereotype. Darwin’s theories stripped bare the myth of each
+individual’s limitless capacity for self-determination. In the Theory of
+Evolution, the individual was trivially unimportant, no more than a data point,
+subject to the uncontrollable force of natural selection. These theories were
+products of their time. Two World Wars had sewn immense doubt that we could find
+our way when left to our own devices.
+
+A sense of public accountability emerged, (supposedly) separate from advertising
+revenue or political axe-grinding. Given all of the uncertainty, valiant
+journalists would establish truth for the masses in a self-less act of public
+service. By the mid 20th century, Siebert wrote that objectivity had gone from
+an ambitious goal to a “fetish,” but the model was not accepted blindly either.
+Elmer Davis, a radio commentator at the time, discussed the extreme difficulty —
+and power — this would put back into the hands of those whose job it was to make
+the news.
+
+> “The good news broadcaster, must walk a tightrope between great gulfs — on one
+> side the false objectivity that takes everything at face value and lets the
+> public be imposed upon like a charlatan with the most brazen front; on the
+> other, the “interpretive” reporting which fails to draw the line between
+> objective and subjective, between a reasonably well-established fact and what
+> the reporter or editor wishes were fact. To say that is easy; to do that is
+> hard.”
+
+Perhaps best shown in _Four Theories_, how one decides to theorize the news, and
+especially how one thinks about truth, is symptomatic of numerous other
+calculations: political systems, economic flows, and material comforts, just to
+name a few. The most consistent factor perhaps is ourselves, and the
+self-referential paradox we ourselves create.
