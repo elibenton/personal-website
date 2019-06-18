@@ -1,6 +1,6 @@
 ---
 title: "Reclaiming Language"
-description: ""
+description: "A project stemming from Aimee Bahng’s Gender and Women’s Studies class, in this bonus episode, Lucy Gold, August Khan, and myself look into derogatory language. More specifically, we want to see how offensive words are complicated by the process of “reclaiming language,” or the re-association of typically demeaning words to empowering affirmations or even signals of solidarity and belonging."
 date: 2019-02-14
 city: "Claremont, California"
 country: "United States"
@@ -15,15 +15,11 @@ tags:
 attachment: ""
 ---
 
-## The Discussion Collective
-
 ### Season 2, Episode 4
 
-A project stemming from Aimee Bahng's Gender and Women's Studies class, in this bonus episode, Lucy Gold, August Khan, and myself look into derogatory language. More specifically, we want to see how offensive words are complicated by the process of "reclaiming language," or the re-association of typically demeaning words to empowering affirmations or even signals of solidarity and belonging.
+## The Discussion Collective
 
 ### Further Reading
-
-Additional Works
 
 [Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective](https://philpapers.org/rec/HARSKT) by Donna Haraway
 

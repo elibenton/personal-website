@@ -1,7 +1,7 @@
 ---
 title: "When Digital Becomes Less Distinct"
-description: "In our oversaturated digital world, nothing can be taken for granted as true. Yet the drive to channel ever more parts of our lives through technology is changing personal and political realities quicker than we can understand all of the implications. From SIM cards to social media, and biometrics to blockchain, I will spend the year traveling the world to examine the socio-political effects of our increasingly networked world."
-date: 2018-11-01
+description: "We channel our lives through digital technology. In doing so we change our relationship to reality faster than we can understand the implications. From SIM cards to social media and biometrics to blockchain, I will spend the year examining the societal, political, and personal effects of our increasingly networked lives."
+date: 2019-06-18
 city: "Claremont, California"
 country: "United States"
 

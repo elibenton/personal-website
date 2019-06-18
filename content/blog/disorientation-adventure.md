@@ -1,6 +1,6 @@
 ---
 title: "(Dis)orientation Adventure"
-description: ""
+description: "When Orientation Adventure—Pomona's four-day outdoors trip for incoming students often called OA—was cancelled, campus activism sprung into rare form. Within exactly one week, the Dean of Students Office retracted their decision. Many students were relieved, but an equally large contingency was furious."
 date: 2019-02-11
 city: "Claremont, California"
 country: "United States"
@@ -14,11 +14,7 @@ tags:
 attachment: ""
 ---
 
-## Description
-
-When Orientation Adventure—Pomona's four-day outdoors trip for incoming students often called OA—was cancelled, campus activism sprung into rare form. Petitions were circulated, meetings were held, statements were drafted, and alumni were notified. Within exactly one week, the Dean of Students Office retracted their decision. Many students were relieved, but an equally large contingency was furious.
-
-Where was this mobilization for the issues that really mattered: mental health resources, affordability issues, Title IX policy changes? Choosing to rally around OA but not other topics, they believed,was negligent, hypocritical, and privileged. It's been approximately two months since the initial decision catalyzed the outrage, then the counter-outrage. Three forums have been held to discuss the future of the Orientation Adventure program,but attendance has been sparse and the discussions vague. We talked to students, professors, and alumni, but the question remains: where do we go from here?
+*Where was this mobilization for the issues that really mattered: mental health resources, affordability issues, Title IX policy changes? Choosing to rally around OA but not other topics, they believed,was negligent, hypocritical, and privileged. It's been approximately two months since the initial decision catalyzed the outrage, then the counter-outrage. Three forums have been held to discuss the future of the Orientation Adventure program,but attendance has been sparse and the discussions vague. We talked to students, professors, and alumni, but the question remains: where do we go from here?*
 
 ## Reflection
 

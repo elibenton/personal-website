@@ -32,11 +32,11 @@ const Footer = () => {
         xsOffset={1}
         xs={10}
         smOffset={1}
-        sm={4}
+        sm={10}
         mdOffset={1}
-        md={4}
+        md={10}
         lgOffset={1}
-        lg={8}
+        lg={10}
       >
         <FinePrint>
           <span role="img" aria-label="Arm">

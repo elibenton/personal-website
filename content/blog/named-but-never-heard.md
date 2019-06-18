@@ -1,6 +1,6 @@
 ---
 title: "Named But Never Heard"
-description: ""
+description: "In the second part of our series about sexual assault on campus, Title IX, and “The Lists,” I talk with a person who understands these lists in a ways most of us cannot—he’s actually on one of them. While this interview is in no way exhaustive, his perspective is an important part of understanding how issues of sexual violence are being handled at the Claremont Colleges."
 date: 2018-11-27
 city: "Claremont, California"
 country: "United States"
@@ -14,9 +14,9 @@ tags:
 attachment: ""
 ---
 
-## Description
+In the second part of our series about sexual assault on campus, Title IX, and “The Lists,” I talk with a person who understands these lists in a ways most of us cannot—he’s actually on one of them. Our original conversations were held in private, have been transcribed, and are reproduced here by a voice actor—all identifying information has been removed. 
 
-In the second part of our series about sexual assault on campus, Title IX, and “the lists,” I talk with a person who understands these lists in a ways most of us cannot—he’s actually on one of them. Our original conversations were held in private, have been transcribed, and are reproduced here by a voice actor—all identifying information has been removed. We talk about the experience of being on one of the lists, how he thinks Title IX could be changed, and what he thinks accountability looks like. While this interview is in no way exhaustive, his perspective and experience is an important part of understanding how issues of sexual violence are being handled at the Claremont Colleges. Please send all thoughts,questions, and concerns to eli.cohen@pomona.edu.
+We talk about the experience of being on one of the lists, how he thinks Title IX could be changed, and what he thinks accountability looks like. While this interview is in no way exhaustive, his perspective and experience is an important part of understanding how issues of sexual violence are being handled at the Claremont Colleges. Please send all thoughts,questions, and concerns to eli.cohen@pomona.edu.
 
 ##Reflection
 

@@ -1,0 +1,77 @@
+---
+title: "Post-Truth Journalism Fits a Post-Technology America"
+description: "The capstone project of all politics majors at Pomona College is creating a book list of 12 works. The collection encapsulates one’s understanding about a topic in politics that shapes the student's view of the world. I chose to explore modern journalism’s collision course with the digitally-networked reality of the current era."
+date: 2019-02-06
+city: "Claremont, California"
+country: "United States"
+cover-image: ""
+color: "yellow"
+
+type: ""
+tags:
+  - fun
+
+attachment: ""
+---
+
+If there is one unequivocal truth to be deduced from only reading books about journalism, it is this: 2019 is not the field’s first crisis. If we allow ourselves a second truth, it is probably that truth does not exist. When dealing in unequivocal truths, these authors all concur: don’t. This can be a daunting notion, but “post-truth” is the zeitgeist of our era: [a president who makes a statement on Monday just to lie about it Tuesday](https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html),
+[a military who impersonates clerics on social media to incite ethnic cleansing](https://www.nytimes.com/2018/10/15/technology/myanmar-facebook-genocide.html),[a family who fabricates science to conceal the lethality of the drugs they sell](https://www.nytimes.com/2019/01/15/health/sacklers-purdue-oxycontin-opioids.html). 
+
+I fear, however, that lying may be the least of our problems. Lying acknowledges the existences of something that needs to be obscured, something that — if revealed — would likely lead to agreement. Both more insidious and less preventable, are the subtle perversions of fact that transpire as an occurrence is recorded, transported, and, ultimately, interpreted by each individual. When “fake news” could be anything from political websites made by Macedonian teenagers to epithets hurled at those with whom you disagree, it can hard to remember that, as Lewis Lapham says, “all news is fake.” Fake in the sense of being fabricated, constructed, “not what happened yesterday; [a story about what happened yesterday](https://www.laphamsquarterly.org/roundtable/fake-news-special-issue).”
+
+Like a ridiculously high-stakes game of telephone with seventeen intermediaries, the modern news media is responsible for facilitating what we know about American politics. As troubling as that may be, I believe it is a game we are obligated to play, because in doing so, we affirm an even more fundamental principle of politics: ideas matter. Precisely because of this importance, I took solace in each author’s struggle with theorizing the aims and methods of the news: questions of what is evidence or opinion, information or storytelling, and fact or fiction. 
+
+To say there is no truth is indeed too simple. But as historian Jill Lepore argues, the American concept of truth never really existed either, [as if waiting to be found](https://www.media.mit.edu/videos/ml-talks-2018-04-23/). It has to be constructed — deconstructed, and reconstructed again, forever. In 2019, I would argue, this is the crucial concept which has been lost. The problem is not that Russian robots impersonate people on Twitter, it is that we thought everybody else on Twitter was “real” in the first place. The last three decades of digital technology innovation have indeed been unprecedented. But we have become so enamored with our own creations we seem to have forgotten that they were indeed created. As such, the information received from them will be altered in critical ways. When we forget this, every subsequent decision is liable to that initial oversight. 
+
+Walter Lippmann defined “fiction” not as a lie, but a “representation of the environment which is in lesser or greater degree made by man himself.” For Lippmann, all fiction had some fidelity to fact. As long as the degree of fidelity could be taken into account, fiction was a perfectly workable standard. In fact, he believed fiction was all we had. Contrary to some pundits, the problems of journalism existed long before the internet. And contrary to some technologists, the invention of the internet did not eradicate long-standing problems. Technology and journalism are not irreconcilable, but as the two are increasingly mediated as a single entity, our understandings of each need critical reevaluation.
+
+The press was given special privilege even before the constituting of the country. In 1735, Andrew Hamilton would successfully defend John Peter Zenger against a libel lawsuit on, what were at the time, very peculiar grounds: a journalist cannot be indicted for libel if the slander is true. That being said, it was more of a victory for slander than truth.
+
+> “They were entirely and enthusiastically partisan. They were not especially interested in establishing facts; they were interested in staging a battle of opinion.”
+> 
+> **— Jill Lepore, *These Truths***
+
+
+
+The idea of “evidence” was not prioritized by the press during America’s founding. Lack of fact was simply not a liability at the time. After all, The Constitution was formed acknowledging that if men were angels, it would not be necessary in the first place. As such, factions would need to be established and power distributed to ensure that tyranny of the majority would not replace the tyranny of a king.
+
+Not even four years later, James Madison would begin to doubt his own creation, questioning The Constitution’s ability to maintain such factions. The country was becoming too big, and public opinion was becoming too difficult to ascertain. Geographically dispersed individuals would not be able to share their ideas among each other; the crucial factions would not be able to serve their purpose. 
+
+The solution was newspapers. A “circulation of newspapers” which “facilitates a general intercourse of sentiments” would effectively shrink the ever-expanding nation, and keeping the hope of liberty alive. It was a bold proclamation, and a harbinger of many similar augments to come: the telegraph, the radio, the television, and most recently, the internet. Newspapers might not have exactly achieved the goal of shrinking the country, but they did work wonders to unite individuals of like minds. Starting with the Federalist Papers, pamphlets and papers would instantiate and maintain the American two party system.
+
+Though Hamilton waxed poetic about truth in the 1730s, it would not be until a century later that any notion of “fact” would manifest cohesively. One paper who happily embraced the fact was the New York Sun, first printed in 1833. Using the first steam powered press, The Sun was able to produce at an immensely higher rate, allowing for a completely different business model. Instead of mailing the paper to party loyalist for six cents, they would be available every day at public newsstands for a mere penny. Pandering to reader’s partisan loyalties would no longer work because the paper had no way to know who its readers were. Facts — though often sordid and provoking — became the coin go the realm, the only currency with broad enough appeal when the going price was a single cent. 
+
+De Tocqueville would remark extensively on these endeavors. “[Americans] study facts of their own senses,” never deferring to or relying on “any man’s authority.” De Tocqueville saw facts as bridges and catalysts. They “enlarged hearts,” “developed minds,” and when spread through “reciprocal action between men,” allowed democracy to flourish. The sharing of ideas is what combined individuals, who had rendered themselves “independent and weak” by their own dogma of equal sovereignty, into associations. Associations reclaimed the social power to act.
+
+Without a concern for facts — and more importantly the acts of verification, explanation, and debate they precipitated — we would all render ourselves a little less free. Without thoughtful communication, our associations would fragment and lose efficacy, our actions would lack coordination and impact, and our representatives would become less accountable. “Newspapers,” Tocqueville said, “make associations.” It is perhaps unsurprising that de Tocqueville believed that newspapers not only “serve to guarantee freedom, they maintain civilization.”
+
+---
+
+The next century would herald in radical changes in both journalism and for the country. The country would expand itself all the way to pacific, connect itself with 10,000 miles of train tracks and five times as many telegraph wires, and then wrench itself apart in civil war. By the time Walter Lippmann was writing Public Opinion in 1922, and debating John Dewey about the provocations therein, the political and technological realities of America had become far more troubled.
+
+Policy would be used effectively for some time to manage these complications. The Radio Act was passed in 1927 by the Federal Radio Commission, and would regulate, with both success and failure, the airwaves. By 1949, the FRC had changed from “Radio” to “Communications,” creating the FCC known today. It required all broadcasts dealing with political topics to adhere to some degree of “public interest.” In method, it was a far cry from the journalism of the nation’s founding. The idea of a public mandated standard for journalism would have been utterly laughable. But in aim, the doctrine may have rung more true. The purpose was to expose readers to a diversity of viewpoint. 
+
+Voracious reading and rigorous debate, ultimately leading to political participation, no longer seemed to exist as emergent behavior. Such exposure only seemed plausible when required through legal mandate. This angered just about everyone, but often for very different reasons. Young activists such as Gil Scott-Heron, deeply engaged in the Black Arts Movement, found American’s passivity disdainful. Having written two novels by age 21, he had little patience for those unwilling to think and act for themselves.
+
+“The Revolution Will Not Be Televised,” the song for which Scott-Heron would become famous, was initially released on Small Talk as spoken word over congas and bongo drums. Re-recorded for Pieces of A Man with a full band, including pianist and flutist Brian Jackson, “Revolution” would quickly gain attention for its biting critique of — just about everyone.
+
+It included standard opponents: politicians, law enforcement, corporate tycoons, but goes further implicating well-intentioned “allies” as well: “brothers” who “lose [themselves] on skag and skip out for beer during commercials” and “hairy armed women liberationists” just to name a few. The lyrics, and Scott-Heron in subsequent interviews, reserve a special contempt for unwitting, complicit individuals, possibly making “Revolution” the first critique of “arm-chair activism,” now often called “slacktavism” or “clicktivism.” 
+
+Conservatives also hated the insinuated passivity of the Fairness Doctrine, but for exactly the opposite reason. Whereas Scott-Heron lamented that people were enjoying mass media too much, with its ameliorating blend of uncontroversial stories and incessant advertising, the Republicans cited an entirely different problem: people were not enjoying their news enough. Advances in opinion measurement had finally given this opinion validity; they had the ratings to prove it. Public interest was no match for market interest.
+
+---
+
+Enter Joan Didion, who at 54, was asked to write about the 1988 presidential election for the New York Review of Books. She had never written on politics before. That lack of experience, or by another interpretation, indoctrination, would allow her to produce an incredibly clairvoyant assessment of the following political decade, the decade that produced the American media landscape we find ourselves in today.
+
+Having never been steeped in “the beltway narrative,” she was never inculcated into the “understandings, tacit agreements, small and large, to overlook the observable in the interest of obtaining a dramatic story line.” What she does observe, carefully curated from a seemingly encyclopedic trove of original quotes, implicates politicians and pundits in equal stead. Didion’s subjects are rendered naked by their own words.
+
+If journalism is about the collection of facts — facts being interviews, government sources, and policy shop data sets — then Didion did nothing of the sort. But if journalism is about seeking the truth, I would argue her pieces for The New York Review are not only one of the most truthful pieces of journalism of recent. For one piece, “The Lion King,” Didion’s argument largely rests of a simple grammatical proclivity: the fact that D’Souza almost exclusively wrote about President Reagan in the active voice. She employs this fact as if asking, “Why does D’Souza feel the need to constantly remind us of Reagan’s agency? Is he overcompensating for that which does not actually exist?”
+
+She calls Reagan “a man for whom historical truth had all his life run at twenty-four frames a second,” carrying out his daily schedule “as being something like a shooting script.” She points how his speeches on his policy are more celebrated than the policies themselves. But Didion never vilifies Reagan in the same way so many of her liberal colleagues do. He, after all, is simply playing the role of president. Replace Reagan, who saw his role as “illusory, like a play” with Trump who purposely obscures any distinction between fact and fiction, just like the genre of television from which he came. Simple observations suddenly seem profound: people are products of their past. 
+
+Such simple pronouncements only become more necessary as the internet age further pummels us with more information than we can grasp. Such overload makes contradiction the norm and instead encourages us to rely on more instinctual heuristics, like affect, identity, and group. Didion gives us none of this. In lieu, she provides her observations: flawed, incomplete, perhaps not all-encompassing, capital “T” truth, but likely as honest as journalism could be in this new era. Didion’s is a back to basic approach. It might just be the best one in a time perhaps best described by Karl Rove to the New York Time’s Ron Suskind in 2004.
+
+> “We’re an empire now, and when we act, we create our own reality. And while you’re studying that reality — judiciously, as you will — we’ll act again, creating other new realities, which you can study too, and that’s how things will sort out.”
+
+Rove may, unfortunately, be correct. As discouraging as it can be, journalists will continue to study all realities — bringing them together, contesting them, and learning from what comes of it. The result will not be _Truth_, but truth was never waiting to be found in the first place. Truth in America is more like a process, partial and incomplete, undertaken in a myriad of different ways over the past centuries. Whatever methods and practices are chosen next is perhaps less important, as long as we ensure the process of trial and error continue. Today, faced with a strengthening contingency for whom a public record of reality is nothing but an impediment, the work of journalism remains as important as ever.◆
+

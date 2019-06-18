@@ -1,6 +1,6 @@
 ---
 title: "Title IX's Constant Cycle of Crisis"
-description: ""
+description: "When viewed in context of the last decade of Claremont's constant cycle of crisis around Title IX, the decision feels more inevitable than unprecedented. For the third installment of our series on Sexual Assault at the Claremont Colleges, we ask a simple question without any straightforward answer: how did we get here?"
 date: 2019-04-11
 city: "Claremont, California"
 country: "United States"
@@ -14,8 +14,6 @@ tags:
 
 attachment: ""
 ---
-
-## Description
 
 On February 13th of this year, The Pomona College Advocates for Survivors of Sexual Assault, the 15 year old peer-to-peer support program, was unilaterally disbanded by the Pomona Administration. Though the program is slated to be reinstated in the coming school year, many questions remain. Why exactly did they need to be disbanded immediately? When they are reinstated, what form will the program take? Why weren't the advocates given forewarning? The decision felt drastic, and without clarity around the impetus behind the choice, left many students confused and angry.
 

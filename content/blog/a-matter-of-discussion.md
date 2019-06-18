@@ -1,6 +1,6 @@
 ---
 title: "A Matter of Discussion"
-description: "What months of non-stop interviewing revealed about how we exchange ideas."
+description: "In 2018, a lot of our conversations seem fraught. Our politics are defined by how we are different. Our media exists in non-overlapping silos. Our facts are guided by what we’d like to be true, rather than what actually is. So I explored the means by which we talk — and how that affects our ultimate understanding."
 
 date: 2018-06-11
 city: "Berkeley, California"
