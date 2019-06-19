@@ -26,7 +26,7 @@ collections:
       - { name: categories, label: Categories, widget: list }
       - { name: tags, label: Tags, widget: list }
 
-      - { name: audio-file, label: Audio File, widget: file }
-      - { name: publication, label: Publication }
+      - { name: audio-file, label: Audio File, widget: file, required: false }
+      - { name: publication, label: Publication, required: false }
 
       - { name: body, label: Body, widget: markdown }
