@@ -10,10 +10,15 @@ publish_mode: editorial_workflow
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: content/blog
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
+      - { name: city, label: City }
+      - { name: country, label: Country }
+      - { name: description, label: Country, widget: "text" }
+      - { name: tags, label: Tags, widget: list }
+      - { name: types, label: Types, widget: list }
+      - { name: color, label: Color, widget: list }
       - { name: body, label: Body, widget: markdown }
