@@ -1,11 +1,12 @@
 ---
-title: "A Road Trip"
-date: 2019-06-12
-city: "Birmingham, Alabama"
-country: "United States"
-
-description: "My sister and I spent 10 days driving across the country. Sometimes we seemd to take the most circuitous path possible. This is what the forging through the center of the country showed me, as I prepare to leave it."
-
+title: A Road Trip
+date: 2019-06-12T00:00:00.000Z
+city: 'Birmingham, Alabama'
+country: United States
+description: >-
+  My sister and I spent 10 days driving across the country. Sometimes we seemed
+  to take the most circuitous path possible. This is what forging through the
+  center of the country showed me, as I prepare to leave it.
 categories:
   - writing
 tags:
