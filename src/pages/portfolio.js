@@ -14,10 +14,6 @@ const Article = styled.h3`
   margin-bottom: 5px;
 `
 
-const LinkWrapper = styled(Link)`
-  text-transform: none;
-  font-style: bold;
-`
 const Publication = styled.span`
   font-style: italic;
   text-transform: none;
@@ -223,7 +219,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { type: { eq: "published" } } }
+      filter: { frontmatter: { categories: { in: "published" } } }
     ) {
       edges {
         node {
@@ -234,7 +230,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            publication
           }
         }
       }

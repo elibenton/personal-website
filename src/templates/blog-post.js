@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { FaCalendarDay, FaMapMarkerAlt } from "react-icons/fa"
@@ -52,8 +52,8 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
-    const color = post.frontmatter.color
+    // const { previous, next } = this.props.pageContext
+    // const color = post.frontmatter.color
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -88,7 +88,7 @@ class BlogPostTemplate extends React.Component {
             lg={4}
           >
             <Attribution offset={130}>
-              <Line color={Color(color)} />
+              <Line color={Color("yellow")} />
               <AttributionText>
                 <FaCalendarDay /> {post.frontmatter.date}
               </AttributionText>
@@ -114,7 +114,7 @@ class BlogPostTemplate extends React.Component {
           >
             <div className="blog-post-body">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              {/* <Line color={Color(color)} /> */}
+              {/* <Line color={Color("yellow")} /> */}
             </div>
           </Col>
         </Row>
@@ -161,7 +161,6 @@ export const pageQuery = graphql`
         description
         city
         country
-        color
       }
     }
   }

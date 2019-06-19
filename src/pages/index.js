@@ -55,7 +55,7 @@ const PostTitle = styled.h2`
 
   @media not all and (hover: none) {
     &:hover {
-      color: ${props => Color(props.color)};
+      color: ${props => Color("yellow")};
     }
   }
 
@@ -112,7 +112,7 @@ class BlogIndex extends React.Component {
         <Spacer height={50} />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          const color = node.frontmatter.color
+          // const color = node.frontmatter.color
           return (
             <Wrapper>
               <Row>
@@ -130,7 +130,7 @@ class BlogIndex extends React.Component {
                     <PostMetaTextContainer>
                       <MetaText>{node.frontmatter.date}</MetaText>
                       <PostLink to={node.fields.slug}>
-                        <PostTitle color={color}>{title}</PostTitle>
+                        <PostTitle color={Color("yellow")}>{title}</PostTitle>
                       </PostLink>
                       <MetaText>
                         {node.frontmatter.city}
@@ -150,7 +150,7 @@ class BlogIndex extends React.Component {
                   lgOffset={0}
                   lg={4}
                 >
-                  <Line color={Color(color)} />
+                  <Line color={Color("yellow")} />
                   <Excerpt
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
@@ -189,7 +189,6 @@ export const pageQuery = graphql`
             city
             country
             description
-            color
           }
         }
       }
