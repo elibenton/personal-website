@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: elibenton/personal-website
+  branch: version-2
 
 media_folder: static/assets
 public_folder: assets
