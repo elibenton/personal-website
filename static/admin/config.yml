@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: version-2
+  name: github
+  branch: elibenton/personal-website
 
 media_folder: static/assets
 public_folder: assets
