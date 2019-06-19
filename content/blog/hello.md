@@ -6,9 +6,8 @@ country: US
 description: Test
 tags:
   - Hi
-types:
-  - Hi
-color:
-  - HI
+types: hello
+color: hello
 ---
+
 Bop boop

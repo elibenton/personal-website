@@ -18,8 +18,8 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: city, label: City }
       - { name: country, label: Country }
-      - { name: description, label: description, widget: "text" }
+      - { name: description, label: description, widget: text }
       - { name: tags, label: Tags, widget: list }
-      - { name: types, label: Types, widget: list }
+      - { name: types, label: Types }
       - { name: color, label: Color }
       - { name: body, label: Body, widget: markdown }
