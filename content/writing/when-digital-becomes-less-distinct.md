@@ -1,11 +1,14 @@
 ---
-title: "When Digital Becomes Less Distinct"
-date: 2019-06-18
-city: "Claremont, California"
-country: "United States"
-
-description: "We channel our lives through digital technology. In doing so we change our relationship to reality faster than we can understand the implications. From SIM cards to social media and biometrics to blockchain, I will spend the year examining the societal, political, and personal effects of our increasingly networked lives."
-
+title: When Digital Becomes Less Distinct
+date: 2019-06-18T00:00:00.000Z
+city: 'Birmingham, Alabama'
+country: United States
+description: >-
+  We are increasingly channelling our lives through digital technology. In doing
+  so, however, we change our relationship to reality faster than we can
+  understand all of the implications. From SIM cards to social media and
+  biometrics to blockchain, I will spend the year examining the societal,
+  political, and personal effects of our increasingly networked lives.
 categories:
   - writing
 tags:
