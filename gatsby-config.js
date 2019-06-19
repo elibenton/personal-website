@@ -49,6 +49,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
+                   filter: {frontmatter: {categories: {in: "writing"}}}
                 ) {
                   edges {
                     node {
@@ -64,14 +65,14 @@ module.exports = {
                 }
               }
             `,
-            output: "/blog.xml",
+            output: "/writing.xml",
             title:
               "Traveling the world to understand the politics of digitally networked life",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
+            match: "^/writing/",
           },
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
@@ -90,7 +91,7 @@ module.exports = {
                 allMarkdownRemark
                   (
                   sort: {order: DESC, fields: [frontmatter___date]}, 
-                  filter: {frontmatter: {type: {eq: "audio"}}}
+                  filter: {frontmatter: {categories: {in: "audio"}}}
                   ) 
                     {
                   edges {
@@ -134,8 +135,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/writing`,
+        name: `writing`,
       },
     },
     {
