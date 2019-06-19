@@ -11,9 +11,9 @@ publish_mode: editorial_workflow
 site_url: https://elibenton.co
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - name: writing
+    label: Writing
+    folder: content/writing
     create: true
     fields:
       - { name: title, label: Title }
