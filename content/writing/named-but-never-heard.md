@@ -13,6 +13,7 @@ tags:
   - Title IX
   - Sexual Assualt
   - Campus Politics
+publication: KSPC 88.7 FM
 ---
 
 In the second part of our series about sexual assault on campus, Title IX, and “The Lists,” I talk with a person who understands these lists in a ways most of us cannot—he’s actually on one of them. Our original conversations were held in private, have been transcribed, and are reproduced here by a voice actor—all identifying information has been removed.

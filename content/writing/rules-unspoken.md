@@ -13,6 +13,7 @@ tags:
   - Hook Up Culture
   - Consent Culture
   - Campus Politics
+publication: KSPC 88.7 FM
 ---
 
 ## Reflection

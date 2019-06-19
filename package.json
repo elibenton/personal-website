@@ -33,10 +33,12 @@
     "netlify-cms-app": "^2.9.3",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
+    "react-collapsible": "^2.6.0",
     "react-dom": "^16.8.6",
     "react-flexbox-grid": "^2.1.2",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
+    "react-responsive-accordion": "^1.0.0",
     "styled-components": "^4.3.1"
   },
   "devDependencies": {

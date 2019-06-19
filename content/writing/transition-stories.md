@@ -14,6 +14,7 @@ tags:
   - Oral History
   - Storytelling
   - Listening
+publication: KSPC 88.7 FM
 ---
 
 Between February 22nd and March 8, The Hive and DisCo put on a series of podcasting workshops, where participants got to make their own collaborative podcast over the course of just three workshops. They did the interviews, created the storyboard, and two brave first-timers even produced episodes all by themselves. The topic: Transition.

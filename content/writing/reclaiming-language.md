@@ -13,6 +13,7 @@ tags:
   - Queer Studies
   - Language
   - Cultural Appropriation
+publication: KSPC 88.7 FM
 ---
 
 ### Season 2, Episode 4
