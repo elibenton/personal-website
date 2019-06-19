@@ -3,10 +3,12 @@ backend:
   repo: elibenton/personal-website
   branch: version-2
 
-media_folder: static/assets
-public_folder: assets
+media_folder: content
+public_folder: static
 
 publish_mode: editorial_workflow
+
+site_url: https://elibenton.co
 
 collections:
   - name: blog
@@ -18,8 +20,13 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: city, label: City }
       - { name: country, label: Country }
-      - { name: description, label: description, widget: text }
+
+      - { name: description, label: Description, widget: text }
+
+      - { name: categories, label: Categories, widget: list }
       - { name: tags, label: Tags, widget: list }
-      - { name: types, label: Types }
-      - { name: color, label: Color }
+
+      - { name: audio-file, label: Audio File, widget: file }
+      - { name: publication, label: Publication }
+
       - { name: body, label: Body, widget: markdown }

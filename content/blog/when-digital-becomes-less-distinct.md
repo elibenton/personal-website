@@ -1,20 +1,17 @@
 ---
 title: "When Digital Becomes Less Distinct"
-description: "We channel our lives through digital technology. In doing so we change our relationship to reality faster than we can understand the implications. From SIM cards to social media and biometrics to blockchain, I will spend the year examining the societal, political, and personal effects of our increasingly networked lives."
 date: 2019-06-18
 city: "Claremont, California"
 country: "United States"
 
-cover-image: ""
-color: "yellow"
+description: "We channel our lives through digital technology. In doing so we change our relationship to reality faster than we can understand the implications. From SIM cards to social media and biometrics to blockchain, I will spend the year examining the societal, political, and personal effects of our increasingly networked lives."
 
-type: "Blog Post"
+categories:
+  - writing
 tags:
   - Digital Dualism
   - Watson Fellowship
   - Politics of Technology
-
-attachment: ""
 ---
 
 Though the word “technology" first conjures images of silicon transistors and chic laptops, the formal definition is much broader. Marshal McLuhan called it a direct “extension of man.” Economists see it as the sum total of knowledge and information that society has acquired. I see technology as the evolution of means, the constantly changing methods, to do what collective groups have always done: make meaning of the world around us. I want to spend the Watson year traveling to societies that are transitioning routine tasks (talking to their relatives, relaxing after a day of work, or just paying bills) to new technologies.

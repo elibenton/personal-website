@@ -1,20 +1,17 @@
 ---
 title: "A Road Trip"
-description: "My sister and I spent 10 days driving across the country. Sometimes we seemd to take the most circuitous path possible. This is what the forging through the center of the country showed me, as I prepare to leave it."
 date: 2019-06-12
 city: "Birmingham, Alabama"
 country: "United States"
 
-cover-image: ""
-color: "yellow"
+description: "My sister and I spent 10 days driving across the country. Sometimes we seemd to take the most circuitous path possible. This is what the forging through the center of the country showed me, as I prepare to leave it."
 
-type: "Blog Post"
+categories:
+  - writing
 tags:
   - Road Trip
   - Camping
   - Travel
-
-attachment: ""
 ---
 
 ## Claremont, California

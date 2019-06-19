@@ -1,18 +1,18 @@
 ---
 title: "Reclaiming Language"
-description: "A project stemming from Aimee Bahng’s Gender and Women’s Studies class, in this bonus episode, Lucy Gold, August Khan, and myself look into derogatory language. More specifically, we want to see how offensive words are complicated by the process of “reclaiming language,” or the re-association of typically demeaning words to empowering affirmations or even signals of solidarity and belonging."
 date: 2019-02-14
 city: "Claremont, California"
 country: "United States"
 
-cover-image: ""
-color: "yellow"
+description: "A project stemming from Aimee Bahng’s Gender and Women’s Studies class, in this bonus episode, Lucy Gold, August Khan, and myself look into derogatory language. More specifically, we want to see how offensive words are complicated by the process of “reclaiming language,” or the re-association of typically demeaning words to empowering affirmations or even signals of solidarity and belonging."
 
-type: "Podcast"
+categories:
+  - audio
+  - published
 tags:
-  - fun
-
-attachment: ""
+  - Queer Studies
+  - Language
+  - Cultural Appropriation
 ---
 
 ### Season 2, Episode 4

@@ -1,21 +1,18 @@
 ---
 title: "A Matter of Discussion"
-description: "In 2018, a lot of our conversations seem fraught. Our politics are defined by how we are different. Our media exists in non-overlapping silos. Our facts are guided by what we’d like to be true, rather than what actually is. So I explored the means by which we talk — and how that affects our ultimate understanding."
-
 date: 2018-06-11
 city: "Berkeley, California"
 country: "United States"
 
-color: "yellow"
-type: "Blog Post"
+description: "In 2018, a lot of our conversations seem fraught. Our politics are defined by how we are different. Our media exists in non-overlapping silos. Our facts are guided by what we’d like to be true, rather than what actually is. So I explored the means by which we talk — and how that affects our ultimate understanding."
+
+categories:
+  - writing
 tags:
   - Interviewing
   - Journalism
   - Podcasting
   - Human Centered Design
-
-cover-image: ""
-attachment: ""
 ---
 
 Over the past half-year, I have conducted a lot of interviews. I have interviewed fellow classmates, professors, students and teachers at other colleges. I’ve also been forced off my college campus, interviewing residents of retirement communities, foster youth, and chief executives. What makes the situation interesting, however, are reasons why I have been conducting these interviews. They are rarely the same. This spring, I had three different projects require me to set down my books and go talk to another human face-to-face:

@@ -1,22 +1,18 @@
 ---
 title: "The Uneasy Marriage of Technology and Politics"
-description: "The news can be defined as information about events, individuals, and forces
-outside the realm of one’s immediate, knowable reality. The news media, then, are the means, methods, and mediums by which this information transfers from its origin “out there” to you."
 date: 2019-02-12
 city: "Claremont, California"
 country: "United States"
 
-cover-image: ""
-color: "yellow"
+description: "The news can be defined as information about events, individuals, and forces outside the realm of one’s immediate, knowable reality. The news media, then, are the means, methods, and mediums by which this information transfers from its origin “out there” to you."
 
-type: "Blog Post"
+categories:
+  - writing
 tags:
   - Politics of Technology
   - Philosophy of Technology
   - Book Reviews
   - Research
-
-attachment: ""
 ---
 
 The news can be defined as information about events, individuals, and forces outside the realm of one’s immediate, knowable reality. The news media, then, are the means, methods, and mediums (media being the alternative plural) by which this information transfers from its origin “out there” to you. I highlight this process of information transfer because the incredible capacities afforded by digital technology have obscured it so well. Information arrives instantly, making it seem as if it never traveled at all. Information arrives unrefined and raw, making it seem objective. And information can be produced by anyone, making
@@ -30,19 +26,19 @@ In the last few years, 140journos has had to pause operations and reconsider wha
 
 > Traditional journalism tries to solve a problem of scarcity: lack of cameras at an event. Social media curatorial journalism tries to solve a problem of abundance: telling false or fake reports from real one.
 >
-> **— Zeynep Tufekci, *Twitter and Tear Gas***
+> **— Zeynep Tufekci, _Twitter and Tear Gas_**
 
 The notion that all content is the same already shakes a fundamental premise of journalism. If a rigorously researched, impeccably sourced, neutrally written piece is the same as a sensationalist fabrication made by a Macedonian teenager trying to make advertising revenue on a fake website, the hope of average citizens being able to make sense of the world are slim. Take that one step further however, and you have Marshal McLuhan’s “The Medium is The Message.”
 
 _Understanding Media_ is famous for producing the line “The Medium is the Message.” Apparently, when the first edition was printed, the type-setters misprinted the section as “The Medium is the Massage.” McLuhan loved it, feeling it proved his point perfectly. His foundational claim is that there is no distinction between content and the medium by which it is provided. In fact, he writes that “the content of any medium is always another medium.”
 
-He discusses the telegraph, which contains printed material, which itself contains words, which is the vehicle for speech. Words allow for speech to be immortalized; the printing press expands degree to which words are spread; and the telegraph eliminates any barrier of time or space. At each step, he points out, there is a “change in scale, pace, or pattern.” Aside from that, however, nothing is different; the content itself is of no import. 
+He discusses the telegraph, which contains printed material, which itself contains words, which is the vehicle for speech. Words allow for speech to be immortalized; the printing press expands degree to which words are spread; and the telegraph eliminates any barrier of time or space. At each step, he points out, there is a “change in scale, pace, or pattern.” Aside from that, however, nothing is different; the content itself is of no import.
 
 This paradigm reminds me of a concept I learned in computer science: recursion, or the idea that a thing can only be understood when defined in terms of itself. Remember, to McLuhan, any medium’s content is just another medium. This produces a kind of “onion peel” layering effect that goes all the way down. What is at the center (or to return to the computer science metaphor “the base case”)? The title is the clue; we are. Jodi Dean provides the modern corollary to this concept with her idea of reflexivity.
 
 > People happily report their activities and stalk their friend. We can make and be our own spectacles — and this is much more entertaining.”
 >
-> **— Jodi Dean, *Blog Theory***
+> **— Jodi Dean, _Blog Theory_**
 
 Reflexivity is what Dean believes we default to in light of the complexity and uncertainty wrought by the exponential growth of the internet. “Lacking answers, ever more uncertain, we become mesmerized by our own looking,” and because we can never find the objects we are looking for, we instead opt “to looking at ourselves as objects.” She concedes that we still “configure the worlds we inhabit” but that they are “ever less what we desire but haven’t reached and ever more what we cannot escape yet still enjoy.” Reflexivity is enabling our own capture and enjoying doing so.
 
@@ -52,9 +48,9 @@ For me, Dean’s concepts are the best descriptor yet for understanding the poli
 
 > We are simply unable to deal with questions that cannot be answered by means of technology.
 >
-> **— Jodi Dean, *Blog Theory***
+> **— Jodi Dean, _Blog Theory_**
 
-One concept McLuhan would famously discuss was that of the global village, an electronic world in which all lived in immediate proximity. Though James Madison hoped newspapers would shrink the physical distance of America for the better, McLuhan envisioned the global village as cramped, suffocating, and dangerously unstable. Angela Nagle seems to describe almost that exact ecosystem in her book _Kill All Normies_. 
+One concept McLuhan would famously discuss was that of the global village, an electronic world in which all lived in immediate proximity. Though James Madison hoped newspapers would shrink the physical distance of America for the better, McLuhan envisioned the global village as cramped, suffocating, and dangerously unstable. Angela Nagle seems to describe almost that exact ecosystem in her book _Kill All Normies_.
 
 Nagle primarily studied two online sub-communities, each with two opposite characteristics. The first is 4chan, whose users coalesce largely on the political right and who all remain anonymous. The second is Tumblr, whose userbases is extremely liberal and identity is not only revealed but also given center stage. Anonymity is key to the analysis because it is one of the most distinct affordances the internet has brought to the political landscape. The effects are unsettling, allowing individuals to rally around their most loathsome thoughts without consequence. But even then, “pure evil” is not readily accessible. On 4chan for instance, provocations of suicide would be readily accompanied by one’s own suicidal confessions. Irony and morbid self-awareness permit even the most grotesque a pass of acceptability. On 4chan, everything is a joke, even if they are not very funny. She sees the unifying element as transgression. Going against whatever predominates for the mere sake of it.
 
@@ -62,7 +58,7 @@ Tumblr, however, is found to be a far more humorless place, especially if the jo
 
 > Because both the act of suicide and the displays of insensitivity toward suicide victims are perceived as forms of transgression, both found a home within this strangely internally coherent online world.
 >
-> **— Angela Nagle, *Kill All Normies***
+> **— Angela Nagle, _Kill All Normies_**
 
 That being said, one still retains the ability, however inconvenient, to opt out of online forums or social media. _The 480_ described a world where that is not possible. The novel’s main character is John Thatch, construction worker turned national hero who launches the most unlikely of presidential bids. He is aided by Madison Curver, an off-beat political fixer somewhat in the mold of a 1960’s Roger Stone. Curver’s proposition is to enlist the help of “Simulation Enterprises,” a company whose claim mimicked that which the real life Simulmatics Corporation offered nominee John F. Kennedy in 1960 and 1964. They would simulate the entire election and tell the candidate what needed to be said to win.
 
@@ -72,12 +68,12 @@ If politics is the study of power (a necessary but not sufficient definition, in
 
 ### References
 
-*Burdick, Eugene. The 480. New York: Dell Publishing Company, 1964.*
+_Burdick, Eugene. The 480. New York: Dell Publishing Company, 1964._
 
-*Dean, Jodi. Blog Theory: Feedback and Capture in the Circuits of Drive. Cambridge: Polity Press, 2011.*
+_Dean, Jodi. Blog Theory: Feedback and Capture in the Circuits of Drive. Cambridge: Polity Press, 2011._
 
-*McLuhan, Marshall. Understanding Media: The Extensions of Man. New York : McGraw-Hill 1964.*
+_McLuhan, Marshall. Understanding Media: The Extensions of Man. New York : McGraw-Hill 1964._
 
-*Nagle, Angela. Kill All Normies: The Online Culture Wars from Tumblr and 4chan to the Alt-right and Trump. Winchester: Zero Books, 2017.*
+_Nagle, Angela. Kill All Normies: The Online Culture Wars from Tumblr and 4chan to the Alt-right and Trump. Winchester: Zero Books, 2017._
 
-*Tufekci, Zeynep. Twitter and Tear Gas: The Power and Fragility of Networked Protest. New Haven: Yale University Press, 2018.*
+_Tufekci, Zeynep. Twitter and Tear Gas: The Power and Fragility of Networked Protest. New Haven: Yale University Press, 2018._

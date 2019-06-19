@@ -1,20 +1,17 @@
 ---
 title: "We Should Be Asking More Questions of Facebook"
-description: "There are now 2.13 billion people on Facebook, almost one third of the world’s population. Two in three users check the site every day. The aggregate of each of us turning a blind eye to Facebook’s flaws quickly becomes willful negligence on a global scale. This assertion includes you and me."
 date: 2018-03-30
 city: "Claremont, California"
 country: "United States"
 
-cover-image: ""
-color: "yellow"
+description: "There are now 2.13 billion people on Facebook, almost one third of the world’s population. Two in three users check the site every day. The aggregate of each of us turning a blind eye to Facebook’s flaws quickly becomes willful negligence on a global scale. This assertion includes you and me."
 
-type: "published"
-publication: "The Student Life"
+categories:
+  - writing
+  - published
 tags:
   - Politics of Technology
   - Facebook
-
-attachment: ""
 ---
 
 Lambasting Facebook is in vogue. It’s dangerous for our children. It’s making us all lonely. It's even

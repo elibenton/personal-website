@@ -27,6 +27,14 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
 
 - [ ] Gatsby Image Styling
 - [ ] Netlify Auto Load Plugin
+- [ ] Filtering Home Page
+  - [ ] Tag-based
+  - [ ] Category-based
+
+* [ ] RSS
+  - [ ] Podcast Feed
+  - [ ] Publish-to-Medium
+  - [ ] Publish-to-Mailchimp
 
 # 🎁 Wish List
 
@@ -36,18 +44,8 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
   - [ ] Download Resume PDF
   - [ ] Toggle Hover Headers
 
-- [ ] **Filtering Home Page**
-  - [ ] Tag-based
-  - [ ] Medium-based
-
-* [ ] **RSS**
-  - [ ] Podcast Feed
-  - [ ] Publish-to-Medium
-  - [ ] Publish-to-Mailchimp
-
 - [ ] **Interactive Reference Component**
 - [ ] **Mapbox Integration**
-- [ ] **Notion API CMS**
 - [ ] **Observable NPM packages**
 - [ ] **Comments through Netlify Lambda Functions**
 
@@ -67,7 +65,7 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
 
 [VSCode](https://code.visualstudio.com/): editor with terminal, git, & typescript integration
 
-**_[Typescript](https://www.typescriptlang.org/): static typing and easier code maintenance???_**
+[NetlifyCMS]()
 
 # 🛠 Coding Guidelines
 
@@ -77,25 +75,15 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
 
 [JAMstack](https://jamstack.org/)
 
-[DRY](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
-
 [PWA's](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1)
 
----
+[DRY](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
 
-Built In
-
-- [ ] SEO
-- [ ] Web App Manifest
-- [ ] Offline support
-- [ ] Analytics
-
-# ✨ Inspiration
-
-[Vulfpeck](https://www.youtube.com/watch?v=KaBBWWj5h_c)
-
-[Kamasi Wasington](https://www.youtube.com/watch?v=LdyabrdFMC8)
-
-[The Punch Brothers](https://www.youtube.com/watch?v=y64KTlk6N_s)
 
 # 🙏 Thank You's
+
+Jimmy Chion
+
+Brian Barbour
+
+Simon Posada

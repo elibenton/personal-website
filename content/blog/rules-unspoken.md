@@ -1,21 +1,19 @@
 ---
 title: "Rules Unspoken"
-description: "Sully and I discuss hookup culture at The Claremont Colleges. We talk with experts such as Professor of Sociology at Occidental, Lisa Wade. We also talk with student Audrey Jang, the President of the Pomona Student Union, who brought Professor Wade to campus."
 date: 2018-10-15
 city: "Claremont, California"
 country: "United States"
 
-cover-image: ""
-color: "yellow"
+description: "Sully and I discuss hookup culture at The Claremont Colleges. We talk with experts such as Professor of Sociology at Occidental, Lisa Wade. We also talk with student Audrey Jang, the President of the Pomona Student Union, who brought Professor Wade to campus."
 
-type: ""
+categories:
+  - audio
+  - published
 tags:
-  - fun
-
-attachment: ""
+  - Hook Up Culture
+  - Consent Culture
+  - Campus Politics
 ---
-
-
 
 ## Reflection
 

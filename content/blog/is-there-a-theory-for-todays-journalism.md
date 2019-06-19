@@ -1,28 +1,29 @@
 ---
 title: "Is There A Theory For Today's Journalism?"
-description: "If there is one “unequivocal truth” to be deduced from reading exclusively books about journalism, it’s that 2019 is not journalism's first crisis. If we’ll allow ourselves a second one — it’s probably that unequivocal truth doesn’t exist. When dealing in unequivocal truths, it’s usually best to stick to one."
 date: 2019-01-17
 city: "Claremont, California"
 country: "United States"
-cover-image: ""
-color: "yellow"
 
-type: "Blog Post"
+description: "If there is one “unequivocal truth” to be deduced from reading exclusively books about journalism, it’s that 2019 is not journalism's first crisis. If we’ll allow ourselves a second one — it’s probably that unequivocal truth doesn’t exist. When dealing in unequivocal truths, it’s usually best to stick to one."
+
+categories:
+  - writing
 tags:
-- fun
-
-attachment: ""
+  - Journalism
+  - Journalistic Theory
+  - Sexaul Assault
+  - Title IX
 ---
 
-*For the Pomona Politics Senior Exam, we are to write three papers synthesizing the arguments of the works and then defend them in oral argument before the Pomona Politics faculty. Each paper represents a sub-category of the full argument. Mine are: historical examples, dsytopic technologies, and the American problem.In this post, I’ll summarize my understanding to the first sub-section, historical examples, which include four works of journalistic theory spanning the past century. I’ll try to lay a foundation for the other two sub-categories as well. By establishing a baseline, I can both contextualize current works in history and track how my beliefs at the end of the project have changed from where they are now.*
+_For the Pomona Politics Senior Exam, we are to write three papers synthesizing the arguments of the works and then defend them in oral argument before the Pomona Politics faculty. Each paper represents a sub-category of the full argument. Mine are: historical examples, dsytopic technologies, and the American problem.In this post, I’ll summarize my understanding to the first sub-section, historical examples, which include four works of journalistic theory spanning the past century. I’ll try to lay a foundation for the other two sub-categories as well. By establishing a baseline, I can both contextualize current works in history and track how my beliefs at the end of the project have changed from where they are now._
 
 ## Public Opinion
 
 ### Lippmann, Walter. New York: Harcourt, Brace, and Company, 1922.
 
-Walter Lippmann’s book is perhaps most famous for formalizing the definition of the word *stereotype.* But just by flipping through the chapters, its easy to tell the work covers far more: censorship, the deep state, political theory — just to name a few.  
+Walter Lippmann’s book is perhaps most famous for formalizing the definition of the word _stereotype._ But just by flipping through the chapters, its easy to tell the work covers far more: censorship, the deep state, political theory — just to name a few.
 
-Lippmann’s book seems more pessimistic than I would have initially thought. He concludes the book with the frighteningly prescient criticism that “news and truth are not the same thing.” That doesn’t necessarily put Lippmann in the Trumpian camp of “all news is fake news.” It does, however, complicate the refrain that we have only recently entered the post-truth era. Lippmann could never have imagined Facebook, Fox News, or the Internet Research Agency. At the time *Public Opinion* was published, the television did not even exist.
+Lippmann’s book seems more pessimistic than I would have initially thought. He concludes the book with the frighteningly prescient criticism that “news and truth are not the same thing.” That doesn’t necessarily put Lippmann in the Trumpian camp of “all news is fake news.” It does, however, complicate the refrain that we have only recently entered the post-truth era. Lippmann could never have imagined Facebook, Fox News, or the Internet Research Agency. At the time _Public Opinion_ was published, the television did not even exist.
 
 Which in fact may prove that all the technological advances of recent are not even the root cause of the crisis in journalism today. The relationship between a free press and American democracy has been fraught for nearly a century, and more likely, since the very beginning.
 

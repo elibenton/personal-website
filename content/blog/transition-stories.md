@@ -1,18 +1,19 @@
 ---
 title: "Transition Stories"
-description: "Between February 22nd and March 8, The Hive and DisCo put on a series of podcasting workshops, where participants got to make their own collaborative podcast over the course of just three workshops. They did the interviews, created the storyboard, and two brave first-timers even produced episodes all by themselves. The topic: transition."
 date: 2018-10-22
 city: "Claremont, California"
 country: "United States"
 
-cover-image: ""
-color: "yellow"
+description: "Between February 22nd and March 8, The Hive and DisCo put on a series of podcasting workshops, where participants got to make their own collaborative podcast over the course of just three workshops. They did the interviews, created the storyboard, and two brave first-timers even produced episodes all by themselves. The topic: transition."
 
-type: ""
+categories:
+  - audio
+  - published
 tags:
-  - fun
-
-attachment: ""
+  - Podcasting
+  - Oral History
+  - Storytelling
+  - Listening
 ---
 
 Between February 22nd and March 8, The Hive and DisCo put on a series of podcasting workshops, where participants got to make their own collaborative podcast over the course of just three workshops. They did the interviews, created the storyboard, and two brave first-timers even produced episodes all by themselves. The topic: Transition.
