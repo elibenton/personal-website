@@ -7,13 +7,12 @@ description: >-
   To start off this three part series on “The Lists,” we try to learn what they
   were, why they were made, and if they are really so different from practices
   that have existed outside the Claremont bubble for some time.
-categories:
-  - audio
-  - published
+template: Writing
 tags:
   - Sexual Assault
   - Campus Politics
   - Title IX
+published: false
 publication: KSPC 88.7 FM
 ---
 
