@@ -64,7 +64,7 @@ const Navbar = () => {
 
 const navLinks = [
   { label: "About", to: "/about" }, // /about
-  { label: "Porfolio", to: "/portfolio" }, // /portfolio
+  { label: "Portfolio", to: "/portfolio" }, // /portfolio
 ]
 
 export default Navbar

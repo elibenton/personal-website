@@ -9,8 +9,11 @@ import Layout from "../components/layout"
 import Spacer from "../utils/spacer"
 
 const About = styled.p`
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2em;
+`
+const Header = styled.span`
+  font-weight: bold;
 `
 
 const AboutContainer = styled.div`
@@ -70,7 +73,12 @@ class AboutPage extends React.Component {
             </About>
             <About>
               I graduated from Pomona College in Los Angeles, where I studied
-              politics and computer science among other topics.
+              politics and computer science.
+            </About>
+            <br />
+            <About>
+              <Header>Contact: </Header>
+              <a href="mailto:eliunited@gmail.com">eliunited@gmail.com</a>{" "}
             </About>
           </Col>
         </Row>

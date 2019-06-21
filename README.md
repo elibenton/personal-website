@@ -29,7 +29,7 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
 - [ ] Netlify Auto Load Plugin
 - [ ] Filtering Home Page
   - [ ] Tag-based
-  - [ ] Category-based
+  - [ ] template-based
 
 * [ ] RSS
   - [ ] Podcast Feed
@@ -78,7 +78,6 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
 [PWA's](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1)
 
 [DRY](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
-
 
 # 🙏 Thank You's
 

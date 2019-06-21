@@ -11,7 +11,10 @@ export default class MainLayout extends React.Component {
     return (
       <div>
         <Helmet>
-          {/* <meta name="description" content={config.siteDescription} /> */}
+          <meta
+            name="description"
+            content="Traveling the world to understand the politics of digitally networked life"
+          />
         </Helmet>
         <Navbar />
         {children}

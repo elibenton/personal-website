@@ -90,6 +90,17 @@ class PortfolioPage extends React.Component {
               }
               transitionTime={200}
             >
+              <h3>Waston Fellowship</h3>
+              <ul>
+                <li>
+                  One year of funded, independent travel outside the United
+                  States
+                </li>
+                <li>
+                  Explored the intersection of politics and technology across
+                  the globe
+                </li>
+              </ul>
               <h3>KQED</h3>
               <ul>
                 <li>
