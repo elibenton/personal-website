@@ -1,11 +1,12 @@
 ---
-title: "A First Attempt At Something Else"
-date: 2018-11-15
-city: "Claremont, California"
-country: "United States"
-
-description: "To start off this three part series on “The Lists,” we try to learn what they were, why they were made, and if they are really so different from practices that have existed outside the Claremont bubble for some time."
-
+title: A First Attempt At Something Else
+date: 2018-11-15T00:00:00.000Z
+city: 'Claremont, California'
+country: United States
+description: >-
+  To start off this three part series on “The Lists,” we try to learn what they
+  were, why they were made, and if they are really so different from practices
+  that have existed outside the Claremont bubble for some time.
 categories:
   - audio
   - published
@@ -15,6 +16,10 @@ tags:
   - Title IX
 publication: KSPC 88.7 FM
 ---
+
+### The Discussion Collective, Episode 3
+
+## [Listen to the episode](https://anchor.fm/discussioncollective/episodes/A-First-Attempt-At-Something-Else-Part-1-e2jfcb)
 
 On October 4th of this year, Pomona College’s Dean of Students sent an email banning the use of anonymously-created lists that kept students out of campus events. Some people were furious, others were relieved, and many students were learning about the practice for the first time.
 
