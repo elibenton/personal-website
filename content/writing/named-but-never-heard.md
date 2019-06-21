@@ -1,11 +1,14 @@
 ---
-title: "Named But Never Heard"
-date: 2018-11-27
-city: "Claremont, California"
-country: "United States"
-
-description: "In the second part of our series about sexual assault on campus, Title IX, and “The Lists,” I talk with a person who understands these lists in a ways most of us cannot—he’s actually on one of them. While this interview is in no way exhaustive, his perspective is an important part of understanding how issues of sexual violence are being handled at the Claremont Colleges."
-
+title: Named But Never Heard
+date: 2018-11-27T00:00:00.000Z
+city: 'Claremont, California'
+country: United States
+description: >-
+  In the second part of our series about sexual assault on campus, Title IX, and
+  “The Lists,” I talk with a person who understands these lists in a ways most
+  of us cannot—he’s actually on one of them. While this interview is in no way
+  exhaustive, his perspective is an important part of understanding how issues
+  of sexual violence are being handled at the Claremont Colleges.
 categories:
   - audio
   - published
@@ -15,6 +18,7 @@ tags:
   - Campus Politics
 publication: KSPC 88.7 FM
 ---
+## [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Named-But-Never-Heard-Part-2-e2laai)
 
 In the second part of our series about sexual assault on campus, Title IX, and “The Lists,” I talk with a person who understands these lists in a ways most of us cannot—he’s actually on one of them. Our original conversations were held in private, have been transcribed, and are reproduced here by a voice actor—all identifying information has been removed.
 
