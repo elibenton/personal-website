@@ -13,7 +13,6 @@ tags:
   - Title IX
 publication: KSPC 88.7 FM
 ---
-![hello](/content/images/ada-sand-1.jpg "hello")
 
 On October 4th of this year, Pomona College’s Dean of Students sent an email banning the use of anonymously-created lists that kept students out of campus events. Some people were furious, others were relieved, and many students were learning about the practice for the first time.
 
