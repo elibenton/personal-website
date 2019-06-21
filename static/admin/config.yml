@@ -4,7 +4,11 @@ backend:
   branch: version-2
 
 media_folder: content/images
+public_folder: content/images
+
 publish_mode: editorial_workflow
+
+preview_path: writing/{{title}}
 
 site_url: https://elibenton.co
 
@@ -12,6 +16,7 @@ collections:
   - name: writing
     label: Writing
     folder: content/writing
+    slug: "{{slug}}"
     create: true
     fields:
       - { name: title, label: Title }
