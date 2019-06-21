@@ -18,6 +18,8 @@ tags:
 
 Driving away from Claremont hit me harder than I would have anticipated.
 
+![Sand](/images/ada-sand-1.jpg "sand")
+
 ## Kelso Dunes, California
 
 The wind
