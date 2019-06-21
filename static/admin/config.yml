@@ -4,8 +4,6 @@ backend:
   branch: version-2
 
 media_folder: content/images
-public_folder: static
-
 publish_mode: editorial_workflow
 
 site_url: https://elibenton.co
