@@ -16,6 +16,8 @@ tags:
   - Watson Fellowship
   - Politics of Technology
 ---
+![Walter Lippmann](/content/images/lippmann.jpeg "Walter Lippmann")
+
 Though the word “technology" first conjures images of silicon transistors and chic laptops, the formal definition is much broader. Marshal McLuhan called it a direct “extension of man.” Economists see it as the sum total of knowledge and information that society has acquired. I see technology as the evolution of means, the constantly changing methods, to do what collective groups have always done: make meaning of the world around us. I want to spend the Watson year traveling to societies that are transitioning routine tasks (talking to their relatives, relaxing after a day of work, or just paying bills) to new technologies.
 
 Does it matter which platform Scandinavian teenagers use to watch TV? How SIM cards are distributed in Myanmar/Burma? What kind of math is needed for Maltese medical records to be verified? Or what forms of ID Indian citizens must produce to obtain government services? I want to convince you that the answer to these questions—and increasingly common ones just like them—is yes. In these subtle processes, we actually construct our world. I’ve spent the majority of my academic career studying politics. Every month, the field seems less about how a bill becomes a law, and more about our fundamental relationships to the individuals ideas, and institutions that construct the narratives of our lives.
