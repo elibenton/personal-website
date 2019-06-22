@@ -27,7 +27,7 @@ I will focus on the patterns that ran throughout each conversation. What answers
 
 In 2018, a lot of our conversations seem fraught. Our politics are defined by how we are different. Our media exists in non-overlapping silos. Our facts are guided by what we’d like to be true, rather than what actually is. It seemed like as good a time as any to explore _the means_ by which we talk — and how they affect our ultimate understanding.
 
-![Long evenings in the studio produce the strangest conversation](/static/elisully.jpg "Long evenings in the studio produce the strangest conversation")
+![Long evenings in the studio produce the strangest conversation](/content/images/elisully.jpg "Long evenings in the studio produce the strangest conversation")
 
 ## Interviewing for Design
 

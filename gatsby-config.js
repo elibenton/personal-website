@@ -9,7 +9,6 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-netlify-cms-paths`,
     "gatsby-plugin-netlify-cache",
     {
       resolve: `gatsby-mdx`,
@@ -17,7 +16,6 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
       },
     },
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -158,7 +156,9 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-plugin-netlify-cms-paths`,
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -201,5 +201,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }
