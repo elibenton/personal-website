@@ -17,9 +17,9 @@ tags:
   - Campus Politics
 publication: KSPC 88.7 FM
 ---
-### The Discussion Collective, Episode 1
+## The Discussion Collective: Episode 1
 
-## [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Pilot-Episode-Rules-Unspoken-e2a2t0)
+### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Pilot-Episode-Rules-Unspoken-e2a2t0)
 
 ## Reflection
 
