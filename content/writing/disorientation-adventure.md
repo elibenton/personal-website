@@ -18,9 +18,9 @@ tags:
 publication: KSPC 88.7 FM
 ---
 
-### The Discussion Collective, Episode 5
+## The Discussion Collective: Episode 5
 
-## [Listen to the episode](https://anchor.fm/discussioncollective/episodes/DisOrientation-Adventure-e2okjk)
+### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/DisOrientation-Adventure-e2okjk)
 
 _Where was this mobilization for the issues that really mattered: mental health resources, affordability issues, Title IX policy changes? Choosing to rally around OA but not other topics, they believed, was negligent, hypocritical, and privileged. It's been approximately two months since the initial decision catalyzed the outrage, then the counter-outrage. Three forums have been held to discuss the future of the Orientation Adventure program, but attendance has been sparse and the discussions vague. We talked to students, professors, and alumni, but the question remains: where do we go from here?_
 
