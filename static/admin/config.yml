@@ -3,7 +3,7 @@ backend:
   repo: elibenton/personal-website
   branch: version-2
 
-media_folder: content/images
+media_folder: static/content/images
 public_folder: content/images
 
 publish_mode: editorial_workflow

@@ -9,6 +9,8 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-netlify-cms-paths`,
+    "gatsby-plugin-netlify-cache",
     {
       resolve: `gatsby-mdx`,
       options: {
@@ -155,8 +157,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        excerpt_separator: `<!-- end -->`,
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: `gatsby-remark-images`,
             options: {
