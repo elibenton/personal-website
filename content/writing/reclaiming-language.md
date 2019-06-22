@@ -19,8 +19,9 @@ tags:
   - Cultural Appropriation
 publication: KSPC 88.7 FM
 ---
+## The Discussion Collective: Bonus Episode
 
-## [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Reclaiming-Language-Bonus-Episode-e36f41)
+### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Reclaiming-Language-Bonus-Episode-e36f41)
 
 [Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective](https://philpapers.org/rec/HARSKT) by Donna Haraway
 
