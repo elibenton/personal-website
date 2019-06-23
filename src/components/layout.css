@@ -151,8 +151,10 @@ blockquote {
 
 .gatsby-resp-image-wrapper {
   left: -55% !important;
+  position: relative;
   margin-top: 2em;
   margin-bottom: 0.5em;
+  margin-left: 0 !important;
 }
 
 .gatsby-resp-image-figcaption {
@@ -160,17 +162,32 @@ blockquote {
   position: relative;
   text-align: right;
   padding-bottom: 4em;
+  text-align: left;
 }
 
 @media not screen and (min-width: 1000px) {
   .gatsby-resp-image-wrapper {
-    left: 0% !important;
+    max-width: 492px;
+    left: -5% !important;
+    width: 115%;
+    /* max-height: 350px; */
+    margin-left: -10%;
+    width: 110%;
+    object-fit: cover;
+    align-self: center;
+    border-radius: 4px;
   }
   .gatsby-resp-image-figcaption {
     left: 0% !important;
     position: relative;
     text-align: left;
     padding-bottom: 1em;
+    max-width: 492px;
+  }
+
+  figure {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
