@@ -4,18 +4,18 @@ module.exports = {
     author: `Eli Benton Cohen`,
     description: `Traveling the world to understand the politics of digitally networked life`,
     siteUrl: `https://elibenton.co/`,
-    social: {
-      twitter: ``,
-    },
+    // social: {
+    //   twitter: ``,
+    // },
   },
   plugins: [
     "gatsby-plugin-netlify-cache",
-    {
-      resolve: `gatsby-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-mdx`,
+    //   options: {
+    //     extensions: [`.mdx`, `.md`],
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -43,7 +43,7 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
+                  description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
@@ -74,21 +74,18 @@ module.exports = {
             output: "/writing.xml",
             title:
               "Traveling the world to understand the politics of digitally networked life",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
             match: "^/writing/",
           },
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
+                  description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
+                  enclosure: edge.node.frontmatter.date, // audio file path!
                 })
               })
             },
@@ -110,21 +107,13 @@ module.exports = {
                       frontmatter {
                         title
                         date
+                        description
                       }
                     }
                   }
                 }
               }
         `,
-            setup: () => ({
-              custom_namespaces: {
-                itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
-              },
-              custom_elements: [
-                { "itunes:author": "Eli Benton Cohen" },
-                { "itunes:explicit": "clean" },
-              ],
-            }),
             output: "/audio.xml",
             title:
               "Traveling the world to understand the politics of digitally networked life",
@@ -133,6 +122,51 @@ module.exports = {
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
             match: "^/audio/",
+            setup: () => ({
+              custom_namespaces: {
+                itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
+              },
+              custom_elements: [
+                {
+                  "itunes:subtitle":
+                    "Traveling the world to understand the politics of digitally networked life",
+                },
+                { "itunes:author": "Eli Benton Cohen" },
+                {
+                  "itunes:summary":
+                    "A podcast documenting my travels across the globe, to better understand the connections of life online and off.",
+                },
+                {
+                  "itunes:owner": [
+                    { "itunes:name": "Eli Benton Cohen" },
+                    { "itunes:email": "eliunited@gmail.com.com" },
+                  ],
+                },
+                {
+                  "itunes:image": {
+                    _attr: {
+                      href: "/content/images/pod-logo.png",
+                    },
+                  },
+                },
+                {
+                  "itunes:category": [
+                    {
+                      _attr: {
+                        text: "Technology",
+                      },
+                    },
+                    {
+                      "itunes:category": {
+                        _attr: {
+                          text: "Places & Travel",
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+            }),
           },
         ],
       },
