@@ -2,41 +2,47 @@
 
 As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I post about journey, write reviews of the works I am studying, and update to my podcast documenting the year.
 
+# ⁉️ Issues
+
+- [ ] **Gatsby images do not propogate to Mailchimp RSS email campaigns**
+
+When porting my site to a Mailchip email campaign through RSS, it uses the "blurred out" Gatsby pre-loading image rather than the appropiate, fully-loaded image
+
+- [ ] **Syncining "collections" in NetlifyCMS, "Templates" in Gatsby, and "Feeds" in RSS**
+
+I have three types of posts, "Writing," "Audio," and "Newsletter," each with its own styling of webpage, use of static assets, and place within one of the three RSS feeds of the corresponding name.
+
+- [ ] **Filtering Home Page based on tags and templates**
+
+Creating a "Tags" homepage filter and a "Templates" homepage filter, so that the index shows ALL pages intially, but then can show a subset based on a specifc criterium as well.
+
 # Website Structure
 
     .
-    ├── content
-    ├── data
-    ├── images
-    ├── static
-    ├── /.cache
-    ├── /node-modules
-    ├── /public
+    ├── /content
+    │   ├── /images
+    │   ├── /posts
+    │       ├── /audio
+    |       ├── /newsletter
+    |       └── /writing
+    ├── /static
+    |    └── /admin
     ├── /src
     │   ├── /components
-    │   ├── /layouts
+    │   ├── /utils
     │   ├── /pages
     │   └── /templates
-    ├── /static
     ├── gatsby-config.json
     ├── gatsby-node.js
     ├── package.json
     └── ...
 
-# ⁉️ Issues
+# 🎁 Wish List
 
-- [ ] Gatsby Image Styling
-- [ ] Netlify Auto Load Plugin
-- [ ] Filtering Home Page
-  - [ ] Tag-based
-  - [ ] template-based
-
-* [ ] RSS
+- [ ] **RSS**
   - [ ] Podcast Feed
   - [ ] Publish-to-Medium
   - [ ] Publish-to-Mailchimp
-
-# 🎁 Wish List
 
 - [ ] **Portfolio Page (Online Resume)**
 
@@ -65,7 +71,7 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
 
 [VSCode](https://code.visualstudio.com/): editor with terminal, git, & typescript integration
 
-[NetlifyCMS]()
+[NetlifyCMS](https://www.netlifycms.org/): Open source content management for Git workflow
 
 # 🛠 Coding Guidelines
 
