@@ -145,7 +145,7 @@ module.exports = {
                 {
                   "itunes:image": {
                     _attr: {
-                      href: "/content/images/pod-logo.png",
+                      href: "content/images/pod-logo.png",
                     },
                   },
                 },

@@ -4,31 +4,74 @@ backend:
   branch: version-2
 
 media_folder: content/images
-
 publish_mode: editorial_workflow
-
-preview_path: writing/{{title}}
-
 site_url: https://elibenton.co
 
 collections:
   - name: writing
     label: Writing
-    folder: content/writing
+    folder: content/posts
     slug: "{{slug}}"
+    preview_path: writing/{{slug}}
     create: true
+    filter: { field: "template", value: "Writing" }
     fields:
+      - {
+          name: template,
+          label: Template,
+          widget: "select",
+          options: ["Writing", "Audio", "Newsletter"],
+        }
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
       - { name: city, label: City }
       - { name: country, label: Country }
-
       - { name: description, label: Description, widget: text }
-
-      - { name: categories, label: Categories, widget: list }
-      - { name: tags, label: Tags, widget: list }
-
-      - { name: audio-file, label: Audio File, widget: file, required: false }
       - { name: publication, label: Publication, required: false }
+
+      - { name: body, label: Body, widget: markdown }
+
+  - name: audio
+    label: Audio
+    folder: content/posts
+    slug: "{{slug}}"
+    preview_path: audio/{{slug}}
+    create: true
+    filter: { field: "template", value: "Audio" }
+    fields:
+      - {
+          name: template,
+          label: Template,
+          widget: "select",
+          options: ["Writing", "Audio", "Newsletter"],
+        }
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
+      - { name: city, label: City }
+      - { name: country, label: Country }
+      - { name: description, label: Description, widget: text }
+      - { name: audio-file, label: Audio File, widget: file }
+
+      - { name: body, label: Body, widget: markdown }
+
+  - name: newsletter
+    label: Newsletter
+    folder: content/posts
+    slug: "{{slug}}"
+    preview_path: newsletter/{{slug}}
+    create: true
+    filter: { field: "template", value: "Newsletter" }
+    fields:
+      - {
+          name: template,
+          label: Template,
+          widget: "select",
+          options: ["Writing", "Audio", "Newsletter"],
+        }
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
+      - { name: city, label: City }
+      - { name: country, label: Country }
+      - { name: description, label: Description, widget: text }
 
       - { name: body, label: Body, widget: markdown }

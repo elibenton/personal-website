@@ -4,6 +4,10 @@ As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of 
 
 # ⁉️ Issues
 
+- [ ] **Learning to use state properly with mailchimp add subscriber**
+
+When using a react popup to ask for email subscribers, use react state to handle all the events
+
 - [ ] **Gatsby images do not propogate to Mailchimp RSS email campaigns**
 
 When porting my site to a Mailchip email campaign through RSS, it uses the "blurred out" Gatsby pre-loading image rather than the appropiate, fully-loaded image
@@ -40,6 +44,7 @@ Creating a "Tags" homepage filter and a "Templates" homepage filter, so that the
 # 🎁 Wish List
 
 - [ ] **RSS**
+
   - [ ] Podcast Feed
   - [ ] Publish-to-Medium
   - [ ] Publish-to-Mailchimp

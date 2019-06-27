@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import EmailPopup from "../components/popup"
 import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
 
@@ -91,30 +92,33 @@ const MetaText = styled.h4`
 const Excerpt = styled.p`
   margin: 0;
 `
+
 const Wrapper = styled.div`
   margin-bottom: 3em;
 `
 
 class BlogIndex extends React.Component {
+
+
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const siteDescription = data.site.siteMetadata.description
-    const posts = data.allMarkdownRemark.edges
+    const { title, description } = this.props.data.site.siteMetadata
+    const posts = this.props.data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO />
+      <Layout location={this.props.location} title={title}>
+        <SEO title={"Home"} />
+        <EmailPopup />
         <BlogTitle>
-          <BlogName>{siteTitle}</BlogName>
-          <BlogDescription>{siteDescription}</BlogDescription>
+          <BlogName>{title}</BlogName>
+          <BlogDescription>{description}</BlogDescription>
         </BlogTitle>
         <Spacer height={50} />
+
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          // const color = node.frontmatter.color
+          const { title, date, city, country, description } = node.frontmatter
+          const { slug } = node.fields
           return (
-            <Wrapper>
+            <Wrapper key={slug}>
               <Row>
                 <Col
                   xsOffset={1}
@@ -126,17 +130,14 @@ class BlogIndex extends React.Component {
                   lgOffset={2}
                   lg={5}
                 >
-                  <MetaContainer key={node.fields.slug}>
+                  <MetaContainer>
                     <PostMetaTextContainer>
-                      <MetaText>{node.frontmatter.date}</MetaText>
-                      <PostLink to={node.fields.slug}>
+                      <MetaText>{date}</MetaText>
+                      <PostLink to={`/${slug}`}>
                         <PostTitle color={Color("yellow")}>{title}</PostTitle>
                       </PostLink>
-                      <MetaText>
-                        {node.frontmatter.city}
-                        <br />
-                        {node.frontmatter.country}
-                      </MetaText>
+                      <MetaText>{city}</MetaText>
+                      <MetaText>{country}</MetaText>
                     </PostMetaTextContainer>
                   </MetaContainer>
                 </Col>
@@ -153,7 +154,7 @@ class BlogIndex extends React.Component {
                   <Line color={Color("yellow")} />
                   <Excerpt
                     dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
+                      __html: description,
                     }}
                   />
                 </Col>
@@ -179,7 +180,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 200)
           fields {
             slug
           }

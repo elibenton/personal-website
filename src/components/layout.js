@@ -8,6 +8,7 @@ import Footer from "./footer"
 export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props
+    // const children = this.props.children
     return (
       <div>
         <Helmet>
