@@ -2,8 +2,6 @@ import React from "react"
 import Popup from "reactjs-popup"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import styled from "styled-components"
-// import { Form, Input, Button } from "antd"
-// import "antd/es/button/style"
 
 const Label = styled.h4`
   margin-top: 1.5em;
@@ -24,7 +22,7 @@ const StyledPopup = styled.div`
 class EmailPopup extends React.Component {
   state = { first_name: null, last_name: null, email: null }
 
-  componentWillMount() {
+  componentDidMount() {
     let visited = sessionStorage["alreadyVisited"]
     if (visited) {
       this.setState({ viewPopup: false })
