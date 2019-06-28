@@ -19,12 +19,6 @@ const FormTitle = styled.h2`
   font-weight: 500;
 `
 
-// const StyledPopup = styled(Popup)`
-//   padding: 20px;
-// `
-
-var message = null
-
 class EmailPopup extends React.Component {
   state = { email: null }
 
@@ -61,7 +55,6 @@ class EmailPopup extends React.Component {
         }
         alert(msg)
         message = msg
-        console.log(message)
       })
       .catch(err => {
         console.log("err", err)
