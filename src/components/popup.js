@@ -9,18 +9,24 @@ const Label = styled.h4`
 
 const Input = styled.input`
   margin-top: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
 `
 
 const FormTitle = styled.h2`
   margin-top: 0.2em;
+  font-weight: 500;
 `
 
-const StyledPopup = styled.div`
-  padding: 20px;
-`
+// const StyledPopup = styled(Popup)`
+//   padding: 20px;
+// `
+
+var message = null
 
 class EmailPopup extends React.Component {
-  state = { first_name: null, last_name: null, email: null }
+  state = { email: null }
 
   componentDidMount() {
     let visited = sessionStorage["alreadyVisited"]
@@ -54,6 +60,8 @@ class EmailPopup extends React.Component {
           throw msg
         }
         alert(msg)
+        message = msg
+        console.log(message)
       })
       .catch(err => {
         console.log("err", err)
@@ -69,34 +77,34 @@ class EmailPopup extends React.Component {
         onClose={this.closeModal}
         modal
       >
-        <StyledPopup>
-          <FormTitle>Subscribe to my Email Newsletter!</FormTitle>
+        <FormTitle>Subscribe to the email newsletter!</FormTitle>
+        <div>
           <div>
-            <div>
-              <form layout="horizontal" onSubmit={this._handleSubmit}>
-                <Label>First Name</Label>
-                <input
-                  type="text"
-                  onChange={this._handleChange}
-                  name="first_name"
-                />
-                <Label>Last Name</Label>
-                <input
-                  type="text"
-                  onChange={this._handleChange}
-                  name="last_name"
-                />
-                <Label>Email Address</Label>
-                <input
-                  type="email"
-                  onChange={this._handleChange}
-                  name="email"
-                />
-                <Input type="submit" />
-              </form>
-            </div>
+            <form layout="horizontal" onSubmit={this._handleSubmit}>
+              <Label>First Name</Label>
+              <input
+                type="text"
+                onChange={this._handleChange}
+                name="FNAME"
+                autofocus
+                pattern="[A-Z][A-Za-z]*"
+                title="Please capitalize your name."
+              />
+              <Label>Last Name</Label>
+              <input
+                type="text"
+                onChange={this._handleChange}
+                name="LNAME"
+                pattern="[A-Z][A-Za-z]*"
+                title="Please capitalize your name."
+              />
+              <Label>Email Address</Label>
+              <input type="email" onChange={this._handleChange} name="email" />
+              <Input type="submit" />
+              <h2>{message}</h2>
+            </form>
           </div>
-        </StyledPopup>
+        </div>
       </Popup>
     )
   }
