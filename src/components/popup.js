@@ -54,11 +54,12 @@ class EmailPopup extends React.Component {
           throw msg
         }
         alert(msg)
-        message = msg
       })
       .catch(err => {
         console.log("err", err)
-        alert(err)
+        alert(
+          "Something is not right. You probably already subscribed. If you have questions, email me at eliunited@gmail.com."
+        )
       })
   }
 
@@ -94,7 +95,6 @@ class EmailPopup extends React.Component {
               <Label>Email Address</Label>
               <input type="email" onChange={this._handleChange} name="email" />
               <Input type="submit" />
-              <h2>{message}</h2>
             </form>
           </div>
         </div>
