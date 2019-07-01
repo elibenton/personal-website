@@ -1,5 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
+import logo from "../../content/images/logo.gif"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import EmailPopup from "../components/popup"
@@ -10,15 +13,22 @@ import Spacer from "../utils/spacer"
 import Color from "../utils/colors"
 import Line from "../utils/line"
 
+const BlogTitleWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+    padding-top: 3em;
+  }
+`
 const BlogTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding: 0 40px 1rem;
   margin-bottom: 30px;
   @media screen and (max-width: 767px) {
-    justify-content: flex-start;
-    flex-direction: column;
+    display: none;
   }
 `
 
@@ -96,10 +106,19 @@ const Excerpt = styled.p`
 const Wrapper = styled.div`
   margin-bottom: 3em;
 `
+const TagText = styled.p`
+  color: #999;
+  font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5em;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin: 0;
+  display: inline;
+`
 
 class BlogIndex extends React.Component {
-
-
   render() {
     const { title, description } = this.props.data.site.siteMetadata
     const posts = this.props.data.allMarkdownRemark.edges
@@ -108,14 +127,25 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={title}>
         <SEO title={"Home"} />
         <EmailPopup />
-        <BlogTitle>
-          <BlogName>{title}</BlogName>
-          <BlogDescription>{description}</BlogDescription>
-        </BlogTitle>
+        <BlogTitleWrapper>
+          <img src={logo} alt="Logo" width="270" height="270" />
+          <BlogTitle>
+            <BlogName>{title}</BlogName>
+            <BlogDescription>{description}</BlogDescription>
+          </BlogTitle>
+        </BlogTitleWrapper>
+
         <Spacer height={50} />
 
         {posts.map(({ node }) => {
-          const { title, date, city, country, description } = node.frontmatter
+          const {
+            title,
+            date,
+            city,
+            country,
+            description,
+            tags,
+          } = node.frontmatter
           const { slug } = node.fields
           return (
             <Wrapper key={slug}>
@@ -136,8 +166,9 @@ class BlogIndex extends React.Component {
                       <PostLink to={`/${slug}`}>
                         <PostTitle color={Color("yellow")}>{title}</PostTitle>
                       </PostLink>
-                      <MetaText>{city}</MetaText>
-                      <MetaText>{country}</MetaText>
+                      <MetaText>
+                        {city}, {country}
+                      </MetaText>
                     </PostMetaTextContainer>
                   </MetaContainer>
                 </Col>
@@ -151,6 +182,9 @@ class BlogIndex extends React.Component {
                   lgOffset={0}
                   lg={4}
                 >
+                  {tags.map(tag => (
+                    <TagText>{`${tag} `}</TagText>
+                  ))}
                   <Line color={Color("yellow")} />
                   <Excerpt
                     dangerouslySetInnerHTML={{
@@ -189,6 +223,7 @@ export const pageQuery = graphql`
             city
             country
             description
+            tags
           }
         }
       }
