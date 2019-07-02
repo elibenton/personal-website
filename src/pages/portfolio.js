@@ -9,6 +9,11 @@ import Collapsible from "react-collapsible"
 
 import Spacer from "../utils/spacer"
 
+const Header = styled.h2`
+  margin-bottom: 15px;
+  margin-top: 30px;
+`
+
 const Article = styled.h3`
   font-style: none;
   text-transform: none;
@@ -48,14 +53,14 @@ class PortfolioPage extends React.Component {
           >
             <Collapsible
               trigger={
-                <h2>
+                <Header>
                   <FaChevronCircleDown /> Published Works
-                </h2>
+                </Header>
               }
               triggerWhenOpen={
-                <h2>
+                <Header>
                   <FaChevronCircleUp /> Published Works
-                </h2>
+                </Header>
               }
               open={true}
               transitionTime={200}
@@ -79,14 +84,14 @@ class PortfolioPage extends React.Component {
 
             <Collapsible
               trigger={
-                <h2>
+                <Header>
                   <FaChevronCircleDown /> Experience
-                </h2>
+                </Header>
               }
               triggerWhenOpen={
-                <h2>
+                <Header>
                   <FaChevronCircleUp /> Experience
-                </h2>
+                </Header>
               }
               transitionTime={200}
             >
@@ -149,14 +154,14 @@ class PortfolioPage extends React.Component {
             </Collapsible>
             <Collapsible
               trigger={
-                <h2>
+                <Header>
                   <FaChevronCircleDown /> Education
-                </h2>
+                </Header>
               }
               triggerWhenOpen={
-                <h2>
+                <Header>
                   <FaChevronCircleUp /> Education
-                </h2>
+                </Header>
               }
             >
               <h3>Pomona College | Bachelor of Arts, Politics</h3>
@@ -178,14 +183,14 @@ class PortfolioPage extends React.Component {
             </Collapsible>
             <Collapsible
               trigger={
-                <h2>
+                <Header>
                   <FaChevronCircleDown /> Skills
-                </h2>
+                </Header>
               }
               triggerWhenOpen={
-                <h2>
+                <Header>
                   <FaChevronCircleUp /> Skills
-                </h2>
+                </Header>
               }
               transitionTime={200}
             >
@@ -254,7 +259,7 @@ class PortfolioPage extends React.Component {
                 </li>
               </ul>
             </Collapsible>
-            <Collapsible tigger={<h2>Skills</h2>}>
+            <Collapsible tigger={<Header>Skills</Header>}>
               <ul>
                 <li>
                   <b>Language: </b>English (fluent), Spanish (working
@@ -294,7 +299,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { in: "published" } } }
+      filter: { frontmatter: { published: { eq: true } } }
     ) {
       edges {
         node {
@@ -305,6 +310,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            published
             publication
           }
         }

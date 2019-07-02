@@ -1,18 +1,18 @@
 ---
+template: writing
+
 title: "Is There A Theory For Today's Journalism?"
 date: 2019-01-17
-city: "Claremont, California"
-country: "United States"
+city: "Claremont, CA"
+country: "US"
 
 description: "If there is one “unequivocal truth” to be deduced from reading exclusively books about journalism, it’s that 2019 is not journalism's first crisis. If we’ll allow ourselves a second one — it’s probably that unequivocal truth doesn’t exist. When dealing in unequivocal truths, it’s usually best to stick to one."
 
-categories:
-  - writing
+published: false
+
 tags:
   - Journalism
-  - Journalistic Theory
-  - Sexaul Assault
-  - Title IX
+  - Academic
 ---
 
 _For the Pomona Politics Senior Exam, we are to write three papers synthesizing the arguments of the works and then defend them in oral argument before the Pomona Politics faculty. Each paper represents a sub-category of the full argument. Mine are: historical examples, dsytopic technologies, and the American problem.In this post, I’ll summarize my understanding to the first sub-section, historical examples, which include four works of journalistic theory spanning the past century. I’ll try to lay a foundation for the other two sub-categories as well. By establishing a baseline, I can both contextualize current works in history and track how my beliefs at the end of the project have changed from where they are now._

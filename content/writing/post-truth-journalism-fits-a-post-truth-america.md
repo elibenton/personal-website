@@ -1,17 +1,18 @@
 ---
+template: writing
+
 title: "Post-Truth Journalism Fits a Post-Truth America"
 date: 2019-02-06
-city: "Claremont, California"
-country: "United States"
+city: "Claremont, CA"
+country: "US"
 
 description: "The capstone project of all politics majors at Pomona College is creating a book list of 12 works. The collection encapsulates one’s understanding about a topic in politics that shapes the student's view of the world. I chose to explore modern journalism’s collision course with the digitally-networked reality of the current era."
 
-categories:
-  - writing
+published: false
+
 tags:
   - Journalism
-  - Philosophy of Technology
-  - Journalistic Theory
+  - Academic
 ---
 
 If there is one unequivocal truth to be deduced from only reading books about journalism, it is this: 2019 is not the field’s first crisis. If we allow ourselves a second truth, it is probably that truth does not exist. When dealing in unequivocal truths, these authors all concur: don’t. This can be a daunting notion, but “post-truth” is the zeitgeist of our era: [a president who makes a statement on Monday just to lie about it Tuesday](https://www.nytimes.com/interactive/2017/06/23/opinion/trumps-lies.html),

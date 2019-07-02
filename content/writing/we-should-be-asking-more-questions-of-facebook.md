@@ -1,14 +1,13 @@
 ---
-title: "We Should Be Asking More Questions of Facebook"
+template: writing
+
+title: We Should Be Asking More Questions of Facebook
 date: 2018-03-30
-city: "Claremont, California"
-country: "United States"
+city: Claremont, CA
+country: US
 
 description: "There are now 2.13 billion people on Facebook, almost one third of the world’s population. Two in three users check the site every day. The aggregate of each of us turning a blind eye to Facebook’s flaws quickly becomes willful negligence on a global scale. This assertion includes you and me."
-
-categories:
-  - writing
-  - published
+published: true
 tags:
   - Politics of Technology
   - Facebook

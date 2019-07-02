@@ -55,7 +55,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                   filter: {frontmatter: {categories: {in: "writing"}}}
+                   filter: {frontmatter: {template: {in: "writing"}}}
                 ) {
                   edges {
                     node {
@@ -94,7 +94,7 @@ module.exports = {
                 allMarkdownRemark
                   (
                   sort: {order: DESC, fields: [frontmatter___date]}, 
-                  filter: {frontmatter: {categories: {in: "audio"}}}
+                  filter: {frontmatter: {template: {in: "audio"}}}
                   ) 
                     {
                   edges {

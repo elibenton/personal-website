@@ -1,19 +1,18 @@
 ---
+template: audio
+
 title: (Dis)orientation Adventure
-date: 2019-02-11T00:00:00.000Z
-city: 'Claremont, California'
-country: United States
+date: 2019-02-11
+city: "Claremont, CA"
+country: US
 description: >-
   When Orientation Adventure—Pomona's four-day outdoors trip for incoming
   students often called OA—was cancelled, campus activism sprung into rare form.
   Within exactly one week, the Dean of Students Office retracted their decision.
   Many students were relieved, but an equally large contingency was furious.
-categories:
-  - audio
-  - published
+published: true
 tags:
   - Campus Politics
-  - College Administration
   - Mental Health
 publication: KSPC 88.7 FM
 ---
@@ -36,21 +35,21 @@ Additionally, the determinism of Pomona discussion became most apparent during t
 
 ## Transcript
 
-**Eli Cohen:** [00:00] Orientation Adventure, Pomona's four day outdoors trip for incoming students, affectionately called OA, was canceled last December for almost exactly one week. 
+**Eli Cohen:** [00:00] Orientation Adventure, Pomona's four day outdoors trip for incoming students, affectionately called OA, was canceled last December for almost exactly one week.
 
 On December 5, 2018, Dean of Students Avis Hinkson sent an email to the entire student body. Yes, we have started podcast like this before. She sent an email to the entire student body, alerting everyone that OA as we knew it would cease to be. She instead recommended an alternative, a sophomore Orientation Adventure, which doesn't make sense semantically or conceptually, but that's beside the point. The interesting part is what happened next.
 
-**Sam Rubin:** [00:53] My name is Sam Rubin, I am a senior at Pomona. I went on OA my freshman year, I was an Orientation Adventure leader and Sponsor my sophomore year and I was an Orientation Adventure leader this past year. Since the email has come out, stating that OA is going to be cancelled for first years and move to sophomore year, I have decided that I want to do something about this. 
+**Sam Rubin:** [00:53] My name is Sam Rubin, I am a senior at Pomona. I went on OA my freshman year, I was an Orientation Adventure leader and Sponsor my sophomore year and I was an Orientation Adventure leader this past year. Since the email has come out, stating that OA is going to be cancelled for first years and move to sophomore year, I have decided that I want to do something about this.
 
-And I've sent Dean Hinkson an email setting up a meeting for tomorrow, Thursday, and have started to collect student responses for why they believe this decision was a bad decision and what suggestions they have for improvement? 
+And I've sent Dean Hinkson an email setting up a meeting for tomorrow, Thursday, and have started to collect student responses for why they believe this decision was a bad decision and what suggestions they have for improvement?
 
-**Eli Cohen:** [01:35] Why did you feel compelled to do that? 
+**Eli Cohen:** [01:35] Why did you feel compelled to do that?
 
 **Sam Rubin:** [01:37] Well, first of all, this survey went live about five minutes ago. And I'm already at nine responses. And so if that continues until I meet with her in about 12 hours, we're going to have over we're going to have the whole student body respond. And I know that's a false statement. But I just I feel like this decision came without any discussion with any students at all.
 
 Students were not contacted before this, the even faculty have stated that they have felt like they weren't part of this decision making.
 
-**Eli Cohen:** [02:07] That was Sam, on the very day that email was sent out. And his thought about the entire student body responding. He was kind of right. 440 students would end up responding. Keep in mind, that's over a quarter of the Pomona population. And not one person had been made aware of this decision. 
+**Eli Cohen:** [02:07] That was Sam, on the very day that email was sent out. And his thought about the entire student body responding. He was kind of right. 440 students would end up responding. Keep in mind, that's over a quarter of the Pomona population. And not one person had been made aware of this decision.
 
 And we talked to the faculty too.
 
@@ -64,19 +63,19 @@ So, for something that abrupt and different, I would have expected a little bit 
 
 **Eli Cohen:** [04:14] I assumed if anyone outside of the dean's office would have been involved in the decision making around LA, it probably would have been Professor Wolf. I asked him about it. And and what I've come to learn is typical style. He answered very thoroughly.
 
-**Ken Wolf:** [04:30] He first day of November, I guess shortly before that. We met as a committee. And one of the things we talked about this was in the context of reviewing the previous orientation, which then we we wait a month or so then we get started with a review process and designing the next year. 
+**Ken Wolf:** [04:30] He first day of November, I guess shortly before that. We met as a committee. And one of the things we talked about this was in the context of reviewing the previous orientation, which then we we wait a month or so then we get started with a review process and designing the next year.
 
 And so in that review, one of the things we looked at was, you know, is there still more things we can do to shorten to make less dense to, and and so we looked at the possibilities of what we might do with our way, we systematically eliminated all of the ones except for what we had. And we basically said, it's the one thing that is almost universally acclaimed by the students who go through it. And there's nothing else on the orientation schedule that gets even half the kind of kudos that that that program gets. So we really need to leave it alone and work around it.
 
 **Eli Cohen:** [05:22] Asked about student input, he also drew a blank.
 
-**Ken Wolf:** [05:26] I am not aware myself of any student input. The dean of students did say that in all of her conversations with students, and she's gotten here, that everyone has complained about the length and the exhaustion associated with with orientation. But I don't know if that was an official survey. If it is unofficial, anecdotal, I don't know I am sure that students are exhausted by the time classes began. I but but I believe that would happen if you gave them 24 hours orientation, because they'd stay up all night. 
+**Ken Wolf:** [05:26] I am not aware myself of any student input. The dean of students did say that in all of her conversations with students, and she's gotten here, that everyone has complained about the length and the exhaustion associated with with orientation. But I don't know if that was an official survey. If it is unofficial, anecdotal, I don't know I am sure that students are exhausted by the time classes began. I but but I believe that would happen if you gave them 24 hours orientation, because they'd stay up all night.
 
 And the more days, they're there, the more nights are going to stay up with their newfound friends. So I don't know that exhaustion is really significant factor here, in real terms, but but that's largely what the dean with the support of the President believes is the driving force behind this that they're they're doing students ultimately a favor by by creating an orientation that's that shorter that way.
 
-**Eli Cohen:** [06:26] And so that's the weird thing about it. As best I can tell, the deans really did think that moving away to sophomore year would be better. Barring some secret ulterior motive, the decision to cancel OA really seems to be one of ignorance, not malice. 
+**Eli Cohen:** [06:26] And so that's the weird thing about it. As best I can tell, the deans really did think that moving away to sophomore year would be better. Barring some secret ulterior motive, the decision to cancel OA really seems to be one of ignorance, not malice.
 
-It felt more like the administration trying to design their way into a solution. We've got some problems first years are tired. Oh, we we've got another problem. sophomores are sad. Oh, whoa, we just move away from freshman to sophomore year. Two problems, one solution. I mean, I can imagine where the administration was coming from. 
+It felt more like the administration trying to design their way into a solution. We've got some problems first years are tired. Oh, we we've got another problem. sophomores are sad. Oh, whoa, we just move away from freshman to sophomore year. Two problems, one solution. I mean, I can imagine where the administration was coming from.
 
 For me, the only real offense was that was the purview of the administration in the first place. Few people, not even most students seem to know, but OA was not created by the college. It was created by the student outdoors club on the loose, usually just called OTL. There was no Outdoor Education Center for orientation review committee. It was just some friends. Here's one of them.
 
@@ -86,21 +85,21 @@ For me, the only real offense was that was the purview of the administration in 
 
 I was so excited to talk to someone who had just made away because they wanted to. I envisioned this halcyon age 25 years ago, where every student had the perfect work life balance, they would all go on trips all over the state, everybody's club would be well attended and vibrant and successful. It would have been the perfect rejoinder to the Dean's decision to cancel OA. Look, just let the students do it. They can always do it better. If only that's what Derek had actually said,
 
-**Derek Churchill:** [08:51] On The Loose was kind of almost collapsed or almost sort of ran out of steam. Basically, when I joined, there was a sort of cadre of people running it, they are graduated. And then I with a couple other people said, hey, let's resurrect this at this one tradition. 
+**Derek Churchill:** [08:51] On The Loose was kind of almost collapsed or almost sort of ran out of steam. Basically, when I joined, there was a sort of cadre of people running it, they are graduated. And then I with a couple other people said, hey, let's resurrect this at this one tradition.
 
-And so I was able to get a kind of get a lot of new people involved and worked with the Dean Quinly to sort of give the the club a big boost. And then, as part of that some students, couple students under me had the idea of OA. And so that started the year after after I left. 
+And so I was able to get a kind of get a lot of new people involved and worked with the Dean Quinly to sort of give the the club a big boost. And then, as part of that some students, couple students under me had the idea of OA. And so that started the year after after I left.
 
 **Eli Cohen:** [09:31] And I want to pause here because what Derek basically said is the experience that we're all pretty used to clubs wax and wane with student interest. Things can be pretty inefficient, redundant, for lack of better words. It's a little bit messy. But the more Derek told me about OA's origin, the more I realized the crucial role that messiness actually played,
 
-**Derek Churchill:** [09:58] I went abroad my first semester, my junior year, and when I came back, the club was kind of basically, you know, there was no one left really who was that interested in running it and, and so I remember thinking, well, I don't really have the energy to like, do this, you know, this call just to kind of let this club die. 
+**Derek Churchill:** [09:58] I went abroad my first semester, my junior year, and when I came back, the club was kind of basically, you know, there was no one left really who was that interested in running it and, and so I remember thinking, well, I don't really have the energy to like, do this, you know, this call just to kind of let this club die.
 
-And then I remember picking up the actual book On The Loose, which I hope you have read. And I remember reading it and just being and I'd read it before, but I read it again, it was just, again, just so inspired, and it's still one of my favorite books. And thinking, you know, I can't I can't let this club die. 
+And then I remember picking up the actual book On The Loose, which I hope you have read. And I remember reading it and just being and I'd read it before, but I read it again, it was just, again, just so inspired, and it's still one of my favorite books. And thinking, you know, I can't I can't let this club die.
 
-**Eli Cohen:** [10:34] And I lit up when I heard that it was the book On The Loose, which convinced Derek to keep the club alive, and eventually led to the formation of OA. Because that book written by Renny and Terry Russell over 50 years ago remains of vital part of the club's identity. To start out the book is an incredible exploration of California, and the American West, full of essays, quotes, and beautiful photography taken in Yosemite point raise the High Sierra, the great base in Glen Canyon. 
+**Eli Cohen:** [10:34] And I lit up when I heard that it was the book On The Loose, which convinced Derek to keep the club alive, and eventually led to the formation of OA. Because that book written by Renny and Terry Russell over 50 years ago remains of vital part of the club's identity. To start out the book is an incredible exploration of California, and the American West, full of essays, quotes, and beautiful photography taken in Yosemite point raise the High Sierra, the great base in Glen Canyon.
 
 But it's more than just the namesake of the club. Derek hoped that I had read it? I have my own copy. All of the leaders do. In it, are page long notes from some of my closest friends. We've read from it allowed under star filled Joshua Tree nights. I've read it by myself freezing alone in my own tent.
 
-The administration is now holding open forums to discuss how best to change OA for the future. I went to the first session, and despite the best of intentions from everyone present, there was a glaring problem. Only six students actually attended. 
+The administration is now holding open forums to discuss how best to change OA for the future. I went to the first session, and despite the best of intentions from everyone present, there was a glaring problem. Only six students actually attended.
 
 But to me, and we're going full opinion here. The cause is so obvious. away has never been the product of working groups, committee reports or learning objectives. It's propelled by ideas in students heads, ideas they have exploring new places, trying new things with new friends they're just making for the first time. My unsolicited advice on how to address OA going forward. Well, don't take it from me. Derek has a couple decades more credibility.
 
@@ -116,21 +115,21 @@ But to me, and we're going full opinion here. The cause is so obvious. away has 
 
 **Eli Cohen:** [15:02] Totally. So then as the week kind of progresses, and right there's there's becomes a big student pushback and the faculty meetings, you know, and kind of the things begin to develop, how to, if at all, did your thinking begin to develop as well?
 
-**Daniela Sada:** [15:18] Um, so as things started to escalate, I along with many of my, for instance, low income peers were beginning to feel like a little bit like alarm, like why is there so much push to change this policy, when there isn't this much push to change, for instance, policy for off campus therapy? Why is there no campus wide lash when there's a terrible injustice with regards to sexual assault? 
+**Daniela Sada:** [15:18] Um, so as things started to escalate, I along with many of my, for instance, low income peers were beginning to feel like a little bit like alarm, like why is there so much push to change this policy, when there isn't this much push to change, for instance, policy for off campus therapy? Why is there no campus wide lash when there's a terrible injustice with regards to sexual assault?
 
-Like there was previously with the same Dean Dean Hinkson, she had made this policy where there can no longer be blacklists against students at parties who had been perpetrators of sexual assault for the express purpose purpose of basically protecting Pomona and protecting the students so that Pomona couldn't get sued with disregard for protecting the safety of the student. 
+Like there was previously with the same Dean Dean Hinkson, she had made this policy where there can no longer be blacklists against students at parties who had been perpetrators of sexual assault for the express purpose purpose of basically protecting Pomona and protecting the students so that Pomona couldn't get sued with disregard for protecting the safety of the student.
 
 So everybody was wondering, why is there this anger for this basically, like recreational while important event, it's important for socializing and making friends and making those initial connections. OA Was really important to me, but also, it's really important to make sure that your fellow peers are getting access to the mental health resources that they need, that they feel safe when they're at parties, that they feel safe on campus, and that they feel that their peers are going to support them to the same extent or more that they're, you know, lashing against this OA policy.
 
 **Eli Cohen:** [16:41] As you can tell, Daniela's is thinking about the OA controversy is much broader than the single decision itself. And she's exactly right. There is a pattern of administrative decision making and student response here in Claremont, which OA captured perfectly, but as part of a much broader and my more troubling overall trend. So I talked to Professor Sandoval, who helped explain what he sees as the relationship between OA and these larger campus dynamics.
 
-**Thomas Sandoval:** [17:13] Sure. Thomas Summer Sandoval, I'm an associate professor of Chicano Latino Studies and history at Pomona College. My first level of concern is, is that we're getting rid of something that we know as some proven track record, without any sense of what the replacement is. And more importantly, without any sense of what we're going to do to fill in, in that first year experience the benefits of the program. 
+**Thomas Sandoval:** [17:13] Sure. Thomas Summer Sandoval, I'm an associate professor of Chicano Latino Studies and history at Pomona College. My first level of concern is, is that we're getting rid of something that we know as some proven track record, without any sense of what the replacement is. And more importantly, without any sense of what we're going to do to fill in, in that first year experience the benefits of the program.
 
-And for me, the the two sort of overarching ones are, that is one of those really deep impact ways that we model very early on what our expectations for our community are, that it's a multiracial group, students who don't know each other and are diverse in every way, having to collaborate with each other and form some kind of community in this kind of intense way. That's, that's a, that's a good model for what we're hoping for, you know, starting that first day of the semester. 
+And for me, the the two sort of overarching ones are, that is one of those really deep impact ways that we model very early on what our expectations for our community are, that it's a multiracial group, students who don't know each other and are diverse in every way, having to collaborate with each other and form some kind of community in this kind of intense way. That's, that's a, that's a good model for what we're hoping for, you know, starting that first day of the semester.
 
-That kind of diversity is in was a two way street to right. I think everybody who's participating in OA, that that is one of the benefits that they draw from it, being there with a diverse group of students, that is not one of their own design, and that one of their own making a choice. And, and, to me, those are important benefits of it. 
+That kind of diversity is in was a two way street to right. I think everybody who's participating in OA, that that is one of the benefits that they draw from it, being there with a diverse group of students, that is not one of their own design, and that one of their own making a choice. And, and, to me, those are important benefits of it.
 
-As somebody who's gone on OA in the past, as a faculty member, I knew how difficult it was for me, right, somebody who didn't grow up doing a lot of outdoors things and, you know, being with a bunch of students who I didn't know, you know, and, and having to step out of my comfort zones, and I recognize that, that a lot of that history, and is sort of balled up into some of the negative response inside of our larger student of color community, with with OA, but but generally, I think away is, is something that's designed in a way to handle that. It is it is for for first generation students of color, it's not just them stepping out of their comfort zone, but the outdoors is is something that is steeped in privilege, historically, and that is often racialized this white, in in that way, the outdoors is a mirror of what Pomona Colleges is, right? 
+As somebody who's gone on OA in the past, as a faculty member, I knew how difficult it was for me, right, somebody who didn't grow up doing a lot of outdoors things and, you know, being with a bunch of students who I didn't know, you know, and, and having to step out of my comfort zones, and I recognize that, that a lot of that history, and is sort of balled up into some of the negative response inside of our larger student of color community, with with OA, but but generally, I think away is, is something that's designed in a way to handle that. It is it is for for first generation students of color, it's not just them stepping out of their comfort zone, but the outdoors is is something that is steeped in privilege, historically, and that is often racialized this white, in in that way, the outdoors is a mirror of what Pomona Colleges is, right?
 
 And in that four day experience, you're somebody who is coming back successfully. I mean, we don't lose anybody. I OA and so and so, you know, for the vast majority of us, it is a success at that level. And, and I think what that communicates to to those students is is that they have the the sort of social, intellectual, emotional wherewithal to, to face what they're going to have to face in the next four years. Right. And not just over that four days. To me, it's also a microcosm of that.
 
@@ -138,11 +137,11 @@ And in that four day experience, you're somebody who is coming back successfully
 
 Maybe campus mobilization is not something that you care to speak to. But, um, if so, what do you think about those disparities?
 
-**Thomas Sandoval:** [21:23] I mean, in the examples that you you mentioned, I'm only familiar tangentially with the with two of them. And I mean, in general, this is obviously something that our students, 100% of our student body have gone through and participated in. And so there's a lot more knowledge and connection to it. 
+**Thomas Sandoval:** [21:23] I mean, in the examples that you you mentioned, I'm only familiar tangentially with the with two of them. And I mean, in general, this is obviously something that our students, 100% of our student body have gone through and participated in. And so there's a lot more knowledge and connection to it.
 
 And, and that that partly, you know, can explain the that kind of response. Most political issues, most issues that students or faculty see as as that they may be very passionate about may be very invested in very few of those campus issues, have that sort of benefit as a starting point, right, where every single student has participated in it, knows what it is, and has a view on it. That's, that's, that's, you know, probably making student voice on this a little louder, a little bigger, then then, other kinds of issues and recent memory.
 
-You know, there have been political issues. Over time where, where a lot of students do speak out, they tend to be ones where they're such an overriding investment in them, either in the larger political context, like about immigration, or or, or changes in curriculum. That that, that, that you can get that kind of huge responsibility. Well, um, but but I mean, very often, we're talking about, you know, something that's sort of a truism and how our community works and creates change. It's it's often small groups of people who care a lot about something that get out there and do that. 
+You know, there have been political issues. Over time where, where a lot of students do speak out, they tend to be ones where they're such an overriding investment in them, either in the larger political context, like about immigration, or or, or changes in curriculum. That that, that, that you can get that kind of huge responsibility. Well, um, but but I mean, very often, we're talking about, you know, something that's sort of a truism and how our community works and creates change. It's it's often small groups of people who care a lot about something that get out there and do that.
 
 That doesn't mean that others don't benefit from it, of course, and it doesn't mean that others don't necessarily have the same stance at the end of the day. Right. But but there's very few things that that's such a critical mass of people that we ever get to there being a critical mass of people who are definitely involved in it already have an opinion on it.
 
@@ -156,7 +155,7 @@ I mean, I imagine inside of the student population that you've talked to, there'
 
 **Eli Cohen:** [24:54] Yeah, okay. Tell me Tell me. Tell me more so.
 
-**Gray Butler:** [24:57] So Dean Avis, it or Hinkson is cutting like these things or like Quest is getting low funding, and just hearing all of these things come up. And knowing that I had been posting about things. And the fact that there was not a comprehensive response, and then to see OA within 24 hours to sell, before they even wrote an article being like, here's our pre article to our article, we're on this like, it was like breaking news, like we are investigating like, like, it was so fast. 
+**Gray Butler:** [24:57] So Dean Avis, it or Hinkson is cutting like these things or like Quest is getting low funding, and just hearing all of these things come up. And knowing that I had been posting about things. And the fact that there was not a comprehensive response, and then to see OA within 24 hours to sell, before they even wrote an article being like, here's our pre article to our article, we're on this like, it was like breaking news, like we are investigating like, like, it was so fast.
 
 And I couldn't help but feel like, like, I guess the sentiment that I had from all these other things, you kind of have this habitual feeling of it doesn't matter where first gen low income students, we don't have power. And it kind of gives us idea that student change doesn't necessarily work because no one's paying attention.
 
@@ -164,13 +163,13 @@ And I couldn't help but feel like, like, I guess the sentiment that I had from a
 
 **Daniela Sada:** [25:57] A frustration that I felt was when this this kind of situation of like, why are we lashing so strongly against away and not against? You know, these other injustices on campus? Some people, including Sam, were very like, "Oh, you're right. Like, this is not a good thing. Like, how can we actually--look what can we do to like, make this better?"
 
-Like, and then other people were saying, like, well, you're, you know, you're just detracting from this cause you're like, hurting the movement, and you're really not doing yourself any favors, when in reality, it's like, no, we're here to support you. Like, we also think that there's this OA like this, this policy change without student input is no good. It's just another example of like, not taking student input and creating policy. Like, we're 100% here for this. 
+Like, and then other people were saying, like, well, you're, you know, you're just detracting from this cause you're like, hurting the movement, and you're really not doing yourself any favors, when in reality, it's like, no, we're here to support you. Like, we also think that there's this OA like this, this policy change without student input is no good. It's just another example of like, not taking student input and creating policy. Like, we're 100% here for this.
 
 We also and you know, making the statement about please help your low income students, please help your peers on campus, that's not going to detract from a movement with hundreds of students on it. Fortunately, though, most of the students I think we're very, like, willing to listen and be like, okay, we need do something to like, make a campus wide, like, make everybody feel safe, make everybody feel like their voices are being heard and overall address the situation of not having students and faculty being addressed having their opinions when there's these policy changes that are, you know, affecting a lot of people.
 
 **Eli Cohen:** [27:18] Yeah, no, I think that's really well said, right, that it, it almost across the board, it's better to have the attitude of like, a "yes and" approach to organizing around different causes rather than this, you said that people kind of accuse you of detracting. I would be curious to hear a little bit more of what they said, I don't quite see how that makes any sense. Because I don't see organizing as a zero sum game, in which energy for one event necessarily has to take energy from another. But But I am curious what those critiques were? I mean, yeah, how you felt about that?
 
-**Daniela Sada:** [28:00] Yeah, exactly. Um, we, I felt the same, a lot of people who are engaging with the same dialogue held the same like, like this person, these people are not quite understanding that like, this is not again, like you said, a zero sum game, like, we're here to help you, and you're here and help us. And so when we actually start engaging with these conversations, like, there were people who, you know, kind of were like, after talking to them, and being and kind of making our point of like, how this is not detracting how this is kind of, in hopes of adding to this cause of, you know, asking for student input whenever these these changes. Fortunately, most of the people were really receptive. 
+**Daniela Sada:** [28:00] Yeah, exactly. Um, we, I felt the same, a lot of people who are engaging with the same dialogue held the same like, like this person, these people are not quite understanding that like, this is not again, like you said, a zero sum game, like, we're here to help you, and you're here and help us. And so when we actually start engaging with these conversations, like, there were people who, you know, kind of were like, after talking to them, and being and kind of making our point of like, how this is not detracting how this is kind of, in hopes of adding to this cause of, you know, asking for student input whenever these these changes. Fortunately, most of the people were really receptive.
 
 But some people reacted by kind of saying, like, Okay, well, in that case, like, "tell us how we can help you." Like, let me help you, that sort of like, like, that sort of idea when, like, for a really long time, like, students have been kind of saying, like, how people can help, you know, financially, like just by if they don't have the resources, like through their voice, you know, like, how they're voicing their opinions about the OA policy change.
 
@@ -178,30 +177,30 @@ It's like, not really the responsibility of those students to like, let you help
 
 **Eli Cohen:** [29:32] Gray explained a similar dynamic, in particular to one topic, changes in funding for mental health care on campus.
 
-**Gray Butler:** [29:39] Part of the issue, particularly with what was happening with the therapy stuff is that it's a group of like overstressed mentally ill folks. And part of the problem is the actual capacity to put in that work, when we are not able to get the actual support that we need in order to be able to mobilize. 
+**Gray Butler:** [29:39] Part of the issue, particularly with what was happening with the therapy stuff is that it's a group of like overstressed mentally ill folks. And part of the problem is the actual capacity to put in that work, when we are not able to get the actual support that we need in order to be able to mobilize.
 
 And that's such a critical thing. And that's such a critical area of where allies are really needed to be paying attention. Because the nature of being like mentally ill and not having access, like this has access to things to be able to function. And, and, and so just a feeling that, feeling from a community that like, supposedly cares about a lot of these things, it definitely felt like oh, because it's affecting, like particular communities on campus, like particularly privileged communities on campus, the resources are there, the responses there, and it's in. My frustration was less that people took action with OA and more with the just silence or just like not being concerned, because it doesn't directly affect them.
 
-**Eli Cohen:** [30:56] I could understand this frustration. We've all probably thought the tension between different groups on campus, and it can take so many different forms. Ignorance is an ever present hurdle. Many conversations happen in closed Facebook groups, or self selecting clubs. I think it's worth noting, the place where these OA discussions first surfaced, probably the most cross cutting forum in all of Claremont is Meme Queens of the Five C's, the Facebook meme group. 
+**Eli Cohen:** [30:56] I could understand this frustration. We've all probably thought the tension between different groups on campus, and it can take so many different forms. Ignorance is an ever present hurdle. Many conversations happen in closed Facebook groups, or self selecting clubs. I think it's worth noting, the place where these OA discussions first surfaced, probably the most cross cutting forum in all of Claremont is Meme Queens of the Five C's, the Facebook meme group.
 
-Beyond that, oftentimes, it takes the form of distrust, whoever I'm talking to, I don't believe that they're really going to listen to what I have to say. Often, there's too much presupposition. I assume that you've already made an assumption about me, and it's just not going to work. 
+Beyond that, oftentimes, it takes the form of distrust, whoever I'm talking to, I don't believe that they're really going to listen to what I have to say. Often, there's too much presupposition. I assume that you've already made an assumption about me, and it's just not going to work.
 
-And sometimes, oftentimes, actually, I think it's even simpler. A simple fear of screwing it up. I asked Daniela, if this rang true to her. 
+And sometimes, oftentimes, actually, I think it's even simpler. A simple fear of screwing it up. I asked Daniela, if this rang true to her.
 
 I think I think that there are a number of people and I don't even think it's in terms of just the dynamic of assisting marginalized groups, I think it's a dynamic between pretty much all groups and even between individuals on this campus, which is a fear of doing something wrong, that that one's action, whether it be support, or voice or or in any kind of, you know, even in class, and you know, just contributing to class, that doing it wrong is such a kind of ever present kind of thing in the back of your mind that it is sometimes the safer call is to just not get involved at all.
 
 Is that a dynamic that you've ever experienced? Or that rings true to you? And if so, or if not, you know, what does it make you think?
 
-**Daniela Sada:** [32:49] Yeah, so that's the sentiment I hear expressed very, very often, especially when you get kind of like, especially when you get first years coming in, who are kind of learning how to voice their opinions for the first time. There's this idea of, Okay, if I say something wrong, the SJW's, the social justice warriors are going to shut me down like, I will be blacklisted, like, it's going to be on my permanent record forever. When that's not true. 
+**Daniela Sada:** [32:49] Yeah, so that's the sentiment I hear expressed very, very often, especially when you get kind of like, especially when you get first years coming in, who are kind of learning how to voice their opinions for the first time. There's this idea of, Okay, if I say something wrong, the SJW's, the social justice warriors are going to shut me down like, I will be blacklisted, like, it's going to be on my permanent record forever. When that's not true.
 
 You know, I have like, met lots of people who you know, who said some shady things during the first year. I have said shady things during my first year! But the important thing is to grow from that. Like, if you acknowledge that you did that you hurted people, you hurt people, you grow from that, like you learn what you did wrong, you apologize, honestly, it's fine. Like, it's, it's more, I think there's a fear more of owning up to what you did wrong.
 
-To kind of like apologize and acknowledge that you did something that could have potentially been hurtful, like, again, this idea of impact versus intent. That's what's important. 
+To kind of like apologize and acknowledge that you did something that could have potentially been hurtful, like, again, this idea of impact versus intent. That's what's important.
 
-Nobody's going to hate you, if you say something wrong, like every, you know, like, everybody comes in with misconceptions, preconceptions, like, nobody, not everybody has accesses access to this, like, you know, lexicon of, like, being politically correct. Like that, in of itself, requires as a sort of privilege. You have to come from a certain kind of environment, you have to come from perhaps a certain kind of wealth, to, you know, know how to voice your thoughts without hurting people. And the most, um, I guess, financially reasonable way to do that is to, you know, voice those thoughts, have somebody come up to you for free, and say, Hey, you know, that hurt me. And then you say, I'm sorry, like, I realized that hurt you, I'm going to move on, and then you just kind of like, be conscious of that in the future. 
+Nobody's going to hate you, if you say something wrong, like every, you know, like, everybody comes in with misconceptions, preconceptions, like, nobody, not everybody has accesses access to this, like, you know, lexicon of, like, being politically correct. Like that, in of itself, requires as a sort of privilege. You have to come from a certain kind of environment, you have to come from perhaps a certain kind of wealth, to, you know, know how to voice your thoughts without hurting people. And the most, um, I guess, financially reasonable way to do that is to, you know, voice those thoughts, have somebody come up to you for free, and say, Hey, you know, that hurt me. And then you say, I'm sorry, like, I realized that hurt you, I'm going to move on, and then you just kind of like, be conscious of that in the future.
 
 A lot of times you find that low income students, students of color, you know, they're making the same same mistakes as well, and even more because they didn't have the resources to kind of like be super like PC. And, you know, it takes a lot of pain and suffering and struggling to talk about that. They just kind of don't really announce it to the world that much, I think. So I really like urge people like, if, you know, like, talk, talk to people about these things, like top of staying silent, is just kind of like not really going to contribute to growth. If you make mistakes, like it's this idea, perfect, perpetual idea. Like, if you make mistakes, you're going to grow. Like a mistake isn't going to stay with you forever. Like, you can move past it. You can you know, become closer with the friends that you hurt. You don't even need to be closer to them, but you can just you know, stay on respectful grounds with them.
 
-**Eli Cohen:** [35:46] Thank you to everyone who was willing to be interviewed for this episode. The decisions around OA have both affected a large number of people and have affected everyone in a number of different ways. Many views are still left unsaid, but such a comprehensive image could not have been made without your input. The music you heard on this episode include in order A Couple Acres Greener by Mipso, Ronald Gregory Erickson The Second, by STFKR, Sound And Color by The Alabama Shakes, roll ride roll, and Memories of Nanjenzi by Mark de Clive-Lowe on his days old album, Heritage. 
+**Eli Cohen:** [35:46] Thank you to everyone who was willing to be interviewed for this episode. The decisions around OA have both affected a large number of people and have affected everyone in a number of different ways. Many views are still left unsaid, but such a comprehensive image could not have been made without your input. The music you heard on this episode include in order A Couple Acres Greener by Mipso, Ronald Gregory Erickson The Second, by STFKR, Sound And Color by The Alabama Shakes, roll ride roll, and Memories of Nanjenzi by Mark de Clive-Lowe on his days old album, Heritage.
 
 And thanks to you for listening to another episode of disco. As always, please reach out with questions, comments, or concerns and keep an ear out for upcoming episodes. There's a lot more in the pipe headed your way very soon.

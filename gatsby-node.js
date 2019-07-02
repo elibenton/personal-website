@@ -1,10 +1,17 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require("lodash")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const writingPost = path.resolve(`./src/templates/post-writing.js`)
+  const imagePost = path.resolve(`./src/templates/post-image.js`)
+
+  const tagTemplate = path.resolve(`./src/templates/index-tag.js`)
+  const monthTemplate = path.resolve(`./src/templates/index-template.js`)
+  const countryTemplate = path.resolve(`./src/templates/index-country.js`)
+
   return graphql(
     `
       {
@@ -19,6 +26,9 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
+                template
+                country
               }
             }
           }
@@ -38,8 +48,8 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : posts[index - 1].node
 
       createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
+        path: `/${post.node.frontmatter.template}${post.node.fields.slug}`,
+        component: writingPost,
         context: {
           slug: post.node.fields.slug,
           previous,
@@ -47,6 +57,48 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+    // Tag pages:
+    let tags = []
+    let countries = []
+
+    // Iterate through each post, putting all found tags into `tags`
+    _.each(posts, edge => {
+      if (_.get(edge, "node.frontmatter.tags")) {
+        tags = tags.concat(edge.node.frontmatter.tags)
+      }
+
+      if (_.get(edge, "node.frontmatter.country")) {
+        countries = countries.concat(edge.node.frontmatter.country)
+      }
+    })
+
+    // Eliminate duplicate tags
+    tags = _.uniq(tags)
+    countries = _.uniq(countries)
+
+    // Make tag pages
+    tags.forEach(tag => {
+      console.log({ tag })
+      createPage({
+        path: `/tags/${_.kebabCase(tag)}/`,
+        component: tagTemplate,
+        context: {
+          tag,
+        },
+      })
+    })
+
+    // countries.forEach(country => {
+    //   console.log({ country })
+    //   createPage({
+    //     path: `/countries/${_.kebabCase(country)}/`,
+    //     component: countryTemplate,
+    //     context: {
+    //       country,
+    //     },
+    //   })
+    // })
 
     return null
   })
@@ -60,7 +112,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: `writing${value}`,
+      value: `${value}`,
     })
   }
 }
