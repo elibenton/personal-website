@@ -4,7 +4,7 @@ template: writing
 title: A Matter of Discussion
 date: 2018-06-11
 city: "Berkeley, CA"
-country: US
+country: United States
 description: >-
   In 2018, a lot of our conversations seem fraught. Our politics are defined by
   how we are different. Our media exists in non-overlapping silos. Our facts are

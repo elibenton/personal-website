@@ -89,16 +89,16 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // countries.forEach(country => {
-    //   console.log({ country })
-    //   createPage({
-    //     path: `/countries/${_.kebabCase(country)}/`,
-    //     component: countryTemplate,
-    //     context: {
-    //       country,
-    //     },
-    //   })
-    // })
+    countries.forEach(country => {
+      console.log({ country })
+      createPage({
+        path: `/countries/${_.kebabCase(country)}/`,
+        component: countryTemplate,
+        context: {
+          country,
+        },
+      })
+    })
 
     return null
   })

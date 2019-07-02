@@ -4,7 +4,7 @@ template: audio
 title: Reclaiming Language
 date: 2019-02-14
 city: "Claremont, CA"
-country: US
+country: United States
 description: >-
   A project stemming from Aimee Bahng’s Gender and Women’s Studies class, in
   this bonus episode, Lucy Gold, August Khan, and myself look into derogatory

@@ -3,7 +3,7 @@ template: writing
 title: "The Uneasy Marriage of Technology and Politics"
 date: 2019-02-12
 city: "Claremont, CA"
-country: "US"
+country: "United States"
 
 description: "The news can be defined as information about events, individuals, and forces outside the realm of one’s immediate, knowable reality. The news media, then, are the means, methods, and mediums by which this information transfers from its origin “out there” to you."
 

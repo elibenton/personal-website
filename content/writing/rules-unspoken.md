@@ -4,7 +4,7 @@ template: audio
 title: Rules Unspoken
 date: 2018-10-15
 city: "Claremont, CA"
-country: US
+country: United States
 description: >-
   Sully and I discuss hookup culture at The Claremont Colleges. We talk with
   experts such as Professor of Sociology at Occidental, Lisa Wade. We also talk

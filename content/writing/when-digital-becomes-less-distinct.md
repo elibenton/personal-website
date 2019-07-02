@@ -4,7 +4,7 @@ template: writing
 title: When Digital Becomes Less Distinct
 date: 2019-06-18
 city: "Birmingham, AL"
-country: US
+country: United States
 description: >-
   We are increasingly channelling our lives through digital technology. In doing
   so, however, we change our relationship to reality faster than we can

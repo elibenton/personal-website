@@ -4,7 +4,7 @@ template: writing
 title: "The Political Arguments of Podcasting"
 date: 2019-02-24
 city: "Claremont, CA"
-country: "US"
+country: "United States"
 
 description: "If journalism is how we talk about our politics, and political speech is how we situate ourselves in the world, what does the recent explosion of podcasts say about the current day?"
 

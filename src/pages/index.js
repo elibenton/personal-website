@@ -185,9 +185,11 @@ class BlogIndex extends React.Component {
                         <PostTitle>{title}</PostTitle>
                       </PostLink>
                       <MetaText>{date}</MetaText>
-                      <MetaText>
-                        {city}, {country}
-                      </MetaText>
+                      <PostLink to={`/countries/${kebabCase(country)}/`}>
+                        <MetaText>
+                          {city}, {country}
+                        </MetaText>
+                      </PostLink>
                     </PostMetaTextContainer>
                   </MetaContainer>
                 </Col>

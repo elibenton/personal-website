@@ -4,7 +4,7 @@ template: audio
 title: (Dis)orientation Adventure
 date: 2019-02-11
 city: "Claremont, CA"
-country: US
+country: United States
 description: >-
   When Orientation Adventure—Pomona's four-day outdoors trip for incoming
   students often called OA—was cancelled, campus activism sprung into rare form.

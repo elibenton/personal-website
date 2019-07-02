@@ -29,6 +29,7 @@ const BlogTitleWrapper = styled.div`
   align-items: center;
   @media screen and (max-width: 767px) {
     justify-content: center;
+    /* flex-direction: column; */
     padding-top: 3em;
   }
 `
@@ -36,9 +37,6 @@ const BlogTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
 `
 const TagCount = styled.h1`
   font-size: 256px;
@@ -148,12 +146,12 @@ const TagSpan = styled.span`
 `
 
 // Class body
-const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
+const Countries = ({ pageContext, data }) => {
+  const { country } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagCount = `${totalCount}`
-  const tagCountPlural = `post${totalCount === 1 ? "" : "s"} in:`
-  const tagHeader = `${tag}`
+  const countryCount = `${totalCount}`
+  const countryCountPlural = `post${totalCount === 1 ? "" : "s"} in:`
+  const countryHeader = `${country}`
 
   const { title } = data.site.siteMetadata
   const posts = edges
@@ -162,10 +160,10 @@ const Tags = ({ pageContext, data }) => {
     <Layout location={data.location} title={title}>
       <SEO title={"Home"} />
       <BlogTitleWrapper>
-        <TagCount>{tagCount}</TagCount>
+        <TagCount>{countryCount}</TagCount>
         <BlogTitle>
-          <TagCountPlural>{tagCountPlural}</TagCountPlural>
-          <TagHeader>{tagHeader}</TagHeader>
+          <TagCountPlural>{countryCountPlural}</TagCountPlural>
+          <TagHeader>{countryHeader}</TagHeader>
         </BlogTitle>
       </BlogTitleWrapper>
 
@@ -219,18 +217,18 @@ const Tags = ({ pageContext, data }) => {
                 lgOffset={0}
                 lg={4}
               >
-                {tags.map((tag, index) =>
+                {tags.map((country, index) =>
                   index === 0 ? (
                     <TagSpan key={index}>
-                      <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                        <TagText>{tag}</TagText>
+                      <PostLink to={`/tags/${kebabCase(country)}/`}>
+                        <TagText>{country}</TagText>
                       </PostLink>
                     </TagSpan>
                   ) : (
                     <TagSpan key={index}>
                       &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                      <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                        <TagText>{tag}</TagText>
+                      <PostLink to={`/tags/${kebabCase(country)}/`}>
+                        <TagText>{country}</TagText>
                       </PostLink>
                     </TagSpan>
                   )
@@ -250,14 +248,14 @@ const Tags = ({ pageContext, data }) => {
   )
 }
 
-export default Tags
+export default Countries
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($theCountry: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { country: { eq: $theCountry } } }
     ) {
       totalCount
       edges {
