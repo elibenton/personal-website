@@ -44,7 +44,7 @@ const Footer = () => {
           </span>
           Coded by hand using{" "}
           <StyledLink href="https://www.gatsbyjs.com/">Gatsby</StyledLink>,{" "}
-          <StyledLink href="https://reactjs.org/">React</StyledLink>, and{" "}
+          <StyledLink href="https://reactjs.org/">React</StyledLink>, &{" "}
           <StyledLink href="https://www.netlify.com/">Netlify</StyledLink>
           <br />
           ©️ Eli Cohen {new Date().getFullYear()}

@@ -200,13 +200,13 @@ module.exports = {
         name: `newsletter`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/data`,
-        name: `data`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/data`,
+    //     name: `data`,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
