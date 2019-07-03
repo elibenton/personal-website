@@ -177,8 +177,8 @@ class BlogIndex extends React.Component {
                   sm={10}
                   mdOffset={0}
                   md={5}
-                  lgOffset={3}
-                  lg={4}
+                  lgOffset={2}
+                  lg={5}
                 >
                   <MetaContainer>
                     <PostMetaTextContainer>
