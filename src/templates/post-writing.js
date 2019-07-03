@@ -106,11 +106,11 @@ class BlogPostTemplate extends React.Component {
             mdOffset={1}
             md={10}
             lgOffset={4}
-            lg={7}
+            lg={6}
           >
             <div className="blog-post-body">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              {/* <Line color={Color("yellow")} /> */}
+              <Line color={Color("yellow")} />
             </div>
           </Col>
         </Row>

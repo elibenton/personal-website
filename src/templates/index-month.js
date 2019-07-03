@@ -38,14 +38,10 @@ const BlogTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
 `
 const TagCount = styled.h1`
   font-size: 256px;
   margin: 90px 60px 60px 60px;
-  /* margin: 60px; */
   text-shadow: 3px 5px #ffd666;
   @media screen and (max-width: 767px) {
     font-size: 128px;
@@ -151,12 +147,15 @@ const TagSpan = styled.span`
 `
 
 // Class body
-const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
+const Countries = ({ pageContext, data }) => {
+  const { month } = pageContext
+  console.log("Context:", month)
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagCount = `${totalCount}`
-  const tagCountPlural = `post${totalCount === 1 ? "" : "s"} in:`
-  const tagHeader = `${tag}`
+  const countryCount = `${totalCount}`
+  const countryCountPlural = `post${totalCount === 1 ? "" : "s"} in:`
+  const countryHeader = `${moment(month).format("MMMM")} ${moment(month).format(
+    "YYYY"
+  )}`
 
   const { title } = data.site.siteMetadata
   const posts = edges
@@ -165,10 +164,10 @@ const Tags = ({ pageContext, data }) => {
     <Layout location={data.location} title={title}>
       <SEO title={"Home"} />
       <BlogTitleWrapper>
-        <TagCount>{tagCount}</TagCount>
+        <TagCount>{countryCount}</TagCount>
         <BlogTitle>
-          <TagCountPlural>{tagCountPlural}</TagCountPlural>
-          <TagHeader>{tagHeader}</TagHeader>
+          <TagCountPlural>{countryCountPlural}</TagCountPlural>
+          <TagHeader>{countryHeader}</TagHeader>
         </BlogTitle>
       </BlogTitleWrapper>
 
@@ -185,6 +184,7 @@ const Tags = ({ pageContext, data }) => {
           template,
         } = node.frontmatter
         const { slug, month } = node.fields
+
         return (
           <Wrapper key={slug}>
             <Row>
@@ -259,14 +259,14 @@ const Tags = ({ pageContext, data }) => {
   )
 }
 
-export default Tags
+export default Countries
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($month: Date) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { fields: { month: { eq: $month } } }
     ) {
       totalCount
       edges {

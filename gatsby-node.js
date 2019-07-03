@@ -1,6 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const _ = require("lodash")
+const moment = require("moment")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -9,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
   const imagePost = path.resolve(`./src/templates/post-image.js`)
 
   const tagTemplate = path.resolve(`./src/templates/index-tag.js`)
-  const monthTemplate = path.resolve(`./src/templates/index-template.js`)
+  const monthTemplate = path.resolve(`./src/templates/index-month.js`)
   const countryTemplate = path.resolve(`./src/templates/index-country.js`)
 
   return graphql(
@@ -23,12 +24,14 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               fields {
                 slug
+                month
               }
               frontmatter {
                 title
                 tags
                 template
                 country
+                date
               }
             }
           }
@@ -61,6 +64,7 @@ exports.createPages = ({ graphql, actions }) => {
     // Tag pages:
     let tags = []
     let countries = []
+    let months = []
 
     // Iterate through each post, putting all found tags into `tags`
     _.each(posts, edge => {
@@ -71,15 +75,19 @@ exports.createPages = ({ graphql, actions }) => {
       if (_.get(edge, "node.frontmatter.country")) {
         countries = countries.concat(edge.node.frontmatter.country)
       }
+
+      if (_.get(edge, "node.fields.month")) {
+        months = months.concat(edge.node.fields.month)
+      }
     })
 
-    // Eliminate duplicate tags
+    // Eliminate duplicates in iterables
     tags = _.uniq(tags)
     countries = _.uniq(countries)
+    months = _.uniq(months)
 
     // Make tag pages
     tags.forEach(tag => {
-      console.log({ tag })
       createPage({
         path: `/tags/${_.kebabCase(tag)}/`,
         component: tagTemplate,
@@ -89,8 +97,8 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Make country pages
     countries.forEach(country => {
-      console.log({ country })
       createPage({
         path: `/countries/${_.kebabCase(country)}/`,
         component: countryTemplate,
@@ -100,6 +108,19 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Make date pages
+    months.forEach(month => {
+      console.log("Month", month)
+      createPage({
+        path: `/${moment(month).format("YYYY")}/${moment(month)
+          .format("MMMM")
+          .toLowerCase()}/`,
+        component: monthTemplate,
+        context: {
+          month,
+        },
+      })
+    })
     return null
   })
 }
@@ -109,10 +130,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
+    console.log("Create Month Field:", monthYear)
+
+    // Create custom slug field for each markdown file
     createNodeField({
       name: `slug`,
       node,
       value: `${value}`,
+    })
+
+    // Create custom month field for each markdown file
+    createNodeField({
+      name: `month`,
+      node,
+      value: `${monthYear}`,
     })
   }
 }

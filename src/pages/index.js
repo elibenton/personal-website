@@ -12,6 +12,7 @@ import EmailPopup from "../components/popup"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
+import moment from "moment"
 
 // Import utilities
 import Spacer from "../utils/spacer"
@@ -165,7 +166,7 @@ class BlogIndex extends React.Component {
             tags,
             template,
           } = node.frontmatter
-          const { slug } = node.fields
+          const { slug, month } = node.fields
           return (
             <Wrapper key={slug}>
               <Row>
@@ -184,7 +185,13 @@ class BlogIndex extends React.Component {
                       <PostLink to={`/${template}${slug}`}>
                         <PostTitle>{title}</PostTitle>
                       </PostLink>
-                      <MetaText>{date}</MetaText>
+                      <PostLink
+                        to={`/${moment(month).format("YYYY")}/${moment(month)
+                          .format("MMMM")
+                          .toLowerCase()}/`}
+                      >
+                        <MetaText>{date}</MetaText>
+                      </PostLink>
                       <PostLink to={`/countries/${kebabCase(country)}/`}>
                         <MetaText>
                           {city}, {country}
@@ -251,6 +258,7 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            month
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")

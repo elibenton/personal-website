@@ -10,6 +10,7 @@ import SEO from "../components/seo"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
+import moment from "moment"
 
 // Import utilities
 import Spacer from "../utils/spacer"
@@ -29,8 +30,8 @@ const BlogTitleWrapper = styled.div`
   align-items: center;
   @media screen and (max-width: 767px) {
     justify-content: center;
-    /* flex-direction: column; */
     padding-top: 3em;
+    width: 85%;
   }
 `
 const BlogTitle = styled.div`
@@ -40,7 +41,7 @@ const BlogTitle = styled.div`
 `
 const TagCount = styled.h1`
   font-size: 256px;
-  margin: 60px;
+  margin: 90px 60px 60px 60px;
   text-shadow: 3px 5px #ffd666;
   @media screen and (max-width: 767px) {
     font-size: 128px;
@@ -167,7 +168,7 @@ const Countries = ({ pageContext, data }) => {
         </BlogTitle>
       </BlogTitleWrapper>
 
-      <Spacer height={50} />
+      <Spacer height={80} />
 
       {posts.map(({ node }) => {
         const {
@@ -179,7 +180,7 @@ const Countries = ({ pageContext, data }) => {
           tags,
           template,
         } = node.frontmatter
-        const { slug } = node.fields
+        const { slug, month } = node.fields
         return (
           <Wrapper key={slug}>
             <Row>
@@ -198,7 +199,13 @@ const Countries = ({ pageContext, data }) => {
                     <PostLink to={`/${template}${slug}`}>
                       <PostTitle>{title}</PostTitle>
                     </PostLink>
-                    <MetaText>{date}</MetaText>
+                    <PostLink
+                      to={`/${moment(month).format("YYYY")}/${moment(month)
+                        .format("MMMM")
+                        .toLowerCase()}/`}
+                    >
+                      <MetaText>{date}</MetaText>
+                    </PostLink>{" "}
                     <PostLink to={`/countries/${kebabCase(country)}/`}>
                       <MetaText>
                         {city}, {country}
@@ -262,6 +269,7 @@ export const pageQuery = graphql`
         node {
           fields {
             slug
+            month
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
