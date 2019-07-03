@@ -1,18 +1,18 @@
 ---
+template: writing
+
 title: "The Political Arguments of Podcasting"
 date: 2019-02-24
-city: "Claremont, California"
+city: "Claremont, CA"
 country: "United States"
 
 description: "If journalism is how we talk about our politics, and political speech is how we situate ourselves in the world, what does the recent explosion of podcasts say about the current day?"
 
-categories:
-  - writing
+published: false
 tags:
-  - Academic Research
+  - Academic
   - Journalism
   - Podcasting
-  - Journalistic Theory
 ---
 
 When you read Rebecca Mead’s New Yorker article “Binge Listening” in the November 19th, 2018 edition of the magazine, you will walk away with an uncanny sense that podcasting is significant in ways you had never previously considered. If you then refer back to the story [online,](https://www.newyorker.com/magazine/2018/11/19/how-podcasts-became-a-seductive-and-sometimes-slippery-mode-of-storytelling) in a bout of beautiful irony, you’ll be prompted to listen to it instead.

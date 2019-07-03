@@ -1,18 +1,17 @@
 ---
+template: writing
 title: "The Uneasy Marriage of Technology and Politics"
 date: 2019-02-12
-city: "Claremont, California"
+city: "Claremont, CA"
 country: "United States"
 
 description: "The news can be defined as information about events, individuals, and forces outside the realm of one’s immediate, knowable reality. The news media, then, are the means, methods, and mediums by which this information transfers from its origin “out there” to you."
 
-categories:
-  - writing
+published: false
 tags:
   - Politics of Technology
-  - Philosophy of Technology
-  - Book Reviews
-  - Research
+  - Journalism
+  - Academic
 ---
 
 The news can be defined as information about events, individuals, and forces outside the realm of one’s immediate, knowable reality. The news media, then, are the means, methods, and mediums (media being the alternative plural) by which this information transfers from its origin “out there” to you. I highlight this process of information transfer because the incredible capacities afforded by digital technology have obscured it so well. Information arrives instantly, making it seem as if it never traveled at all. Information arrives unrefined and raw, making it seem objective. And information can be produced by anyone, making

@@ -10,8 +10,7 @@ site_url: https://elibenton.co
 collections:
   - name: writing
     label: Writing
-    folder: content/posts
-    slug: "{{slug}}"
+    folder: content/writing
     preview_path: writing/{{slug}}
     create: true
     filter: { field: "template", value: "Writing" }
@@ -27,14 +26,18 @@ collections:
       - { name: city, label: City }
       - { name: country, label: Country }
       - { name: description, label: Description, widget: text }
-      - { name: publication, label: Publication, required: false }
+      - {
+          name: publication,
+          label: Publication,
+          widget: boolean,
+          required: false,
+        }
 
       - { name: body, label: Body, widget: markdown }
 
   - name: audio
     label: Audio
-    folder: content/posts
-    slug: "{{slug}}"
+    folder: content/audio
     preview_path: audio/{{slug}}
     create: true
     filter: { field: "template", value: "Audio" }
@@ -50,14 +53,19 @@ collections:
       - { name: city, label: City }
       - { name: country, label: Country }
       - { name: description, label: Description, widget: text }
+      - {
+          name: publication,
+          label: Publication,
+          widget: boolean,
+          required: false,
+        }
       - { name: audio-file, label: Audio File, widget: file }
 
       - { name: body, label: Body, widget: markdown }
 
   - name: newsletter
     label: Newsletter
-    folder: content/posts
-    slug: "{{slug}}"
+    folder: content/newsletter
     preview_path: newsletter/{{slug}}
     create: true
     filter: { field: "template", value: "Newsletter" }

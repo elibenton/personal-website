@@ -1,7 +1,9 @@
 ---
+template: writing
+
 title: When Digital Becomes Less Distinct
-date: 2019-06-18T00:00:00.000Z
-city: 'Birmingham, Alabama'
+date: 2019-06-18
+city: "Birmingham, AL"
 country: United States
 description: >-
   We are increasingly channelling our lives through digital technology. In doing
@@ -9,13 +11,12 @@ description: >-
   understand all of the implications. From SIM cards to social media and
   biometrics to blockchain, I will spend the year examining the societal,
   political, and personal effects of our increasingly networked lives.
-categories:
-  - writing
+published: false
 tags:
-  - Digital Dualism
   - Watson Fellowship
   - Politics of Technology
 ---
+
 ![Walter Lippmann](/content/images/lippmann.jpeg "Walter Lippmann")
 
 Though the word “technology" first conjures images of silicon transistors and chic laptops, the formal definition is much broader. Marshal McLuhan called it a direct “extension of man.” Economists see it as the sum total of knowledge and information that society has acquired. I see technology as the evolution of means, the constantly changing methods, to do what collective groups have always done: make meaning of the world around us. I want to spend the Watson year traveling to societies that are transitioning routine tasks (talking to their relatives, relaxing after a day of work, or just paying bills) to new technologies.
@@ -36,7 +37,7 @@ The internet itself is new to Myanmar in just the last decade, due to the explos
 
 In comparison to accessing food rations in India or accurate information in Myanmar, Norwegian high school drama may seem remarkably unimportant, especially on social media. I’m not talking about classmates who channel their insecurities through Instagram, however. I am referring to a fictional world that exists solely online. It’s the Norwegian television show “SKAM.” A show that, without any promotion, advertisement, or even being on TV, broke viewership records across Norway.
 
-Set at the Hartvig Nissen School, one of Olso’s oldest, wealthiest, and most prestigious prep schools, the content is rather typical of high school dramas. What makes “SKAM” so intriguing is the format. The show has no episodes, instead being released on social media alone. Each character has his or her own account. The characters post their own photos and videos of what is happening, all in real time. If a breakup happens at the end of a Friday night party, you’ll probably see the post when you are leaving one of your own. It is the anti- binge watch series. Instead of giving hours-long reprieves from daily life, “SKAM” is daily life, at least, life as so many of my generation have come to experience it: constantly connected, hyperaware, and always checking in. To learn how “SKAM” was made and its impact, I plan to go to Olso to interview members of NRK, the public media corporation that created SKAM. Although “SKAM” was prematurely cancelled due to high production stress, I am actively working to shadow one of the many sequels, “Blank,” also made by NRK. 
+Set at the Hartvig Nissen School, one of Olso’s oldest, wealthiest, and most prestigious prep schools, the content is rather typical of high school dramas. What makes “SKAM” so intriguing is the format. The show has no episodes, instead being released on social media alone. Each character has his or her own account. The characters post their own photos and videos of what is happening, all in real time. If a breakup happens at the end of a Friday night party, you’ll probably see the post when you are leaving one of your own. It is the anti- binge watch series. Instead of giving hours-long reprieves from daily life, “SKAM” is daily life, at least, life as so many of my generation have come to experience it: constantly connected, hyperaware, and always checking in. To learn how “SKAM” was made and its impact, I plan to go to Olso to interview members of NRK, the public media corporation that created SKAM. Although “SKAM” was prematurely cancelled due to high production stress, I am actively working to shadow one of the many sequels, “Blank,” also made by NRK.
 
 Though I know that the Watson is not primarily concerned with output, I think my project would be well documented through the medium of a podcast. Audio sits in a funny realm between the digital and tangible. Podcasts can certainly be distributed like a webpage or a re-tweet, but the human voice demands a different kind of attention. It’s intimate in a way few other aspects of the digital world currently are. Using my experience at two public radio stations and from my podcast-based thesis, I hope to create a monthly podcast documenting my experience on the Watson year.
 

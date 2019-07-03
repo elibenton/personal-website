@@ -1,7 +1,9 @@
 ---
+template: audio
+
 title: Named But Never Heard
-date: 2018-11-27T00:00:00.000Z
-city: 'Claremont, California'
+date: 2018-11-27
+city: "Claremont, CA"
 country: United States
 description: >-
   In the second part of our series about sexual assault on campus, Title IX, and
@@ -9,15 +11,14 @@ description: >-
   of us cannot—he’s actually on one of them. While this interview is in no way
   exhaustive, his perspective is an important part of understanding how issues
   of sexual violence are being handled at the Claremont Colleges.
-categories:
-  - audio
-  - published
+published: true
 tags:
   - Title IX
   - Sexual Assualt
   - Campus Politics
 publication: KSPC 88.7 FM
 ---
+
 ## The Discussion Collective: Episode 4
 
 ### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Named-But-Never-Heard-Part-2-e2laai)
@@ -38,13 +39,13 @@ All of this to say, I was ultimately let down by the episode’s reception, whic
 
 **Eli Cohen:** [00:00] Thanks for tuning in to the second episode of DisCo. Last time, we talked with a number of people about the topics of combating sexual violence, the Title IX process, and one measure, the lists, that were an attempt to bridge the gap between the two. We looked inside our own campuses, and outside as well, to try to see what was being done about this pervasive and disturbing topic.
 
-If you haven't had a chance, I'd recommend giving that a listen first. Today, I want us to hear from another voice that was conspicuously absent from part one, someone who has actually been put on one of these lists. After all, they are the people who are most intimately aware of how these systems actually operate. While producing episode one, I made it generally known that I was looking for such a person in hopes that someone would come forward and offer to speak with me. And someone did. We talked at length, and decided it would be better if our conversations stayed confidential. 
+If you haven't had a chance, I'd recommend giving that a listen first. Today, I want us to hear from another voice that was conspicuously absent from part one, someone who has actually been put on one of these lists. After all, they are the people who are most intimately aware of how these systems actually operate. While producing episode one, I made it generally known that I was looking for such a person in hopes that someone would come forward and offer to speak with me. And someone did. We talked at length, and decided it would be better if our conversations stayed confidential.
 
 To preserve this confidentiality, I transcribed our conversation and had a reader reenact a condensed and edited version. To be clear, the voice you are about to hear is not the person with whom I spoke, the voice you will hear is simply reading a script. One other clarification. While I removed the parts of our conversation, which could reveal the interviewees identity, you should know something about his specific situation. He does not know who put him on the list, and is even unsure of why they might have done so. I do not mean to imply that his experience speaks to every case. Just like I do not think this episode comes close to an exhaustive conversation about this difficult topic.
 
 **Eli Cohen:** [02:04] Can you describe the experience of being on this list and how it has changed your life in any facet?
 
-**Anonymous Respondent:** [02:12] The the first impact of this list really was a profound sense of guilt and shame. I'd assume that be considered positive for them. It's kind of in part what they want. So it was kind of it was torturous to imagine what I had done. This, like uncertainty of you've done something wrong, but you don't know what it is can make you think of the worst case scenario. Yeah, it's, it's torturous, for sure. 
+**Anonymous Respondent:** [02:12] The the first impact of this list really was a profound sense of guilt and shame. I'd assume that be considered positive for them. It's kind of in part what they want. So it was kind of it was torturous to imagine what I had done. This, like uncertainty of you've done something wrong, but you don't know what it is can make you think of the worst case scenario. Yeah, it's, it's torturous, for sure.
 
 Then the second effect its had is sort of social paranoia. It is, to some extent real because I thought everyone that everyone hated me. I thought I didn't want to be on this campus. I thought I was seen as a rapist and a monster and right, I thought myself that I was a monster.
 
@@ -68,7 +69,7 @@ And I mean, those are really legitimate concerns. What I don't think is that the
 
 **Eli Cohen:** [06:55] Let me ask a question about one specific in what you said earlier, which is right, lot of these lists purportedly are not shared, they're managed by one person and one person alone. the privacy of the list is paramount. And, and the consequences of being on the list is supposed to be exclusion from a singular discrete event, or series of events, and nothing more. But what you're telling me definitely does not confirm that. So I think a lot of this is kind of predicated on how seriously the confidentiality of these lists is taken. And when people say that there's not a consequence for for being on the list. Are there other consequences that are very real, but that the the makers of the lists don't publicly say?
 
-**Anonymous Respondent:** [07:45] I mean, I think it could be the case that I've been put on every list out there. I don't know, so I can't say anything. But when I can say things about it's, it's about literally an advocate herself coming up to me and telling me I've been accused. So I, how the fuck are you defending privacy? And this is the person I respect, the person I actually know as well intentioned, but how do you misunderstand your own systems so profoundly, that you think that that's acceptable? 
+**Anonymous Respondent:** [07:45] I mean, I think it could be the case that I've been put on every list out there. I don't know, so I can't say anything. But when I can say things about it's, it's about literally an advocate herself coming up to me and telling me I've been accused. So I, how the fuck are you defending privacy? And this is the person I respect, the person I actually know as well intentioned, but how do you misunderstand your own systems so profoundly, that you think that that's acceptable?
 
 I've had people not only coming up to me, but someone's coming up to my friends, my friends and my relationships, and people are going out to friends of mine, people around my circle and telling them I'm a perpetrator, and that they should stay away from me.
 
@@ -84,7 +85,7 @@ But I can't really see another option. I I don't think there's another option. I
 
 And I just, I do think that going through a process is really important, because although we believe survivors, and I do myself, like, I believe that I hurt someone. I'm sure they don't go out there to just just level basis accusations, and that doesn't mean that you can just throw any sort of process out the window. Survivors are believed in the context of a process.
 
-**Eli Cohen:** [12:13] Right, but that that process itself is so flawed. We know that people go through the process all the time, and have zero accountability. What does accountability look like to you? 
+**Eli Cohen:** [12:13] Right, but that that process itself is so flawed. We know that people go through the process all the time, and have zero accountability. What does accountability look like to you?
 
 **Anonymous Respondent:** [12:29] You know, I don't think it would have been much less devastating if I had been formally accused. So if that's what you're looking for just just go through the system, and then you can actually do something about it. But yeah, there there can be uncertainty in the system, and there's the possibility of not doing anything about it.
 

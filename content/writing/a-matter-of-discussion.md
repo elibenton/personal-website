@@ -1,7 +1,9 @@
 ---
+template: writing
+
 title: A Matter of Discussion
-date: 2018-06-11T00:00:00.000Z
-city: 'Berkeley, California'
+date: 2018-06-11
+city: "Berkeley, CA"
 country: United States
 description: >-
   In 2018, a lot of our conversations seem fraught. Our politics are defined by
@@ -9,14 +11,13 @@ description: >-
   guided by what we’d like to be true, rather than what actually is. So I
   explored the means by which we talk — and how that affects our ultimate
   understanding.
-categories:
-  - writing
+published: false
 tags:
-  - Interviewing
   - Journalism
   - Podcasting
-  - Human Centered Design
+  - American Politics
 ---
+
 Over the past half-year, I have conducted a lot of interviews. I have interviewed fellow classmates, professors, students and teachers at other colleges. I’ve also been forced off my college campus, interviewing residents of retirement communities, foster youth, and chief executives. What makes the situation interesting, however, are reasons why I have been conducting these interviews. They are rarely the same. This spring, I had three different projects require me to set down my books and go talk to another human face-to-face:
 
 1. A design project for _Human-Centered Design (Engineering 180)_
@@ -55,7 +56,7 @@ I loved every interview I did for my HCD class, but I couldn’t shake the feeli
 
 My most ambitious project of the semester was a feature article on [The Claremont Independent](https://claremontindependent.com), the lone conservative publication at the Claremont Colleges. Despite continuous calls for boycotts of the paper and widespread condemnation of the staff, they tirelessly report on incidents of liberal bias which occur on the Claremont College campuses. An excerpt from the introduction to my piece:
 
-> To many students at the Claremont Colleges, The Claremont Independent is a joke; on Facebook, The Independent is the second most popular student newspaper in the country. Granted exclusive access to national media outlets, supported by more than $30,000 in contributions from private donors, and guided by outside institutions who ensure they stay afloat, The Claremont Independent has not only survived decades of animosity at some of the country’s most progressive colleges. They, along with an intercollegiate network of like minded papers, have helped reframe the national conversation about college political life.
+> To many students at the Claremont Colleges, The Claremont Independent is a joke; on Facebook, The Independent is the second most popular student newspaper in the country. Granted exclusive access to national media outlets, supported by more than \$30,000 in contributions from private donors, and guided by outside institutions who ensure they stay afloat, The Claremont Independent has not only survived decades of animosity at some of the country’s most progressive colleges. They, along with an intercollegiate network of like minded papers, have helped reframe the national conversation about college political life.
 
 ![One of the Claremont Independent’s favorite advertisements](/static/ci.png "One of the Claremont Independent’s favorite advertisements")
 

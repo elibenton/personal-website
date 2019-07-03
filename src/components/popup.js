@@ -80,7 +80,7 @@ class EmailPopup extends React.Component {
                 type="text"
                 onChange={this._handleChange}
                 name="FNAME"
-                autofocus
+                autoFocus
                 pattern="[A-Z][A-Za-z]*"
                 title="Please capitalize your name."
               />

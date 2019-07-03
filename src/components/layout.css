@@ -97,7 +97,7 @@ h5 {
 }
 
 /*remove red outline in moz*/
-input:invalid {
+/* input:invalid {
   box-shadow: none;
 }
 input:-moz-submit-invalid {
@@ -105,7 +105,7 @@ input:-moz-submit-invalid {
 }
 input:-moz-ui-invalid {
   box-shadow: none;
-}
+} */
 
 blockquote {
   margin-left: 0;
@@ -257,11 +257,6 @@ label {
 input[type="submit"] {
   background-color: #ffd666;
   color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
 }
 
 .popup-content {

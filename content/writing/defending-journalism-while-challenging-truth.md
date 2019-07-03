@@ -1,13 +1,13 @@
 ---
+template: writing
+
 title: "Defending Journalism While Challenging Truth"
 date: 2019-02-23
-city: "Claremont, California"
+city: "Claremont, CA"
 country: "United States"
 
 description: "How one decides to theorize the news, and especially how one thinks about truth, is symptomatic of numerous other calculations: political systems, economic flows, and material comforts. The most consistent factor is ourselves, and the self-referential paradox we mold from the world around us."
-
-categories:
-  - writing
+published: false
 tags:
   - Journalism
   - Journalistic Theory
@@ -37,7 +37,7 @@ _Having selected the works, written the essays (some of which have been altered 
 ### The Uneasy Marriage of Technology and Politics
 
 - _The 480_ by **Eugene Burdick** (1964)
-- _Understanding Media: The Extensions of Man_ by **Marshal McLuhan** (1964)
+- _Understanding Media_ by **Marshal McLuhan** (1964)
 - _Kill All Normies_ by **Angela Nagle** (2017)
 - _Twitter and Tear Gas_ by **Zeynep Tufekci** (2018)
 

@@ -1,15 +1,15 @@
 ---
+template: writing
+
 title: A First Attempt At Something Else
-date: 2018-11-15T00:00:00.000Z
-city: 'Claremont, California'
+date: 2018-11-15
+city: 'Claremont, CA'
 country: United States
 description: >-
   To start off this three part series on “The Lists,” we try to learn what they
   were, why they were made, and if they are really so different from practices
   that have existed outside the Claremont bubble for some time.
-categories:
-  - audio
-  - published
+published: true
 tags:
   - Sexual Assault
   - Campus Politics

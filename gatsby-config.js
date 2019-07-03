@@ -55,7 +55,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                   filter: {frontmatter: {categories: {in: "writing"}}}
+                   filter: {frontmatter: {template: {in: "writing"}}}
                 ) {
                   edges {
                     node {
@@ -94,7 +94,7 @@ module.exports = {
                 allMarkdownRemark
                   (
                   sort: {order: DESC, fields: [frontmatter___date]}, 
-                  filter: {frontmatter: {categories: {in: "audio"}}}
+                  filter: {frontmatter: {template: {in: "audio"}}}
                   ) 
                     {
                   edges {
@@ -182,10 +182,31 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/audio`,
+        name: `audio`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/images`,
         name: `images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/newsletter`,
+        name: `newsletter`,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/data`,
+    //     name: `data`,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

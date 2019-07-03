@@ -44,9 +44,6 @@ const Attribution = styled.div`
     width: calc(100% - 20px);
   }
 `
-const Indent = styled.div`
-  text-indent: 1.4em;
-`
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -93,9 +90,8 @@ class BlogPostTemplate extends React.Component {
                 <FaCalendarDay /> {post.frontmatter.date}
               </AttributionText>
               <AttributionText>
-                <FaMapMarkerAlt /> {post.frontmatter.city}
-                <br />
-                <Indent>{post.frontmatter.country}</Indent>
+                <FaMapMarkerAlt /> {post.frontmatter.city},{" "}
+                {post.frontmatter.country}
               </AttributionText>
             </Attribution>
           </Col>
@@ -110,11 +106,11 @@ class BlogPostTemplate extends React.Component {
             mdOffset={1}
             md={10}
             lgOffset={4}
-            lg={7}
+            lg={6}
           >
             <div className="blog-post-body">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              {/* <Line color={Color("yellow")} /> */}
+              <Line color={Color("yellow")} />
             </div>
           </Col>
         </Row>

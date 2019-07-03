@@ -1,7 +1,9 @@
 ---
+template: audio
+
 title: Reclaiming Language
-date: 2019-02-14T00:00:00.000Z
-city: 'Claremont, California'
+date: 2019-02-14
+city: "Claremont, CA"
 country: United States
 description: >-
   A project stemming from Aimee Bahng’s Gender and Women’s Studies class, in
@@ -10,15 +12,14 @@ description: >-
   complicated by the process of “reclaiming language,” or the re-association of
   typically demeaning words to empowering affirmations or even signals of
   solidarity and belonging.
-categories:
-  - audio
-  - published
+published: true
+
 tags:
+  - Academic
   - Queer Studies
-  - Language
-  - Cultural Appropriation
 publication: KSPC 88.7 FM
 ---
+
 ## The Discussion Collective: Bonus Episode
 
 ### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Reclaiming-Language-Bonus-Episode-e36f41)
