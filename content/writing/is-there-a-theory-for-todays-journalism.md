@@ -7,9 +7,6 @@ city: "Claremont, CA"
 country: "United States"
 
 description: "If there is one “unequivocal truth” to be deduced from reading exclusively books about journalism, it’s that 2019 is not journalism's first crisis. If we’ll allow ourselves a second one — it’s probably that unequivocal truth doesn’t exist. When dealing in unequivocal truths, it’s usually best to stick to one."
-
-published: false
-
 tags:
   - Journalism
   - Academic

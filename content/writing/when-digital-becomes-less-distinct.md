@@ -11,7 +11,6 @@ description: >-
   understand all of the implications. From SIM cards to social media and
   biometrics to blockchain, I will spend the year examining the societal,
   political, and personal effects of our increasingly networked lives.
-published: false
 tags:
   - Watson Fellowship
   - Politics of Technology

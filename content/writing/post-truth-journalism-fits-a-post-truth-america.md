@@ -7,9 +7,6 @@ city: "Claremont, CA"
 country: "United States"
 
 description: "The capstone project of all politics majors at Pomona College is creating a book list of 12 works. The collection encapsulates one’s understanding about a topic in politics that shapes the student's view of the world. I chose to explore modern journalism’s collision course with the digitally-networked reality of the current era."
-
-published: false
-
 tags:
   - Journalism
   - Academic

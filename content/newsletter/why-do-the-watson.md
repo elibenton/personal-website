@@ -7,7 +7,6 @@ city: "Birmingham, AL"
 country: United States
 description: >-
   A little more than one year ago, I decided to embark on a thought experiment. I was going to plan a year-long, globe-spanning adventure where no one could tell me what to do. That thought experiment developed into pages of writing, hundreds of emails, a handful of gut-wrenching interviews, and now, the opportunity of a lifetime.
-published: false
 tags:
   - Watson Fellowship
   - Travel

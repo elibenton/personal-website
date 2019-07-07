@@ -38,10 +38,14 @@ const BlogTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `
 const TagCount = styled.h1`
   font-size: 256px;
   margin: 90px 60px 60px 60px;
+  /* margin: 60px; */
   text-shadow: 3px 5px #ffd666;
   @media screen and (max-width: 767px) {
     font-size: 128px;
@@ -162,15 +166,12 @@ const TagSpan = styled.span`
 `
 
 // Class body
-const Countries = ({ pageContext, data }) => {
-  const { month } = pageContext
-  console.log("Context:", month)
+const Tags = ({ pageContext, data }) => {
+  const { template } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const countryCount = `${totalCount}`
-  const countryCountPlural = `post${totalCount === 1 ? "" : "s"} in:`
-  const countryHeader = `${moment(month).format("MMMM")} ${moment(month).format(
-    "YYYY"
-  )}`
+  const templateCount = `${totalCount}`
+  const templateCountPlural = `post${totalCount === 1 ? "" : "s"} in:`
+  const templateHeader = `${template}`
 
   const { title } = data.site.siteMetadata
   const posts = edges
@@ -179,10 +180,10 @@ const Countries = ({ pageContext, data }) => {
     <Layout location={data.location} title={title}>
       <SEO title={"Home"} />
       <BlogTitleWrapper>
-        <TagCount>{countryCount}</TagCount>
+        <TagCount>{templateCount}</TagCount>
         <BlogTitle>
-          <TagCountPlural>{countryCountPlural}</TagCountPlural>
-          <TagHeader>{countryHeader}</TagHeader>
+          <TagCountPlural>{templateCountPlural}</TagCountPlural>
+          <TagHeader>{templateHeader}</TagHeader>
         </BlogTitle>
       </BlogTitleWrapper>
 
@@ -199,7 +200,6 @@ const Countries = ({ pageContext, data }) => {
           template,
         } = node.frontmatter
         const { slug, month } = node.fields
-
         return (
           <Wrapper key={slug}>
             <Row>
@@ -277,14 +277,14 @@ const Countries = ({ pageContext, data }) => {
   )
 }
 
-export default Countries
+export default Tags
 
 export const pageQuery = graphql`
-  query($month: Date) {
+  query($template: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { month: { eq: $month } } }
+      filter: { frontmatter: { template: { in: [$template] } } }
     ) {
       totalCount
       edges {

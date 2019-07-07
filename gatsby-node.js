@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
   const tagTemplate = path.resolve(`./src/templates/index-tag.js`)
   const monthTemplate = path.resolve(`./src/templates/index-month.js`)
   const countryTemplate = path.resolve(`./src/templates/index-country.js`)
+  const templateTemplate = path.resolve(`./src/templates/index-template.js`)
 
   return graphql(
     `
@@ -32,6 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
                 template
                 country
                 date
+                publication
               }
             }
           }
@@ -65,6 +67,7 @@ exports.createPages = ({ graphql, actions }) => {
     let tags = []
     let countries = []
     let months = []
+    let templates = []
 
     // Iterate through each post, putting all found tags into `tags`
     _.each(posts, edge => {
@@ -79,12 +82,17 @@ exports.createPages = ({ graphql, actions }) => {
       if (_.get(edge, "node.fields.month")) {
         months = months.concat(edge.node.fields.month)
       }
+
+      if (_.get(edge, "node.frontmatter.template")) {
+        templates = templates.concat(edge.node.frontmatter.template)
+      }
     })
 
     // Eliminate duplicates in iterables
     tags = _.uniq(tags)
     countries = _.uniq(countries)
     months = _.uniq(months)
+    templates = _.uniq(templates)
 
     // Make tag pages
     tags.forEach(tag => {
@@ -108,9 +116,21 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Make template pages
+    console.log(templates)
+    templates.forEach(template => {
+      console.log(template)
+      createPage({
+        path: `/${template}`,
+        component: templateTemplate,
+        context: {
+          template,
+        },
+      })
+    })
+
     // Make date pages
     months.forEach(month => {
-      console.log("Month", month)
       createPage({
         path: `/${moment(month).format("YYYY")}/${moment(month)
           .format("MMMM")
@@ -129,9 +149,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({
+      node,
+      getNode,
+    })
     const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
-    console.log("Create Month Field:", monthYear)
 
     // Create custom slug field for each markdown file
     createNodeField({
@@ -146,5 +168,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       value: `${monthYear}`,
     })
+
+    if (node.frontmatter.publication === undefined) {
+      // Create custom published field for each markdown file
+      createNodeField({
+        name: `published`,
+        node,
+        value: false,
+      })
+    } else {
+      // Create custom published field for each markdown file
+      createNodeField({
+        name: `published`,
+        node,
+        value: true,
+      })
+    }
   }
 }

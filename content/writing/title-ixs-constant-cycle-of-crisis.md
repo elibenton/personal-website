@@ -11,7 +11,6 @@ description: >-
   For the third installment of our series on Sexual Assault at the Claremont
   Colleges, we ask a simple question without any straightforward answer: how did
   we get here?
-published: true
 tags:
   - Sexual Assualt
   - Title IX
