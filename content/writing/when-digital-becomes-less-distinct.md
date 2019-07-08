@@ -11,13 +11,10 @@ description: >-
   understand all of the implications. From SIM cards to social media and
   biometrics to blockchain, I will spend the year examining the societal,
   political, and personal effects of our increasingly networked lives.
-published: false
 tags:
   - Watson Fellowship
   - Politics of Technology
 ---
-
-![Walter Lippmann](/content/images/lippmann.jpeg "Walter Lippmann")
 
 Though the word “technology" first conjures images of silicon transistors and chic laptops, the formal definition is much broader. Marshal McLuhan called it a direct “extension of man.” Economists see it as the sum total of knowledge and information that society has acquired. I see technology as the evolution of means, the constantly changing methods, to do what collective groups have always done: make meaning of the world around us. I want to spend the Watson year traveling to societies that are transitioning routine tasks (talking to their relatives, relaxing after a day of work, or just paying bills) to new technologies.
 

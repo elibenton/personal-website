@@ -11,7 +11,6 @@ description: >-
   podcast over the course of just three workshops. They did the interviews,
   created the storyboard, and two brave first-timers even produced episodes all
   by themselves. The topic: transition.
-published: true
 tags:
   - Podcasting
   - Storytelling

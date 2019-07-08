@@ -116,6 +116,22 @@ const TagText = styled.p`
   color: #999;
   font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
+  /* font-style: italic; */
+  font-size: 13px;
+  line-height: 1em;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 0;
+  display: inline;
+  :hover,
+  :active {
+    color: #ffd666;
+  }
+`
+const TemplateText = styled.p`
+  color: #999;
+  font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
   font-size: 13px;
   line-height: 1em;
   letter-spacing: 0.6px;
@@ -210,6 +226,9 @@ class BlogIndex extends React.Component {
                   lgOffset={0}
                   lg={4}
                 >
+                  <PostLink to={`/${template}`}>
+                    <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
+                  </PostLink>
                   {tags.map((tag, index) =>
                     index === 0 ? (
                       <TagSpan key={index}>

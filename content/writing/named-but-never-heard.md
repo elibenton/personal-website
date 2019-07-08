@@ -11,7 +11,6 @@ description: >-
   of us cannot—he’s actually on one of them. While this interview is in no way
   exhaustive, his perspective is an important part of understanding how issues
   of sexual violence are being handled at the Claremont Colleges.
-published: true
 tags:
   - Title IX
   - Sexual Assualt

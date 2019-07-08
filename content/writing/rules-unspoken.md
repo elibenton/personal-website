@@ -10,7 +10,6 @@ description: >-
   experts such as Professor of Sociology at Occidental, Lisa Wade. We also talk
   with student Audrey Jang, the President of the Pomona Student Union, who
   brought Professor Wade to campus.
-published: true
 tags:
   - Hook Up Culture
   - Campus Politics

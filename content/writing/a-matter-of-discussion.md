@@ -11,7 +11,6 @@ description: >-
   guided by what we’d like to be true, rather than what actually is. So I
   explored the means by which we talk — and how that affects our ultimate
   understanding.
-published: false
 tags:
   - Journalism
   - Podcasting

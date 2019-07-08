@@ -299,18 +299,18 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { eq: true } } }
+      filter: { fields: { published: { eq: true } } }
     ) {
       edges {
         node {
           fields {
             slug
+            published
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            published
             publication
           }
         }

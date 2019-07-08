@@ -6,8 +6,6 @@ city: "Claremont, CA"
 country: "United States"
 
 description: "The news can be defined as information about events, individuals, and forces outside the realm of one’s immediate, knowable reality. The news media, then, are the means, methods, and mediums by which this information transfers from its origin “out there” to you."
-
-published: false
 tags:
   - Politics of Technology
   - Journalism

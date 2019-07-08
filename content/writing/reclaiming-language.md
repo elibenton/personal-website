@@ -12,8 +12,6 @@ description: >-
   complicated by the process of “reclaiming language,” or the re-association of
   typically demeaning words to empowering affirmations or even signals of
   solidarity and belonging.
-published: true
-
 tags:
   - Academic
   - Queer Studies

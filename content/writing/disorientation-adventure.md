@@ -10,7 +10,6 @@ description: >-
   students often called OA—was cancelled, campus activism sprung into rare form.
   Within exactly one week, the Dean of Students Office retracted their decision.
   Many students were relieved, but an equally large contingency was furious.
-published: true
 tags:
   - Campus Politics
   - Mental Health
