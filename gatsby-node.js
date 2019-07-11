@@ -6,153 +6,191 @@ const moment = require("moment")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const writingPost = path.resolve(`./src/templates/post-writing.js`)
+  const postWriting = path.resolve(`./src/templates/post-writing.js`)
   const imagePost = path.resolve(`./src/templates/post-image.js`)
+  const indexFiltered = path.resolve(`./src/templates/index-filtered.js`)
 
-  const tagTemplate = path.resolve(`./src/templates/index-tag.js`)
-  const monthTemplate = path.resolve(`./src/templates/index-month.js`)
-  const countryTemplate = path.resolve(`./src/templates/index-country.js`)
-  const templateTemplate = path.resolve(`./src/templates/index-template.js`)
-
-  return graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-                month
+  return new Promise((resolve, reject) => {
+    resolve(
+      graphql(
+        `
+          query allPages {
+            allMarkdownRemark(
+              sort: { fields: [frontmatter___date], order: DESC }
+              limit: 1000
+            ) {
+              edges {
+                node {
+                  fields {
+                    slug
+                    month
+                  }
+                  frontmatter {
+                    title
+                    tags
+                    template
+                    country
+                    date
+                    publication
+                  }
+                }
               }
-              frontmatter {
-                title
-                tags
-                template
-                country
-                date
-                publication
+            }
+            allMdx {
+              edges {
+                node {
+                  id
+                  fields {
+                    slug
+                  }
+                }
               }
             }
           }
+        `
+      ).then(result => {
+        // this is some boilerlate to handle errors
+        if (result.errors) {
+          console.error(result.errors)
+          reject(result.errors)
         }
-      }
-    `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
 
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
+        const mdx = result.data.allMdx.edges
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+        // We'll call `createPage` for each result
+        mdx.forEach(({ node }) => {
+          createPage({
+            path: node.fields.slug,
+            component: path.resolve(`./src/components/mdx-layout.js`),
+            context: {
+              id: inode.d,
+            },
+          })
+        })
 
-      createPage({
-        path: `/${post.node.frontmatter.template}${post.node.fields.slug}`,
-        component: writingPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
+        // Create blog posts pages.
+        const posts = result.data.allMarkdownRemark.edges
+
+        posts.forEach(post => {
+          const { template } = post.node.frontmatter
+          const { slug } = post.node.fields
+
+          createPage({
+            path: `/${template}${slug}`,
+            component: postWriting,
+            context: {
+              slug: slug,
+            },
+          })
+        })
+
+        // Tag pages:
+        let tags = []
+        let countries = []
+        let months = []
+        let templates = []
+
+        // Iterate through each post, putting all found tags into `tags`
+        _.each(posts, edge => {
+          if (_.get(edge, "node.frontmatter.tags")) {
+            tags = tags.concat(edge.node.frontmatter.tags)
+          }
+
+          if (_.get(edge, "node.frontmatter.country")) {
+            countries = countries.concat(edge.node.frontmatter.country)
+          }
+
+          if (_.get(edge, "node.fields.month")) {
+            months = months.concat(edge.node.fields.month)
+          }
+
+          if (_.get(edge, "node.frontmatter.template")) {
+            templates = templates.concat(edge.node.frontmatter.template)
+          }
+        })
+
+        // Eliminate duplicates in iterables
+        tags = _.uniq(tags)
+        countries = _.uniq(countries)
+        months = _.uniq(months)
+        templates = _.uniq(templates)
+
+        // Make tag pages
+        tags.forEach(filter_tag => {
+          createPage({
+            path: `/tags/${_.kebabCase(filter_tag)}/`,
+            component: indexFiltered,
+            context: {
+              name: filter_tag,
+              filter: { frontmatter: { tags: { in: [filter_tag] } } },
+            },
+          })
+        })
+
+        // Make country pages
+        countries.forEach(filter_country => {
+          createPage({
+            path: `/countries/${_.kebabCase(filter_country)}/`,
+            component: indexFiltered,
+            context: {
+              name: filter_country,
+              filter: { frontmatter: { country: { in: [filter_country] } } },
+            },
+          })
+        })
+
+        // Make template pages
+        templates.forEach(filter_template => {
+          createPage({
+            path: `/${filter_template}`,
+            component: indexFiltered,
+            context: {
+              name: filter_template,
+              filter: { frontmatter: { template: { in: [filter_template] } } },
+            },
+          })
+        })
+
+        // Make date pages
+        months.forEach(filter_month => {
+          createPage({
+            path: `/${moment(filter_month).format("YYYY")}/${moment(
+              filter_month
+            )
+              .format("MMMM")
+              .toLowerCase()}/`,
+            component: indexFiltered,
+            context: {
+              name: filter_month,
+              filter: { fields: { month: { in: [filter_month] } } },
+            },
+          })
+        })
       })
-    })
-
-    // Tag pages:
-    let tags = []
-    let countries = []
-    let months = []
-    let templates = []
-
-    // Iterate through each post, putting all found tags into `tags`
-    _.each(posts, edge => {
-      if (_.get(edge, "node.frontmatter.tags")) {
-        tags = tags.concat(edge.node.frontmatter.tags)
-      }
-
-      if (_.get(edge, "node.frontmatter.country")) {
-        countries = countries.concat(edge.node.frontmatter.country)
-      }
-
-      if (_.get(edge, "node.fields.month")) {
-        months = months.concat(edge.node.fields.month)
-      }
-
-      if (_.get(edge, "node.frontmatter.template")) {
-        templates = templates.concat(edge.node.frontmatter.template)
-      }
-    })
-
-    // Eliminate duplicates in iterables
-    tags = _.uniq(tags)
-    countries = _.uniq(countries)
-    months = _.uniq(months)
-    templates = _.uniq(templates)
-
-    // Make tag pages
-    tags.forEach(tag => {
-      createPage({
-        path: `/tags/${_.kebabCase(tag)}/`,
-        component: tagTemplate,
-        context: {
-          tag,
-        },
-      })
-    })
-
-    // Make country pages
-    countries.forEach(country => {
-      createPage({
-        path: `/countries/${_.kebabCase(country)}/`,
-        component: countryTemplate,
-        context: {
-          country,
-        },
-      })
-    })
-
-    // Make template pages
-    console.log(templates)
-    templates.forEach(template => {
-      console.log(template)
-      createPage({
-        path: `/${template}`,
-        component: templateTemplate,
-        context: {
-          template,
-        },
-      })
-    })
-
-    // Make date pages
-    months.forEach(month => {
-      createPage({
-        path: `/${moment(month).format("YYYY")}/${moment(month)
-          .format("MMMM")
-          .toLowerCase()}/`,
-        component: monthTemplate,
-        context: {
-          month,
-        },
-      })
-    })
-    return null
+    )
   })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({
+  if (node.internal.type === "Mdx") {
+    const value = createFilePath({ node, getNode })
+
+    createNodeField({
+      // Name of the field you are adding
+      name: "slug",
+      // Individual MDX node
       node,
-      getNode,
+      // Generated value based on filepath with "blog" prefix. We
+      // don't need a separating "/" before the value because
+      // createFilePath returns a path with the leading "/".
+      value: `/blog${value}`,
     })
+  }
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
     const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
 
     // Create custom slug field for each markdown file

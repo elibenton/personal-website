@@ -4,18 +4,10 @@ module.exports = {
     author: `Eli Benton Cohen`,
     description: `Traveling the world to understand the politics of digitally networked life`,
     siteUrl: `https://elibenton.co/`,
-    // social: {
-    //   twitter: ``,
-    // },
   },
   plugins: [
     "gatsby-plugin-netlify-cache",
-    // {
-    //   resolve: `gatsby-mdx`,
-    //   options: {
-    //     extensions: [`.mdx`, `.md`],
-    //   },
-    // },
+    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -200,13 +192,13 @@ module.exports = {
         name: `newsletter`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/content/data`,
-    //     name: `data`,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mdx",
+        path: `${__dirname}/content/mdx/`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

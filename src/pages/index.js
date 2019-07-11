@@ -170,7 +170,7 @@ class BlogIndex extends React.Component {
           </BlogTitle>
         </BlogTitleWrapper>
 
-        <Spacer height={50} />
+        <Spacer height={80} />
 
         {posts.map(({ node }) => {
           const {
@@ -193,8 +193,8 @@ class BlogIndex extends React.Component {
                   sm={10}
                   mdOffset={0}
                   md={5}
-                  lgOffset={2}
-                  lg={5}
+                  lgOffset={0}
+                  lg={4}
                 >
                   <MetaContainer>
                     <PostMetaTextContainer>
@@ -224,7 +224,7 @@ class BlogIndex extends React.Component {
                   mdOffset={0}
                   md={6}
                   lgOffset={0}
-                  lg={4}
+                  lg={5}
                 >
                   <PostLink to={`/${template}`}>
                     <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
