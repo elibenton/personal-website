@@ -206,13 +206,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/newsletter`,
-        name: `newsletter`,
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "mdx",
