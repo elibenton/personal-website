@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import { Row, Col } from "react-flexbox-grid"
@@ -21,7 +21,7 @@ const Article = styled.h3`
   margin-bottom: 1.2em;
   font-weight: normal;
 `
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   font-weight: 800;
 `
 
@@ -66,14 +66,14 @@ class PortfolioPage extends React.Component {
               transitionTime={200}
             >
               {posts.map(({ node }) => {
-                const title = node.frontmatter.title
+                const { title, link } = node.frontmatter
                 const date = node.frontmatter.date
                 const publication = node.frontmatter.publication
 
                 return (
                   <div>
                     <Article>
-                      <StyledLink to={node.fields.slug}>{title}</StyledLink> in{" "}
+                      <StyledLink href={link}>{title}</StyledLink> in{" "}
                       <Publication>{publication}</Publication>
                       <h4>{date}</h4>
                     </Article>
@@ -312,6 +312,7 @@ export const pageQuery = graphql`
             title
             description
             publication
+            link
           }
         }
       }

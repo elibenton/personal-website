@@ -11,6 +11,8 @@ tags:
   - Radio
   - Gentrification
   - WBHM
+publication: 90.3 WBHM
+link: https://wbhm.org/feature/2017/birmingham-task-force-addressing-gentrification-set-to-meet/
 ---
 
 `audio: https://wbhm.org/media/2017/08/GentTaskForce_Eli_Spot.m4a`

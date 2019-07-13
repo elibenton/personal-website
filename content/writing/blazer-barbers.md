@@ -11,6 +11,8 @@ tags:
   - Radio
   - Football
   - WBHM
+publication: 90.3 WBHM
+link: https://wbhm.org/feature/2017/twists-fades-and-frohawks-blazers-barbers-gotcha-covered/
 ---
 
 `audio: https://wbhm.org/media/2017/08/UAB_Barbershop_for_web.m4a`

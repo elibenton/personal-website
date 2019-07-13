@@ -14,6 +14,7 @@ tags:
   - Hook Up Culture
   - Campus Politics
 publication: KSPC 88.7 FM
+link: https://discussioncollective.org/episodes/rules-unspoken
 ---
 
 ## The Discussion Collective: Episode 1
