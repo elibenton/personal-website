@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import enhanceWithClickOutside from "react-click-outside"
 
-import Color from "layout/colors"
+import Color from "../utils/colors"
 import CitationButton from "./citation-button"
 import CitationContainer from "./citation-container"
 
@@ -44,14 +44,14 @@ here's a blank to copy:
 
 const styles = {
   selectText: {
-    backgroundColor: Color("yellow1"),
+    backgroundColor: Color("yellow"),
     transition: "background-color 150ms ease-in",
   },
   deselectText: {
     backgroundColor: "transparent",
   },
   hoverText: {
-    backgroundColor: Color("yellow1", 0, 10, 0.8),
+    backgroundColor: Color("yellow", 0, 20),
   },
 }
 class Citation extends React.Component {

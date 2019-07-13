@@ -110,7 +110,7 @@ class BlogPostTemplate extends React.Component {
             sm={10}
             mdOffset={1}
             md={10}
-            lgOffset={4}
+            lgOffset={3}
             lg={6}
           >
             <div className="blog-post-body">
@@ -164,6 +164,7 @@ export const pageQuery = graphql`
         city
         country
         template
+        tags
       }
     }
   }

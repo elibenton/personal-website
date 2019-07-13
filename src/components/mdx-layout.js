@@ -1,6 +1,6 @@
 import React from "react"
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -49,9 +49,9 @@ const Attribution = styled.div`
   }
 `
 
-function PageTemplate({ data: { mdx } }) {
-  // const post = this.props.data.markdownRemark
-  // const siteTitle = this.props.data.site.siteMetadata.title
+function PageTemplate({ data }) {
+  const siteTitle = data.site.siteMetadata.title
+  const { mdx } = data
   const {
     title,
     description,
@@ -61,9 +61,10 @@ function PageTemplate({ data: { mdx } }) {
     tags,
     template,
   } = mdx.frontmatter
+
   return (
-    <Layout location={this.props.location} title={"hello"}>
-      {/* <SEO title={title} description={description || post.excerpt} /> */}
+    <Layout location={data.location} title={siteTitle}>
+      <SEO title={title} description={description || mdx.excerpt} />
       <Row>
         <Col
           xsOffset={0}
@@ -143,14 +144,22 @@ function PageTemplate({ data: { mdx } }) {
   )
 }
 
+export default PageTemplate
+
 export const pageQuery = graphql`
   query MdxPostQuery($id: String) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
     mdx(id: { eq: $id }) {
       id
       frontmatter {
         title
         description
-        date
+        date(formatString: "MMMM DD, YYYY")
         city
         country
         tags

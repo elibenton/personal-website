@@ -63,7 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: node.fields.slug,
             component: path.resolve(`./src/components/mdx-layout.js`),
             context: {
-              id: inode.d,
+              id: node.id,
             },
           })
         })
@@ -74,7 +74,6 @@ exports.createPages = ({ graphql, actions }) => {
         posts.forEach(post => {
           const { template } = post.node.frontmatter
           const { slug } = post.node.fields
-
           createPage({
             path: `/${template}${slug}`,
             component: postWriting,
@@ -161,7 +160,7 @@ exports.createPages = ({ graphql, actions }) => {
               .toLowerCase()}/`,
             component: indexFiltered,
             context: {
-              name: filter_month,
+              name: moment(filter_month).format("MMMM YYYY"),
               filter: { fields: { month: { in: [filter_month] } } },
             },
           })

@@ -208,7 +208,7 @@ const Tags = ({ pageContext, data }) => {
                 mdOffset={0}
                 md={6}
                 lgOffset={0}
-                lg={4}
+                lg={5}
               >
                 <PostLink to={`/${template}`}>
                   <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>

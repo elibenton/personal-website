@@ -7,7 +7,34 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-netlify-cache",
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        mediaTypes: [`text/x-markdown`],
+        defaultLayouts: {
+          default: require.resolve("./src/components/mdx-layout.js"),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              // maxHeight: 600,
+            },
+          },
+          {
+            resolve: "gatsby-remark-audio",
+            options: {
+              preload: "auto",
+              loop: false,
+              controls: true,
+              muted: false,
+              autoplay: false,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -203,6 +230,16 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: "gatsby-remark-audio",
+            options: {
+              preload: "auto",
+              loop: false,
+              controls: true,
+              muted: false,
+              autoplay: false,
+            },
+          },
           {
             resolve: `gatsby-remark-relative-images`,
           },

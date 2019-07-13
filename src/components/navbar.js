@@ -5,7 +5,7 @@ import styled from "styled-components"
 const Nav = styled.div`
   position: sticky;
   top: 0;
-  background-color: rgb(254, 250, 250);
+  background-color: white;
   height: 50px;
   z-index: 10;
   width: 100%;

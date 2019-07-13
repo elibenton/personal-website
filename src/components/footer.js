@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const FooterWrapper = styled(Row)`
   display: flex;
-  background-color: rgb(254, 250, 250);
+  background-color: white;
   padding-top: 40px;
   padding-bottom: 5px;
   border-top: thick double;

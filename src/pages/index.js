@@ -192,9 +192,9 @@ class BlogIndex extends React.Component {
                   smOffset={1}
                   sm={10}
                   mdOffset={0}
-                  md={5}
+                  md={4}
                   lgOffset={0}
-                  lg={4}
+                  lg={5}
                 >
                   <MetaContainer>
                     <PostMetaTextContainer>
@@ -278,6 +278,25 @@ export const pageQuery = graphql`
           fields {
             slug
             month
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            city
+            country
+            description
+            tags
+            template
+          }
+        }
+      }
+    }
+    allMdx {
+      edges {
+        node {
+          id
+          fields {
+            slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")

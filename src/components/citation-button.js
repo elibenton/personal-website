@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Color from "layout/colors"
+import Color from "../utils/colors"
 
 const Icon = styled.span`
   display: inline-block;
@@ -10,7 +10,7 @@ const Icon = styled.span`
   height: 14px;
   width: 14px;
   margin-left: 4px;
-  background-color: ${props => (props.isActive ? Color("yellow1") : "#eee")};
+  background-color: ${props => (props.isActive ? Color("yellow") : "#eee")};
   border-radius: 7px;
   pointer-events: auto;
   cursor: pointer;
@@ -18,7 +18,7 @@ const Icon = styled.span`
   @media not all and (hover: none) {
     &:hover {
       border-color: transparent;
-      background-color: ${Color("yellow1")};
+      background-color: ${Color("yellow")};
     }
   }
 `

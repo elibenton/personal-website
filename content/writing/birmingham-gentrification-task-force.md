@@ -1,0 +1,22 @@
+---
+template: audio
+
+title: The Birmingham Gentrification Task Force
+date: 2017-08-03
+city: "Birmingham, AL"
+country: United States
+description: >-
+  Gentrification has been an issue in the August 22nd city elections. It’s unclear whether a change in city leadership will affect the task force. Some task force members told WBHM they knew very little about the group’s plans so far. The mayor’s office did not respond to requests for an interview.
+tags:
+  - Radio
+  - Gentrification
+  - WBHM
+---
+
+`audio: https://wbhm.org/media/2017/08/GentTaskForce_Eli_Spot.m4a`
+
+A new task force to address gentrification in Birmingham is set to meet for the first time later this month. More than 30 people make up the “Task Force on Preserving Dynamic and Diverse Neighborhoods.” They include city officials, community organizers, and local business leaders.
+
+According to a city press release, the goal of the task force is to present a comprehensive policy to the mayor, who created the entity, in about a year. Most of that time will be spent considering policy recommendations on issues from affordable housing to transportation. Sally Mackin is the Executive Director of the Woodlawn Foundation and a member of the gentrification task force. She says she’s optimistic the group will address key development issues before they become bigger problems.
+
+“I’m trying to look at this as a positive opportunity for Birmingham, because I think we’re still early enough in our stage of growth to address some policies that ensure equitable development, particularly in our neighborhoods,” says Sally Mackin, executive director of the much talked about Woodlawn Foundation.
