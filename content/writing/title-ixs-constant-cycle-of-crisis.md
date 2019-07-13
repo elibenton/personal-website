@@ -16,6 +16,7 @@ tags:
   - Title IX
   - Campus Politics
 publication: KSPC 88.7 FM
+link: https://discussioncollective.org/episodes/part-3
 ---
 
 ## The Discussion Collective: Episode 6

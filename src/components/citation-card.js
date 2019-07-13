@@ -1,16 +1,15 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import Color from "layout/colors"
-import { LinkOutIcon } from "components/static/icons"
+import { FaExternalLinkSquareAlt } from "react-icons/fa"
 
 const Card = styled.span`
-  font-family: ${props => props.theme.fonts.helvetica};
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   display: block;
   padding: 10px;
   background-color: white;
-  color: ${Color("black")};
-  border: 2px solid ${Color("black")};
+  color: black;
+  border: 2px solid black;
   border-radius: 2px;
   width: 100%;
 `
@@ -20,7 +19,7 @@ const CardLabel = styled.span`
   font-weight: bold;
   text-align: center;
   font-size: 16px;
-  color: ${Color("black")};
+  color: black;
 `
 
 const SourcePublication = styled.span`
@@ -76,9 +75,9 @@ const Button = styled.div`
   justify-content: center;
   background-color: white;
   font-weight: bold;
-  border: 2px solid ${Color("black")};
+  border: 2px solid black;
   font-size: 12px;
-  color: ${Color("black")};
+  color: black;
   text-align: center;
   padding: 6px 9px 6px 5px;
   border-radius: 4px;
@@ -87,7 +86,7 @@ const Button = styled.div`
 
   @media not all and (hover: none) {
     &:hover {
-      background-color: ${Color("yellow1")};
+      background-color: black;
       text-decoration: underline;
       outline: none;
     }
@@ -123,10 +122,12 @@ class CitationCard extends Component {
                 style={{ textDecoration: "none" }}
               >
                 <Button>
+                  Read more&nbsp;
                   <LinkOutStyle>
-                    <LinkOutIcon />
+                    <FaExternalLinkSquareAlt
+                      style={{ position: "relative", bottom: "1px"}}
+                    />
                   </LinkOutStyle>
-                  Read more
                 </Button>
               </a>
             </span>

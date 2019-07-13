@@ -16,6 +16,7 @@ tags:
   - Academic
   - Queer Studies
 publication: KSPC 88.7 FM
+link: https://discussioncollective.squarespace.com/episodes/reclaiming-language
 ---
 
 ## The Discussion Collective: Bonus Episode

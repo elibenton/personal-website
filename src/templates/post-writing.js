@@ -1,24 +1,27 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import { graphql, Link } from "gatsby"
+
 import SEO from "../components/seo"
+import Layout from "../components/layout"
+import { TagText, TemplateText, TagSpan } from "../components/layout"
+
 import { FaCalendarDay, FaMapMarkerAlt } from "react-icons/fa"
 import { Row, Col } from "react-flexbox-grid"
 import styled from "styled-components"
+import kebabCase from "lodash/kebabCase"
 
 import Spacer from "../utils/spacer"
 import Color from "../utils/colors"
 import Line from "../utils/line"
 
-// const FrontImage = styled.img`
-//   max-height: 200px;
-//   width: 100%;
-//   margin-top: 15px;
-//   object-fit: cover;
-//   object-position: 50% 50%;
-//   box-shadow: 0 2px 10px #eee;
-// `
-
+// Created locally-scoped styled components
+const PostLink = styled(Link)`
+  text-decoration: none;
+  :hover,
+  :active {
+    color: #ffd666;
+  }
+`
 const TitleContainer = styled.div`
   @media screen and (max-width: 767px) {
     margin-left: 10px;
@@ -49,15 +52,18 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    // const { previous, next } = this.props.pageContext
-    // const color = post.frontmatter.color
-
+    const {
+      title,
+      description,
+      date,
+      city,
+      country,
+      tags,
+      template,
+    } = post.frontmatter
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
+        <SEO title={title} description={description || post.excerpt} />
         <Row>
           <Col
             xsOffset={0}
@@ -70,8 +76,8 @@ class BlogPostTemplate extends React.Component {
             lg={6}
           >
             <TitleContainer>
-              <Title>{post.frontmatter.title}</Title>
-              <Subtitle>{post.frontmatter.description}</Subtitle>
+              <Title>{title}</Title>
+              <Subtitle>{description}</Subtitle>
             </TitleContainer>
           </Col>
           <Col
@@ -87,11 +93,10 @@ class BlogPostTemplate extends React.Component {
             <Attribution offset={130}>
               <Line color={Color("yellow")} />
               <AttributionText>
-                <FaCalendarDay /> {post.frontmatter.date}
+                <FaCalendarDay /> {date}
               </AttributionText>
               <AttributionText>
-                <FaMapMarkerAlt /> {post.frontmatter.city},{" "}
-                {post.frontmatter.country}
+                <FaMapMarkerAlt /> {city}, {country}
               </AttributionText>
             </Attribution>
           </Col>
@@ -105,33 +110,35 @@ class BlogPostTemplate extends React.Component {
             sm={10}
             mdOffset={1}
             md={10}
-            lgOffset={4}
+            lgOffset={3}
             lg={6}
           >
             <div className="blog-post-body">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
               <Line color={Color("yellow")} />
             </div>
+            <PostLink to={`/${template}`}>
+              <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
+            </PostLink>
+            {tags.map((tag, index) =>
+              index === 0 ? (
+                <TagSpan key={index}>
+                  <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                    <TagText>{tag}</TagText>
+                  </PostLink>
+                </TagSpan>
+              ) : (
+                <TagSpan key={index}>
+                  &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                  <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                    <TagText>{tag}</TagText>
+                  </PostLink>
+                </TagSpan>
+              )
+            )}
           </Col>
         </Row>
         <Spacer height={100} />
-
-        {/* <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul> */}
       </Layout>
     )
   }
@@ -156,6 +163,8 @@ export const pageQuery = graphql`
         description
         city
         country
+        template
+        tags
       }
     }
   }

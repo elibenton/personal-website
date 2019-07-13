@@ -11,6 +11,7 @@ tags:
   - Politics of Technology
   - Facebook
 publication: The Student Life
+link: https://tsl.news/opinions7481/
 ---
 
 Lambasting Facebook is in vogue. It’s dangerous for our children. It’s making us all lonely. It's even

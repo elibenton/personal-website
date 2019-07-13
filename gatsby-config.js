@@ -4,18 +4,37 @@ module.exports = {
     author: `Eli Benton Cohen`,
     description: `Traveling the world to understand the politics of digitally networked life`,
     siteUrl: `https://elibenton.co/`,
-    // social: {
-    //   twitter: ``,
-    // },
   },
   plugins: [
     "gatsby-plugin-netlify-cache",
-    // {
-    //   resolve: `gatsby-mdx`,
-    //   options: {
-    //     extensions: [`.mdx`, `.md`],
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        mediaTypes: [`text/x-markdown`],
+        defaultLayouts: {
+          default: require.resolve("./src/components/mdx-layout.js"),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              // maxHeight: 600,
+            },
+          },
+          {
+            resolve: "gatsby-remark-audio",
+            options: {
+              preload: "auto",
+              loop: false,
+              controls: true,
+              muted: false,
+              autoplay: false,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -200,17 +219,27 @@ module.exports = {
         name: `newsletter`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/content/data`,
-    //     name: `data`,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mdx",
+        path: `${__dirname}/content/mdx/`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: "gatsby-remark-audio",
+            options: {
+              preload: "auto",
+              loop: false,
+              controls: true,
+              muted: false,
+              autoplay: false,
+            },
+          },
           {
             resolve: `gatsby-remark-relative-images`,
           },
