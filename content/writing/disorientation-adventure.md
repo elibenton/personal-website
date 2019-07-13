@@ -16,11 +16,13 @@ tags:
 publication: KSPC 88.7 FM
 ---
 
-## The Discussion Collective: Episode 5
+`audio: https://s3-us-west-2.amazonaws.com/anchor-audio-bank/production/2019-1-11/9836971-44100-2-1b822d0bae834.mp3`
 
-### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/DisOrientation-Adventure-e2okjk)
+## The Discussion Collective
 
-_Where was this mobilization for the issues that really mattered: mental health resources, affordability issues, Title IX policy changes? Choosing to rally around OA but not other topics, they believed, was negligent, hypocritical, and privileged. It's been approximately two months since the initial decision catalyzed the outrage, then the counter-outrage. Three forums have been held to discuss the future of the Orientation Adventure program, but attendance has been sparse and the discussions vague. We talked to students, professors, and alumni, but the question remains: where do we go from here?_
+#### Episode 5
+
+Students would demand: Where was this mobilization for the issues that really mattered: mental health resources, affordability issues, Title IX policy changes? Choosing to rally around OA but not other topics, they believed, was negligent, hypocritical, and privileged. It's been approximately two months since the initial decision catalyzed the outrage, then the counter-outrage. Three forums have been held to discuss the future of the Orientation Adventure program, but attendance has been sparse and the discussions vague. We talked to students, professors, and alumni, but the question remains: where do we go from here?
 
 ## Reflection
 

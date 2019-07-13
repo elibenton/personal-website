@@ -1,5 +1,5 @@
 ---
-template: writing
+template: audio
 
 title: A First Attempt At Something Else
 date: 2018-11-15
@@ -17,9 +17,11 @@ publication: KSPC 88.7 FM
 link: https://discussioncollective.org/episodes/part-1
 ---
 
-## The Discussion Collective: Episode 3
+`audio: https://s3-us-west-2.amazonaws.com/anchor-audio-bank/production/2018-10-15/5834481-44100-2-ff94a684abacf.mp3`
 
-### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/A-First-Attempt-At-Something-Else-Part-1-e2jfcb)
+## The Discussion Collective
+
+#### Episode 3
 
 On October 4th of this year, Pomona College’s Dean of Students sent an email banning the use of anonymously-created lists that kept students out of campus events. Some people were furious, others were relieved, and many students were learning about the practice for the first time.
 
