@@ -19,9 +19,11 @@ publication: KSPC 88.7 FM
 link: https://discussioncollective.squarespace.com/episodes/reclaiming-language
 ---
 
-## The Discussion Collective: Bonus Episode
-
 ### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Reclaiming-Language-Bonus-Episode-e36f41)
+
+## The Discussion Collective
+
+#### Bonus Episode
 
 [Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective](https://philpapers.org/rec/HARSKT) by Donna Haraway
 

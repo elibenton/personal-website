@@ -17,11 +17,9 @@ publication: KSPC 88.7 FM
 link: https://discussioncollective.org/episodes/rules-unspoken
 ---
 
-## The Discussion Collective: Episode 1
+## The Discussion Collective
 
-### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Pilot-Episode-Rules-Unspoken-e2a2t0)
-
-## Reflection
+### Episode 1: [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Pilot-Episode-Rules-Unspoken-e2a2t0)
 
 This being the first episode I ever produced, the learning curve was incredibly steep and it took me almost two months just to produce the episode. The first thing I noticed was just how challenging it is to work with raw conversation. People do not speak in linear fashion. Furthermore, a lot of speech is referential and meaning resides outside of the words themselves (gestures, cadence, and tone). As such, pulling quotations for use in a podcast is harder than one would expect. Most self-contained thoughts only existed in two types, either a five second soundbite or a minutes long speech. Neither are particularly useful for podcasting. A laundry of soundbites does not build to anything meaningful for a listener, but more than 30 seconds of a single speaker can be difficult to follow.
 

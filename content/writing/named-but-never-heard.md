@@ -19,9 +19,11 @@ publication: KSPC 88.7 FM
 link: https://discussioncollective.org/episodes/part-2
 ---
 
-## The Discussion Collective: Episode 4
+`audio: https://s3-us-west-2.amazonaws.com/anchor-audio-bank/production/2018-10-27/6074862-44100-2-de598f828e95b.mp3`
 
-### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Named-But-Never-Heard-Part-2-e2laai)
+## The Discussion Collective
+
+#### Episode 4
 
 In the second part of our series about sexual assault on campus, Title IX, and “The Lists,” I talk with a person who understands these lists in a ways most of us cannot—he’s actually on one of them. Our original conversations were held in private, have been transcribed, and are reproduced here by a voice actor—all identifying information has been removed.
 

@@ -291,24 +291,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMdx {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            city
-            country
-            description
-            tags
-            template
-          }
-        }
-      }
-    }
   }
 `
