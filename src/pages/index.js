@@ -226,25 +226,25 @@ class BlogIndex extends React.Component {
                   lgOffset={0}
                   lg={5}
                 >
-                  <PostLink to={`/${template}`}>
-                    <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
-                  </PostLink>
-                  {tags.map((tag, index) =>
-                    index === 0 ? (
-                      <TagSpan key={index}>
+                  <TagSpan>
+                    <PostLink to={`/${template}`}>
+                      <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
+                    </PostLink>
+                    {tags.map((tag, index) =>
+                      index === 0 ? (
                         <PostLink to={`/tags/${kebabCase(tag)}/`}>
                           <TagText>{tag}</TagText>
                         </PostLink>
-                      </TagSpan>
-                    ) : (
-                      <TagSpan key={index}>
-                        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                        <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                          <TagText>{tag}</TagText>
-                        </PostLink>
-                      </TagSpan>
-                    )
-                  )}
+                      ) : (
+                        <TagSpan key={index}>
+                          &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                          <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                            <TagText>{tag}</TagText>
+                          </PostLink>
+                        </TagSpan>
+                      )
+                    )}
+                  </TagSpan>
                   <Line color={Color("yellow")} />
                   <Excerpt
                     dangerouslySetInnerHTML={{

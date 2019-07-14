@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 
 // Import custom build components
 import Layout from "../components/layout"
-import { TagText, TemplateText, TagSpan } from "../components/layout"
+import { TagText, TemplateText } from "../components/layout"
 import SEO from "../components/seo"
 
 // Import ancillary libraries
@@ -131,6 +131,12 @@ const MetaText = styled.h4`
     color: #ffd666;
   }
 `
+export const TagSpan = styled.span`
+  color: #999;
+  @media screen and (max-width: 767px) {
+     display: none;
+  }
+`
 
 // Class body
 const Tags = ({ pageContext, data }) => {
@@ -210,25 +216,26 @@ const Tags = ({ pageContext, data }) => {
                 lgOffset={0}
                 lg={5}
               >
-                <PostLink to={`/${template}`}>
-                  <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
-                </PostLink>
-                {tags.map((tag, index) =>
-                  index === 0 ? (
-                    <TagSpan key={index}>
+                <TagSpan>
+                  <PostLink to={`/${template}`}>
+                    <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
+                  </PostLink>
+                  {tags.map((tag, index) =>
+                    index === 0 ? (
                       <PostLink to={`/tags/${kebabCase(tag)}/`}>
                         <TagText>{tag}</TagText>
                       </PostLink>
-                    </TagSpan>
-                  ) : (
-                    <TagSpan key={index}>
-                      &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                      <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                        <TagText>{tag}</TagText>
-                      </PostLink>
-                    </TagSpan>
-                  )
-                )}
+                    ) : (
+                      <TagSpan key={index}>
+                        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                        <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                          <TagText>{tag}</TagText>
+                        </PostLink>
+                      </TagSpan>
+                    )
+                  )}
+                </TagSpan>
+
                 <Line color={Color("yellow")} />
                 <Excerpt
                   dangerouslySetInnerHTML={{

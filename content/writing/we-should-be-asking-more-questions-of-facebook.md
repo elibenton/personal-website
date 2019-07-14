@@ -1,7 +1,7 @@
 ---
 template: writing
 
-title: We Should Be Asking More Questions of Facebook
+title: We Should Be Asking More Questions
 date: 2018-03-30
 city: Claremont, CA
 country: United States

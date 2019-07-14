@@ -14,8 +14,6 @@ description: >-
 tags:
   - Podcasting
   - Storytelling
-publication: KSPC 88.7 FM
-link: https://discussioncollective.org/episodes/transition-stories
 ---
 
 ## The Discussion Collective

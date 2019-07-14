@@ -15,8 +15,6 @@ description: >-
 tags:
   - Academic
   - Queer Studies
-publication: KSPC 88.7 FM
-link: https://discussioncollective.squarespace.com/episodes/reclaiming-language
 ---
 
 ### [Listen to the episode](https://anchor.fm/discussioncollective/episodes/Reclaiming-Language-Bonus-Episode-e36f41)

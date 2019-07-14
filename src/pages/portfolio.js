@@ -14,21 +14,31 @@ const Header = styled.h2`
   margin-top: 30px;
 `
 
+const MobileContainer = styled.span`
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+`
+
 const Article = styled.h3`
   font-style: none;
   text-transform: none;
-  margin-top: 0.5em;
-  margin-bottom: 1.2em;
   font-weight: normal;
 `
 const StyledLink = styled.a`
   font-weight: 800;
 `
-
-const Publication = styled.span`
+const Item = styled.div`
+  margin-top: 20px;
+`
+const Publication = styled.div`
+  display: inline;
   font-style: italic;
   text-transform: none;
   font-weight: 800;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
 `
 
 class PortfolioPage extends React.Component {
@@ -71,13 +81,14 @@ class PortfolioPage extends React.Component {
                 const publication = node.frontmatter.publication
 
                 return (
-                  <div>
+                  <Item>
                     <Article>
-                      <StyledLink href={link}>{title}</StyledLink> in{" "}
+                      <StyledLink href={link}>{title}</StyledLink>
+                      <MobileContainer> in </MobileContainer>
                       <Publication>{publication}</Publication>
                       <h4>{date}</h4>
                     </Article>
-                  </div>
+                  </Item>
                 )
               })}
             </Collapsible>

@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { TagText, TemplateText, TagSpan } from "../components/layout"
+import { TagText, TemplateText } from "../components/layout"
 
 import { FaCalendarDay, FaMapMarkerAlt } from "react-icons/fa"
 import { Row, Col } from "react-flexbox-grid"
@@ -26,6 +26,7 @@ const PostLink = styled(Link)`
 const TitleContainer = styled.div`
   @media screen and (max-width: 767px) {
     margin-left: 10px;
+    width: 90%;
   }
 `
 const Title = styled.h1`
@@ -47,6 +48,9 @@ const Attribution = styled.div`
     margin-left: 10px;
     width: calc(100% - 20px);
   }
+`
+export const TagSpan = styled.span`
+  color: #999;
 `
 
 function PageTemplate({ data }) {
@@ -117,26 +121,26 @@ function PageTemplate({ data }) {
           <div className="blog-post-body">
             <MDXRenderer>{mdx.body}</MDXRenderer>
             <Line color={Color("yellow")} />
+            <PostLink to={`/${template}`}>
+              <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
+            </PostLink>
+            {tags.map((tag, index) =>
+              index === 0 ? (
+                <TagSpan key={index}>
+                  <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                    <TagText>{tag}</TagText>
+                  </PostLink>
+                </TagSpan>
+              ) : (
+                <TagSpan key={index}>
+                  &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                  <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                    <TagText>{tag}</TagText>
+                  </PostLink>
+                </TagSpan>
+              )
+            )}
           </div>
-          <PostLink to={`/${template}`}>
-            <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
-          </PostLink>
-          {tags.map((tag, index) =>
-            index === 0 ? (
-              <TagSpan key={index}>
-                <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                  <TagText>{tag}</TagText>
-                </PostLink>
-              </TagSpan>
-            ) : (
-              <TagSpan key={index}>
-                &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                  <TagText>{tag}</TagText>
-                </PostLink>
-              </TagSpan>
-            )
-          )}
         </Col>
       </Row>
       <Spacer height={100} />

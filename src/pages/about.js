@@ -12,13 +12,21 @@ const About = styled.p`
   font-size: 24px;
   line-height: 1.2em;
 `
-const Header = styled.span`
+const Header = styled.h2`
+  margin-top: 0.5em;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    margin-top: 0;
+  }
+`
+const Bold = styled.span`
   font-weight: bold;
 `
 
 const AboutContainer = styled.div`
-  margin: 2em 2em 2em 0;
+  margin: 2em 4em 0 0;
   @media screen and (max-width: 767px) {
+    margin: 2em 0 1em 0;
     justify-content: flex-start;
     flex-direction: column;
   }
@@ -76,10 +84,13 @@ class AboutPage extends React.Component {
               politics and computer science.
             </About>
             <br />
-            <About>
-              <Header>Contact: </Header>
-              <a href="mailto:eliunited@gmail.com">eliunited@gmail.com</a>{" "}
-            </About>
+            <Header>
+              <Bold>Email: </Bold>
+              <a href="mailto:eliunited@gmail.com">eliunited@gmail.com</a>
+            </Header>
+            <Header>
+              <Bold>WhatsApp: </Bold>+1 (205) 876-3367
+            </Header>
           </Col>
         </Row>
         <Spacer height={135} xsHeight={20} />
