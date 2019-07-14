@@ -118,7 +118,7 @@ blockquote {
 
 /* Styles for blog post */
 
-.blog-post-body > div {
+/* .blog-post-body > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -127,7 +127,7 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-}
+} */
 
 .blog-post-body div p > img {
   max-height: 350px;
@@ -174,7 +174,7 @@ blockquote {
     border-radius: 4px;
   }
   .gatsby-resp-image-figcaption {
-    left: -5% !important;
+    left: 0% !important;
     position: relative;
     text-align: left;
     padding-bottom: 1em;
