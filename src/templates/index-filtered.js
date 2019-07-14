@@ -47,18 +47,17 @@ const BlogTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  @media screen and (max-width: 767px) {
+  /* @media screen and (max-width: 767px) {
     display: none;
-  }
+  } */
 `
 const TagCount = styled.h1`
   font-size: 256px;
   margin: 90px 60px 60px 60px;
-  /* margin: 60px; */
   text-shadow: 3px 5px #ffd666;
   @media screen and (max-width: 767px) {
     font-size: 128px;
-    margin: 10px;
+    margin: 10px 10px 10px 40px;
   }
 `
 const TagCountPlural = styled.h1`
@@ -131,10 +130,11 @@ const MetaText = styled.h4`
     color: #ffd666;
   }
 `
-export const TagSpan = styled.span`
+export const TagSpan = styled.div`
   color: #999;
+  display: inline;
   @media screen and (max-width: 767px) {
-     display: none;
+    display: none;
   }
 `
 
