@@ -73,4 +73,4 @@ Meet people where they are — and appreciate them when they do. Sitting down wi
 
 How can we all work to regain this appreciation? First, we should stop focusing on who deserves the blame for the countless failed conversations we have today. In fact, I think it would be wise to take a break from our current conversations entirely — at least until we take enough time for a gut check.
 
-This is a request that we step back and evaluate our own methods, that we critically examine the aspects of discussion typically overlooked. It will be a lengthy, iterative project, largely predicted on good-faith effort and slowly-established trust. The place to start is with ourselves.◆
+This is a request that we step back and evaluate our own methods, that we critically examine the aspects of discussion typically overlooked. It will be a lengthy, iterative project, largely predicted on good-faith effort and slowly-established trust. The place to start is with ourselves.

@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 
 // Import custom build components
 import Layout from "../components/layout"
-import { TagText, TemplateText, TagSpan } from "../components/layout"
+import { TagText, TemplateText } from "../components/layout"
 import SEO from "../components/seo"
 
 // Import ancillary libraries
@@ -47,18 +47,17 @@ const BlogTitle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  @media screen and (max-width: 767px) {
+  /* @media screen and (max-width: 767px) {
     display: none;
-  }
+  } */
 `
 const TagCount = styled.h1`
   font-size: 256px;
   margin: 90px 60px 60px 60px;
-  /* margin: 60px; */
   text-shadow: 3px 5px #ffd666;
   @media screen and (max-width: 767px) {
     font-size: 128px;
-    margin: 10px;
+    margin: 10px 10px 10px 40px;
   }
 `
 const TagCountPlural = styled.h1`
@@ -129,6 +128,13 @@ const MetaText = styled.h4`
   :hover,
   :active {
     color: #ffd666;
+  }
+`
+export const TagSpan = styled.div`
+  color: #999;
+  display: inline;
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `
 
@@ -210,25 +216,26 @@ const Tags = ({ pageContext, data }) => {
                 lgOffset={0}
                 lg={5}
               >
-                <PostLink to={`/${template}`}>
-                  <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
-                </PostLink>
-                {tags.map((tag, index) =>
-                  index === 0 ? (
-                    <TagSpan key={index}>
+                <TagSpan>
+                  <PostLink to={`/${template}`}>
+                    <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
+                  </PostLink>
+                  {tags.map((tag, index) =>
+                    index === 0 ? (
                       <PostLink to={`/tags/${kebabCase(tag)}/`}>
                         <TagText>{tag}</TagText>
                       </PostLink>
-                    </TagSpan>
-                  ) : (
-                    <TagSpan key={index}>
-                      &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-                      <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                        <TagText>{tag}</TagText>
-                      </PostLink>
-                    </TagSpan>
-                  )
-                )}
+                    ) : (
+                      <TagSpan key={index}>
+                        &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                        <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                          <TagText>{tag}</TagText>
+                        </PostLink>
+                      </TagSpan>
+                    )
+                  )}
+                </TagSpan>
+
                 <Line color={Color("yellow")} />
                 <Excerpt
                   dangerouslySetInnerHTML={{

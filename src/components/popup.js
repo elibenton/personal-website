@@ -23,11 +23,11 @@ class EmailPopup extends React.Component {
   state = { email: null }
 
   componentDidMount() {
-    let visited = sessionStorage["alreadyVisited"]
+    let visited = localStorage["alreadyVisited"]
     if (visited) {
       this.setState({ viewPopup: false })
     } else {
-      sessionStorage["alreadyVisited"] = true
+      localStorage["alreadyVisited"] = true
       this.setState({ viewPopup: true })
     }
   }

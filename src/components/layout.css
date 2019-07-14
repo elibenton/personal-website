@@ -174,7 +174,7 @@ blockquote {
     border-radius: 4px;
   }
   .gatsby-resp-image-figcaption {
-    left: -5% !important;
+    left: 0% !important;
     position: relative;
     text-align: left;
     padding-bottom: 1em;

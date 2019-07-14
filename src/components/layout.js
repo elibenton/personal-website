@@ -37,13 +37,6 @@ export const TemplateText = styled.p`
   }
 `
 
-export const TagSpan = styled.span`
-  color: #999;
-  @media screen and (max-width: 767px) {
-     display: none;
-  }
-`
-
 export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props
