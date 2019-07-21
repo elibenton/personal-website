@@ -19,6 +19,9 @@ const FinePrint = styled.div`
   font-size: 14px;
   line-height: 20px;
   color: black;
+  @media screen and (max-width: 360px) {
+    font-size: 12px;
+  }
 `
 
 const StyledLink = styled.a`

@@ -153,8 +153,9 @@ const TagSpan = styled.span`
 // Class body
 class BlogIndex extends React.Component {
   render() {
-    // Using destructuing, pull off site title and description
+    // Site Data
     const { title, description } = this.props.data.site.siteMetadata
+
     // Using destructuing, create an array of posts
     const posts = this.props.data.allMarkdownRemark.edges
 
@@ -288,6 +289,27 @@ export const pageQuery = graphql`
             tags
             template
           }
+        }
+      }
+    }
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            city
+            country
+            description
+            tags
+            template
+          }
+          body
+          rawBody
         }
       }
     }
