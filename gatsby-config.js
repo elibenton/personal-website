@@ -212,13 +212,13 @@ module.exports = {
         name: `images`,
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "mdx",
-        path: `${__dirname}/content/mdx/`,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "mdx",
+    //     path: `${__dirname}/content/mdx/`,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
