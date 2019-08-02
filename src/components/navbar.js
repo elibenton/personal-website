@@ -41,7 +41,7 @@ const NavLink = styled(Link)`
   color: black;
   padding: 3px 20px;
 `
-var prevScrollPos = window.pageYOffset
+var prevScrollPos
 
 class Navbar extends React.Component {
   state = { scrollingUp: false }

@@ -36,16 +36,6 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
-            allMdx {
-              edges {
-                node {
-                  id
-                  fields {
-                    slug
-                  }
-                }
-              }
-            }
           }
         `
       ).then(result => {
@@ -55,18 +45,19 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const mdx = result.data.allMdx.edges
+        // ADD BACK IN MDX FUNCTIONALITY LATER
+        // const mdx = result.data.allMdx.edges
 
         // We'll call `createPage` for each result
-        mdx.forEach(({ node }) => {
-          createPage({
-            path: node.fields.slug,
-            component: path.resolve(`./src/components/mdx-layout.js`),
-            context: {
-              id: node.id,
-            },
-          })
-        })
+        // mdx.forEach(({ node }) => {
+        //   createPage({
+        //     path: node.fields.slug,
+        //     component: path.resolve(`./src/components/mdx-layout.js`),
+        //     context: {
+        //       id: node.id,
+        //     },
+        //   })
+        // })
 
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges

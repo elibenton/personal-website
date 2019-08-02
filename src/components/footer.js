@@ -26,6 +26,8 @@ const FinePrint = styled.div`
 
 const StyledLink = styled.a`
   color: black;
+  /* text-decoration: none; */
+  /* font-style: italic; */
 `
 
 const Footer = () => {
@@ -45,12 +47,29 @@ const Footer = () => {
           <span role="img" aria-label="Arm">
             💪
           </span>
-          Coded by hand using{" "}
-          <StyledLink href="https://www.gatsbyjs.com/">Gatsby</StyledLink>,{" "}
-          <StyledLink href="https://reactjs.org/">React</StyledLink>, &{" "}
+          Coded by hand using&nbsp;
+          <StyledLink href="https://www.gatsbyjs.com/">Gatsby</StyledLink>
+          ,&nbsp;
+          <StyledLink href="https://reactjs.org/">React</StyledLink>, and&nbsp;
           <StyledLink href="https://www.netlify.com/">Netlify</StyledLink>
           <br />
-          ©️ Eli Cohen {new Date().getFullYear()}
+          <span role="img" aria-label="Books">
+            📚
+          </span>
+          Checkout the&nbsp;
+          <StyledLink href="https://github.com/elibenton/personal-website">
+            Codebase
+          </StyledLink>
+          ,&nbsp;
+          <StyledLink href="https://www.elibenton.co/sitemap.xml">
+            Sitemap
+          </StyledLink>
+          , or&nbsp;
+          <StyledLink href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            CC License
+          </StyledLink>
+          <br />
+          ©️ {new Date().getFullYear()} Eli Cohen
         </FinePrint>
       </Col>
     </FooterWrapper>

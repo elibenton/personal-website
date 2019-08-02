@@ -9,24 +9,21 @@ import Layout from "../components/layout"
 import Spacer from "../utils/spacer"
 
 const About = styled.p`
+  margin-top: 2em;
   font-size: 24px;
   line-height: 1.2em;
 `
 const Header = styled.h2`
-  margin-top: 0.5em;
-  @media screen and (max-width: 767px) {
-    font-size: 18px;
-    margin-top: 0;
-  }
+  margin-top: 0;
+  font-size: 22px;
 `
 const Bold = styled.span`
   font-weight: bold;
 `
 
 const AboutContainer = styled.div`
-  margin: 2em 4em 0 0;
+  margin-top: 3.2em;
   @media screen and (max-width: 767px) {
-    margin: 2em 0 1em 0;
     justify-content: flex-start;
     flex-direction: column;
   }
@@ -43,8 +40,8 @@ class AboutPage extends React.Component {
             xs={10}
             smOffset={1}
             sm={10}
-            mdOffset={0}
-            md={5}
+            mdOffset={1}
+            md={4}
             lgOffset={1}
             lg={4}
           >
@@ -58,10 +55,10 @@ class AboutPage extends React.Component {
             xs={10}
             smOffset={1}
             sm={10}
-            mdOffset={0}
-            md={6}
-            lgOffset={0}
-            lg={6}
+            mdOffset={1}
+            md={5}
+            lgOffset={1}
+            lg={5}
           >
             <About>
               As a 2019-2020{" "}
@@ -71,17 +68,14 @@ class AboutPage extends React.Component {
               the world around us. This website is where I post about my
               journey, discuss the things I am reading, and release episodes of
               my podcast documenting the year.
-            </About>
-            <About>
+              <br /> <br />
               Previously, I produced public radio at{" "}
               <a href="https://www.kqed.org/">KQED</a> in San Francisco and
               researched the US Congress at{" "}
               <a href="https://www.brookings.edu/">The Brookings Institution</a>{" "}
               in Washington D.C.
-            </About>
-            <About>
-              I graduated from Pomona College in Los Angeles, where I studied
-              politics and computer science.
+              <br /> <br />I graduated from Pomona College in Los Angeles, where
+              I studied politics and computer science.
             </About>
             <br />
             <Header>

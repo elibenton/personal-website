@@ -292,26 +292,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            city
-            country
-            description
-            tags
-            template
-          }
-          body
-          rawBody
-        }
-      }
-    }
   }
 `

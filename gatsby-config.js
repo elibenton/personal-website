@@ -1,12 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `Eli Benton Cohen`,
+    shortTitle: `Eli B. Cohen`,
     author: `Eli Benton Cohen`,
     description: `Traveling the world to understand the politics of digitally networked life`,
     siteUrl: `https://elibenton.co/`,
   },
   plugins: [
     "gatsby-plugin-netlify-cache",
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -71,25 +73,30 @@ module.exports = {
               })
             },
             query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                   filter: {frontmatter: {template: {in: "writing"}}}
-                ) {
+               {
+                allMarkdownRemark
+                  (
+                  sort: {order: DESC, fields: [frontmatter___date]}, 
+                  filter: {frontmatter: {template: {in: "audio"}}}
+                  ) 
+                    {
                   edges {
                     node {
                       excerpt
                       html
-                      fields { slug }
+                      fields {
+                        slug
+                      }
                       frontmatter {
                         title
                         date
+                        description
                       }
                     }
                   }
                 }
               }
-            `,
+        `,
             output: "/writing.xml",
             title:
               "Traveling the world to understand the politics of digitally networked life",
@@ -259,11 +266,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Eli Benton Cohen`,
+        short_name: `Eli B. Cohen`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `content/images/icon.png`,
       },
