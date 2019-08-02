@@ -65,8 +65,8 @@ h2 {
   font-family: "Roboto Condensed", "Helvetica Condensed", "Helvetica Neue",
     Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 36px;
+  line-height: 36px;
   letter-spacing: 0.3px;
   /* text-transform: uppercase; */
   margin-top: 45px;
@@ -76,8 +76,9 @@ h3 {
   font-family: "Roboto Condensed", "Helvetica Condensed", "Helvetica Neue",
     Helvetica, sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 30px;
   text-transform: uppercase;
 }
 

@@ -143,7 +143,7 @@ class PortfolioPage extends React.Component {
                     States
                   </li>
                   <li>
-                    Explored the intersection of politics and technology across
+                    Exploring the intersection of politics and technology across
                     the globe
                   </li>
                 </ul>
