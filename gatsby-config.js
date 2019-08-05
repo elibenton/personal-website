@@ -262,7 +262,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        base64: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
