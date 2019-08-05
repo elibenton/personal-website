@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Helmet from "react-helmet"
 
-import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { TagText, TemplateText } from "../components/layout"
 
@@ -9,6 +9,7 @@ import { FaCalendarDay, FaMapMarkerAlt } from "react-icons/fa"
 import { Row, Col } from "react-flexbox-grid"
 import styled from "styled-components"
 import kebabCase from "lodash/kebabCase"
+import moment from "moment"
 
 import Spacer from "../utils/spacer"
 import Color from "../utils/colors"
@@ -76,7 +77,7 @@ class BlogPostTemplate extends React.Component {
     } = post.frontmatter
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={title} description={description || post.excerpt} />
+        <Helmet title={title} />
         <Row>
           <Col
             xsOffset={0}
@@ -106,10 +107,18 @@ class BlogPostTemplate extends React.Component {
             <Attribution offset={130}>
               <Line color={Color("yellow")} />
               <AttributionText>
-                <FaCalendarDay /> {date}
+                <PostLink
+                  to={`/${moment(date).format("YYYY")}/${moment(date)
+                    .format("MMMM")
+                    .toLowerCase()}/`}
+                >
+                  <FaCalendarDay /> {date}
+                </PostLink>
               </AttributionText>
               <AttributionText>
-                <FaMapMarkerAlt /> {city}, {country}
+                <PostLink to={`/countries/${kebabCase(country)}/`}>
+                  <FaMapMarkerAlt /> {city}, {country}
+                </PostLink>
               </AttributionText>
             </Attribution>
           </Col>
