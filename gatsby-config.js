@@ -277,7 +277,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `content/images/tinhat_asia.png`,
+        icon: `content/images/world_map.png`,
       },
     },
     `gatsby-plugin-offline`,
