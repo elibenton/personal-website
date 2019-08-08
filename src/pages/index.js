@@ -1,11 +1,11 @@
 // Import foundational libraries, React and Gatsby
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 // Import custom build components
 import logo from "../../content/images/logo.gif"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import EmailPopup from "../components/popup"
 
 // Import ancillary libraries
@@ -161,7 +161,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={title}>
-        <SEO title={"Home"} />
+        <Helmet title={title} />
         <EmailPopup />
         <BlogTitleWrapper>
           <img src={logo} alt="Logo" width="270" height="270" />
@@ -170,9 +170,7 @@ class BlogIndex extends React.Component {
             <BlogDescription>{description}</BlogDescription>
           </BlogTitle>
         </BlogTitleWrapper>
-
         <Spacer height={80} />
-
         {posts.map(({ node }) => {
           const {
             title,

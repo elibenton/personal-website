@@ -77,7 +77,7 @@ module.exports = {
                 allMarkdownRemark
                   (
                   sort: {order: DESC, fields: [frontmatter___date]}, 
-                  filter: {frontmatter: {template: {in: "audio"}}}
+                  filter: {frontmatter: {template: {in: "writing"}}}
                   ) 
                     {
                   edges {
@@ -252,17 +252,22 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              offsetY: `75`,
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-autolink-headers`,
+          //   options: {
+          //     offsetY: `25`,
+          //   },
+          // },
         ],
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        base64: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -272,7 +277,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `content/images/icon.png`,
+        icon: `content/images/world_map.png`,
       },
     },
     `gatsby-plugin-offline`,

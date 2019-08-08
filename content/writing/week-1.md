@@ -8,11 +8,10 @@ country: India
 
 description: "I am writing this almost exactly one week after I left home, and I feel like I've lived a miniature lifetime. From Birmingham to New York, to the Kuwait Airport, and finally to Bangalore, I honestly am having a hard time conveying the quantity, range, and complexity of the first week of this journey."
 tags:
-  - Watson
+  - Watson Fellowship
   - Travel
   - SIM Cards
   - Airports
-publication:
 ---
 
 ## Kuwait Airport
@@ -21,9 +20,9 @@ I flew out of JFK after spending an _incredible_ weekend traversing the New York
 
 The first leg of my flight landed me in Kuwait, where I would wait for the next seven hours. Here I had my first "small world" moment. I was looking around the modest but spotless terminal, somewhat impressed that I had _already_ begun to feel out of place, when I noticed the person sitting back-to-back with me was rapidly flipping through powerpoint slides that contained a) lots of English and b) even more math. As stupid as this may sound, I thought to myself, "He does English _and_ numbers, this could be a good chat."
 
-"What are you reading there?" I asked. "Rocket propulsion data analysis," he replied. He saw my eyes widen, laughed, and told me he had to file a report in the next 15 minutes. Turning back around, he added, "But I'd love to talk when I'm done." Two hours later, we had covered a lot of ground: the divide between Pakistan and India, the divide between white and black America, rock climbing in Yosemite, the trade-offs of pursuing a PhD, just to name a few.
+"What are you reading there?" I asked. "Large scale computational simulations for a new generation fusion reactor," he replied. He saw my eyes widen, laughed, and told me he had to file a report in the next 15 minutes. Turning back around, he added, "But I'd love to talk when I'm done." Two hours later, we had covered a lot of ground: the divide between Pakistan and India, the divide between white and black America, rock climbing in Yosemite, the trade-offs of pursuing a PhD, just to name a few.
 
-His name was Sami, and he was heading home to Islama, Pakistan after completing his first year of a Rocket Engineering PhD at Rochester University. Having done undergrad at the University of Richmond, he was acquainted with the American South. We had visited the same national park in West Virginia. We both dreamed of climbing El Cap. We had both recently jumped the turnstile in the New York Metro.
+His name was Sami, and he was heading home to Islama, Pakistan after completing his first year of an Aerospace Engineering PhD at Rensselaer Polytechnic Institute. Having done undergrad at the University of Richmond, he was acquainted with the American South. We had visited the same national park in West Virginia. We both dreamed of climbing El Cap. We had both recently jumped the turnstile in the New York Metro.
 
 By the time I had to board, I was honestly upset Sami was not en route to Bangalore like myself, but as he reminded me, he couldn't take the risk; too many horror stories of Pakistani's who tried to travel in India. It was a sobering reminder of the immense power of the American passport in my back pocket, and the implicit supremacy that backs it. The Watson subscribes to a "global commons" mentality, but it is no doubt powered by the trappings of American dominance.
 
@@ -31,7 +30,7 @@ By the time I had to board, I was honestly upset Sami was not en route to Bangal
 
 ## Landing in Bangalore
 
-I landed in Bangalore at 3:45 am, approximately 26 hours after departing New York. After a small kerfuffle with the customs agent—my time in India may end up being halved  (but likely not)—I collected my bags and was immediately hit with my first "digital world vs. physical world" collision. I had taken out my Verizon SIM in the US, paranoid they might sneak in a hidden fee for crossing borders with it. I had hoped to log onto the airport WiFi to hail an Uber to my friend Rhea's home. Much to my luck, the WiFi login required I submit my phone number; they'd text me a login PIN. I was in the dark.
+I landed in Bangalore at 3:45 am, approximately 26 hours after departing New York. After a small kerfuffle with the customs agent—my time in India may end up being halved (but likely not)—I collected my bags and was immediately hit with my first "digital world vs. physical world" collision. I had taken out my Verizon SIM in the US, paranoid they might sneak in a hidden fee for crossing borders with it. I had hoped to log onto the airport WiFi to hail an Uber to my friend Rhea's home. Much to my luck, the WiFi login required I submit my phone number; they'd text me a login PIN. I was in the dark.
 
 This realization came very quickly: the digital tools which I chide in the US as mere luxury were now going to be essential unless I was prepared to _radically_ raise my tolerance for the unknown. This time, exhausted from days of flying and overwhelmed by the lack of familiarity, I didn't debate long. That SIM card popped right back in my phone, and I breathed an audible sigh of relief when the familiar "Ding!" told me my driver was coming to get me.
 

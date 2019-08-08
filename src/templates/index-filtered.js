@@ -1,15 +1,15 @@
 // Import foundational libraries, React and Gatsby
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 // Import custom build components
 import Layout from "../components/layout"
 import { TagText, TemplateText } from "../components/layout"
-import SEO from "../components/seo"
 
 // Import ancillary libraries
 import kebabCase from "lodash/kebabCase"
-import capitalize from "lodash/capitalize"
+import upperFirst from "lodash/upperFirst"
 import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
 import moment from "moment"
@@ -144,14 +144,14 @@ const Tags = ({ pageContext, data }) => {
   const { edges, totalCount } = data.allMarkdownRemark
   const Count = `${totalCount}`
   const CountPlural = `post${totalCount === 1 ? "" : "s"} in:`
-  const Header = `${capitalize(name)}`
+  const Header = `${upperFirst(name)}`
 
   const { title } = data.site.siteMetadata
   const posts = edges
 
   return (
     <Layout location={data.location} title={title}>
-      <SEO title={"Home"} />
+      <Helmet title={`${Header} | ${title}`} />
       <BlogTitleWrapper>
         <TagCount>{Count}</TagCount>
         <BlogTitle>
@@ -282,6 +282,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        shortTitle
       }
     }
   }

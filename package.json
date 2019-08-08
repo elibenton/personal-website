@@ -32,7 +32,7 @@
     "gatsby-remark-copy-linked-files": "^2.0.13",
     "gatsby-remark-images": "^3.0.14",
     "gatsby-remark-prismjs": "^3.2.11",
-    "gatsby-remark-relative-images": "^0.2.2",
+    "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-source-filesystem": "^2.0.39",
@@ -55,6 +55,7 @@
     "reactjs-popup": "^1.4.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.2",
+    "sharp": "^0.23.0",
     "styled-components": "^4.3.1"
   },
   "devDependencies": {

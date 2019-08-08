@@ -38,21 +38,23 @@ const Article = styled.h3`
   text-transform: none;
   font-weight: normal;
   margin-left: 40px;
+
   @media screen and (max-width: 500px) {
     margin-left: 0;
   }
 `
 const StyledLink = styled.a`
-  font-weight: 800;
+  font-weight: 600;
 `
 const Item = styled.div`
   margin-top: 20px;
+  line-height: 28px !important;
 `
 const Publication = styled.div`
   display: inline;
   font-style: italic;
   text-transform: none;
-  font-weight: 800;
+  font-weight: 500;
   @media screen and (max-width: 500px) {
     display: block;
   }
