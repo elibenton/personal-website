@@ -2,7 +2,7 @@
 template: writing
 
 title: It’s Not a Technology Problem
-date: 2019-08-09
+date: 2019-08-10
 city: Bangalore, Karnataka
 country: India
 
@@ -22,11 +22,11 @@ For a quick refresher, Aadhaar is what I came to India to try to understand. I m
 
 ## iSPIRIT
 
-The panel was hosted by [iSPIRIT](http://ispirt.in/), a trade group of sorts with the goal of paving the way for Indian software products that aim to improve government, labour, and social productivity. Much of the original Aadhaar team is now involved with iSPIRIT, and most of their more recent endeavors build on the ID system as a foundational layer. The moderator of the panel was Sharad Sharma, one of the co-founders of iSPIRIT. 
+The panel was hosted by [iSPIRIT](http://ispirt.in/), a trade group of sorts with the goal of paving the way for Indian software products that aim to improve government, labour, and social productivity. Much of the original Aadhaar team is now involved with iSPIRIT, and most of their more recent endeavors build on the ID system as a foundational layer. The moderator of the panel was Sharad Sharma, one of the co-founders of iSPIRIT.
 
 ---
 
-*I’ll walk through my most interesting moments below. Every clip is original audio from the evening. Apologies for the poor quality. The AV team was having a rough night.*
+_I’ll walk through my most interesting moments below. Every clip is original audio from the evening. Apologies for the poor quality. The AV team was having a rough night._
 
 ---
 
@@ -35,46 +35,45 @@ The panel was hosted by [iSPIRIT](http://ispirt.in/), a trade group of sorts wit
 <br />
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415382&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
 In a refrain I have heard repeated by multiple people over the past few days, Nilekani was quick to point out that a lot of innovation—even when made by private companies—relies on an underlying infrastructure made by public entities, referring to US led initiatives such as the internet and GPS.
 
 <br />
 
-<br />
-
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415343&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
 Nilekani soon added, however, that there are certain cases where government is insufficient, namely times when radical departure from the status quo are necessary. Here, he believed philanthropy served best, even outperforming the private sector.
 
 <br />
 
-<br />
-
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415319&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
 Khosla, displaying his fierce optimism, spent a lot of talk talking about the perils of “experience bias.” He made the fair distinction between “productivity” and “innovation.” He acknowledged that those without experience are not as productive at the outset, but by being forced to learn as they go, the end up innovating on old processes. Nilekani brought him back down to earth with a simple rejoinder, however.
 
 <br />
 
-<br />
-
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415283&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-About halfway through, the conversation turned to the idea of failure. Khosla, in typical Silicon Valley style, began celebrating failure—almost worshipping it. I was taken aback *only* because of the event just days prior. V.G. Siddhartha, the founder of India’s wildly successful coffee franchise _Cafe Coffee Day_, had reportedly killed himself in the nearby city of Mangalore, writing in his suicide note, “I have failed as an entrepreneur.” 
+
+About halfway through, the conversation turned to the idea of failure. Khosla, in typical Silicon Valley style, began celebrating failure—almost worshipping it. I was taken aback _only_ because of the event just days prior. V.G. Siddhartha, the founder of India’s wildly successful coffee franchise Cafe Coffee Day, had [reportedly killed himself](https://edition.cnn.com/2019/07/31/business/ccd-founder-body-found-siddhartha/index.html) in the nearby city of Mangalore, writing in his suicide note, “I have failed as an entrepreneur.”
 
 He wrote, “I am solely responsible for all mistakes,” and that the pressure from debt burden, tax raids, and corporate disputes had become too much. Instead of getting bailed out, he instead ended it all, begging the entire “Coffee day family” for forgiveness. In this clip, you can hear Nilekani make a veiled allusion to the “consequences” of not unlinking the failure of a company and that of the person who runs it.
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415205&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-About an hour in, the conversation had loosened up a bit, and Sharad ventured into the more philosophical concerns techies think about these days—will computers supplant humans? 
-
 <br />
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415205&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
+About an hour in, the conversation had loosened up a bit, and Sharad ventured into the more philosophical concerns techies think about these days—will computers supplant humans?
 
 <br />
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415178&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
 Neither Khosla nor Nilekani really took the bate. Nilekani especially did not buy into the “doomsday” narrative that typically pervades talk of generalized artificial intelligence, and instead saw an easy marriage of human’s strongest attributes with the strengths of computational thinking.
 
 <br />
 
-<br />
-
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/663415361&color=%23383637&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-I’ll admit, I got hung on this one offhand remark by Nilekani: “It’s not a technology problem.” I believe he meant the phrase as: “we already have the technological capability, and so the rest is simple.”  All we have to do is scale. I agree with his premise, actually. I barely know how modern tech stacks work, but I know they work well—servers are big, data streams are fast, and connectivity permeates far and wide. And yet, the problems persist. If the technology is up to par, what’s missing?
+
+I’ll admit, I got hung on this one offhand remark by Nilekani: “It’s not a technology problem.” I believe he meant the phrase as: “we already have the technological capability, and so the rest is simple.” All we have to do is scale. I agree with his premise, actually. I barely know how modern tech stacks work, but I know they work well—servers are big, data streams are fast, and connectivity permeates far and wide. And yet, the problems persist. If the technology is up to par, what’s missing?
 
 I was genuinely pleased by the optimism and enthusiasm in the room that night. I could feel the energy produced by hundreds of eager and dedicated young people like myself hoping to affect their own futures. But as I found my way out of the auditorium, camera crews packing up, only a meager few lingering behind, I couldn’t help but wonder. “If it’s not a technology problem, why do all these technologists still believe they have the answer?“
