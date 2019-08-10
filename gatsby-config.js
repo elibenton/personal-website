@@ -66,8 +66,14 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url:
+                    site.siteMetadata.siteUrl +
+                    edge.node.frontmatter.template +
+                    edge.node.fields.slug,
+                  guid:
+                    site.siteMetadata.siteUrl +
+                    edge.node.frontmatter.template +
+                    edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
@@ -91,6 +97,7 @@ module.exports = {
                         title
                         date
                         description
+                        template
                       }
                     }
                   }
@@ -234,9 +241,6 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-relative-images`,
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
@@ -266,6 +270,8 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         base64: false,
+        stripMetadata: true,
+        defaultQuality: 75,
       },
     },
     {
@@ -284,5 +290,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-remove-trailing-slashes`,
   ],
 }
