@@ -117,6 +117,51 @@ class PortfolioPage extends React.Component {
                 )
               })}
             </Collapsible>
+            <Collapsible
+              trigger={
+                <Header>
+                  <FaChevronCircleDown
+                    style={{ position: "relative", top: "3px" }}
+                  />{" "}
+                  Education
+                </Header>
+              }
+              triggerWhenOpen={
+                <Header>
+                  <FaChevronCircleUp
+                    style={{ position: "relative", top: "3px" }}
+                  />{" "}
+                  Education
+                </Header>
+              }
+              transitionTime={250}
+            >
+              <Indent>
+                <h3>Pomona College | Bachelor of Arts, Politics</h3>
+                <h4>Thesis</h4>
+                The Political Arguments of Podcasting
+                <br /> <br />
+                <h4>Senior Exam</h4>
+                Theories of Journalism for a Post-Truth America
+                <br /> <br />
+                <h4>Coursework</h4>
+                Political Journalism, Political Statistics, Newspaper Op-Ed,
+                Advanced Programming, Data Structures, Electronic Music Studio,
+                Fundamentals of 2D Design
+                <h3>Indian Springs School | High School</h3>
+                <h4>Student Body President</h4>
+                <ul>
+                  <li>
+                    Led 22 member student government, liaison between
+                    administration and students
+                  </li>
+                  <li>
+                    Originated and established 1st annual school-wide scavenger
+                    hunt with 75% student participation
+                  </li>
+                </ul>
+              </Indent>
+            </Collapsible>
 
             <Collapsible
               trigger={
@@ -138,17 +183,6 @@ class PortfolioPage extends React.Component {
               transitionTime={300}
             >
               <Indent>
-                <h3>Waston Fellowship</h3>
-                <ul>
-                  <li>
-                    One year of funded, independent travel outside the United
-                    States
-                  </li>
-                  <li>
-                    Exploring the intersection of politics and technology across
-                    the globe
-                  </li>
-                </ul>
                 <h3>KQED</h3>
                 <ul>
                   <li>
@@ -194,67 +228,6 @@ class PortfolioPage extends React.Component {
                     over four-month fundraising campaign
                   </li>
                 </ul>
-              </Indent>
-            </Collapsible>
-            <Collapsible
-              trigger={
-                <Header>
-                  <FaChevronCircleDown
-                    style={{ position: "relative", top: "3px" }}
-                  />{" "}
-                  Education
-                </Header>
-              }
-              triggerWhenOpen={
-                <Header>
-                  <FaChevronCircleUp
-                    style={{ position: "relative", top: "3px" }}
-                  />{" "}
-                  Education
-                </Header>
-              }
-              transitionTime={250}
-            >
-              <Indent>
-                <h3>Pomona College | Bachelor of Arts, Politics</h3>
-                <ul>
-                  <li>
-                    <b>Thesis: </b>The Political Arguments of Podcasting
-                  </li>
-                  <li>
-                    <b>Senior Exam: </b>Theories of Journalism for a Post-Truth
-                    America
-                  </li>
-                  <li>
-                    <b>Coursework: </b>Political Journalism, Political
-                    Statistics, Newspaper Op-Ed, Advanced Programming, Data
-                    Structures, Electronic Music Studio, Fundamentals of 2D
-                    Design
-                  </li>
-                </ul>
-                <h3>Indian Springs School | High School</h3>
-              </Indent>
-            </Collapsible>
-            <Collapsible
-              trigger={
-                <Header>
-                  <FaChevronCircleDown
-                    style={{ position: "relative", top: "3px" }}
-                  />{" "}
-                  Leadership
-                </Header>
-              }
-              triggerWhenOpen={
-                <Header>
-                  <FaChevronCircleUp
-                    style={{ position: "relative", top: "3px" }}
-                  />{" "}
-                  Leadership
-                </Header>
-              }
-              transitionTime={250}
-            >
-              <Indent>
                 <h3>The Discussion Collective, Founder</h3>
                 <ul>
                   <li>
@@ -274,23 +247,6 @@ class PortfolioPage extends React.Component {
                     college’s human-centered design initiative
                   </li>
                 </ul>
-                <h3>
-                  Pomona Politics Department, Faculty Liaison & Researcher
-                </h3>
-                <ul>
-                  <li>
-                    Provide interface between politics majors, perspective
-                    majors, and faculty
-                  </li>
-                  <li>
-                    Arrange bi-weekly events, lectures, and panels about
-                    political theory and current events
-                  </li>
-                  <li>
-                    Assist professor with preparing, curating, and digitizing
-                    over 400 syllabi and exams
-                  </li>
-                </ul>
                 <h3>On The Loose, President</h3>
                 <ul>
                   <li>
@@ -308,17 +264,6 @@ class PortfolioPage extends React.Component {
                   <li>
                     Assisted in creation of new website, using modern web
                     frameworks
-                  </li>
-                </ul>
-                <h3>Indian Springs School, Student Body President</h3>
-                <ul>
-                  <li>
-                    Led 22 member student government, liaison between
-                    administration and students
-                  </li>
-                  <li>
-                    Originated and established 1st annual school-wide scavenger
-                    hunt with 75% student participation
                   </li>
                 </ul>
               </Indent>
