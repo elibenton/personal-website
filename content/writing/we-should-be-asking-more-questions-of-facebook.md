@@ -3,7 +3,7 @@ template: writing
 
 title: We Should Be Asking More Questions
 date: 2018-03-30
-city: Claremont, CA
+city: Los Angeles, CA
 country: United States
 
 description: "There are now 2.13 billion people on Facebook, almost one third of the world’s population. Two in three users check the site every day. The aggregate of each of us turning a blind eye to Facebook’s flaws quickly becomes willful negligence on a global scale. This assertion includes you and me."

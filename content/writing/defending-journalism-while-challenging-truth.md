@@ -3,7 +3,7 @@ template: writing
 
 title: "Defending Journalism While Challenging Truth"
 date: 2019-02-23
-city: "Claremont, CA"
+city: "Los Angeles, CA"
 country: "United States"
 
 description: "How one decides to theorize the news, and especially how one thinks about truth, is symptomatic of numerous other calculations: political systems, economic flows, and material comforts. The most consistent factor is ourselves, and the self-referential paradox we mold from the world around us."

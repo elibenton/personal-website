@@ -3,7 +3,7 @@ template: audio
 
 title: Rules Unspoken
 date: 2018-10-15
-city: "Claremont, CA"
+city: "Los Angeles, CA"
 country: United States
 description: >-
   Sully and I discuss hookup culture at The Claremont Colleges. We talk with

@@ -3,7 +3,7 @@ template: audio
 
 title: Transition Stories
 date: 2018-10-22
-city: "Claremont, CA"
+city: "Los Angeles, CA"
 country: United States
 description: >-
   Between February 22nd and March 8, The Hive and DisCo put on a series of

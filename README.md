@@ -2,6 +2,8 @@
 
 As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I post about journey, write reviews of the works I am studying, and update to my podcast documenting the year.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/350d5dbd-f00e-404a-b13d-3c46627ed351/deploy-status)](https://app.netlify.com/sites/elibenton/deploys)
+
 # ⁉️ Issues
 
 - [ ] **Learning to use state properly with mailchimp add subscriber**

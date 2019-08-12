@@ -3,7 +3,7 @@ template: audio
 
 title: Named But Never Heard
 date: 2018-11-27
-city: "Claremont, CA"
+city: "Los Angeles, CA"
 country: United States
 description: >-
   In the second part of our series about sexual assault on campus, Title IX, and
