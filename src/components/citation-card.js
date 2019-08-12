@@ -80,6 +80,11 @@ const Button = styled.div`
   color: black;
   text-align: center;
   padding: 6px 9px 6px 5px;
+  @media screen and (max-width: 767px) {
+    padding-left: 14px;
+    padding-right: 11px;
+  }
+
   border-radius: 4px;
   user-select: none;
   cursor: pointer;
@@ -123,7 +128,7 @@ class CitationCard extends Component {
                 style={{ textDecoration: "none" }}
               >
                 <Button>
-                  Read more&nbsp;
+                  Read&nbsp;more&nbsp;
                   <LinkOutStyle>
                     <FaExternalLinkSquareAlt
                       style={{ position: "relative", bottom: "1px" }}

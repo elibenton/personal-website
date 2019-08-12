@@ -62,7 +62,7 @@ class Citation extends React.Component {
       taggedTextStyle: styles.deselectText,
       isActive: false,
     }
-    this.clickLocationY = 0
+    this.clickLocationY = 25
     this.marker = null
   }
 
