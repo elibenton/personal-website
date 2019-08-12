@@ -12,7 +12,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
-        mediaTypes: [`text/x-markdown`],
         defaultLayouts: {
           default: require.resolve("./src/components/mdx-layout.js"),
         },
@@ -20,8 +19,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
-              // maxHeight: 600,
+              maxWidth: 1000,
             },
           },
           {
@@ -41,7 +39,7 @@ module.exports = {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-          "https://elibenton.us3.list-manage.com/subscribe/post?u=d1b94901dc20703c70ecddf85&amp;id=e8d93b9cc3", // add your MC list endpoint here; see instructions below
+          "https://elibenton.us3.list-manage.com/subscribe/post?u=d1b94901dc20703c70ecddf85&amp;id=e8d93b9cc3",
       },
     },
     {
@@ -111,98 +109,6 @@ module.exports = {
               "Traveling the world to understand the politics of digitally networked life",
             match: "^/writing/",
           },
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                  enclosure: edge.node.frontmatter.date, // audio file path!
-                })
-              })
-            },
-            query: `
-              {
-                allMarkdownRemark
-                  (
-                  sort: {order: DESC, fields: [frontmatter___date]}, 
-                  filter: {frontmatter: {template: {in: "audio"}}}
-                  ) 
-                    {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        description
-                      }
-                    }
-                  }
-                }
-              }
-        `,
-            output: "/audio.xml",
-            title:
-              "Traveling the world to understand the politics of digitally networked life",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/audio/",
-            setup: () => ({
-              custom_namespaces: {
-                itunes: "http://www.itunes.com/dtds/podcast-1.0.dtd",
-              },
-              custom_elements: [
-                {
-                  "itunes:subtitle":
-                    "Traveling the world to understand the politics of digitally networked life",
-                },
-                { "itunes:author": "Eli Benton Cohen" },
-                {
-                  "itunes:summary":
-                    "A podcast documenting my travels across the globe, to better understand the connections of life online and off.",
-                },
-                {
-                  "itunes:owner": [
-                    { "itunes:name": "Eli Benton Cohen" },
-                    { "itunes:email": "eliunited@gmail.com.com" },
-                  ],
-                },
-                {
-                  "itunes:image": {
-                    _attr: {
-                      href: "content/images/pod-logo.png",
-                    },
-                  },
-                },
-                {
-                  "itunes:category": [
-                    {
-                      _attr: {
-                        text: "Technology",
-                      },
-                    },
-                    {
-                      "itunes:category": {
-                        _attr: {
-                          text: "Places & Travel",
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
-            }),
-          },
         ],
       },
     },
@@ -221,13 +127,13 @@ module.exports = {
         name: `images`,
       },
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "mdx",
-    //     path: `${__dirname}/content/mdx/`,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mdx",
+        path: `${__dirname}/content/mdx/`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -245,7 +151,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
+              maxWidth: 1000,
               showCaptions: true,
             },
           },
@@ -258,12 +164,12 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          // {
-          //   resolve: `gatsby-remark-autolink-headers`,
-          //   options: {
-          //     offsetY: `25`,
-          //   },
-          // },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `25`,
+            },
+          },
         ],
       },
     },
@@ -292,6 +198,5 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-remove-trailing-slashes`,
   ],
 }

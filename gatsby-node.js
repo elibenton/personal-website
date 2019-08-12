@@ -36,6 +36,29 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+            allMdx {
+              edges {
+                node {
+                  body
+                  id
+                  frontmatter {
+                    title
+                    city
+                    country
+                    date
+                    description
+                    tags
+                    template
+                  }
+                  internal {
+                    type
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
           }
         `
       ).then(result => {
@@ -46,18 +69,18 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // ADD BACK IN MDX FUNCTIONALITY LATER
-        // const mdx = result.data.allMdx.edges
+        const mdx = result.data.allMdx.edges
 
         // We'll call `createPage` for each result
-        // mdx.forEach(({ node }) => {
-        //   createPage({
-        //     path: node.fields.slug,
-        //     component: path.resolve(`./src/components/mdx-layout.js`),
-        //     context: {
-        //       id: node.id,
-        //     },
-        //   })
-        // })
+        mdx.forEach(({ node }) => {
+          createPage({
+            path: node.fields.slug,
+            component: path.resolve(`./src/components/mdx-layout.js`),
+            context: {
+              id: node.id,
+            },
+          })
+        })
 
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
@@ -168,14 +191,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const value = createFilePath({ node, getNode })
 
     createNodeField({
-      // Name of the field you are adding
       name: "slug",
-      // Individual MDX node
       node,
-      // Generated value based on filepath with "blog" prefix. We
-      // don't need a separating "/" before the value because
-      // createFilePath returns a path with the leading "/".
-      value: `/blog${value}`,
+      value: `/mdx${value}`,
     })
   }
 
