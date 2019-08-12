@@ -1,8 +1,9 @@
 body {
   position: relative;
   font-family: "Georgia", "Times New Roman", Serif;
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
   color: #323232;
   margin: 0 auto;
   padding: 0;
@@ -45,9 +46,10 @@ ul {
 }
 
 h1 {
-  font-family: Abril Fatface, Georgia, Times New Roman, slab-serif;
-  /*font-size: 40px;*/
-  font-weight: 700;
+  font-family: "Roboto Condensed", "Helvetica Condensed", "Helvetica Neue",
+    Helvetica, sans-serif;
+  /* font-size: 40px; */
+  font-weight: 500;
   line-height: 70px;
   font-size: 70px;
   letter-spacing: -2px;
@@ -93,8 +95,10 @@ h4 {
 }
 h5 {
   font-family: Helvetica Neue, Helvetica, Roboto, sans-serif;
-  font-weight: bold;
-  letter-spacing: -0.1px;
+  font-size: 18px;
+
+  /* font-weight: bold; */
+  /* letter-spacing: -0.1px; */
 }
 
 /*remove red outline in moz*/

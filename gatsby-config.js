@@ -17,12 +17,6 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1000,
-            },
-          },
-          {
             resolve: "gatsby-remark-audio",
             options: {
               preload: "auto",
@@ -32,6 +26,22 @@ module.exports = {
               autoplay: false,
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1000,
+              showCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
@@ -59,8 +69,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
@@ -80,7 +90,7 @@ module.exports = {
             },
             query: `
                {
-                allMarkdownRemark
+                allMdx
                   (
                   sort: {order: DESC, fields: [frontmatter___date]}, 
                   filter: {frontmatter: {template: {in: "writing"}}}
@@ -125,13 +135,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/images`,
         name: `images`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "mdx",
-        path: `${__dirname}/content/mdx/`,
       },
     },
     {

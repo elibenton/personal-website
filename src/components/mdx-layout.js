@@ -1,8 +1,8 @@
 import React from "react"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 import { graphql, Link } from "gatsby"
+import Helmet from "react-helmet"
 
-import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { TagText, TemplateText } from "../components/layout"
 
@@ -10,6 +10,7 @@ import { FaCalendarDay, FaMapMarkerAlt } from "react-icons/fa"
 import { Row, Col } from "react-flexbox-grid"
 import styled from "styled-components"
 import kebabCase from "lodash/kebabCase"
+import moment from "moment"
 
 import Spacer from "../utils/spacer"
 import Color from "../utils/colors"
@@ -25,16 +26,19 @@ const PostLink = styled(Link)`
 `
 const TitleContainer = styled.div`
   @media screen and (max-width: 767px) {
-    margin-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
     width: 90%;
+    box-sizing: border-box;
   }
 `
 const Title = styled.h1`
   text-align: left;
   margin-bottom: 5px;
 `
-const Subtitle = styled.p`
+const Subtitle = styled.h5`
   font-style: italic;
+  font-weight: 400;
   text-align: left;
 `
 const AttributionText = styled.h4`
@@ -45,12 +49,19 @@ const Attribution = styled.div`
   margin-top: ${props => props.offset}px;
   @media screen and (max-width: 767px) {
     margin-top: 0;
-    margin-left: 10px;
-    width: calc(100% - 20px);
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
   }
 `
-export const TagSpan = styled.span`
+export const TagSpan = styled.div`
   color: #999;
+  @media screen and (max-width: 767px) {
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* width: 90%; */
+  }
 `
 
 function PageTemplate({ data }) {
@@ -68,7 +79,7 @@ function PageTemplate({ data }) {
 
   return (
     <Layout location={data.location} title={siteTitle}>
-      <SEO title={title} description={description || mdx.excerpt} />
+      <Helmet title={title} />
       <Row>
         <Col
           xsOffset={0}
@@ -98,10 +109,18 @@ function PageTemplate({ data }) {
           <Attribution offset={130}>
             <Line color={Color("yellow")} />
             <AttributionText>
-              <FaCalendarDay /> {date}
+              <PostLink
+                to={`/${moment(date).format("YYYY")}/${moment(date)
+                  .format("MMMM")
+                  .toLowerCase()}/`}
+              >
+                <FaCalendarDay /> {date}
+              </PostLink>
             </AttributionText>
             <AttributionText>
-              <FaMapMarkerAlt /> {city}, {country}
+              <PostLink to={`/countries/${kebabCase(country)}/`}>
+                <FaMapMarkerAlt /> {city}, {country}
+              </PostLink>
             </AttributionText>
           </Attribution>
         </Col>
@@ -115,32 +134,34 @@ function PageTemplate({ data }) {
           sm={10}
           mdOffset={1}
           md={10}
-          lgOffset={4}
+          lgOffset={3}
           lg={6}
         >
           <div className="blog-post-body">
-            <MDXRenderer>{mdx.body}</MDXRenderer>
+            <div>
+              <MDXRenderer>{mdx.body}</MDXRenderer>
+            </div>
             <Line color={Color("yellow")} />
+          </div>
+          <TagSpan>
             <PostLink to={`/${template}`}>
               <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
             </PostLink>
             {tags.map((tag, index) =>
               index === 0 ? (
-                <TagSpan key={index}>
-                  <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                    <TagText>{tag}</TagText>
-                  </PostLink>
-                </TagSpan>
+                <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                  <TagText>{tag}</TagText>
+                </PostLink>
               ) : (
-                <TagSpan key={index}>
-                  &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+                <span>
+                  &nbsp;&middot;&nbsp;
                   <PostLink to={`/tags/${kebabCase(tag)}/`}>
                     <TagText>{tag}</TagText>
                   </PostLink>
-                </TagSpan>
+                </span>
               )
             )}
-          </div>
+          </TagSpan>
         </Col>
       </Row>
       <Spacer height={100} />
@@ -170,7 +191,6 @@ export const pageQuery = graphql`
         template
       }
       body
-      rawBody
     }
   }
 `

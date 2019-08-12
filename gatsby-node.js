@@ -6,8 +6,8 @@ const moment = require("moment")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const postWriting = path.resolve(`./src/templates/post-writing.js`)
-  const imagePost = path.resolve(`./src/templates/post-image.js`)
+  // const postWriting = path.resolve(`./src/templates/post-writing.js`)
+  // const imagePost = path.resolve(`./src/templates/post-image.js`)
   const indexFiltered = path.resolve(`./src/templates/index-filtered.js`)
 
   return new Promise((resolve, reject) => {
@@ -15,31 +15,9 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           query allPages {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                    month
-                  }
-                  frontmatter {
-                    title
-                    tags
-                    template
-                    country
-                    date
-                    publication
-                  }
-                }
-              }
-            }
             allMdx {
               edges {
                 node {
-                  body
                   id
                   frontmatter {
                     title
@@ -55,6 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   fields {
                     slug
+                    month
                   }
                 }
               }
@@ -69,33 +48,35 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // ADD BACK IN MDX FUNCTIONALITY LATER
-        const mdx = result.data.allMdx.edges
+        const mdxs = result.data.allMdx.edges
 
         // We'll call `createPage` for each result
-        mdx.forEach(({ node }) => {
+        mdxs.forEach(mdx => {
+          const { template } = mdx.node.frontmatter
+          const { slug } = mdx.node.fields
           createPage({
-            path: node.fields.slug,
+            path: `/${template}${slug}`,
             component: path.resolve(`./src/components/mdx-layout.js`),
             context: {
-              id: node.id,
+              id: mdx.node.id,
             },
           })
         })
 
         // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
+        // const posts = result.data.allMarkdownRemark.edges
 
-        posts.forEach(post => {
-          const { template } = post.node.frontmatter
-          const { slug } = post.node.fields
-          createPage({
-            path: `/${template}${slug}`,
-            component: postWriting,
-            context: {
-              slug: slug,
-            },
-          })
-        })
+        // posts.forEach(post => {
+        //   const { template } = post.node.frontmatter
+        //   const { slug } = post.node.fields
+        //   createPage({
+        //     path: `/${template}${slug}`,
+        //     component: postWriting,
+        //     context: {
+        //       slug: slug,
+        //     },
+        //   })
+        // })
 
         // Tag pages:
         let tags = []
@@ -104,7 +85,7 @@ exports.createPages = ({ graphql, actions }) => {
         let templates = []
 
         // Iterate through each post, putting all found tags into `tags`
-        _.each(posts, edge => {
+        _.each(mdxs, edge => {
           if (_.get(edge, "node.frontmatter.tags")) {
             tags = tags.concat(edge.node.frontmatter.tags)
           }
@@ -171,7 +152,7 @@ exports.createPages = ({ graphql, actions }) => {
               filter_month
             )
               .format("MMMM")
-              .toLowerCase()}/`,
+              .toLowerCase()}`,
             component: indexFiltered,
             context: {
               name: moment(filter_month).format("MMMM YYYY"),
@@ -188,22 +169,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({
+      node,
+      getNode,
+    })
+    const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
 
     createNodeField({
       name: "slug",
-      node,
-      value: `/mdx${value}`,
-    })
-  }
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
-
-    // Create custom slug field for each markdown file
-    createNodeField({
-      name: `slug`,
       node,
       value: `${value}`,
     })
@@ -231,4 +204,39 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       })
     }
   }
+
+  // if (node.internal.type === `MarkdownRemark`) {
+  //   const value = createFilePath({ node, getNode })
+  //   const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
+
+  //   // Create custom slug field for each markdown file
+  //   createNodeField({
+  //     name: `slug`,
+  //     node,
+  //     value: `${value}`,
+  //   })
+
+  //   // Create custom month field for each markdown file
+  //   createNodeField({
+  //     name: `month`,
+  //     node,
+  //     value: `${monthYear}`,
+  //   })
+
+  //   if (node.frontmatter.publication === undefined) {
+  //     // Create custom published field for each markdown file
+  //     createNodeField({
+  //       name: `published`,
+  //       node,
+  //       value: false,
+  //     })
+  //   } else {
+  //     // Create custom published field for each markdown file
+  //     createNodeField({
+  //       name: `published`,
+  //       node,
+  //       value: true,
+  //     })
+  //   }
+  // }
 }

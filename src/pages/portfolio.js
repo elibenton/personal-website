@@ -62,7 +62,7 @@ const Publication = styled.div`
 
 class PortfolioPage extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
+    const posts = this.props.data.allMdx.edges
 
     return (
       <Layout>
@@ -324,7 +324,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fields: { published: { eq: true } } }
     ) {

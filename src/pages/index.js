@@ -22,6 +22,8 @@ import Line from "../utils/line"
 // Created locally-scoped styled components
 const Excerpt = styled.p`
   margin: 0;
+  font-size: 12pt;
+  line-height: 1.5em;
 `
 const Wrapper = styled.div`
   margin-bottom: 3em;
@@ -53,7 +55,7 @@ const BlogDescription = styled.div`
   }
 `
 const BlogName = styled.h1`
-  font-size: 64px;
+  font-size: 74px;
   letter-spacing: -4px;
   line-height: 1em;
   margin-bottom: 10px;
@@ -157,7 +159,7 @@ class BlogIndex extends React.Component {
     const { title, description } = this.props.data.site.siteMetadata
 
     // Using destructuing, create an array of posts
-    const posts = this.props.data.allMarkdownRemark.edges
+    const posts = this.props.data.allMdx.edges
 
     return (
       <Layout location={this.props.location} title={title}>
@@ -271,21 +273,41 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    # allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    #   edges {
+    #     node {
+    #       fields {
+    #         slug
+    #         month
+    #       }
+    #       frontmatter {
+    #         date(formatString: "MMMM DD, YYYY")
+    #         title
+    #         city
+    #         country
+    #         description
+    #         tags
+    #         template
+    #       }
+    #     }
+    #   }
+    # }
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          fields {
-            slug
-            month
-          }
+          id
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             city
             country
+            date(formatString: "MMMM DD, YYYY")
             description
             tags
             template
+          }
+          fields {
+            slug
+            month
           }
         }
       }

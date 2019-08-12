@@ -87,7 +87,8 @@ const Button = styled.div`
   @media not all and (hover: none) {
     &:hover {
       background-color: black;
-      text-decoration: underline;
+      color: white;
+      /* text-decoration: underline; */
       outline: none;
     }
   }
@@ -125,7 +126,7 @@ class CitationCard extends Component {
                   Read more&nbsp;
                   <LinkOutStyle>
                     <FaExternalLinkSquareAlt
-                      style={{ position: "relative", bottom: "1px"}}
+                      style={{ position: "relative", bottom: "1px" }}
                     />
                   </LinkOutStyle>
                 </Button>
