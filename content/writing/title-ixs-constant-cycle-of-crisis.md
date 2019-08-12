@@ -3,7 +3,7 @@ template: audio
 
 title: Title IX's Constant Cycle of Crisis
 date: 2019-04-11
-city: "Claremont, CA"
+city: "Los Angeles, CA"
 country: United States
 description: >-
   When viewed in context of the last decade of Claremont's constant cycle of

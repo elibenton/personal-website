@@ -2,6 +2,26 @@
 
 As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I post about journey, write reviews of the works I am studying, and update to my podcast documenting the year.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/350d5dbd-f00e-404a-b13d-3c46627ed351/deploy-status)](https://app.netlify.com/sites/elibenton/deploys)
+
+# ⁉️ Issues
+
+- [ ] **Learning to use state properly with mailchimp add subscriber**
+
+When using a react popup to ask for email subscribers, use react state to handle all the events
+
+- [ ] **Gatsby images do not propogate to Mailchimp RSS email campaigns**
+
+When porting my site to a Mailchip email campaign through RSS, it uses the "blurred out" Gatsby pre-loading image rather than the appropiate, fully-loaded image
+
+- [ ] **Syncining "collections" in NetlifyCMS, "Templates" in Gatsby, and "Feeds" in RSS**
+
+I have three types of posts, "Writing," "Audio," and "Newsletter," each with its own styling of webpage, use of static assets, and place within one of the three RSS feeds of the corresponding name.
+
+- [ ] **Filtering Home Page based on tags and templates**
+
+Creating a "Tags" homepage filter and a "Templates" homepage filter, so that the index shows ALL pages intially, but then can show a subset based on a specifc criterium as well.
+
 # Website Structure
 
     .

@@ -3,7 +3,7 @@ template: audio
 
 title: (Dis)orientation Adventure
 date: 2019-02-11
-city: "Claremont, CA"
+city: "Los Angeles, CA"
 country: United States
 description: >-
   When Orientation Adventure—Pomona's four-day outdoors trip for incoming

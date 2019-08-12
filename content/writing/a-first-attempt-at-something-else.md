@@ -3,7 +3,7 @@ template: audio
 
 title: A First Attempt At Something Else
 date: 2018-11-15
-city: "Claremont, CA"
+city: "Los Angeles, CA"
 country: United States
 description: >-
   To start off this three part series on “The Lists,” we try to learn what they
