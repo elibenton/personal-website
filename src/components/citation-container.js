@@ -44,8 +44,8 @@ const Container = styled.span`
   display: inline-block;
   width: ${popupDimensions.width}px;
   overflow: hidden;
-  box-shadow: 12px 12px 2px rgba(0, 0, 0, 0.1),
-    -20px 16px 2px rgba(0, 0, 0, 0.04);
+  box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.08);
+  /* -20px 16px 2px rgba(0, 0, 0, 0.04); */
   color: white;
   border-radius: 4px;
   @media screen and (max-width: 767px) {

@@ -156,7 +156,7 @@ Citation.propTypes = {
     link: PropTypes.string,
     publication: PropTypes.string.isRequired,
     headline: PropTypes.string.isRequired,
-    directQuote: PropTypes.string.isRequired,
+    // directQuote: PropTypes.string.isRequired,
   }),
 }
 

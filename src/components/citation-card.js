@@ -56,7 +56,7 @@ const SourceBody = styled.span`
 const LinkBar = styled.span`
   display: flex;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 16px;
   margin-bottom: 12px;
   height: auto;
   width: 100%;
@@ -108,16 +108,25 @@ const LinkOutStyle = styled.div`
 class CitationCard extends Component {
   render() {
     const dataSource = this.props.data ? this.props.data : this.props //-- supporting legacy
-    const { publication, headline, directQuote, link, noLink } = dataSource
+    const {
+      publication,
+      headline,
+      directQuote,
+      link,
+      noLink,
+      noQuote,
+    } = dataSource
     return (
       <Card>
         <CardLabel>Source</CardLabel>
         <SourcePublication>{publication}</SourcePublication>
         <SourceHeadline>{headline}</SourceHeadline>
-        <SourceBody>
-          <Quotes>&ldquo;</Quotes>&nbsp;&nbsp;&nbsp;{directQuote}
-          <Quotes>&rdquo;</Quotes>
-        </SourceBody>
+        {!noQuote && (
+          <SourceBody>
+            <Quotes>&ldquo;</Quotes>&nbsp;&nbsp;{directQuote}
+            <Quotes>&rdquo;</Quotes>
+          </SourceBody>
+        )}
         <LinkBar>
           {!noLink && (
             <span>

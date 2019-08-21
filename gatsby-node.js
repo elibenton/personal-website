@@ -50,7 +50,25 @@ exports.createPages = ({ graphql, actions }) => {
         // ADD BACK IN MDX FUNCTIONALITY LATER
         const mdxs = result.data.allMdx.edges
 
+        // Pagination
+        const postsPerPage = 5
+        const numPages = Math.ceil(mdxs.length / postsPerPage)
+
+        Array.from({ length: numPages }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? `/` : `/${i + 1}`,
+            component: path.resolve("./src/templates/index-paginated.js"),
+            context: {
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages,
+              currentPage: i + 1,
+            },
+          })
+        })
+
         // We'll call `createPage` for each result
+
         mdxs.forEach(mdx => {
           const { template } = mdx.node.frontmatter
           const { slug } = mdx.node.fields
@@ -116,7 +134,9 @@ exports.createPages = ({ graphql, actions }) => {
             component: indexFiltered,
             context: {
               name: filter_tag,
-              filter: { frontmatter: { tags: { in: [filter_tag] } } },
+              filter: {
+                frontmatter: { tags: { in: [filter_tag] } },
+              },
             },
           })
         })
@@ -128,7 +148,11 @@ exports.createPages = ({ graphql, actions }) => {
             component: indexFiltered,
             context: {
               name: filter_country,
-              filter: { frontmatter: { country: { in: [filter_country] } } },
+              filter: {
+                frontmatter: {
+                  country: { in: [filter_country] },
+                },
+              },
             },
           })
         })
@@ -140,7 +164,11 @@ exports.createPages = ({ graphql, actions }) => {
             component: indexFiltered,
             context: {
               name: filter_template,
-              filter: { frontmatter: { template: { in: [filter_template] } } },
+              filter: {
+                frontmatter: {
+                  template: { in: [filter_template] },
+                },
+              },
             },
           })
         })
@@ -156,7 +184,9 @@ exports.createPages = ({ graphql, actions }) => {
             component: indexFiltered,
             context: {
               name: moment(filter_month).format("MMMM YYYY"),
-              filter: { fields: { month: { in: [filter_month] } } },
+              filter: {
+                fields: { month: { in: [filter_month] } },
+              },
             },
           })
         })

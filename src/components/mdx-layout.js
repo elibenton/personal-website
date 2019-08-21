@@ -34,12 +34,13 @@ const TitleContainer = styled.div`
 `
 const Title = styled.h1`
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 `
 const Subtitle = styled.h5`
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 400;
   text-align: left;
+  margin-top: 4px;
 `
 const AttributionText = styled.h4`
   margin-top: 2px;
@@ -93,6 +94,7 @@ function PageTemplate({ data }) {
         >
           <TitleContainer>
             <Title>{title}</Title>
+            <Line color={Color("yellow")} />
             <Subtitle>{description}</Subtitle>
           </TitleContainer>
         </Col>
@@ -106,7 +108,7 @@ function PageTemplate({ data }) {
           lgOffset={1}
           lg={4}
         >
-          <Attribution offset={130}>
+          <Attribution offset={150}>
             <Line color={Color("yellow")} />
             <AttributionText>
               <PostLink
