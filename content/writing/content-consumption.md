@@ -2,7 +2,7 @@
 template: writing
 
 title: Content Consumption
-date: 2019-08-22
+date: 2019-08-21
 city: Bangalore, Karnataka
 country: India
 description: >-
@@ -59,17 +59,17 @@ It is safe to say that listening to “Breaking News” is when I decided on my 
 
 The entire episode is worth listening to, but the following exchange is what has stuck with me two years later. The interchange happens between the episode’s reporter, Simon Adler, and Ira Kemelmacher-Shlizerman a professor of computer science at The University of Washington. For context, Kemelmacher-Shlizerman develops programs that animates individual’s faces to speak any text fed into the machine.
 
-> **SIMON:** *Like, the timing of you guys making this thing, and then this explosion of fake news. Like, how do you guys think about -- about how it could be used for nefarious purposes?*
+> **SIMON:** _Like, the timing of you guys making this thing, and then this explosion of fake news. Like, how do you guys think about -- about how it could be used for nefarious purposes?_
 >
-> **IRA:** *Yeah, it's a good question.*
+> **IRA:** _Yeah, it's a good question._
 >
 > **…**
 >
-> **IRA:** *I feel like when every technology is developed, then there is this danger of with our technology, you -- you can create fake videos and so on. I don't want to call it fake videos, but like, to create video from audio, right?*
+> **IRA:** _I feel like when every technology is developed, then there is this danger of with our technology, you -- you can create fake videos and so on. I don't want to call it fake videos, but like, to create video from audio, right?_
 >
-> **SIMON:** *But they are fake videos.*
+> **SIMON:** _But they are fake videos._
 >
-> **IRA:** *Yeah, yeah. But the way that I think about it is that, like scientists are doing their job and showing -- like, inventing the technology and showing it off, and then we all need to, like, think about the next steps, obviously. I mean, people should work on that, and the answer is not clear.* 
+> **IRA:** _Yeah, yeah. But the way that I think about it is that, like scientists are doing their job and showing -- like, inventing the technology and showing it off, and then we all need to, like, think about the next steps, obviously. I mean, people should work on that, and the answer is not clear._
 >
 > **…**
 >
@@ -109,5 +109,4 @@ If we allow the rest of our world to go the way of digital music, squashing all 
 
 ---
 
-If you get the chance to explore any of these three pieces in full, I’d love to hear from you! Please send me recommendations as well. As always, respond to the email newsletter and I’d be happy to chat.
-
+If you get the chance to explore any of these three pieces in full, I’d love to hear from you! Please send me recommendations as well. As always, respond to the email newsletter, and I’d be happy to chat.
