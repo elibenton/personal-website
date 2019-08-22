@@ -45,7 +45,7 @@ Taken in isolation, each episode shocks the conscious. But when a new horror app
 
 Then periodically, I would remember that I had never once experienced a loss remotely similar to the hundreds I had just read about. Closing the book left me with a feeling I simply could not comprehend; not like the pre-packaged outrage offered readily online, or the feel-good empathy engendered by “learning across difference.” _Random Family_ is a forced reckoning—an insistence that tragedy and hardship the likes of which I cannot conceive is real. So real—in fact—it is almost banal.
 
-Reading about heartbreak like it is baseball stats creates a strange disconnect. The book prompted _many_ thoughts about the theoretical elements of journalism as a medium and reporting’s complicated relationship to truth. But I need more time to understand my own thoughts there, so I’ll save that for later.
+Reading about heartbreaks like baseball statistics creates a strange disconnect. The book prompted _many_ thoughts about the theoretical elements of journalism as a medium and reporting’s complicated relationship to truth. But I need more time to understand my own thoughts there, so I’ll save that for later.
 
 Regardless, read _Random Family_. I can’t promise exactly what you’ll take away, but it will trouble both your heart and mind.
 
@@ -103,7 +103,7 @@ The article is really not about music at all. It is about raising a new generati
 
 Using music—and sound more broadly—as synecdoche for experience, Goldberg tries to argue that Young’s obsession with fidelity is really about preserving our humanity. What creates high fidelity sound? It’s not loud volumes, not instant streaming, not universal availability, and certainly not compression. It’s the exact opposite; the incongruences, imperfections, and inexplicable complexities.
 
-If we allow the rest of our world to go the way of digital music, squashing all the outliers into a more comfortable range, we’ll sew the seeds of our dissatisfaction, sacrificing wonder at the altar of convenience.
+If we allow the rest of our world to go the way of digital music, squashing all the outliers into a more comfortable range, we’ll sow the seeds of our dissatisfaction, sacrificing wonder at the altar of convenience.
 
 > It’s strange to imagine that Young might be a prophet of sorts — but maybe not. His lesson is that everything human is shot through with imperfection. Filtering that out doesn’t make us more perfect; it is making us sick.
 
