@@ -30,8 +30,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1000,
+              maxWidth: 900,
               showCaptions: true,
+              // wrapperStyle: "border: 2px solid black;",
             },
           },
           {
@@ -43,6 +44,12 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `85`,
+            },
+          },
         ],
       },
     },

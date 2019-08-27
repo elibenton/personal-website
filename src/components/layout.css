@@ -149,14 +149,14 @@ blockquote {
 }
 
 .blog-post-body p {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.6em;
   margin-bottom: 1.6em;
 }
 
 .gatsby-resp-image-wrapper {
-  margin-top: 4em;
-  margin-bottom: 0.5em;
+  margin-top: 3em;
+  /* margin-bottom: 0.5em; */
   width: 150%;
   left: -25% !important;
 }
@@ -164,7 +164,7 @@ blockquote {
 .gatsby-resp-image-figcaption {
   position: relative;
   text-align: right;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   text-align: left;
   left: -25% !important;
 }
