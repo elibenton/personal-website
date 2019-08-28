@@ -157,8 +157,8 @@ blockquote {
 .gatsby-resp-image-wrapper {
   margin-top: 3em;
   /* margin-bottom: 0.5em; */
-  width: 150%;
-  left: -25% !important;
+  width: 130%;
+  left: -15% !important;
 }
 
 .gatsby-resp-image-figcaption {
@@ -166,7 +166,7 @@ blockquote {
   text-align: right;
   padding-bottom: 2em;
   text-align: left;
-  left: -25% !important;
+  left: -15% !important;
 }
 
 @media not screen and (min-width: 1000px) {
@@ -192,7 +192,6 @@ blockquote {
   }
   figcaption {
     margin-top: 8px;
-    line-height: 1.2em;
   }
 }
 
@@ -201,6 +200,8 @@ figcaption {
   letter-spacing: -0.2px;
   color: gray;
   font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.2em;
 }
 
 .author-head-img {
@@ -221,8 +222,12 @@ figcaption {
   .blog-post-body div {
     margin-left: 5%;
     margin-right: 5%;
-    width: 90%;
     box-sizing: border-box;
+  }
+
+  .blog-post-body div div {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .blog-post-body p > img {

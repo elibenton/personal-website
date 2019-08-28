@@ -14,31 +14,27 @@ const Card = styled.span`
   width: 100%;
 `
 
-const CardLabel = styled.span`
-  display: block;
-  font-weight: bold;
-  text-align: center;
-  font-size: 16px;
-  color: black;
+const SourcePub = styled.span`
+  font-style: italic;
 `
 
-const SourcePublication = styled.span`
+const SourceIntro = styled.span`
   display: block;
   font-size: 14px;
   font-weight: normal;
-  margin-top: 10px;
-  line-height: 14px;
+  margin-bottom: 14px;
+  line-height: 18px;
   color: #333;
-  margin-top: 12px;
+  margin-top: 6px;
   text-align: left;
 `
 
 const SourceHeadline = styled.span`
   display: inline-block;
   text-transform: none;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
   margin-top: 4px;
   text-align: left;
 `
@@ -113,14 +109,23 @@ class CitationCard extends Component {
       headline,
       directQuote,
       link,
+      author,
       noLink,
       noQuote,
+      noAuthor,
     } = dataSource
     return (
       <Card>
-        <CardLabel>Source</CardLabel>
-        <SourcePublication>{publication}</SourcePublication>
         <SourceHeadline>{headline}</SourceHeadline>
+        <SourceIntro>
+          In: <SourcePub>{publication}</SourcePub>
+          {<br />}
+          {!noAuthor && (
+            <span>
+              By: <SourcePub>{author}</SourcePub>
+            </span>
+          )}
+        </SourceIntro>
         {!noQuote && (
           <SourceBody>
             <Quotes>&ldquo;</Quotes>&nbsp;&nbsp;{directQuote}

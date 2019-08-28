@@ -150,6 +150,7 @@ class Citation extends React.Component {
 Citation.propTypes = {
   link: PropTypes.string,
   publication: PropTypes.string,
+  author: PropTypes.string,
   headline: PropTypes.string,
   directQuote: PropTypes.string,
   data: PropTypes.shape({
