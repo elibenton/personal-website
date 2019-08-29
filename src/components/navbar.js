@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "gatsby-link"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 const Nav = styled.div`
@@ -66,6 +66,7 @@ class Navbar extends React.Component {
   }
 
   render() {
+    // const { title, date, city, country } = this.props.data.mdx.frontmatter
     const links = navLinks.map((link, i) => {
       return (
         <NavLink key={i} to={link.to}>
@@ -88,6 +89,7 @@ class Navbar extends React.Component {
           </Flex>
           <Flex>
             {links}
+            {/* {this.state.scrollingUp ? links : "hi"} */}
             <Padding />
           </Flex>
         </InnerContainer>
@@ -101,3 +103,16 @@ const navLinks = [
 ]
 
 export default Navbar
+
+export const titleQuery = graphql`
+  query($id: String) {
+    mdx(id: { eq: $id }) {
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        city
+        country
+      }
+    }
+  }
+`
