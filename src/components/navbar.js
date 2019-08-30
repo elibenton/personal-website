@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
 const Nav = styled.div`
@@ -66,6 +66,7 @@ class Navbar extends React.Component {
   }
 
   render() {
+    // console.log(this.props.site)
     // const { title, date, city, country } = this.props.data.mdx.frontmatter
     const links = navLinks.map((link, i) => {
       return (
@@ -106,6 +107,11 @@ export default Navbar
 
 export const titleQuery = graphql`
   query($id: String) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     mdx(id: { eq: $id }) {
       frontmatter {
         title
