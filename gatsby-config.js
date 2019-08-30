@@ -101,7 +101,6 @@ module.exports = {
                 allMdx
                   (
                   sort: {order: DESC, fields: [frontmatter___date]}, 
-                  filter: {frontmatter: {template: {in: "writing"}}}
                   ) 
                     {
                   edges {
@@ -125,7 +124,7 @@ module.exports = {
             output: "/writing.xml",
             title:
               "Traveling the world to understand the politics of digitally networked life",
-            match: "^/writing/",
+            match: "^/",
           },
         ],
       },
