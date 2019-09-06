@@ -27,7 +27,10 @@ const Excerpt = styled.p`
 `
 
 const PaginationWrapper = styled.div`
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `
 
 const BlogTitleWrapper = styled.div`
@@ -113,19 +116,6 @@ const MetaText = styled.h4`
   text-transform: uppercase;
   @media screen and (max-width: 767px) {
     text-align: left;
-  }
-  :hover,
-  :active {
-    color: #ffd666;
-  }
-`
-const PageText = styled.h4`
-  display: inline;
-  color: black;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-  @media screen and (max-width: 767px) {
-    display: block;
   }
   :hover,
   :active {
@@ -258,7 +248,13 @@ class BlogIndex extends React.Component {
         <PaginationWrapper>
           {!isFirst && (
             <PostLink to={prevPage} rel="prev">
-              <PageText>← Previous Page&nbsp;&nbsp;</PageText>
+              <h3
+                style={{
+                  fontSize: "16px",
+                }}
+              >
+                ← Previous &nbsp;&nbsp;
+              </h3>
             </PostLink>
           )}
           {Array.from({ length: numPages }, (_, i) => (
@@ -266,20 +262,25 @@ class BlogIndex extends React.Component {
               key={`pagination-number${i + 1}`}
               to={`/${i === 0 ? "" : i + 1}`}
             >
-              &nbsp;
-              <PageText
+              <h3
                 style={{
-                  textDecoration: i + 1 === currentPage ? "underline" : "none",
+                  color: i + 1 === currentPage ? "#ffd666" : "black",
+                  fontSize: "16px",
                 }}
               >
-                {i + 1}
-              </PageText>
-              &nbsp;
+                &nbsp;{i + 1} &nbsp;
+              </h3>
             </PostLink>
           ))}
           {!isLast && (
             <PostLink to={nextPage} rel="next" style={{}}>
-              <PageText>&nbsp;&nbsp;Next Page →</PageText>
+              <h3
+                style={{
+                  fontSize: "16px",
+                }}
+              >
+                &nbsp;&nbsp;Next →
+              </h3>
             </PostLink>
           )}
         </PaginationWrapper>
