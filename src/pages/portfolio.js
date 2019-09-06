@@ -279,7 +279,7 @@ class PortfolioPage extends React.Component {
                   <FaChevronCircleUp
                     style={{ position: "relative", top: "3px" }}
                   />{" "}
-                  Skill
+                  Skills
                 </Header>
               }
               transitionTime={250}
