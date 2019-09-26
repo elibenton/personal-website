@@ -62,7 +62,7 @@ class Citation extends React.Component {
       taggedTextStyle: styles.deselectText,
       isActive: false,
     }
-    this.clickLocationY = 0
+    this.clickLocationY = 25
     this.marker = null
   }
 
@@ -150,13 +150,14 @@ class Citation extends React.Component {
 Citation.propTypes = {
   link: PropTypes.string,
   publication: PropTypes.string,
+  author: PropTypes.string,
   headline: PropTypes.string,
   directQuote: PropTypes.string,
   data: PropTypes.shape({
     link: PropTypes.string,
     publication: PropTypes.string.isRequired,
     headline: PropTypes.string.isRequired,
-    directQuote: PropTypes.string.isRequired,
+    // directQuote: PropTypes.string.isRequired,
   }),
 }
 

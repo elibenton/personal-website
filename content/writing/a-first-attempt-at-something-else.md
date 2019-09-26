@@ -1,5 +1,5 @@
 ---
-template: audio
+template: Episode 1
 
 title: A First Attempt At Something Else
 date: 2018-11-15
@@ -10,22 +10,26 @@ description: >-
   were, why they were made, and if they are really so different from practices
   that have existed outside the Claremont bubble for some time.
 tags:
+  - Title IX
   - Sexual Assault
   - Campus Politics
-  - Title IX
 publication: KSPC 88.7 FM
 link: https://discussioncollective.org/episodes/part-1
 ---
 
-`audio: https://s3-us-west-2.amazonaws.com/anchor-audio-bank/production/2018-10-15/5834481-44100-2-ff94a684abacf.mp3`
-
 ## The Discussion Collective
 
-#### Episode 3
+#### Title IX Today - Episode 1
+
+<br />
+
+<iframe height="120" width="400" src="https://anchor.fm/discussioncollective/embed/episodes/A-First-Attempt-At-Something-Else-Part-1-e2jfcb" frameborder="0" scrolling="no"></iframe>
 
 On October 4th of this year, Pomona College’s Dean of Students sent an email banning the use of anonymously-created lists that kept students out of campus events. Some people were furious, others were relieved, and many students were learning about the practice for the first time.
 
-Though many specifics about these lists remain unknown—how long the practice had been in place, how many groups were using such lists, or how many names had actually been submitted—moral stances on “The Lists” became one of the most salient conversation in campus politics. The practice was first implemented so that survivors of sexual assault could name their perpetrator and prevent them from being at the same gathering, without fear of retaliation. Critics, and ultimately the Pomona administration, seemed to fear these lists could be used for more insidious purposes as well. To start off this four part series on “The Lists”, we try to learn from students what they were, why they were made, and if they are really so different from practices that have existed outside the Claremont bubble for some time.
+Though many specifics about these lists remain unknown—how long the practice had been in place, how many groups were using such lists, or how many names had actually been submitted—moral stances on “The Lists” became one of the most salient conversation in campus politics. The practice was first implemented so that survivors of sexual assault could name their perpetrator and prevent them from being at the same gathering, without fear of retaliation.
+
+Critics, and ultimately the Pomona administration, seemed to fear these lists could be used for more insidious purposes as well. To start off this four part series on “The Lists”, we try to learn from students what they were, why they were made, and if they are really so different from practices that have existed outside the Claremont bubble for some time.
 
 ## Reflection
 

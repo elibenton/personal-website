@@ -62,7 +62,7 @@ const Publication = styled.div`
 
 class PortfolioPage extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
+    const posts = this.props.data.allMdx.edges
 
     return (
       <Layout>
@@ -78,7 +78,7 @@ class PortfolioPage extends React.Component {
             mdOffset={2}
             md={8}
             lgOffset={2}
-            lg={7}
+            lg={8}
           >
             <Collapsible
               trigger={
@@ -146,20 +146,17 @@ class PortfolioPage extends React.Component {
                 <br /> <br />
                 <h4>Coursework</h4>
                 Political Journalism, Political Statistics, Newspaper Op-Ed,
-                Advanced Programming, Data Structures, Electronic Music Studio,
-                Fundamentals of 2D Design
+                Advanced Programming,
+                <br />
+                Data Structures, Electronic Music Studio, Fundamentals of 2D
+                Design
                 <h3>Indian Springs School | High School</h3>
                 <h4>Student Body President</h4>
-                <ul>
-                  <li>
-                    Led 22 member student government, liaison between
-                    administration and students
-                  </li>
-                  <li>
-                    Originated and established 1st annual school-wide scavenger
-                    hunt with 75% student participation
-                  </li>
-                </ul>
+                Led 22 member student government, liaison between administration
+                and students
+                <br />
+                Originated and established 1st annual school-wide scavenger hunt
+                with 75% student participation
               </Indent>
             </Collapsible>
 
@@ -282,7 +279,7 @@ class PortfolioPage extends React.Component {
                   <FaChevronCircleUp
                     style={{ position: "relative", top: "3px" }}
                   />{" "}
-                  Skill
+                  Skills
                 </Header>
               }
               transitionTime={250}
@@ -324,7 +321,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fields: { published: { eq: true } } }
     ) {

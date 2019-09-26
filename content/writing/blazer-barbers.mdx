@@ -1,0 +1,20 @@
+---
+template: audio
+
+title: Blazer Barbers Have It Covered
+date: 2017-08-29
+city: "Birmingham, AL"
+country: United States
+description: >-
+  To keep a college football team running, it takes lots of people: coaches, physical therapists, boosters, and maybe even a team psychologist. To keep players looking sharp underneath the helmets, there’s the team barber. Or as is the case for the UAB Blazers football team, make that barbers.
+tags:
+  - Radio
+  - Football
+  - WBHM
+publication: 90.3 WBHM
+link: https://wbhm.org/feature/2017/twists-fades-and-frohawks-blazers-barbers-gotcha-covered/
+---
+
+`audio: https://wbhm.org/media/2017/08/UAB_Barbershop_for_web.m4a`
+
+Inside the team’s new locker room, there’s a barber pole. Once the chair arrives, that corner of the locker room will become the team’s barbershop. Linebacker Tevin Crews and Michael Turner, a quarterback, know how to use scissors and clippers. They say between classes and practice, players don’t have a lot of time for haircuts. Having it done in-house by one of their own means players save time and money.

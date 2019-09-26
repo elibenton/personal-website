@@ -35,9 +35,9 @@ const Footer = () => {
     <FooterWrapper>
       <Col
         xsOffset={1}
-        xs={10}
+        xs={11}
         smOffset={1}
-        sm={10}
+        sm={11}
         mdOffset={1}
         md={10}
         lgOffset={1}

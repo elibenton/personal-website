@@ -6,8 +6,8 @@ const moment = require("moment")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const postWriting = path.resolve(`./src/templates/post-writing.js`)
-  const imagePost = path.resolve(`./src/templates/post-image.js`)
+  // const postWriting = path.resolve(`./src/templates/post-writing.js`)
+  // const imagePost = path.resolve(`./src/templates/post-image.js`)
   const indexFiltered = path.resolve(`./src/templates/index-filtered.js`)
 
   return new Promise((resolve, reject) => {
@@ -15,23 +15,25 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           query allPages {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              limit: 1000
-            ) {
+            allMdx {
               edges {
                 node {
+                  id
+                  frontmatter {
+                    title
+                    city
+                    country
+                    date
+                    description
+                    tags
+                    template
+                  }
+                  internal {
+                    type
+                  }
                   fields {
                     slug
                     month
-                  }
-                  frontmatter {
-                    title
-                    tags
-                    template
-                    country
-                    date
-                    publication
                   }
                 }
               }
@@ -46,33 +48,53 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // ADD BACK IN MDX FUNCTIONALITY LATER
-        // const mdx = result.data.allMdx.edges
+        const mdxs = result.data.allMdx.edges
 
-        // We'll call `createPage` for each result
-        // mdx.forEach(({ node }) => {
-        //   createPage({
-        //     path: node.fields.slug,
-        //     component: path.resolve(`./src/components/mdx-layout.js`),
-        //     context: {
-        //       id: node.id,
-        //     },
-        //   })
-        // })
+        // Pagination
+        const postsPerPage = 5
+        const numPages = Math.ceil(mdxs.length / postsPerPage)
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
-
-        posts.forEach(post => {
-          const { template } = post.node.frontmatter
-          const { slug } = post.node.fields
+        Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
-            path: `/${template}${slug}`,
-            component: postWriting,
+            path: i === 0 ? `/` : `/${i + 1}`,
+            component: path.resolve("./src/templates/index-paginated.js"),
             context: {
-              slug: slug,
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages,
+              currentPage: i + 1,
             },
           })
         })
+
+        // We'll call `createPage` for each result
+
+        mdxs.forEach(mdx => {
+          const { template } = mdx.node.frontmatter
+          const { slug } = mdx.node.fields
+          createPage({
+            path: `/${template}${slug}`,
+            component: path.resolve(`./src/components/mdx-layout.js`),
+            context: {
+              id: mdx.node.id,
+            },
+          })
+        })
+
+        // Create blog posts pages.
+        // const posts = result.data.allMarkdownRemark.edges
+
+        // posts.forEach(post => {
+        //   const { template } = post.node.frontmatter
+        //   const { slug } = post.node.fields
+        //   createPage({
+        //     path: `/${template}${slug}`,
+        //     component: postWriting,
+        //     context: {
+        //       slug: slug,
+        //     },
+        //   })
+        // })
 
         // Tag pages:
         let tags = []
@@ -81,7 +103,7 @@ exports.createPages = ({ graphql, actions }) => {
         let templates = []
 
         // Iterate through each post, putting all found tags into `tags`
-        _.each(posts, edge => {
+        _.each(mdxs, edge => {
           if (_.get(edge, "node.frontmatter.tags")) {
             tags = tags.concat(edge.node.frontmatter.tags)
           }
@@ -112,7 +134,9 @@ exports.createPages = ({ graphql, actions }) => {
             component: indexFiltered,
             context: {
               name: filter_tag,
-              filter: { frontmatter: { tags: { in: [filter_tag] } } },
+              filter: {
+                frontmatter: { tags: { in: [filter_tag] } },
+              },
             },
           })
         })
@@ -124,7 +148,11 @@ exports.createPages = ({ graphql, actions }) => {
             component: indexFiltered,
             context: {
               name: filter_country,
-              filter: { frontmatter: { country: { in: [filter_country] } } },
+              filter: {
+                frontmatter: {
+                  country: { in: [filter_country] },
+                },
+              },
             },
           })
         })
@@ -136,7 +164,11 @@ exports.createPages = ({ graphql, actions }) => {
             component: indexFiltered,
             context: {
               name: filter_template,
-              filter: { frontmatter: { template: { in: [filter_template] } } },
+              filter: {
+                frontmatter: {
+                  template: { in: [filter_template] },
+                },
+              },
             },
           })
         })
@@ -148,11 +180,13 @@ exports.createPages = ({ graphql, actions }) => {
               filter_month
             )
               .format("MMMM")
-              .toLowerCase()}/`,
+              .toLowerCase()}`,
             component: indexFiltered,
             context: {
               name: moment(filter_month).format("MMMM YYYY"),
-              filter: { fields: { month: { in: [filter_month] } } },
+              filter: {
+                fields: { month: { in: [filter_month] } },
+              },
             },
           })
         })
@@ -165,27 +199,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === "Mdx") {
-    const value = createFilePath({ node, getNode })
-
-    createNodeField({
-      // Name of the field you are adding
-      name: "slug",
-      // Individual MDX node
+    const value = createFilePath({
       node,
-      // Generated value based on filepath with "blog" prefix. We
-      // don't need a separating "/" before the value because
-      // createFilePath returns a path with the leading "/".
-      value: `/blog${value}`,
+      getNode,
     })
-  }
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
     const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
 
-    // Create custom slug field for each markdown file
     createNodeField({
-      name: `slug`,
+      name: "slug",
       node,
       value: `${value}`,
     })
@@ -213,4 +234,39 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       })
     }
   }
+
+  // if (node.internal.type === `MarkdownRemark`) {
+  //   const value = createFilePath({ node, getNode })
+  //   const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
+
+  //   // Create custom slug field for each markdown file
+  //   createNodeField({
+  //     name: `slug`,
+  //     node,
+  //     value: `${value}`,
+  //   })
+
+  //   // Create custom month field for each markdown file
+  //   createNodeField({
+  //     name: `month`,
+  //     node,
+  //     value: `${monthYear}`,
+  //   })
+
+  //   if (node.frontmatter.publication === undefined) {
+  //     // Create custom published field for each markdown file
+  //     createNodeField({
+  //       name: `published`,
+  //       node,
+  //       value: false,
+  //     })
+  //   } else {
+  //     // Create custom published field for each markdown file
+  //     createNodeField({
+  //       name: `published`,
+  //       node,
+  //       value: true,
+  //     })
+  //   }
+  // }
 }

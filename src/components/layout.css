@@ -1,8 +1,9 @@
 body {
   position: relative;
   font-family: "Georgia", "Times New Roman", Serif;
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
   color: #323232;
   margin: 0 auto;
   padding: 0;
@@ -45,11 +46,12 @@ ul {
 }
 
 h1 {
-  font-family: Abril Fatface, Georgia, Times New Roman, slab-serif;
-  /*font-size: 40px;*/
-  font-weight: 700;
+  font-family: "Roboto Condensed", "Helvetica Condensed", "Helvetica Neue",
+    Helvetica, sans-serif;
+  /* font-size: 40px; */
+  font-weight: 500;
   line-height: 70px;
-  font-size: 70px;
+  font-size: 72px;
   letter-spacing: -2px;
 }
 
@@ -89,12 +91,14 @@ h4 {
   line-height: 1.5em;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 4px;
 }
 h5 {
   font-family: Helvetica Neue, Helvetica, Roboto, sans-serif;
-  font-weight: bold;
-  letter-spacing: -0.1px;
+  font-size: 18px;
+
+  /* font-weight: bold; */
+  /* letter-spacing: -0.1px; */
 }
 
 /*remove red outline in moz*/
@@ -145,24 +149,23 @@ blockquote {
 }
 
 .blog-post-body p {
-  font-size: 18px;
   line-height: 1.6em;
   margin-bottom: 1.6em;
 }
 
 .gatsby-resp-image-wrapper {
-  margin-top: 4em;
-  margin-bottom: 0.5em;
-  width: 150%;
-  left: -25% !important;
+  margin-top: 3em;
+  /* margin-bottom: 0.5em; */
+  width: 130%;
+  left: -15% !important;
 }
 
 .gatsby-resp-image-figcaption {
   position: relative;
   text-align: right;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   text-align: left;
-  left: -25% !important;
+  left: -15% !important;
 }
 
 @media not screen and (min-width: 1000px) {
@@ -188,7 +191,6 @@ blockquote {
   }
   figcaption {
     margin-top: 8px;
-    line-height: 1.2em;
   }
 }
 
@@ -197,6 +199,8 @@ figcaption {
   letter-spacing: -0.2px;
   color: gray;
   font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.2em;
 }
 
 .author-head-img {
@@ -217,8 +221,12 @@ figcaption {
   .blog-post-body div {
     margin-left: 5%;
     margin-right: 5%;
-    width: 90%;
     box-sizing: border-box;
+  }
+
+  .blog-post-body div div {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .blog-post-body p > img {

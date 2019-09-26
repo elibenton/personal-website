@@ -29,6 +29,8 @@ const PostLink = styled(Link)`
 `
 const Excerpt = styled.p`
   margin: 0;
+  font-size: 12pt;
+  line-height: 1.5em;
 `
 const Wrapper = styled.div`
   margin-bottom: 3em;
@@ -141,7 +143,7 @@ export const TagSpan = styled.div`
 // Class body
 const Tags = ({ pageContext, data }) => {
   const { name } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges, totalCount } = data.allMdx
   const Count = `${totalCount}`
   const CountPlural = `post${totalCount === 1 ? "" : "s"} in:`
   const Header = `${upperFirst(name)}`
@@ -254,8 +256,8 @@ const Tags = ({ pageContext, data }) => {
 export default Tags
 
 export const pageQuery = graphql`
-  query($filter: MarkdownRemarkFilterInput) {
-    allMarkdownRemark(
+  query($filter: MdxFilterInput) {
+    allMdx(
       limit: 500
       sort: { fields: [frontmatter___date], order: DESC }
       filter: $filter

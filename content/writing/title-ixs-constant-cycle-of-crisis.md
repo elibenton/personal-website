@@ -1,5 +1,5 @@
 ---
-template: audio
+template: Episode 3
 
 title: Title IX's Constant Cycle of Crisis
 date: 2019-04-11
@@ -12,22 +12,31 @@ description: >-
   Colleges, we ask a simple question without any straightforward answer: how did
   we get here?
 tags:
-  - Sexual Assualt
   - Title IX
+  - Sexual Assault
   - Campus Politics
 publication: KSPC 88.7 FM
 link: https://discussioncollective.org/episodes/part-3
 ---
 
-`audio: https://s3-us-west-2.amazonaws.com/anchor-audio-bank/production/2019-3-2/12272886-44100-2-48498ebab82b8.mp3`
-
 ## The Discussion Collective
 
-#### Episode 6
+#### Title IX Today - Episode 3
+
+<a href="https://www.notion.so/elibentoncohen/c866734226e6461d8aab56c4880d53a5?v=9d51bdd904ac422e8a8aed5ba66b3b9f">
+  <button type="button"> View Interactive Timeline</button>
+</a>
+
+<br />
+<br />
+
+<iframe height="120" width="400" src="https://anchor.fm/discussioncollective/embed/episodes/Title-IXs-Constant-Cycle-of-Crisis-Part-3-e3kf0n" frameborder="0" scrolling="no"></iframe>
 
 On February 13th of this year, The Pomona College Advocates for Survivors of Sexual Assault, the 15 year old peer-to-peer support program, was unilaterally disbanded by the Pomona Administration. Though the program is slated to be reinstated in the coming school year, many questions remain. Why exactly did they need to be disbanded immediately? When they are reinstated, what form will the program take? Why weren't the advocates given forewarning? The decision felt drastic, and without clarity around the impetus behind the choice, left many students confused and angry.
 
-But when viewed in context of the last decade of Claremont's constant cycle of crisis around Title IX, the decision feels more inevitable than unprecedented. Pomona College’s President’s Advisory Committee on Sexual Violence Intervention and Prevention, or PAC-SVIP, it is the third working group to revise Pomona's Title IX policy in just six years. Three of the five colleges have been named in investigations filed by the Department of Education's Office of Civil Rights. These are the kinds of investigations where if the federal government believed the colleges weren't complying, they could pull federal funding. Since Dear Colleague, the Claremont College's have been sued by students on eight separate times. That's a lawsuit a year, and some of them are still being appealed. For the third installment of our series on Sexual Assault at the Claremont Colleges, we're a simple question without any straightforward answer: how did we get here?
+But when viewed in context of the last decade of Claremont's constant cycle of crisis around Title IX, the decision feels more inevitable than unprecedented. Pomona College’s President’s Advisory Committee on Sexual Violence Intervention and Prevention, or PAC-SVIP, it is the third working group to revise Pomona's Title IX policy in just six years. Three of the five colleges have been named in investigations filed by the Department of Education's Office of Civil Rights.
+
+These are the kinds of investigations where if the federal government believed the colleges weren't complying, they could pull federal funding. Since Dear Colleague, the Claremont College's have been sued by students on eight separate times. That's a lawsuit a year, and some of them are still being appealed. For the third installment of our series on Sexual Assault at the Claremont Colleges, we're a simple question without any straightforward answer: how did we get here?
 
 ## Reflection
 
