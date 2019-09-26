@@ -76,7 +76,7 @@ const TagHeader = styled.p`
   font-size: 23px;
   line-height: 28px;
   margin-top: 12px;
-  margin-left: 10rem;
+  margin-left: 11rem;
   width: 61%;
   @media screen and (max-width: 767px) {
     margin-left: 5%;

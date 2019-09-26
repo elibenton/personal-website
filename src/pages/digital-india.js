@@ -51,7 +51,7 @@ const BlogTitle = styled.div`
 `
 const TagCount = styled.h1`
   font-size: 120px;
-  margin: 90px 60px 55px 10rem;
+  margin: 90px 60px 55px 11rem;
   text-shadow: 2px 4px #ffd666;
   @media screen and (max-width: 767px) {
     font-size: 50px;
@@ -76,7 +76,7 @@ const TagHeader = styled.p`
   font-size: 23px;
   line-height: 28px;
   margin-top: 12px;
-  margin-left: 10rem;
+  margin-left: 11rem;
   width: 61%;
   @media screen and (max-width: 767px) {
     margin-left: 5%;
