@@ -158,17 +158,17 @@ const Tags = ({ pageContext, data }) => {
 
         <BlogTitle>
           <TagHeader>
-            I didn't think my investigation of the internet would lead me remote
-            mountain towns of India, to a place where people walk for 5
-            kilometers just to find a road, a place where the government ships
-            in rice because, if it rains, making it to the weekly market becomes
-            impossible. But it actually makes perfect sense. To investigate the
-            networked world, one follows the network—and here, the network was
-            perfect.
+            I didn't think my investigation of the internet would lead me to the
+            remote mountain towns of India, to a place where people walk for
+            five kilometers just to find a road, a place where the government
+            ships in rice because, if it rains, making it to the weekly market
+            becomes impossible. But the location actually makes perfect sense.
+            To investigate the networked world, one follows the network—and
+            here, the network was perfect.
             <br />
             <br />
             The discrepancy between India's physical and digital infrastructure
-            boggles the mind. Here, public sanitation is still a political
+            boggles my mind. Here, public sanitation is still a political
             concern of the highest priority, but mobile broadband is so passé
             it's only three US cents per gigabyte. Nandan Nilekani, sometimes
             called “The CEO of India,” has said the country will be “data rich
@@ -179,18 +179,18 @@ const Tags = ({ pageContext, data }) => {
             Nilekani conjured 1.2 billion new data points by digitizing the
             second largest population in the world. In recent years, Aadhaar has
             faced mounting criticism from privacy activists, civil society
-            groups, and the Supreme Court. But the drive for digital ubiquity
-            has proceeded apace. The High Court of Tamil Nadu recommended
-            Aadhaar be linked to Facebook to fight fake news. The Excise
-            Department of Karnataka considered requiring the ID to purchase
-            alcohol, to cut down on litter.
+            groups, and the Supreme Court, but it has not tempered the Aadhaar
+            fever. The High Court of Tamil Nadu recommended Aadhaar be linked to
+            Facebook to fight fake news. The Excise Department of Karnataka
+            considered requiring the ID to purchase alcohol, to cut down on
+            litter.
             <br />
             <br />
             Nothing appears off limits in India's digital experiment, even under
             unfavorable conditions: a still developing economy, massive cultural
             and linguistic diversity, and almost no digital literacy. People
-            here say, “If it works it India, it could be a global standard.” I
-            think they might be right.
+            here say, “If it works it India, it could be the next global
+            standard.” The globe might want to start paying attention.
           </TagHeader>
         </BlogTitle>
       </BlogTitleWrapper>
