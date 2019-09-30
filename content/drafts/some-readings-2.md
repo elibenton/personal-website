@@ -3,8 +3,8 @@ template: writing
 
 title: More Content Consumption
 date: 2019-08-29
-city: Bangalore, Karnataka
-country: India
+city: Bangalore
+country: IND
 description: >-
 
 tags:

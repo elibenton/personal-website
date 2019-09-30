@@ -30,9 +30,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 900,
+              maxWidth: 800,
               showCaptions: true,
-              // wrapperStyle: "border: 2px solid black;",
             },
           },
           {
@@ -161,7 +160,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1000,
+              maxWidth: 800,
               showCaptions: true,
             },
           },

@@ -3,8 +3,8 @@ template: Episode 1
 
 title: A First Attempt At Something Else
 date: 2018-11-15
-city: "Los Angeles, CA"
-country: United States
+city: "Los Angeles"
+country: USA
 description: >-
   To start off this three part series on “The Lists,” we try to learn what they
   were, why they were made, and if they are really so different from practices

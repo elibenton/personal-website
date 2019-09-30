@@ -3,8 +3,8 @@ template: Episode 3
 
 title: Title IX's Constant Cycle of Crisis
 date: 2019-04-11
-city: "Los Angeles, CA"
-country: United States
+city: "Los Angeles"
+country: USA
 description: >-
   When viewed in context of the last decade of Claremont's constant cycle of
   crisis around Title IX, the decision feels more inevitable than unprecedented.

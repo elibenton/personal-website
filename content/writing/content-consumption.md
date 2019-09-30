@@ -3,8 +3,8 @@ template: writing
 
 title: Content Consumption
 date: 2019-08-21
-city: Bangalore, Karnataka
-country: India
+city: Bangalore
+country: IND
 description: >-
   Today, I write my first "listicle," a truly genius form. Taking other people's content, repackaging it with the hottest "hot takes" and serving it back to you,  lukewarm. Here’s a small window into my thinking through books, podcasts, and articles that have stuck with me over the past months. Each of these pieces has informed my current thinking here in India, even if the path was circuitous.
 
@@ -83,7 +83,7 @@ The entire episode is worth listening to, but the following exchange is what has
 
 By the middle of this exchange, I was yelling in frustration and banging my hands on the steering wheel. It felt like the perfect exemplification of a fear that had been brewing inside me ever since I started taking computer science and political science courses side-by-side.
 
-Kemelmacher-Shlizerman was subscribing to the belief that scientists are not responsible for the way their discoveries and/or inventions are used. It struck me as both tone deaf and painfully naive. Is Facebook not responsible when it abets the ethic cleansing of Rohingya Muslims out on its platform? Are the Sacklers not responsible for the pandemic of preventable opioid deaths across the United States? Does Kemelmacher-Shlizerman really believe she has no responsibility for fake news when she’s built a program specifically designed to rewrite reality?
+Kemelmacher-Shlizerman was subscribing to the belief that scientists are not responsible for the way their discoveries and/or inventions are used. It struck me as both tone deaf and painfully naive. Is Facebook not responsible when it abets the ethic cleansing of Rohingya Muslims out on its platform? Are the Sacklers not responsible for the pandemic of preventable opioid deaths across the USA? Does Kemelmacher-Shlizerman really believe she has no responsibility for fake news when she’s built a program specifically designed to rewrite reality?
 
 Then again—she might actually not be responsible. Is Albert Einstein responsible for the United State’s massacre of the Japanese with two atomic bombs? The politics of technology is complicated, and this episode of RadioLab dives into the mess head on.
 

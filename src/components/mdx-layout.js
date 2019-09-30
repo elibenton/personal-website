@@ -33,6 +33,7 @@ const TitleContainer = styled.div`
   }
 `
 const Title = styled.h1`
+  margin-top: 0px;
   text-align: left;
   margin-bottom: 16px;
 `
@@ -83,33 +84,21 @@ function PageTemplate({ data }) {
       <Helmet title={title} />
       <Row>
         <Col
-          xsOffset={0}
-          xs={12}
+          xsOffset={1}
+          xs={10}
           smOffset={1}
           sm={10}
-          mdOffset={1}
-          md={6}
-          lgOffset={1}
-          lg={6}
+          mdOffset={0}
+          md={9}
+          lgOffset={0}
+          lg={9}
         >
           <TitleContainer>
             <Title>{title}</Title>
-            <Line color={Color("yellow")} />
             <Subtitle>{description}</Subtitle>
           </TitleContainer>
-        </Col>
-        <Col
-          xsOffset={0}
-          xs={12}
-          smOffset={1}
-          sm={10}
-          mdOffset={1}
-          md={4}
-          lgOffset={1}
-          lg={4}
-        >
-          <Attribution offset={150}>
-            <Line color={Color("yellow")} />
+          {/* <Line color={Color("yellow")} /> */}
+          <Attribution>
             <AttributionText>
               <PostLink
                 to={`/${moment(date).format("YYYY")}/${moment(date)
@@ -127,17 +116,18 @@ function PageTemplate({ data }) {
           </Attribution>
         </Col>
       </Row>
+
       <Spacer height={50} />
       <Row>
         <Col
           xsOffset={0}
           xs={12}
-          smOffset={1}
-          sm={10}
-          mdOffset={1}
-          md={10}
-          lgOffset={3}
-          lg={6}
+          smOffset={0}
+          sm={12}
+          mdOffset={0}
+          md={12}
+          lgOffset={0}
+          lg={9}
         >
           <div className="blog-post-body">
             <div>

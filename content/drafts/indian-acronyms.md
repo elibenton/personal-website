@@ -3,8 +3,8 @@ template: writing
 
 title: "I.L.A."
 date: 2019-09-02
-city: Bangalore, Karnataka
-country: India
+city: Bangalore
+country: IND
 description: >-
   One month in, and I can only be sure of one thing: Indians. Love. Acronyms. Acronyms are ubiquitous here, even English text slang! So rather than just sit here and SMH, I decided I'd make a cheat sheet for you and me both.
 

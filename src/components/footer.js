@@ -5,9 +5,7 @@ import styled from "styled-components"
 const FooterWrapper = styled(Row)`
   display: flex;
   background-color: white;
-  padding-top: 40px;
   padding-bottom: 5px;
-  border-top: thick double;
   @media print {
     display: none;
   }
@@ -26,23 +24,12 @@ const FinePrint = styled.div`
 
 const StyledLink = styled.a`
   color: black;
-  /* text-decoration: none; */
-  /* font-style: italic; */
 `
 
 const Footer = () => {
   return (
     <FooterWrapper>
-      <Col
-        xsOffset={1}
-        xs={11}
-        smOffset={1}
-        sm={11}
-        mdOffset={1}
-        md={10}
-        lgOffset={1}
-        lg={10}
-      >
+      <Col xs={11} sm={11} md={10} lg={10} css={{ marginLeft: "22px" }}>
         <FinePrint>
           <span role="img" aria-label="Arm">
             💪
