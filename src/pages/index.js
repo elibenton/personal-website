@@ -4,12 +4,24 @@ import { Row, Col } from "react-flexbox-grid"
 import Spacer from "../utils/spacer"
 import Collapsible from "react-collapsible"
 import Helmet from "react-helmet"
-
-import Color from "../utils/colors"
-
-import styled from "styled-components"
-
 import Layout from "../components/layout"
+import styled from "styled-components"
+import moment from "moment"
+import kebabCase from "lodash/kebabCase"
+
+const Button = styled.h4`
+  margin: 12px 0 30px 0;
+  font-weight: 600;
+  font-size: 15px;
+  :hover,
+  :active {
+    color: #ffd666;
+  }
+`
+
+const BetterLink = styled(Link)`
+  text-decoration: none;
+`
 
 class HomePrototype extends React.Component {
   render() {
@@ -19,7 +31,7 @@ class HomePrototype extends React.Component {
     return (
       <Layout>
         <Helmet title={"Home"} />
-        <Row>
+        <Row css={{ marginTop: "3em" }}>
           <Col>
             <h3
               css={{
@@ -39,7 +51,7 @@ class HomePrototype extends React.Component {
                 description,
                 template,
               } = node.frontmatter
-              const { slug } = node.fields
+              const { slug, month } = node.fields
 
               return (
                 <Collapsible
@@ -58,7 +70,7 @@ class HomePrototype extends React.Component {
                       >
                         <h4
                           css={{
-                            fontSize: "16px",
+                            fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
                           }}
@@ -67,9 +79,23 @@ class HomePrototype extends React.Component {
                         </h4>
                         <Row>
                           <h4>
-                            {city}, {country}
+                            <BetterLink
+                              to={`/countries/${kebabCase(country)}/`}
+                            >
+                              {city}, {country}
+                            </BetterLink>
                           </h4>
-                          <h4 css={{ paddingRight: "4px" }}>{date}</h4>
+                          <h4 css={{ paddingRight: "4px" }}>
+                            <BetterLink
+                              to={`/${moment(month).format("YYYY")}/${moment(
+                                month
+                              )
+                                .format("MMMM")
+                                .toLowerCase()}/`}
+                            >
+                              {date}
+                            </BetterLink>
+                          </h4>
                         </Row>
                       </Row>
                     </div>
@@ -80,16 +106,16 @@ class HomePrototype extends React.Component {
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
-                          borderBottom: "solid",
-                          borderBottomWidth: "thin",
-                          color: "blue",
+                          borderBottom: "dashed",
+                          borderBottomWidth: "2px",
+                          borderBottomColor: "#ffd666",
                           marginLeft: "0px !important",
                           marginRight: "0px !important",
                         }}
                       >
                         <h4
                           css={{
-                            fontSize: "16px",
+                            fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
                           }}
@@ -98,9 +124,23 @@ class HomePrototype extends React.Component {
                         </h4>
                         <Row>
                           <h4>
-                            {city}, {country}
+                            <BetterLink
+                              to={`/countries/${kebabCase(country)}/`}
+                            >
+                              {city}, {country}
+                            </BetterLink>
                           </h4>
-                          <h4 css={{ paddingRight: "4px" }}>{date}</h4>
+                          <h4 css={{ paddingRight: "4px" }}>
+                            <BetterLink
+                              to={`/${moment(month).format("YYYY")}/${moment(
+                                month
+                              )
+                                .format("MMMM")
+                                .toLowerCase()}/`}
+                            >
+                              {date}
+                            </BetterLink>
+                          </h4>
                         </Row>
                       </Row>
                     </div>
@@ -115,21 +155,12 @@ class HomePrototype extends React.Component {
                   >
                     {description}
                   </h4>
-                  <Link
+                  <BetterLink
                     to={`/${template}${slug}`}
-                    css={{ textDecorationColor: "blue" }}
+                    css={{ textDecoration: "none" }}
                   >
-                    <h4
-                      css={{
-                        marginLeft: "0px",
-                        marginBottom: "16px",
-                        marginTop: "8px",
-                        color: "blue",
-                      }}
-                    >
-                      Read More
-                    </h4>
-                  </Link>
+                    <Button>Read More&nbsp;&nbsp;➔</Button>
+                  </BetterLink>
                 </Collapsible>
               )
             })}
@@ -151,7 +182,7 @@ class HomePrototype extends React.Component {
                 description,
                 template,
               } = node.frontmatter
-              const { slug } = node.fields
+              const { slug, month } = node.fields
 
               return (
                 <Collapsible
@@ -170,7 +201,7 @@ class HomePrototype extends React.Component {
                       >
                         <h4
                           css={{
-                            fontSize: "16px",
+                            fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
                           }}
@@ -179,9 +210,23 @@ class HomePrototype extends React.Component {
                         </h4>
                         <Row>
                           <h4>
-                            {city}, {country}
+                            <BetterLink
+                              to={`/countries/${kebabCase(country)}/`}
+                            >
+                              {city}, {country}
+                            </BetterLink>
                           </h4>
-                          <h4 css={{ paddingRight: "4px" }}>{date}</h4>
+                          <h4 css={{ paddingRight: "4px" }}>
+                            <BetterLink
+                              to={`/${moment(month).format("YYYY")}/${moment(
+                                month
+                              )
+                                .format("MMMM")
+                                .toLowerCase()}/`}
+                            >
+                              {date}
+                            </BetterLink>
+                          </h4>
                         </Row>
                       </Row>
                     </div>
@@ -192,16 +237,16 @@ class HomePrototype extends React.Component {
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
-                          borderBottom: "solid",
-                          borderBottomWidth: "thin",
-                          color: "blue",
+                          borderBottom: "dashed",
+                          borderBottomWidth: "2px",
+                          borderBottomColor: "#ffd666",
                           marginLeft: "0px !important",
                           marginRight: "0px !important",
                         }}
                       >
                         <h4
                           css={{
-                            fontSize: "16px",
+                            fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
                           }}
@@ -227,21 +272,12 @@ class HomePrototype extends React.Component {
                   >
                     {description}
                   </h4>
-                  <Link
+                  <BetterLink
                     to={`/${template}${slug}`}
-                    css={{ textDecorationColor: "blue" }}
+                    css={{ textDecoration: "none" }}
                   >
-                    <h4
-                      css={{
-                        marginLeft: "0px",
-                        marginBottom: "16px",
-                        marginTop: "8px",
-                        color: "blue",
-                      }}
-                    >
-                      Read More
-                    </h4>
-                  </Link>
+                    <Button>Read More&nbsp;&nbsp;➔</Button>
+                  </BetterLink>
                 </Collapsible>
               )
             })}

@@ -138,11 +138,6 @@ export default Navbar
 
 export const titleQuery = graphql`
   query($id: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     mdx(id: { eq: $id }) {
       frontmatter {
         title

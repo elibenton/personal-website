@@ -4,7 +4,7 @@ template: writing
 title: Content Consumption
 date: 2019-08-21
 city: Bangalore
-country: IND
+country: India
 description: >-
   Today, I write my first "listicle," a truly genius form. Taking other people's content, repackaging it with the hottest "hot takes" and serving it back to you,  lukewarm. Here’s a small window into my thinking through books, podcasts, and articles that have stuck with me over the past months. Each of these pieces has informed my current thinking here in India, even if the path was circuitous.
 

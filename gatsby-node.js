@@ -8,7 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   // const postWriting = path.resolve(`./src/templates/post-writing.js`)
   // const imagePost = path.resolve(`./src/templates/post-image.js`)
-  const indexFiltered = path.resolve(`./src/templates/index-filtered.js`)
+  const indexFiltered = path.resolve(`./src/templates/index-tag-filter.js`)
 
   return new Promise((resolve, reject) => {
     resolve(
@@ -54,18 +54,18 @@ exports.createPages = ({ graphql, actions }) => {
         const postsPerPage = 5
         const numPages = Math.ceil(mdxs.length / postsPerPage)
 
-        Array.from({ length: numPages }).forEach((_, i) => {
-          createPage({
-            path: i === 0 ? `/` : `/${i + 1}`,
-            component: path.resolve("./src/templates/index-paginated.js"),
-            context: {
-              limit: postsPerPage,
-              skip: i * postsPerPage,
-              numPages,
-              currentPage: i + 1,
-            },
-          })
-        })
+        // Array.from({ length: numPages }).forEach((_, i) => {
+        //   createPage({
+        //     path: i === 0 ? `/` : `/${i + 1}`,
+        //     component: path.resolve("./src/templates/index-paginated.js"),
+        //     context: {
+        //       limit: postsPerPage,
+        //       skip: i * postsPerPage,
+        //       numPages,
+        //       currentPage: i + 1,
+        //     },
+        //   })
+        // })
 
         // We'll call `createPage` for each result
 

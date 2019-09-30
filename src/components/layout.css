@@ -101,6 +101,26 @@ h5 {
   /* letter-spacing: -0.1px; */
 }
 
+.button {
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+  background-color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.button:hover {
+  background-color: black;
+  color: #ffd666;
+}
+
 /*remove red outline in moz*/
 /* input:invalid {
   box-shadow: none;

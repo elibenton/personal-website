@@ -7,10 +7,6 @@ import Footer from "./footer"
 
 import { Row, Col, Grid } from "react-flexbox-grid"
 
-export const LayoutRow = styled(Row)`
-  display: inline-flex;
-`
-
 export const TagText = styled.p`
   color: #999;
   font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
@@ -55,17 +51,23 @@ export default class MainLayout extends React.Component {
           />
         </Helmet>
         <Grid fluid>
-          <Row xs={12} sm={12} md={3} lg={3} css={{ paddingLeft: "50px" }}>
-            <Col css={{ marginTop: "4em" }}>
+          <Row>
+            <Col
+              xs={12}
+              sm={12}
+              md={4}
+              lg={4}
+              css={{ marginTop: "4em", paddingLeft: "50px", maxWidth: "50%" }}
+            >
               <Nav />
             </Col>
             <Col
               xs={12}
               sm={12}
-              mdOffset={1}
-              md={8}
-              lgOffset={1}
-              lg={8}
+              mdOffset={0}
+              md={7}
+              lgOffset={0}
+              lg={7}
               css={{
                 marginTop: "4em",
               }}
@@ -74,7 +76,6 @@ export default class MainLayout extends React.Component {
             </Col>
           </Row>
         </Grid>
-        <Footer />
       </div>
     )
   }
