@@ -21,6 +21,11 @@ const Button = styled.h4`
 const MobileRowOuter = styled(Row)`
   display: flex;
   flex-direction: row;
+  margin-bottom: 2px;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
     margin-left: 4px !important;
@@ -79,7 +84,8 @@ const HomePrototype = ({ pageContext, data }) => {
   return (
     <Layout>
       <Helmet title={`${name} | Eli Benton Cohen`} />
-      <Row css={{ marginTop: "6em" }}>
+      <Spacer height={0} xsHeight={30} />
+      <Row>
         <Col>
           <MobileHeader>{name}</MobileHeader>
           {filtered.map(({ node }) => {
@@ -100,18 +106,11 @@ const HomePrototype = ({ pageContext, data }) => {
                 transitionTime={200}
                 trigger={
                   <div>
-                    <MobileRowOuter
-                      css={{
-                        justifyContent: "space-between",
-                        cursor: "pointer",
-                        marginLeft: "0px !important",
-                        marginRight: "0px !important",
-                      }}
-                    >
+                    <MobileRowOuter>
                       <MobileTitle
                         css={{
                           fontSize: "15px",
-                          fontWeight: "500",
+                          // fontWeight: "500",
                           marginLeft: "0px",
                           marginBottom: "0px",
                         }}
@@ -119,12 +118,13 @@ const HomePrototype = ({ pageContext, data }) => {
                         {title}
                       </MobileTitle>
                       <MobileRowInner>
-                        <h4>
+                        <h5>
                           <BetterLink to={`/countries/${kebabCase(country)}/`}>
                             {city}, {country}
                           </BetterLink>
-                        </h4>
-                        <h4 css={{ paddingRight: "4px" }}>
+                        </h5>
+                        <h5>&middot;</h5>
+                        <h5 css={{ paddingRight: "4px" }}>
                           <BetterLink
                             to={`/${moment(month).format("YYYY")}/${moment(
                               month
@@ -134,7 +134,7 @@ const HomePrototype = ({ pageContext, data }) => {
                           >
                             {date}
                           </BetterLink>
-                        </h4>
+                        </h5>
                       </MobileRowInner>
                     </MobileRowOuter>
                   </div>
@@ -145,7 +145,7 @@ const HomePrototype = ({ pageContext, data }) => {
                       css={{
                         justifyContent: "space-between",
                         cursor: "pointer",
-                        borderBottom: "dashed",
+                        borderBottom: "dotted",
                         borderBottomWidth: "2px",
                         borderBottomColor: "#ffd666",
                         marginLeft: "0px !important",
@@ -155,7 +155,7 @@ const HomePrototype = ({ pageContext, data }) => {
                       <MobileTitle
                         css={{
                           fontSize: "15px",
-                          fontWeight: "500",
+                          // fontWeight: "500",
                           marginLeft: "0px",
                           marginBottom: "0px",
                         }}
@@ -163,12 +163,13 @@ const HomePrototype = ({ pageContext, data }) => {
                         {title}
                       </MobileTitle>
                       <MobileRowInner>
-                        <h4>
+                        <h5>
                           <BetterLink to={`/countries/${kebabCase(country)}/`}>
                             {city}, {country}
                           </BetterLink>
-                        </h4>
-                        <h4 css={{ paddingRight: "4px" }}>
+                        </h5>
+                        <h5>&middot;</h5>
+                        <h5 css={{ paddingRight: "4px" }}>
                           <BetterLink
                             to={`/${moment(month).format("YYYY")}/${moment(
                               month
@@ -178,7 +179,7 @@ const HomePrototype = ({ pageContext, data }) => {
                           >
                             {date}
                           </BetterLink>
-                        </h4>
+                        </h5>
                       </MobileRowInner>
                     </MobileRowOuter>
                   </div>

@@ -1,8 +1,8 @@
 import React from "react"
 import logo from "../../content/images/logo.gif"
+import logoStill from "../../content/images/tinhat_america.png"
 import Collapsible from "react-collapsible"
 import { Link, StaticQuery, graphql } from "gatsby"
-import { Col } from "react-flexbox-grid"
 import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
@@ -34,6 +34,12 @@ const Hide = styled.div`
     display: none;
   }
 `
+const ReverseHide = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: inline;
+  }
+`
 
 const Container = styled.div`
   display: flex;
@@ -51,9 +57,15 @@ const Topic = styled.h4`
   }
 `
 const Div = styled.div`
+  padding-left: 50px;
   @media screen and (max-width: 767px) {
     margin: 0 -16px 0 -16px;
     border-bottom: double;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    padding-left: 8px;
+    align-items: center;
   }
 `
 
@@ -78,14 +90,14 @@ export default () => (
       <Div>
         <Name>Eli Benton Cohen</Name>
         <Hide>
-          <h4 css={{ fontStyle: "italic" }}>
+          <h4 css={{ fontStyle: "italic", width: "80%" }}>
             Traveling the world to understand the politics of digitally
             networked life
           </h4>
         </Hide>
 
-        <Hide>
-          <BetterLink to="/">
+        <BetterLink to="/">
+          <Hide>
             <img
               src={logo}
               alt="Logo"
@@ -93,28 +105,36 @@ export default () => (
               height="150"
               css={{ marginTop: "50px", marginBottom: "35px" }}
             />
-          </BetterLink>
-        </Hide>
+          </Hide>
+          <ReverseHide>
+            <img
+              src={logoStill}
+              alt="Logo"
+              width="39"
+              height="50"
+              css={{
+                marginTop: "16px",
+                marginBottom: "8px",
+                marginRight: "16px",
+              }}
+            />
+          </ReverseHide>
+        </BetterLink>
+
         <Container>
-          <BetterLink
-            to="/"
-            css={{ textDecoration: "none", textTransform: "uppercase" }}
-          >
-            <h4>portfolio</h4>
-          </BetterLink>
-          <BetterLink
-            to="/reading"
-            css={{ textDecoration: "none", textTransform: "uppercase" }}
-          >
-            <h4>reading</h4>
-          </BetterLink>
-          <BetterLink
-            to="/about"
-            css={{ textDecoration: "none", textTransform: "uppercase" }}
-          >
-            <h4>about</h4>
-          </BetterLink>
           <Hide>
+            <BetterLink
+              to="/about"
+              css={{ textDecoration: "none", textTransform: "uppercase" }}
+            >
+              <h4>about</h4>
+            </BetterLink>
+            <BetterLink
+              to="/"
+              css={{ textDecoration: "none", textTransform: "uppercase" }}
+            >
+              <h4>reading</h4>
+            </BetterLink>
             <Collapsible
               easing="ease-in-out"
               open={false}
@@ -125,25 +145,36 @@ export default () => (
                 </Topic>
               }
             >
-              <h4 css={{ width: "80%" }}>
+              <div
+                css={{
+                  width: "92%",
+                  display: "inline-block",
+                  marginLeft: "4px",
+                }}
+              >
                 {data.allMdx.group.map((tag, index) =>
                   index === data.allMdx.group.length - 1 ? (
                     <BetterLink
                       to={`/tags/${kebabCase(tag.fieldValue)}/`}
                       css={{ textDecoration: "none" }}
                     >
-                      {tag.fieldValue} ({tag.totalCount})
+                      <span class="tag">
+                        {tag.fieldValue} ({tag.totalCount})
+                      </span>
                     </BetterLink>
                   ) : (
                     <BetterLink
                       to={`/tags/${kebabCase(tag.fieldValue)}/`}
                       css={{ textDecoration: "none" }}
                     >
-                      {tag.fieldValue} ({tag.totalCount}){", "}
+                      <span class="tag">
+                        {tag.fieldValue} ({tag.totalCount})
+                      </span>
+                      {"  "}
                     </BetterLink>
                   )
                 )}
-              </h4>
+              </div>
             </Collapsible>
             <br />
             <br />

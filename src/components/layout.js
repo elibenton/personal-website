@@ -56,13 +56,14 @@ export default class MainLayout extends React.Component {
     return (
       <div>
         <Helmet>
+          <link rel="stylesheet" href="https://use.typekit.net/pls6imv.css " />
           <meta
             name="Eli Benton Cohen"
             content="Traveling the world to understand the politics of digitally networked life"
           />
         </Helmet>
         <Grid fluid css={{ backgroundColor: "white" }}>
-          <Spacer height={100} xsHeight={0} />
+          <Spacer height={60} xsHeight={0} />
           <Row>
             <Divider
               xs={12}

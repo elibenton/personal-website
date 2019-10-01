@@ -2,7 +2,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-// yarn packagages
+// yarn packages
 import { Row, Col } from "react-flexbox-grid"
 import Collapsible from "react-collapsible"
 import Helmet from "react-helmet"
@@ -28,6 +28,11 @@ const Button = styled.h4`
 const MobileRowOuter = styled(Row)`
   display: flex;
   flex-direction: row;
+  margin-bottom: 2px;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
     margin-left: 4px !important;
@@ -86,10 +91,10 @@ class HomePrototype extends React.Component {
     return (
       <Layout>
         <Helmet title={"Home | Eli Benton Cohen"} />
-        <Spacer height={120} xsHeight={30} />
+        <Spacer height={0} xsHeight={30} />
         <Row>
           <Col>
-            <MobileHeader>featured</MobileHeader>
+            <MobileHeader>Featured</MobileHeader>
             {featured.map(({ node }) => {
               const {
                 title,
@@ -108,19 +113,11 @@ class HomePrototype extends React.Component {
                   transitionTime={200}
                   trigger={
                     <div>
-                      <MobileRowOuter
-                        css={{
-                          justifyContent: "space-between",
-                          cursor: "pointer",
-                          marginLeft: "0px !important",
-                          marginRight: "0px !important",
-                          position: "sticky",
-                        }}
-                      >
+                      <MobileRowOuter>
                         <MobileTitle
                           css={{
                             fontSize: "15px",
-                            fontWeight: "500",
+                            // fontWeight: "500",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}
@@ -128,14 +125,15 @@ class HomePrototype extends React.Component {
                           {title}
                         </MobileTitle>
                         <MobileRowInner>
-                          <h4>
+                          <h5>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
                             >
                               {city}, {country}
                             </BetterLink>
-                          </h4>
-                          <h4 css={{ paddingRight: "4px" }}>
+                          </h5>
+                          <h5>&middot;</h5>
+                          <h5 css={{ paddingRight: "4px" }}>
                             <BetterLink
                               to={`/${moment(month).format("YYYY")}/${moment(
                                 month
@@ -145,7 +143,7 @@ class HomePrototype extends React.Component {
                             >
                               {date}
                             </BetterLink>
-                          </h4>
+                          </h5>
                         </MobileRowInner>
                       </MobileRowOuter>
                     </div>
@@ -156,7 +154,7 @@ class HomePrototype extends React.Component {
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
-                          borderBottom: "dashed",
+                          borderBottom: "dotted",
                           borderBottomWidth: "2px",
                           borderBottomColor: "#ffd666",
                           marginLeft: "0px !important",
@@ -166,7 +164,7 @@ class HomePrototype extends React.Component {
                         <MobileTitle
                           css={{
                             fontSize: "15px",
-                            fontWeight: "500",
+                            // fontWeight: "500",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}
@@ -174,14 +172,15 @@ class HomePrototype extends React.Component {
                           {title}
                         </MobileTitle>
                         <MobileRowInner>
-                          <h4>
+                          <h5>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
                             >
                               {city}, {country}
                             </BetterLink>
-                          </h4>
-                          <h4 css={{ paddingRight: "4px" }}>
+                          </h5>
+                          <h5>&middot;</h5>
+                          <h5 css={{ paddingRight: "4px" }}>
                             <BetterLink
                               to={`/${moment(month).format("YYYY")}/${moment(
                                 month
@@ -191,7 +190,7 @@ class HomePrototype extends React.Component {
                             >
                               {date}
                             </BetterLink>
-                          </h4>
+                          </h5>
                         </MobileRowInner>
                       </MobileRowOuter>
                     </div>
@@ -215,7 +214,7 @@ class HomePrototype extends React.Component {
               )
             })}
             <MobileHeader css={{ marginTop: "24px !important" }}>
-              recently
+              Recently
             </MobileHeader>
             {recently.map(({ node }) => {
               const {
@@ -235,18 +234,11 @@ class HomePrototype extends React.Component {
                   transitionTime={200}
                   trigger={
                     <div>
-                      <MobileRowOuter
-                        css={{
-                          justifyContent: "space-between",
-                          cursor: "pointer",
-                          marginLeft: "0px !important",
-                          marginRight: "0px !important",
-                        }}
-                      >
+                      <MobileRowOuter>
                         <MobileTitle
                           css={{
                             fontSize: "15px",
-                            fontWeight: "500",
+                            // fontWeight: "500",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}
@@ -254,14 +246,15 @@ class HomePrototype extends React.Component {
                           {title}
                         </MobileTitle>
                         <MobileRowInner>
-                          <h4>
+                          <h5>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
                             >
                               {city}, {country}
                             </BetterLink>
-                          </h4>
-                          <h4 css={{ paddingRight: "4px" }}>
+                          </h5>
+                          <h5>&middot;</h5>
+                          <h5 css={{ paddingRight: "4px" }}>
                             <BetterLink
                               to={`/${moment(month).format("YYYY")}/${moment(
                                 month
@@ -271,7 +264,7 @@ class HomePrototype extends React.Component {
                             >
                               {date}
                             </BetterLink>
-                          </h4>
+                          </h5>
                         </MobileRowInner>
                       </MobileRowOuter>
                     </div>
@@ -282,7 +275,7 @@ class HomePrototype extends React.Component {
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
-                          borderBottom: "dashed",
+                          borderBottom: "dotted",
                           borderBottomWidth: "2px",
                           borderBottomColor: "#ffd666",
                           marginLeft: "0px !important",
@@ -292,7 +285,7 @@ class HomePrototype extends React.Component {
                         <MobileTitle
                           css={{
                             fontSize: "15px",
-                            fontWeight: "500",
+                            // fontWeight: "500",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}
@@ -300,14 +293,15 @@ class HomePrototype extends React.Component {
                           {title}
                         </MobileTitle>
                         <MobileRowInner>
-                          <h4>
+                          <h5>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
                             >
                               {city}, {country}
                             </BetterLink>
-                          </h4>
-                          <h4 css={{ paddingRight: "4px" }}>
+                          </h5>
+                          <h5>&middot;</h5>
+                          <h5 css={{ paddingRight: "4px" }}>
                             <BetterLink
                               to={`/${moment(month).format("YYYY")}/${moment(
                                 month
@@ -317,7 +311,7 @@ class HomePrototype extends React.Component {
                             >
                               {date}
                             </BetterLink>
-                          </h4>
+                          </h5>
                         </MobileRowInner>
                       </MobileRowOuter>
                     </div>
