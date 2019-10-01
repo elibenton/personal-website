@@ -18,6 +18,24 @@ const Button = styled.h4`
     color: #ffd666;
   }
 `
+const MobileRowOuter = styled(Row)`
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 767px) {
+    flex-direction: column !important;
+  }
+`
+const MobileRowInner = styled(Row)`
+  display: flex;
+  flex-direction: row;
+  margin-left: 0px !important;
+  margin-right: -8px !important;
+  @media screen and (max-width: 767px) {
+    margin: 0px 0px 8px -4px !important;
+    flex-direction: row-reverse !important;
+    justify-content: flex-end;
+  }
+`
 
 const BetterLink = styled(Link)`
   text-decoration: none;
@@ -30,14 +48,15 @@ class HomePrototype extends React.Component {
 
     return (
       <Layout>
-        <Helmet title={"Home"} />
-        <Row css={{ marginTop: "3em" }}>
+        <Helmet title={"Home | Eli Benton Cohen"} />
+        <Row css={{ marginTop: "6em" }}>
           <Col>
             <h3
               css={{
                 borderBottom: "double",
                 margin: "0px 0px 6px 0px",
                 paddingBottom: "4px",
+                fontWeight: "500",
               }}
             >
               featured
@@ -60,7 +79,7 @@ class HomePrototype extends React.Component {
                   transitionTime={200}
                   trigger={
                     <div>
-                      <Row
+                      <MobileRowOuter
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
@@ -73,11 +92,12 @@ class HomePrototype extends React.Component {
                             fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
+                            marginBottom: "0px",
                           }}
                         >
-                          {title}
+                          <BetterLink>{title}</BetterLink>
                         </h4>
-                        <Row>
+                        <MobileRowInner>
                           <h4>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
@@ -96,13 +116,13 @@ class HomePrototype extends React.Component {
                               {date}
                             </BetterLink>
                           </h4>
-                        </Row>
-                      </Row>
+                        </MobileRowInner>
+                      </MobileRowOuter>
                     </div>
                   }
                   triggerWhenOpen={
                     <div>
-                      <Row
+                      <MobileRowOuter
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
@@ -122,8 +142,12 @@ class HomePrototype extends React.Component {
                         >
                           {title}
                         </h4>
-                        <Row>
-                          <h4>
+                        <MobileRowInner>
+                          <h4
+                            css={{
+                              padding: "0px 0px 10px 4px !important",
+                            }}
+                          >
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
                             >
@@ -141,8 +165,8 @@ class HomePrototype extends React.Component {
                               {date}
                             </BetterLink>
                           </h4>
-                        </Row>
-                      </Row>
+                        </MobileRowInner>
+                      </MobileRowOuter>
                     </div>
                   }
                 >
@@ -169,6 +193,7 @@ class HomePrototype extends React.Component {
                 borderBottom: "double",
                 margin: "24px 0px 6px 0px",
                 paddingBottom: "4px",
+                fontWeight: "500",
               }}
             >
               recently
@@ -191,7 +216,7 @@ class HomePrototype extends React.Component {
                   transitionTime={200}
                   trigger={
                     <div>
-                      <Row
+                      <MobileRowOuter
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
@@ -204,11 +229,12 @@ class HomePrototype extends React.Component {
                             fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
+                            marginBottom: "0px",
                           }}
                         >
-                          {title}
+                          <BetterLink>{title}</BetterLink>
                         </h4>
-                        <Row>
+                        <MobileRowInner>
                           <h4>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
@@ -227,8 +253,8 @@ class HomePrototype extends React.Component {
                               {date}
                             </BetterLink>
                           </h4>
-                        </Row>
-                      </Row>
+                        </MobileRowInner>
+                      </MobileRowOuter>
                     </div>
                   }
                   triggerWhenOpen={
@@ -254,10 +280,28 @@ class HomePrototype extends React.Component {
                           {title}
                         </h4>
                         <Row>
-                          <h4>
-                            {city}, {country}
+                          <h4
+                            css={{
+                              padding: "0px 0px 10px 4px !important",
+                            }}
+                          >
+                            <BetterLink
+                              to={`/countries/${kebabCase(country)}/`}
+                            >
+                              {city}, {country}
+                            </BetterLink>
                           </h4>
-                          <h4 css={{ paddingRight: "4px" }}>{date}</h4>
+                          <h4 css={{ paddingRight: "4px" }}>
+                            <BetterLink
+                              to={`/${moment(month).format("YYYY")}/${moment(
+                                month
+                              )
+                                .format("MMMM")
+                                .toLowerCase()}/`}
+                            >
+                              {date}
+                            </BetterLink>
+                          </h4>
                         </Row>
                       </Row>
                     </div>

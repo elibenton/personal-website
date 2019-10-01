@@ -10,9 +10,7 @@ description: >-
 
 tags:
   - Book Review
-  - Criticism
-  - Podcasts
-  - Reading List
+  - Modern Condition
 ---
 
 Hello Dear Readers!

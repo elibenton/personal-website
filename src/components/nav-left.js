@@ -1,18 +1,44 @@
 import React from "react"
-
 import logo from "../../content/images/logo.gif"
-import comp from "../../content/images/comp.png"
-import copy from "../../content/images/copy.png"
-
+import Collapsible from "react-collapsible"
 import { Link, StaticQuery, graphql } from "gatsby"
-import { Row, Col } from "react-flexbox-grid"
+import { Col } from "react-flexbox-grid"
 import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
-
 import styled from "styled-components"
 
 const BetterLink = styled(Link)`
   text-decoration: none;
+`
+
+const A = styled.a`
+  text-decoration: none;
+`
+
+const Hide = styled.div`
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 767px) {
+    flex-direction: row;
+  }
+`
+
+const Divider = styled(Col)`
+  @media screen and (max-width: 767px) {
+    border-bottom: double;
+  }
+`
+const Topic = styled.h4`
+  :hover,
+  :active {
+    color: #ffd666;
+  }
 `
 
 export default () => (
@@ -33,28 +59,34 @@ export default () => (
       }
     `}
     render={data => (
-      <Col xsOffset={1} smOffset={1} mdOffset={1} lgOffset={1}>
+      <Divider xsOffset={1} smOffset={1} mdOffset={1} lgOffset={1}>
         <h3
           css={{
             fontWeight: "600",
             textTransform: "none",
             fontSize: "22px",
-            lineHeight: "1.1em",
             marginTop: "0",
+            marginLeft: "4px",
           }}
         >
           Eli Benton Cohen
         </h3>
-        <BetterLink to="/">
-          <img
-            src={logo}
-            alt="Logo"
-            width="115"
-            height="150"
-            css={{ marginTop: "10px", marginBottom: "35px" }}
-          />
-        </BetterLink>
-        <div>
+        <h4 css={{ fontStyle: "italic" }}>
+          Traveling the world to understand the politics of digitally networked
+          life
+        </h4>
+        <Hide>
+          <BetterLink to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              width="115"
+              height="150"
+              css={{ marginTop: "50px", marginBottom: "35px" }}
+            />
+          </BetterLink>
+        </Hide>
+        <Container>
           <BetterLink
             to="/"
             css={{ textDecoration: "none", textTransform: "uppercase" }}
@@ -73,39 +105,58 @@ export default () => (
           >
             <h4>about</h4>
           </BetterLink>
-          <br />
-          <h4 css={{ textTransform: "uppercase" }}>tags</h4>
-          <h4 css={{ width: "80%" }}>
-            {data.allMdx.group.map(tag => (
-              <BetterLink
-                to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                css={{ textDecoration: "none" }}
-              >
-                {tag.fieldValue} ({tag.totalCount}){", "}
-              </BetterLink>
-            ))}
-          </h4>
-          <br />
-          <br />
-          <h4>
-            <span>
-              <BetterLink href="https://github.com/elibenton/personal-website">
-                Codebase
-              </BetterLink>
-              ,&nbsp;
-              <BetterLink href="https://www.elibenton.co/sitemap.xml">
-                Sitemap
-              </BetterLink>
-              , &&nbsp;
-              <BetterLink href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                CC License
-              </BetterLink>
-            </span>
+          <Hide>
+            <Collapsible
+              easing="ease-in-out"
+              open={false}
+              transitionTime={200}
+              trigger={
+                <Topic css={{ textTransform: "uppercase", cursor: "pointer" }}>
+                  topics
+                </Topic>
+              }
+            >
+              <h4 css={{ width: "80%" }}>
+                {data.allMdx.group.map((tag, index) =>
+                  index === data.allMdx.group.length - 1 ? (
+                    <BetterLink
+                      to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                      css={{ textDecoration: "none" }}
+                    >
+                      {tag.fieldValue} ({tag.totalCount})
+                    </BetterLink>
+                  ) : (
+                    <BetterLink
+                      to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                      css={{ textDecoration: "none" }}
+                    >
+                      {tag.fieldValue} ({tag.totalCount}){", "}
+                    </BetterLink>
+                  )
+                )}
+              </h4>
+            </Collapsible>
             <br />
-            ©️{new Date().getFullYear()} Eli Cohen
-          </h4>
-        </div>
-      </Col>
+            <br />
+            <h4>
+              <span>
+                <A href="https://github.com/elibenton/personal-website">
+                  Codebase
+                </A>
+                ,&nbsp;
+                <A href="https://www.elibenton.co/sitemap.xml">Sitemap</A>,
+                &&nbsp;
+                <A href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  CC License
+                </A>
+              </span>
+              <br />
+              ©️{new Date().getFullYear()} Eli Cohen
+            </h4>
+          </Hide>
+          <Spacer height={80} xsHeight={0} />
+        </Container>
+      </Divider>
     )}
   />
 )

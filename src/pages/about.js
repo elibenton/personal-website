@@ -1,22 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Row, Col } from "react-flexbox-grid"
+import Helmet from "react-helmet"
 import Spacer from "../utils/spacer"
 import styled from "styled-components"
-
 import Layout from "../components/layout"
 
-import Nav from "../components/nav-left"
-
 const About = styled.p`
-  font-size: 20px;
-  font-weight: 450;
-  line-height: 1.2em;
-  font-family: Avenir;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.4em;
 `
 const AboutContainer = styled.div`
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   max-width: 350px;
   @media screen and (max-width: 767px) {
     justify-content: flex-start;
@@ -25,7 +21,8 @@ const AboutContainer = styled.div`
 `
 const Header = styled.h2`
   margin-top: 0;
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 1.5em;
 `
 const Bold = styled.span`
   font-weight: bold;
@@ -35,19 +32,17 @@ class AboutPrototype extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet title={"Home | Eli Benton Cohen"} />
+        <Spacer height={40} xsHeight={20} />
+        <AboutContainer>
+          <Img fluid={this.props.data.file.childImageSharp.fluid} />
+        </AboutContainer>
         <About>
-          <AboutContainer>
-            <Img fluid={this.props.data.file.childImageSharp.fluid} />
-          </AboutContainer>
-          <br />
-          Hello! I'm Eli.
-          <br /> <br />
           As a 2019-2020 <a href="https://watson.foundation/">Watson Fellow</a>,
-          I am traveling the world to explore the politics of technology. I am
-          hoping to see how life online and off shape our understanding of the
-          world around us. This website is where I post about my journey,
-          discuss the things I am reading, and release episodes of my podcast
-          documenting the year.
+          I am traveling the world to explore the politics of technology. I hope
+          to see how life online—and off—shape our understanding of the world
+          around us. This website is where I write about my journey, discuss
+          what I am reading, and release audio and photos documenting the year.
           <br /> <br />
           Previously, I produced public radio at{" "}
           <a href="https://www.kqed.org/">KQED</a> in San Francisco and

@@ -4,13 +4,9 @@ import { Row, Col } from "react-flexbox-grid"
 import Spacer from "../utils/spacer"
 import Collapsible from "react-collapsible"
 import Helmet from "react-helmet"
-
 import moment from "moment"
 import kebabCase from "lodash/kebabCase"
-import Color from "../utils/colors"
-
 import styled from "styled-components"
-
 import Layout from "../components/layout"
 
 const Button = styled.h4`
@@ -33,14 +29,15 @@ const HomePrototype = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Helmet title={"Home"} />
-      <Row css={{ marginTop: "3em" }}>
+      <Helmet title={`${name} | Eli Benton Cohen`} />
+      <Row css={{ marginTop: "6em" }}>
         <Col>
           <h3
             css={{
               borderBottom: "double",
               margin: "0px 0px 6px 0px",
               paddingBottom: "4px",
+              fontWeight: "500",
             }}
           >
             {name}

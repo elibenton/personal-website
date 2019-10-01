@@ -13,6 +13,7 @@ tags:
   - Title IX
   - Sexual Assault
   - Campus Politics
+  - Hook Up Culture
 publication: KSPC 88.7 FM
 link: https://discussioncollective.org/episodes/part-1
 ---

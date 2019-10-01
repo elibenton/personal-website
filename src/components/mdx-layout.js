@@ -82,6 +82,7 @@ function PageTemplate({ data }) {
   return (
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />
+      <Spacer height={80} xsHeight={10} />
       <Row>
         <Col
           xsOffset={1}
