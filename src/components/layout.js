@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Helmet from "react-helmet"
 import Nav from "./nav-left"
 import { Row, Col, Grid } from "react-flexbox-grid"
+import Spacer from "../utils/spacer"
 
 export const TagText = styled.p`
   color: #999;
@@ -37,6 +38,18 @@ export const TemplateText = styled.p`
   }
 `
 
+const Divider = styled(Col)`
+  z-index: 100;
+  background-color: white;
+  /* margin: 0 -8px 0 -8px !important; */
+  /* padding: 0 50px 0 50px !important; */
+  @media screen and (max-width: 767px) {
+    /* padding: 0 8px 0 8px !important; */
+    position: sticky;
+    top: 0px;
+  }
+`
+
 export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props
@@ -48,18 +61,22 @@ export default class MainLayout extends React.Component {
             content="Traveling the world to understand the politics of digitally networked life"
           />
         </Helmet>
-        <Grid fluid>
+        <Grid fluid css={{ backgroundColor: "white" }}>
+          <Spacer height={100} xsHeight={0} />
           <Row>
-            <Col
+            <Divider
               xs={12}
+              xsOffset={0}
               sm={12}
+              smOffset={0}
               md={4}
+              mdOffset={0}
               lg={4}
-              css={{ marginTop: "4em", paddingLeft: "50px", maxWidth: "50%" }}
+              lgOffset={0}
             >
               <Nav />
-            </Col>
-            <Col xs={12} sm={12} mdOffset={0} md={7} lgOffset={0} lg={7}>
+            </Divider>
+            <Col xs={12} sm={12} md={7} lg={7}>
               {children}
             </Col>
           </Row>

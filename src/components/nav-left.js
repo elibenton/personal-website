@@ -7,6 +7,20 @@ import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
 
+const Name = styled.h3`
+  display: flex;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 22px;
+  margin-top: 0;
+  margin-left: 4px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 4px;
+    margin-top: 20px;
+    margin-left: 8px;
+  }
+`
+
 const BetterLink = styled(Link)`
   text-decoration: none;
 `
@@ -26,18 +40,20 @@ const Container = styled.div`
   flex-direction: column;
   @media screen and (max-width: 767px) {
     flex-direction: row;
-  }
-`
-
-const Divider = styled(Col)`
-  @media screen and (max-width: 767px) {
-    border-bottom: double;
+    justify-content: flex-start;
+    margin-left: 4px;
   }
 `
 const Topic = styled.h4`
   :hover,
   :active {
     color: #ffd666;
+  }
+`
+const Div = styled.div`
+  @media screen and (max-width: 767px) {
+    margin: 0 -16px 0 -16px;
+    border-bottom: double;
   }
 `
 
@@ -59,22 +75,15 @@ export default () => (
       }
     `}
     render={data => (
-      <Divider xsOffset={1} smOffset={1} mdOffset={1} lgOffset={1}>
-        <h3
-          css={{
-            fontWeight: "600",
-            textTransform: "none",
-            fontSize: "22px",
-            marginTop: "0",
-            marginLeft: "4px",
-          }}
-        >
-          Eli Benton Cohen
-        </h3>
-        <h4 css={{ fontStyle: "italic" }}>
-          Traveling the world to understand the politics of digitally networked
-          life
-        </h4>
+      <Div>
+        <Name>Eli Benton Cohen</Name>
+        <Hide>
+          <h4 css={{ fontStyle: "italic" }}>
+            Traveling the world to understand the politics of digitally
+            networked life
+          </h4>
+        </Hide>
+
         <Hide>
           <BetterLink to="/">
             <img
@@ -156,7 +165,7 @@ export default () => (
           </Hide>
           <Spacer height={80} xsHeight={0} />
         </Container>
-      </Divider>
+      </Div>
     )}
   />
 )

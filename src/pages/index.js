@@ -1,11 +1,18 @@
+// core libraries
 import React from "react"
 import { Link, graphql } from "gatsby"
+
+// yarn packagages
 import { Row, Col } from "react-flexbox-grid"
-import Spacer from "../utils/spacer"
 import Collapsible from "react-collapsible"
 import Helmet from "react-helmet"
-import Layout from "../components/layout"
 import styled from "styled-components"
+
+// components and utils
+import Layout from "../components/layout"
+import Spacer from "../utils/spacer"
+
+// ancillary libraries
 import moment from "moment"
 import kebabCase from "lodash/kebabCase"
 
@@ -23,6 +30,7 @@ const MobileRowOuter = styled(Row)`
   flex-direction: row;
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
+    margin-left: 4px !important;
   }
 `
 const MobileRowInner = styled(Row)`
@@ -31,9 +39,38 @@ const MobileRowInner = styled(Row)`
   margin-left: 0px !important;
   margin-right: -8px !important;
   @media screen and (max-width: 767px) {
+    font-style: italic;
     margin: 0px 0px 8px -4px !important;
     flex-direction: row-reverse !important;
     justify-content: flex-end;
+  }
+`
+const MobileTitle = styled.h4`
+  letter-spacing: 0.7px;
+  :hover,
+  :active {
+    color: #ffd666;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+`
+
+const MobileContainer = styled.h4`
+  width: 70%;
+  @media screen and (max-width: 767px) {
+    width: 98%;
+  }
+`
+
+const MobileHeader = styled.h3`
+  margin: 0px 0px 6px 0px;
+  padding-bottom: 4px;
+  font-weight: 500;
+  border-bottom: double;
+  @media screen and (max-width: 767px) {
+    margin: 0px -8px 6px -8px;
+    padding-left: 12px;
   }
 `
 
@@ -49,18 +86,10 @@ class HomePrototype extends React.Component {
     return (
       <Layout>
         <Helmet title={"Home | Eli Benton Cohen"} />
-        <Row css={{ marginTop: "6em" }}>
+        <Spacer height={120} xsHeight={30} />
+        <Row>
           <Col>
-            <h3
-              css={{
-                borderBottom: "double",
-                margin: "0px 0px 6px 0px",
-                paddingBottom: "4px",
-                fontWeight: "500",
-              }}
-            >
-              featured
-            </h3>
+            <MobileHeader>featured</MobileHeader>
             {featured.map(({ node }) => {
               const {
                 title,
@@ -85,9 +114,10 @@ class HomePrototype extends React.Component {
                           cursor: "pointer",
                           marginLeft: "0px !important",
                           marginRight: "0px !important",
+                          position: "sticky",
                         }}
                       >
-                        <h4
+                        <MobileTitle
                           css={{
                             fontSize: "15px",
                             fontWeight: "500",
@@ -95,8 +125,8 @@ class HomePrototype extends React.Component {
                             marginBottom: "0px",
                           }}
                         >
-                          <BetterLink>{title}</BetterLink>
-                        </h4>
+                          {title}
+                        </MobileTitle>
                         <MobileRowInner>
                           <h4>
                             <BetterLink
@@ -133,21 +163,18 @@ class HomePrototype extends React.Component {
                           marginRight: "0px !important",
                         }}
                       >
-                        <h4
+                        <MobileTitle
                           css={{
                             fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
+                            marginBottom: "0px",
                           }}
                         >
                           {title}
-                        </h4>
+                        </MobileTitle>
                         <MobileRowInner>
-                          <h4
-                            css={{
-                              padding: "0px 0px 10px 4px !important",
-                            }}
-                          >
+                          <h4>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
                             >
@@ -170,15 +197,14 @@ class HomePrototype extends React.Component {
                     </div>
                   }
                 >
-                  <h4
+                  <MobileContainer
                     css={{
-                      width: "70%",
                       marginLeft: "0px",
                       fontSize: "15px",
                     }}
                   >
                     {description}
-                  </h4>
+                  </MobileContainer>
                   <BetterLink
                     to={`/${template}${slug}`}
                     css={{ textDecoration: "none" }}
@@ -188,16 +214,9 @@ class HomePrototype extends React.Component {
                 </Collapsible>
               )
             })}
-            <h3
-              css={{
-                borderBottom: "double",
-                margin: "24px 0px 6px 0px",
-                paddingBottom: "4px",
-                fontWeight: "500",
-              }}
-            >
+            <MobileHeader css={{ marginTop: "24px !important" }}>
               recently
-            </h3>
+            </MobileHeader>
             {recently.map(({ node }) => {
               const {
                 title,
@@ -224,7 +243,7 @@ class HomePrototype extends React.Component {
                           marginRight: "0px !important",
                         }}
                       >
-                        <h4
+                        <MobileTitle
                           css={{
                             fontSize: "15px",
                             fontWeight: "500",
@@ -232,8 +251,8 @@ class HomePrototype extends React.Component {
                             marginBottom: "0px",
                           }}
                         >
-                          <BetterLink>{title}</BetterLink>
-                        </h4>
+                          {title}
+                        </MobileTitle>
                         <MobileRowInner>
                           <h4>
                             <BetterLink
@@ -259,7 +278,7 @@ class HomePrototype extends React.Component {
                   }
                   triggerWhenOpen={
                     <div>
-                      <Row
+                      <MobileRowOuter
                         css={{
                           justifyContent: "space-between",
                           cursor: "pointer",
@@ -270,21 +289,18 @@ class HomePrototype extends React.Component {
                           marginRight: "0px !important",
                         }}
                       >
-                        <h4
+                        <MobileTitle
                           css={{
                             fontSize: "15px",
                             fontWeight: "500",
                             marginLeft: "0px",
+                            marginBottom: "0px",
                           }}
                         >
                           {title}
-                        </h4>
-                        <Row>
-                          <h4
-                            css={{
-                              padding: "0px 0px 10px 4px !important",
-                            }}
-                          >
+                        </MobileTitle>
+                        <MobileRowInner>
+                          <h4>
                             <BetterLink
                               to={`/countries/${kebabCase(country)}/`}
                             >
@@ -302,20 +318,19 @@ class HomePrototype extends React.Component {
                               {date}
                             </BetterLink>
                           </h4>
-                        </Row>
-                      </Row>
+                        </MobileRowInner>
+                      </MobileRowOuter>
                     </div>
                   }
                 >
-                  <h4
+                  <MobileContainer
                     css={{
-                      width: "70%",
                       marginLeft: "0px",
                       fontSize: "15px",
                     }}
                   >
                     {description}
-                  </h4>
+                  </MobileContainer>
                   <BetterLink
                     to={`/${template}${slug}`}
                     css={{ textDecoration: "none" }}
