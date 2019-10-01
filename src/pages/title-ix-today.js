@@ -5,7 +5,6 @@ import Helmet from "react-helmet"
 
 // Import custom build components
 import Layout from "../components/layout"
-import { TagText, TemplateText } from "../components/layout"
 
 // Import ancillary libraries
 import kebabCase from "lodash/kebabCase"
@@ -248,7 +247,7 @@ const Tags = ({ pageContext, data }) => {
                 lgOffset={0}
                 lg={5}
               >
-                <TagSpan>
+                {/* <TagSpan>
                   <PostLink to={`/${template}`}>
                     <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
                   </PostLink>
@@ -266,7 +265,7 @@ const Tags = ({ pageContext, data }) => {
                       </TagSpan>
                     )
                   )}
-                </TagSpan>
+                </TagSpan> */}
 
                 <Line color={Color("yellow")} />
                 <Excerpt
