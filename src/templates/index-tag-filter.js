@@ -1,13 +1,21 @@
+// core libraries
 import React from "react"
 import { Link, graphql } from "gatsby"
+
+// yarn packages
 import { Row, Col } from "react-flexbox-grid"
-import Spacer from "../utils/spacer"
 import Collapsible from "react-collapsible"
 import Helmet from "react-helmet"
-import moment from "moment"
-import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
+
+// components and utils
 import Layout from "../components/layout"
+import Spacer from "../utils/spacer"
+import Nav from "../components/nav-left"
+
+// ancillary libraries
+import moment from "moment"
+import { kebabCase, upperFirst } from "lodash"
 
 const Button = styled.h4`
   margin: 12px 0 30px 0;
@@ -75,6 +83,12 @@ const MobileHeader = styled.h3`
 const BetterLink = styled(Link)`
   text-decoration: none;
 `
+const Divider = styled(Col)`
+  z-index: 100;
+`
+const CustomRow = styled(Row)`
+  margin: 0 0 0 0 !important;
+`
 
 const HomePrototype = ({ pageContext, data }) => {
   const { name } = pageContext
@@ -85,9 +99,12 @@ const HomePrototype = ({ pageContext, data }) => {
     <Layout>
       <Helmet title={`${name} | Eli Benton Cohen`} />
       <Spacer height={0} xsHeight={30} />
-      <Row>
-        <Col>
-          <MobileHeader>{name}</MobileHeader>
+      <CustomRow>
+        <Divider xs={12} sm={12} md={3} lg={3}>
+          <Nav title={"hi"} />
+        </Divider>
+        <Col xs={12} sm={12} md={8} lg={8} css={{ marginLeft: "50px" }}>
+          <MobileHeader>{upperFirst(name)}</MobileHeader>
           {filtered.map(({ node }) => {
             const {
               title,
@@ -203,7 +220,7 @@ const HomePrototype = ({ pageContext, data }) => {
             )
           })}
         </Col>
-      </Row>
+      </CustomRow>
       <Spacer height={140} xsHeight={40} />
     </Layout>
   )

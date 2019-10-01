@@ -11,6 +11,7 @@ import styled from "styled-components"
 // components and utils
 import Layout from "../components/layout"
 import Spacer from "../utils/spacer"
+import Nav from "../components/nav-left"
 
 // ancillary libraries
 import moment from "moment"
@@ -35,14 +36,12 @@ const MobileRowOuter = styled(Row)`
   margin-right: 0px !important;
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
-    margin-left: 4px !important;
+    margin-left: 12px !important;
   }
 `
 const MobileRowInner = styled(Row)`
   display: flex;
   flex-direction: row;
-  margin-left: 0px !important;
-  margin-right: -8px !important;
   @media screen and (max-width: 767px) {
     font-style: italic;
     margin: 0px 0px 8px -4px !important;
@@ -74,13 +73,18 @@ const MobileHeader = styled.h3`
   font-weight: 500;
   border-bottom: double;
   @media screen and (max-width: 767px) {
-    margin: 0px -8px 6px -8px;
     padding-left: 12px;
   }
 `
 
 const BetterLink = styled(Link)`
   text-decoration: none;
+`
+const Divider = styled(Col)`
+  z-index: 100;
+`
+const CustomRow = styled(Row)`
+  margin: 0 0 0 0 !important;
 `
 
 class HomePrototype extends React.Component {
@@ -92,8 +96,12 @@ class HomePrototype extends React.Component {
       <Layout>
         <Helmet title={"Home | Eli Benton Cohen"} />
         <Spacer height={0} xsHeight={30} />
-        <Row>
-          <Col>
+
+        <CustomRow>
+          <Divider xs={12} sm={12} md={3} lg={3} lgOffset={0}>
+            <Nav title={"hi"} />
+          </Divider>
+          <Col xs={12} sm={12} md={8} lg={8} css={{ marginLeft: "50px" }}>
             <MobileHeader>Featured</MobileHeader>
             {featured.map(({ node }) => {
               const {
@@ -157,8 +165,8 @@ class HomePrototype extends React.Component {
                           borderBottom: "dotted",
                           borderBottomWidth: "2px",
                           borderBottomColor: "#ffd666",
-                          marginLeft: "0px !important",
-                          marginRight: "0px !important",
+                          // marginLeft: "0px !important",
+                          // marginRight: "0px !important",
                         }}
                       >
                         <MobileTitle
@@ -335,7 +343,7 @@ class HomePrototype extends React.Component {
               )
             })}
           </Col>
-        </Row>
+        </CustomRow>
         <Spacer height={140} xsHeight={40} />
       </Layout>
     )

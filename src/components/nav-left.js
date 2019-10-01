@@ -6,6 +6,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
+import { props } from "bluebird"
 
 const Name = styled.h3`
   display: flex;
@@ -17,7 +18,6 @@ const Name = styled.h3`
   @media screen and (max-width: 767px) {
     margin-bottom: 4px;
     margin-top: 20px;
-    margin-left: 8px;
   }
 `
 
@@ -40,16 +40,6 @@ const ReverseHide = styled.div`
     display: inline;
   }
 `
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 767px) {
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 4px;
-  }
-`
 const Topic = styled.h4`
   :hover,
   :active {
@@ -58,18 +48,29 @@ const Topic = styled.h4`
 `
 const Div = styled.div`
   padding-left: 50px;
+  background: white;
   @media screen and (max-width: 767px) {
     margin: 0 -16px 0 -16px;
     border-bottom: double;
+    padding-left: 16px;
     display: flex;
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-    padding-left: 8px;
-    align-items: center;
+    flex-direction: row;
+  }
+`
+const InnerDiv = styled.div`
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+`
+const InnerInnerDiv = styled.div`
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
   }
 `
 
-export default () => (
+export default props => (
   <StaticQuery
     query={graphql`
       {
@@ -88,25 +89,8 @@ export default () => (
     `}
     render={data => (
       <Div>
-        <Name>Eli Benton Cohen</Name>
-        <Hide>
-          <h4 css={{ fontStyle: "italic", width: "80%" }}>
-            Traveling the world to understand the politics of digitally
-            networked life
-          </h4>
-        </Hide>
-
-        <BetterLink to="/">
-          <Hide>
-            <img
-              src={logo}
-              alt="Logo"
-              width="115"
-              height="150"
-              css={{ marginTop: "50px", marginBottom: "35px" }}
-            />
-          </Hide>
-          <ReverseHide>
+        <ReverseHide>
+          <BetterLink to="/">
             <img
               src={logoStill}
               alt="Logo"
@@ -118,11 +102,28 @@ export default () => (
                 marginRight: "16px",
               }}
             />
-          </ReverseHide>
-        </BetterLink>
-
-        <Container>
+          </BetterLink>
+        </ReverseHide>
+        <InnerDiv>
+          <Name>{data.site.siteMetadata.title}</Name>
           <Hide>
+            <h4 css={{ fontStyle: "italic" }}>
+              Traveling the world to understand the politics of digitally
+              networked life
+            </h4>
+          </Hide>
+          <BetterLink to="/">
+            <Hide>
+              <img
+                src={logo}
+                alt="Logo"
+                width="115"
+                height="150"
+                css={{ marginTop: "50px", marginBottom: "35px" }}
+              />
+            </Hide>
+          </BetterLink>
+          <InnerInnerDiv>
             <BetterLink
               to="/about"
               css={{ textDecoration: "none", textTransform: "uppercase" }}
@@ -135,67 +136,66 @@ export default () => (
             >
               <h4>reading</h4>
             </BetterLink>
-            <Collapsible
-              easing="ease-in-out"
-              open={false}
-              transitionTime={200}
-              trigger={
-                <Topic css={{ textTransform: "uppercase", cursor: "pointer" }}>
-                  topics
-                </Topic>
-              }
+          </InnerInnerDiv>
+        </InnerDiv>
+        <Hide>
+          <Collapsible
+            easing="ease-in-out"
+            open={true}
+            transitionTime={200}
+            trigger={
+              <Topic css={{ textTransform: "uppercase", cursor: "pointer" }}>
+                topics
+              </Topic>
+            }
+          >
+            <div
+              css={{
+                display: "inline-block",
+              }}
             >
-              <div
-                css={{
-                  width: "92%",
-                  display: "inline-block",
-                  marginLeft: "4px",
-                }}
-              >
-                {data.allMdx.group.map((tag, index) =>
-                  index === data.allMdx.group.length - 1 ? (
-                    <BetterLink
-                      to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                      css={{ textDecoration: "none" }}
-                    >
-                      <span class="tag">
-                        {tag.fieldValue} ({tag.totalCount})
-                      </span>
-                    </BetterLink>
-                  ) : (
-                    <BetterLink
-                      to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                      css={{ textDecoration: "none" }}
-                    >
-                      <span class="tag">
-                        {tag.fieldValue} ({tag.totalCount})
-                      </span>
-                      {"  "}
-                    </BetterLink>
-                  )
-                )}
-              </div>
-            </Collapsible>
+              {data.allMdx.group.map((tag, index) =>
+                index === data.allMdx.group.length - 1 ? (
+                  <BetterLink
+                    to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                    css={{ textDecoration: "none" }}
+                  >
+                    <span class="tag">
+                      {tag.fieldValue} ({tag.totalCount})
+                    </span>
+                  </BetterLink>
+                ) : (
+                  <BetterLink
+                    to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                    css={{ textDecoration: "none" }}
+                  >
+                    <span class="tag">
+                      {tag.fieldValue} ({tag.totalCount})
+                    </span>
+                  </BetterLink>
+                )
+              )}
+            </div>
+          </Collapsible>
+          <br />
+          <br />
+          <h4>
+            <span>
+              <A href="https://github.com/elibenton/personal-website">
+                Codebase
+              </A>
+              ,&nbsp;
+              <A href="https://www.elibenton.co/sitemap.xml">Sitemap</A>,
+              &&nbsp;
+              <A href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                CC License
+              </A>
+            </span>
             <br />
-            <br />
-            <h4>
-              <span>
-                <A href="https://github.com/elibenton/personal-website">
-                  Codebase
-                </A>
-                ,&nbsp;
-                <A href="https://www.elibenton.co/sitemap.xml">Sitemap</A>,
-                &&nbsp;
-                <A href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  CC License
-                </A>
-              </span>
-              <br />
-              ©️{new Date().getFullYear()} Eli Cohen
-            </h4>
-          </Hide>
-          <Spacer height={80} xsHeight={0} />
-        </Container>
+            ©️{new Date().getFullYear()} Eli Cohen
+          </h4>
+        </Hide>
+        <Spacer height={80} xsHeight={0} />
       </Div>
     )}
   />

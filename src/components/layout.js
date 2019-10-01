@@ -1,10 +1,12 @@
 import React from "react"
+import { graphql } from "gatsby"
 import "./layout.css"
 import styled from "styled-components"
 import Helmet from "react-helmet"
 import Nav from "./nav-left"
-import { Row, Col, Grid } from "react-flexbox-grid"
+import { Row, Col } from "react-flexbox-grid"
 import Spacer from "../utils/spacer"
+import SEO from "../components/seo"
 
 export const TagText = styled.p`
   color: #999;
@@ -40,49 +42,22 @@ export const TemplateText = styled.p`
 
 const Divider = styled(Col)`
   z-index: 100;
-  background-color: white;
-  /* margin: 0 -8px 0 -8px !important; */
-  /* padding: 0 50px 0 50px !important; */
-  @media screen and (max-width: 767px) {
-    /* padding: 0 8px 0 8px !important; */
-    position: sticky;
-    top: 0px;
-  }
+`
+const CustomRow = styled(Row)`
+  margin: 0 0 0 0 !important;
 `
 
-export default class MainLayout extends React.Component {
-  render() {
-    const { children } = this.props
-    return (
-      <div>
-        <Helmet>
-          <link rel="stylesheet" href="https://use.typekit.net/pls6imv.css " />
-          <meta
-            name="Eli Benton Cohen"
-            content="Traveling the world to understand the politics of digitally networked life"
-          />
-        </Helmet>
-        <Grid fluid css={{ backgroundColor: "white" }}>
-          <Spacer height={60} xsHeight={0} />
-          <Row>
-            <Divider
-              xs={12}
-              xsOffset={0}
-              sm={12}
-              smOffset={0}
-              md={4}
-              mdOffset={0}
-              lg={4}
-              lgOffset={0}
-            >
-              <Nav />
-            </Divider>
-            <Col xs={12} sm={12} md={7} lg={7}>
-              {children}
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-    )
-  }
-}
+export default ({ children }) => (
+  <div>
+    <Helmet>
+      <link rel="stylesheet" href="https://use.typekit.net/pls6imv.css " />
+      <meta
+        name="Eli Benton Cohen"
+        content="Traveling the world to understand the politics of digitally networked life"
+      />
+    </Helmet>
+    <SEO />
+    <Spacer height={60} xsHeight={0} />
+    {children}
+  </div>
+)

@@ -9,7 +9,6 @@ body {
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
-  /* max-width: 1440px; */
   background-color: white;
 }
 
@@ -114,6 +113,7 @@ h5 {
   letter-spacing: 0.8px;
   padding: 2px 4px 2px 5px;
   display: inline-block;
+  margin: 0 3px 0 3px;
 }
 
 @font-face {

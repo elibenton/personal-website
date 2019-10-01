@@ -6,10 +6,15 @@ import Helmet from "react-helmet"
 import Layout from "../components/layout"
 import { TagText, TemplateText } from "../components/layout"
 
-import { FaCalendarDay, FaMapMarkerAlt } from "react-icons/fa"
+import {
+  FaCalendarDay,
+  FaMapMarkerAlt,
+  FaBook,
+  FaHeadphones,
+} from "react-icons/fa"
 import { Row, Col } from "react-flexbox-grid"
 import styled from "styled-components"
-import kebabCase from "lodash/kebabCase"
+import { kebabCase, upperFirst } from "lodash"
 import moment from "moment"
 
 import Spacer from "../utils/spacer"
@@ -24,14 +29,7 @@ const PostLink = styled(Link)`
     color: #ffd666;
   }
 `
-const TitleContainer = styled.div`
-  @media screen and (max-width: 767px) {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-    box-sizing: border-box;
-  }
-`
+
 const Title = styled.h1`
   margin-top: 0px;
   text-align: left;
@@ -42,19 +40,6 @@ const Subtitle = styled.h5`
   font-weight: 400;
   text-align: left;
   margin-top: 4px;
-`
-const AttributionText = styled.h4`
-  margin-top: 2px;
-  color: #777;
-`
-const Attribution = styled.div`
-  margin-top: ${props => props.offset}px;
-  @media screen and (max-width: 767px) {
-    margin-top: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-  }
 `
 export const TagSpan = styled.div`
   color: #999;
@@ -82,79 +67,77 @@ function PageTemplate({ data }) {
   return (
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />
-      <Spacer height={80} xsHeight={10} />
+      <Spacer height={60} xsHeight={10} />
       <Row>
+        <Col mdOffset={3} lgOffset={3} xs={10} sm={10} md={6} lg={6}>
+          <Title>{title}</Title>
+        </Col>
+
+        <br />
         <Col
-          xsOffset={1}
+          mdOffset={3}
+          lgOffset={3}
           xs={10}
-          smOffset={1}
           sm={10}
-          mdOffset={0}
-          md={9}
-          lgOffset={0}
-          lg={9}
+          md={3}
+          lg={4}
+          css={{ paddingLeft: "1.5em" }}
         >
-          <TitleContainer>
-            <Title>{title}</Title>
-            <Subtitle>{description}</Subtitle>
-          </TitleContainer>
-          {/* <Line color={Color("yellow")} /> */}
-          <Attribution>
-            <AttributionText>
-              <PostLink
-                to={`/${moment(date).format("YYYY")}/${moment(date)
-                  .format("MMMM")
-                  .toLowerCase()}/`}
-              >
-                <FaCalendarDay /> {date}
+          <h4>{description}</h4>
+        </Col>
+        <Col xs={12} sm={12} md={3} lg={2}>
+          <h5>
+            <PostLink
+              to={`/${moment(date).format("YYYY")}/${moment(date)
+                .format("MMMM")
+                .toLowerCase()}/`}
+            >
+              <FaCalendarDay /> {date}
+            </PostLink>
+          </h5>
+          <h5>
+            <PostLink to={`/countries/${kebabCase(country)}/`}>
+              <FaMapMarkerAlt /> {city}, {country}
+            </PostLink>
+          </h5>
+          {template === "writing" ? (
+            <h5>
+              <PostLink to={`/${template}`}>
+                <FaBook /> {upperFirst(template)}
               </PostLink>
-            </AttributionText>
-            <AttributionText>
-              <PostLink to={`/countries/${kebabCase(country)}/`}>
-                <FaMapMarkerAlt /> {city}, {country}
+            </h5>
+          ) : (
+            <h5>
+              <PostLink to={`/${template}`}>
+                <FaHeadphones /> {upperFirst(template)}
               </PostLink>
-            </AttributionText>
-          </Attribution>
+            </h5>
+          )}
+          {tags.map(tag => (
+            <PostLink to={`/tags/${kebabCase(tag)}/`}>
+              <h5 class="tag">{tag}</h5>
+            </PostLink>
+          ))}
         </Col>
       </Row>
+      <Spacer height={60} xsHeight={10} />
 
-      <Spacer height={50} />
       <Row>
         <Col
           xsOffset={0}
           xs={12}
           smOffset={0}
           sm={12}
-          mdOffset={0}
-          md={12}
-          lgOffset={0}
-          lg={9}
+          mdOffset={3}
+          md={6}
+          lgOffset={3}
+          lg={6}
         >
           <div className="blog-post-body">
             <div>
               <MDXRenderer>{mdx.body}</MDXRenderer>
             </div>
-            <Line color={Color("yellow")} />
           </div>
-          <TagSpan>
-            <PostLink to={`/${template}`}>
-              <TemplateText>{template}:&nbsp;&nbsp;</TemplateText>
-            </PostLink>
-            {tags.map((tag, index) =>
-              index === 0 ? (
-                <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                  <TagText>{tag}</TagText>
-                </PostLink>
-              ) : (
-                <span>
-                  &nbsp;&middot;&nbsp;
-                  <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                    <TagText>{tag}</TagText>
-                  </PostLink>
-                </span>
-              )
-            )}
-          </TagSpan>
         </Col>
       </Row>
       <Spacer height={100} />
