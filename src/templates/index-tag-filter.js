@@ -66,16 +66,16 @@ const MobileContainer = styled.h4`
   width: 70%;
   @media screen and (max-width: 767px) {
     width: 98%;
+    margin-left: 8px !important;
   }
 `
 
 const MobileHeader = styled.h3`
-  margin: 0px 0px 6px 0px;
+  margin: 24px 0px 6px 0px;
   padding-bottom: 4px;
   font-weight: 500;
   border-bottom: double;
   @media screen and (max-width: 767px) {
-    margin: 0px -8px 6px -8px;
     padding-left: 12px;
   }
 `
@@ -90,6 +90,13 @@ const CustomRow = styled(Row)`
   margin: 0 0 0 0 !important;
 `
 
+const CustomCol = styled(Col)`
+  margin-left: 50px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+    padding: 0 !important;
+  }
+`
 const HomePrototype = ({ pageContext, data }) => {
   const { name } = pageContext
   const filtered = data.filtered.edges
@@ -97,13 +104,13 @@ const HomePrototype = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Helmet title={`${name} | Eli Benton Cohen`} />
-      <Spacer height={0} xsHeight={30} />
+      <Helmet title={`${name}`} />
+      <Spacer height={60} xsHeight={0} />
       <CustomRow>
         <Divider xs={12} sm={12} md={3} lg={3}>
-          <Nav title={"hi"} />
+          <Nav />
         </Divider>
-        <Col xs={12} sm={12} md={8} lg={8} css={{ marginLeft: "50px" }}>
+        <CustomCol xs={12} sm={12} md={8} lg={8}>
           <MobileHeader>{upperFirst(name)}</MobileHeader>
           {filtered.map(({ node }) => {
             const {
@@ -219,7 +226,7 @@ const HomePrototype = ({ pageContext, data }) => {
               </Collapsible>
             )
           })}
-        </Col>
+        </CustomCol>
       </CustomRow>
       <Spacer height={140} xsHeight={40} />
     </Layout>

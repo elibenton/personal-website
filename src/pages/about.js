@@ -32,7 +32,7 @@ class AboutPrototype extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title={"Home | Eli Benton Cohen"} />
+        <Helmet title={"About"} />
         <Spacer height={40} xsHeight={20} />
         <AboutContainer>
           <Img fluid={this.props.data.file.childImageSharp.fluid} />

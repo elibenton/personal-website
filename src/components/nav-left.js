@@ -6,7 +6,6 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
-import { props } from "bluebird"
 
 const Name = styled.h3`
   display: flex;

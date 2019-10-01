@@ -57,7 +57,6 @@ export default ({ children }) => (
       />
     </Helmet>
     <SEO />
-    <Spacer height={60} xsHeight={0} />
     {children}
   </div>
 )

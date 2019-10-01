@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import Helmet from "react-helmet"
 
 import Layout from "../components/layout"
-import { TagText, TemplateText } from "../components/layout"
+import Nav from "../components/nav-top"
 
 import {
   FaCalendarDay,
@@ -18,8 +18,6 @@ import { kebabCase, upperFirst } from "lodash"
 import moment from "moment"
 
 import Spacer from "../utils/spacer"
-import Color from "../utils/colors"
-import Line from "../utils/line"
 
 // Created locally-scoped styled components
 const PostLink = styled(Link)`
@@ -35,12 +33,7 @@ const Title = styled.h1`
   text-align: left;
   margin-bottom: 16px;
 `
-const Subtitle = styled.h5`
-  /* font-style: italic; */
-  font-weight: 400;
-  text-align: left;
-  margin-top: 4px;
-`
+
 export const TagSpan = styled.div`
   color: #999;
   @media screen and (max-width: 767px) {
@@ -67,6 +60,7 @@ function PageTemplate({ data }) {
   return (
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />
+      <Nav title={title} date={date} city={city} country={country} />
       <Spacer height={60} xsHeight={10} />
       <Row>
         <Col mdOffset={3} lgOffset={3} xs={10} sm={10} md={6} lg={6}>
@@ -83,7 +77,7 @@ function PageTemplate({ data }) {
           lg={4}
           css={{ paddingLeft: "1.5em" }}
         >
-          <h4>{description}</h4>
+          <h4 css={{ textAlign: "justify" }}>{description}</h4>
         </Col>
         <Col xs={12} sm={12} md={3} lg={2}>
           <h5>
