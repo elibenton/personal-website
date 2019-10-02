@@ -143,7 +143,6 @@ class HomePrototype extends React.Component {
                         <MobileTitle
                           css={{
                             fontSize: "15px",
-                            // fontWeight: "500",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}

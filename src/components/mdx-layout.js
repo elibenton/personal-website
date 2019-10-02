@@ -85,7 +85,6 @@ function PageTemplate({ data }) {
           sm={10}
           md={4}
           lg={4}
-          css={{ paddingLeft: "1.5em" }}
         >
           <h4 css={{ textAlign: "justify" }}>{description}</h4>
         </Col>
