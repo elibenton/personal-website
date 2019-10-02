@@ -14,6 +14,7 @@ const Name = styled.h3`
   font-size: 22px;
   margin-top: 0;
   margin-left: 4px;
+  line-height: 1.1em;
   @media screen and (max-width: 767px) {
     margin-bottom: 4px;
     margin-top: 20px;
@@ -69,7 +70,7 @@ const InnerInnerDiv = styled.div`
   }
 `
 
-export default props => (
+export default () => (
   <StaticQuery
     query={graphql`
       {
@@ -95,11 +96,7 @@ export default props => (
               alt="Logo"
               width="39"
               height="50"
-              css={{
-                marginTop: "16px",
-                marginBottom: "8px",
-                marginRight: "16px",
-              }}
+              css={{ margin: "16px 16px 8px 8px" }}
             />
           </BetterLink>
         </ReverseHide>
@@ -129,12 +126,12 @@ export default props => (
             >
               <h4>about</h4>
             </BetterLink>
-            <BetterLink
-              to="/"
+            <A
+              href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
               css={{ textDecoration: "none", textTransform: "uppercase" }}
             >
               <h4>reading</h4>
-            </BetterLink>
+            </A>
           </InnerInnerDiv>
         </InnerDiv>
         <Hide>

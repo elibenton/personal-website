@@ -288,35 +288,28 @@ const Tags = ({ pageContext, data }) => {
 export default Tags
 
 export const pageQuery = graphql`
-  query {
-    allMdx(
-      limit: 500
-      sort: { fields: [frontmatter___date], order: ASC }
-      filter: { frontmatter: { tags: { in: ["Title IX"] } } }
+  query($filter: MdxFilterInput) {
+    filtered: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: $filter
     ) {
-      totalCount
       edges {
         node {
-          fields {
-            slug
-            month
-          }
+          id
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             city
             country
+            date(formatString: "MM-DD-YYYY")
             description
             tags
             template
           }
+          fields {
+            slug
+            month
+          }
         }
-      }
-    }
-    site {
-      siteMetadata {
-        title
-        shortTitle
       }
     }
   }

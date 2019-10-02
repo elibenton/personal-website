@@ -6,9 +6,8 @@ const moment = require("moment")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // const postWriting = path.resolve(`./src/templates/post-writing.js`)
-  // const imagePost = path.resolve(`./src/templates/post-image.js`)
-  const indexFiltered = path.resolve(`./src/templates/index-tag-filter.js`)
+  const specialTopic = path.resolve(`./src/templates/special-topic-template.js`)
+  const indexFiltered = path.resolve(`./src/templates/index-filter-template.js`)
 
   return new Promise((resolve, reject) => {
     resolve(
@@ -41,34 +40,16 @@ exports.createPages = ({ graphql, actions }) => {
           }
         `
       ).then(result => {
-        // this is some boilerlate to handle errors
+        // this is some boilerplate to handle errors
         if (result.errors) {
           console.error(result.errors)
           reject(result.errors)
         }
 
-        // ADD BACK IN MDX FUNCTIONALITY LATER
+        // Collect all MDX and MD pages
         const mdxs = result.data.allMdx.edges
 
-        // Pagination
-        const postsPerPage = 5
-        const numPages = Math.ceil(mdxs.length / postsPerPage)
-
-        // Array.from({ length: numPages }).forEach((_, i) => {
-        //   createPage({
-        //     path: i === 0 ? `/` : `/${i + 1}`,
-        //     component: path.resolve("./src/templates/index-paginated.js"),
-        //     context: {
-        //       limit: postsPerPage,
-        //       skip: i * postsPerPage,
-        //       numPages,
-        //       currentPage: i + 1,
-        //     },
-        //   })
-        // })
-
         // We'll call `createPage` for each result
-
         mdxs.forEach(mdx => {
           const { template } = mdx.node.frontmatter
           const { slug } = mdx.node.fields
@@ -80,21 +61,6 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-
-        // Create blog posts pages.
-        // const posts = result.data.allMarkdownRemark.edges
-
-        // posts.forEach(post => {
-        //   const { template } = post.node.frontmatter
-        //   const { slug } = post.node.fields
-        //   createPage({
-        //     path: `/${template}${slug}`,
-        //     component: postWriting,
-        //     context: {
-        //       slug: slug,
-        //     },
-        //   })
-        // })
 
         // Tag pages:
         let tags = []
@@ -234,39 +200,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       })
     }
   }
-
-  // if (node.internal.type === `MarkdownRemark`) {
-  //   const value = createFilePath({ node, getNode })
-  //   const monthYear = moment(node.frontmatter.date).format("YYYY-MM")
-
-  //   // Create custom slug field for each markdown file
-  //   createNodeField({
-  //     name: `slug`,
-  //     node,
-  //     value: `${value}`,
-  //   })
-
-  //   // Create custom month field for each markdown file
-  //   createNodeField({
-  //     name: `month`,
-  //     node,
-  //     value: `${monthYear}`,
-  //   })
-
-  //   if (node.frontmatter.publication === undefined) {
-  //     // Create custom published field for each markdown file
-  //     createNodeField({
-  //       name: `published`,
-  //       node,
-  //       value: false,
-  //     })
-  //   } else {
-  //     // Create custom published field for each markdown file
-  //     createNodeField({
-  //       name: `published`,
-  //       node,
-  //       value: true,
-  //     })
-  //   }
-  // }
 }

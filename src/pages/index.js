@@ -21,6 +21,9 @@ const Button = styled.h4`
   margin: 12px 0 30px 0;
   font-weight: 600;
   font-size: 15px;
+  @media screen and (max-width: 767px) {
+    padding-left: 12px;
+  }
   :hover,
   :active {
     color: #ffd666;
@@ -63,18 +66,21 @@ const MobileTitle = styled.h4`
 const MobileContainer = styled.h4`
   width: 70%;
   @media screen and (max-width: 767px) {
-    width: 98%;
+    width: 90%;
     margin-left: 8px !important;
+    padding-left: 4px;
   }
 `
 
 const MobileHeader = styled.h3`
-  margin: 24px 0px 6px 0px;
+  margin: 0px 0px 6px 0px;
   padding-bottom: 4px;
   font-weight: 500;
   border-bottom: double;
   @media screen and (max-width: 767px) {
     padding-left: 12px;
+    margin-right: -8px;
+    margin-top: 24px;
   }
 `
 
@@ -83,6 +89,10 @@ const BetterLink = styled(Link)`
 `
 const Divider = styled(Col)`
   z-index: 100;
+  @media screen and (max-width: 767px) {
+    position: sticky;
+    top: 0px;
+  }
 `
 const CustomRow = styled(Row)`
   margin: 0 0 0 0 !important;

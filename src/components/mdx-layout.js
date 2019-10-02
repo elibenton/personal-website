@@ -40,7 +40,6 @@ export const TagSpan = styled.div`
     margin-top: 0;
     margin-left: 5%;
     margin-right: 5%;
-    /* width: 90%; */
   }
 `
 
@@ -61,25 +60,45 @@ function PageTemplate({ data }) {
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />
       <Nav title={title} date={date} city={city} country={country} />
-      <Spacer height={60} xsHeight={10} />
+      <Spacer height={60} xsHeight={30} />
       <Row>
-        <Col mdOffset={3} lgOffset={3} xs={10} sm={10} md={6} lg={6}>
+        <Col
+          xsOffset={1}
+          smOffset={1}
+          mdOffset={2}
+          lgOffset={3}
+          xs={10}
+          sm={10}
+          md={8}
+          lg={6}
+        >
           <Title>{title}</Title>
         </Col>
 
         <br />
         <Col
-          mdOffset={3}
+          xsOffset={1}
+          smOffset={1}
+          mdOffset={2}
           lgOffset={3}
           xs={10}
           sm={10}
-          md={3}
+          md={4}
           lg={4}
           css={{ paddingLeft: "1.5em" }}
         >
           <h4 css={{ textAlign: "justify" }}>{description}</h4>
         </Col>
-        <Col xs={12} sm={12} md={3} lg={2}>
+        <Col
+          xsOffset={1}
+          smOffset={1}
+          mdOffset={0}
+          lgOffset={0}
+          xs={10}
+          sm={10}
+          md={4}
+          lg={2}
+        >
           <h5>
             <PostLink
               to={`/${moment(date).format("YYYY")}/${moment(date)
@@ -122,8 +141,8 @@ function PageTemplate({ data }) {
           xs={12}
           smOffset={0}
           sm={12}
-          mdOffset={3}
-          md={6}
+          mdOffset={2}
+          md={8}
           lgOffset={3}
           lg={6}
         >
