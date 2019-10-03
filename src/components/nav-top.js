@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { kebabCase } from "lodash"
 import moment from "moment"
-import logoStill from "../../content/images/tinhat_america.png"
+import logo from "../../content/images/logo.gif"
 
 const Nav = styled.div`
   position: sticky;
@@ -16,7 +16,7 @@ const Nav = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: thick double;
+  border-bottom: double;
   justify-content: space-between;
   align-items: center;
   @media screen and (max-width: 767px) {
@@ -29,7 +29,7 @@ const NavLink = styled(Link)`
   color: black;
   padding: 5px 20px;
   @media screen and (max-width: 600px) {
-    padding-left: 5px;
+    padding-left: 8px;
     padding-right: 5px;
   }
 `
@@ -71,11 +71,11 @@ class Navbar extends React.Component {
       >
         <NavLink to="/">
           <img
-            src={logoStill}
+            src={logo}
             alt="Logo"
             width="31"
             height="40"
-            css={{ margin: "16px 8px 8px 8px" }}
+            css={{ margin: "16px 12px 8px 8px" }}
           />
         </NavLink>
         <h3 css={{ fontSize: "1.2em", lineHeight: "1.1em" }}>

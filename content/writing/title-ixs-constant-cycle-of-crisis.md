@@ -1,5 +1,5 @@
 ---
-template: Episode 3
+template: audio
 
 title: Title IX's Constant Cycle of Crisis
 date: 2019-04-11

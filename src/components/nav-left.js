@@ -1,6 +1,5 @@
 import React from "react"
 import logo from "../../content/images/logo.gif"
-import logoStill from "../../content/images/tinhat_america.png"
 import Collapsible from "react-collapsible"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Spacer from "../utils/spacer"
@@ -16,8 +15,8 @@ const Name = styled.h3`
   margin-left: 4px;
   line-height: 1.1em;
   @media screen and (max-width: 767px) {
-    margin-bottom: 4px;
-    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-top: 16px;
   }
 `
 
@@ -57,12 +56,14 @@ const Div = styled.div`
     flex-direction: row;
   }
 `
+
 const InnerDiv = styled.div`
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
   }
 `
+
 const InnerInnerDiv = styled.div`
   @media screen and (max-width: 767px) {
     display: flex;
@@ -92,11 +93,11 @@ export default () => (
         <ReverseHide>
           <BetterLink to="/">
             <img
-              src={logoStill}
+              src={logo}
               alt="Logo"
-              width="39"
-              height="50"
-              css={{ margin: "16px 16px 8px 8px" }}
+              width="31"
+              height="40"
+              css={{ margin: "16px 12px 8px 8px" }}
             />
           </BetterLink>
         </ReverseHide>

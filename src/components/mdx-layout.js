@@ -86,7 +86,9 @@ function PageTemplate({ data }) {
           md={4}
           lg={4}
         >
-          <h4 css={{ textAlign: "justify" }}>{description}</h4>
+          <h4 css={{ textAlign: "justify", fontSize: "15px" }}>
+            {description}
+          </h4>
         </Col>
         <Col
           xsOffset={1}

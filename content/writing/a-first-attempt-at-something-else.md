@@ -1,5 +1,5 @@
 ---
-template: Episode 1
+template: audio
 
 title: A First Attempt At Something Else
 date: 2018-11-15
