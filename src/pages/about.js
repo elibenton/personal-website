@@ -36,7 +36,6 @@ const CustomRow = styled(Row)`
 const CustomCol = styled(Col)`
   margin-left: 50px;
   @media screen and (max-width: 767px) {
-    margin-left: 0;
     padding: 0 !important;
   }
 `

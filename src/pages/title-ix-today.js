@@ -25,6 +25,12 @@ const PostLink = styled(Link)`
   :active {
     color: #ffd666;
   }
+  @media screen and (max-width: 767px) {
+    :hover,
+    :active {
+      color: black;
+    }
+  }
 `
 const Excerpt = styled.p`
   margin: 0;

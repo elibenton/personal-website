@@ -21,12 +21,12 @@ const Button = styled.h4`
   margin: 12px 0 30px 0;
   font-weight: 600;
   font-size: 15px;
-  @media screen and (max-width: 767px) {
-    padding-left: 12px;
-  }
   :hover,
   :active {
     color: #ffd666;
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: 12px;
   }
 `
 const MobileRowOuter = styled(Row)`
@@ -60,6 +60,10 @@ const MobileTitle = styled.h4`
   }
   @media screen and (max-width: 767px) {
     font-size: 16px;
+    :hover,
+    :active {
+      color: black;
+    }
   }
 `
 
@@ -86,6 +90,12 @@ const MobileHeader = styled.h3`
 
 const BetterLink = styled(Link)`
   text-decoration: none;
+  @media screen and (max-width: 767px) {
+    :hover,
+    :active {
+      color: black;
+    }
+  }
 `
 const Divider = styled(Col)`
   z-index: 100;
