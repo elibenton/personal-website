@@ -34,6 +34,13 @@ const Title = styled.h1`
   margin-bottom: 16px;
 `
 
+const StyledRow = styled(Row)`
+  @media screen and (max-width: 767px) {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+`
+
 export const TagSpan = styled.div`
   color: #999;
   @media screen and (max-width: 767px) {
@@ -61,10 +68,10 @@ function PageTemplate({ data }) {
       <Helmet title={title} />
       <Nav title={title} date={date} city={city} country={country} />
       <Spacer height={60} xsHeight={30} />
-      <Row>
+      <StyledRow>
         <Col
-          xsOffset={1}
-          smOffset={1}
+          xsOffset={0}
+          smOffset={0}
           mdOffset={2}
           lgOffset={3}
           xs={10}
@@ -77,8 +84,8 @@ function PageTemplate({ data }) {
 
         <br />
         <Col
-          xsOffset={1}
-          smOffset={1}
+          xsOffset={0}
+          smOffset={0}
           mdOffset={2}
           lgOffset={3}
           xs={10}
@@ -86,13 +93,11 @@ function PageTemplate({ data }) {
           md={4}
           lg={4}
         >
-          <h4 css={{ textAlign: "justify", fontSize: "15px" }}>
-            {description}
-          </h4>
+          <h4 css={{ fontSize: "15px" }}>{description}</h4>
         </Col>
         <Col
-          xsOffset={1}
-          smOffset={1}
+          xsOffset={0}
+          smOffset={0}
           mdOffset={0}
           lgOffset={0}
           xs={10}
@@ -133,7 +138,7 @@ function PageTemplate({ data }) {
             </PostLink>
           ))}
         </Col>
-      </Row>
+      </StyledRow>
       <Spacer height={60} xsHeight={10} />
 
       <Row>

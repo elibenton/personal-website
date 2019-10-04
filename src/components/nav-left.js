@@ -133,6 +133,14 @@ export default () => (
             >
               <h4>reading</h4>
             </A>
+            <ReverseHide>
+              <BetterLink
+                to={`/tags/`}
+                css={{ textDecoration: "none", textTransform: "uppercase" }}
+              >
+                <h4>topics</h4>
+              </BetterLink>
+            </ReverseHide>
           </InnerInnerDiv>
         </InnerDiv>
         <Hide>
