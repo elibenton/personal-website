@@ -81,8 +81,8 @@ function PageTemplate({ data }) {
           smOffset={0}
           mdOffset={2}
           lgOffset={3}
-          xs={10}
-          sm={10}
+          xs={12}
+          sm={12}
           md={8}
           lg={6}
         >
@@ -95,8 +95,8 @@ function PageTemplate({ data }) {
           smOffset={0}
           mdOffset={2}
           lgOffset={3}
-          xs={10}
-          sm={10}
+          xs={12}
+          sm={12}
           md={4}
           lg={4}
         >
@@ -107,8 +107,8 @@ function PageTemplate({ data }) {
           smOffset={0}
           mdOffset={0}
           lgOffset={0}
-          xs={10}
-          sm={10}
+          xs={12}
+          sm={12}
           md={4}
           lg={2}
         >
