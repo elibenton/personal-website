@@ -36,8 +36,15 @@ const Title = styled.h1`
 
 const StyledRow = styled(Row)`
   @media screen and (max-width: 767px) {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+  }
+`
+
+const ReverseCol = styled(Col)`
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 `
 
@@ -95,7 +102,7 @@ function PageTemplate({ data }) {
         >
           <h4 css={{ fontSize: "15px" }}>{description}</h4>
         </Col>
-        <Col
+        <ReverseCol
           xsOffset={0}
           smOffset={0}
           mdOffset={0}
@@ -105,39 +112,43 @@ function PageTemplate({ data }) {
           md={4}
           lg={2}
         >
-          <h5>
-            <PostLink
-              to={`/${moment(date).format("YYYY")}/${moment(date)
-                .format("MMMM")
-                .toLowerCase()}/`}
-            >
-              <FaCalendarDay /> {date}
-            </PostLink>
-          </h5>
-          <h5>
-            <PostLink to={`/countries/${kebabCase(country)}/`}>
-              <FaMapMarkerAlt /> {city}, {country}
-            </PostLink>
-          </h5>
-          {template === "writing" ? (
+          <div>
             <h5>
-              <PostLink to={`/${template}`}>
-                <FaBook /> {upperFirst(template)}
+              <PostLink
+                to={`/${moment(date).format("YYYY")}/${moment(date)
+                  .format("MMMM")
+                  .toLowerCase()}/`}
+              >
+                <FaCalendarDay /> {date}
               </PostLink>
             </h5>
-          ) : (
             <h5>
-              <PostLink to={`/${template}`}>
-                <FaHeadphones /> {upperFirst(template)}
+              <PostLink to={`/countries/${kebabCase(country)}/`}>
+                <FaMapMarkerAlt /> {city}, {country}
               </PostLink>
             </h5>
-          )}
-          {tags.map(tag => (
-            <PostLink to={`/tags/${kebabCase(tag)}/`}>
-              <h5 class="tag">{tag}</h5>
-            </PostLink>
-          ))}
-        </Col>
+            {template === "writing" ? (
+              <h5>
+                <PostLink to={`/${template}`}>
+                  <FaBook /> {upperFirst(template)}
+                </PostLink>
+              </h5>
+            ) : (
+              <h5>
+                <PostLink to={`/${template}`}>
+                  <FaHeadphones /> {upperFirst(template)}
+                </PostLink>
+              </h5>
+            )}
+          </div>
+          <div>
+            {tags.map(tag => (
+              <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                <h5 class="tag">{tag}</h5>
+              </PostLink>
+            ))}
+          </div>
+        </ReverseCol>
       </StyledRow>
       <Spacer height={60} xsHeight={10} />
 
