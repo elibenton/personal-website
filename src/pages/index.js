@@ -381,7 +381,10 @@ export default HomePrototype
 
 export const pageQuery = graphql`
   query {
-    recently: allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    recently: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { template: { ne: "reading" } } }
+    ) {
       edges {
         node {
           id

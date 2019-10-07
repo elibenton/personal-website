@@ -31,7 +31,12 @@ const PostLink = styled(Link)`
 const Title = styled.h1`
   margin-top: 0px;
   text-align: left;
-  margin-bottom: 16px;
+  line-height: 9vw;
+  font-size: 8.2vw;
+  @media screen and (max-width: 767px) {
+    line-height: 15vw;
+    font-size: 14.2vw;
+  }
 `
 
 const StyledRow = styled(Row)`
@@ -79,80 +84,69 @@ function PageTemplate({ data }) {
         <Col
           xsOffset={0}
           smOffset={0}
-          mdOffset={2}
-          lgOffset={3}
+          mdOffset={1}
+          lgOffset={1}
           xs={12}
           sm={12}
-          md={8}
+          md={6}
           lg={6}
         >
           <Title>{title}</Title>
         </Col>
-
         <br />
         <Col
           xsOffset={0}
           smOffset={0}
-          mdOffset={2}
-          lgOffset={3}
+          mdOffset={1}
+          lgOffset={1}
           xs={12}
           sm={12}
-          md={4}
-          lg={4}
+          md={6}
+          lg={3}
         >
-          <h4 css={{ fontSize: "15px" }}>{description}</h4>
+          <Spacer height={30} xsHeight={0} />
+          <Col>
+            <h4 css={{ fontSize: "15px" }}>{description}</h4>
+          </Col>
+          <Col>
+            <div>
+              {tags.map(tag => (
+                <PostLink to={`/tags/${kebabCase(tag)}/`}>
+                  <h5 class="tag">{tag}</h5>
+                </PostLink>
+              ))}
+            </div>
+            <div>
+              <h5>
+                <PostLink
+                  to={`/${moment(date).format("YYYY")}/${moment(date)
+                    .format("MMMM")
+                    .toLowerCase()}/`}
+                >
+                  <FaCalendarDay /> {date}
+                </PostLink>
+              </h5>
+              <h5>
+                <PostLink to={`/countries/${kebabCase(country)}/`}>
+                  <FaMapMarkerAlt /> {city}, {country}
+                </PostLink>
+              </h5>
+              {template === "writing" ? (
+                <h5>
+                  <PostLink to={`/${template}`}>
+                    <FaBook /> {upperFirst(template)}
+                  </PostLink>
+                </h5>
+              ) : (
+                <h5>
+                  <PostLink to={`/${template}`}>
+                    <FaHeadphones /> {upperFirst(template)}
+                  </PostLink>
+                </h5>
+              )}
+            </div>
+          </Col>
         </Col>
-        <ReverseCol
-          xsOffset={0}
-          smOffset={0}
-          mdOffset={0}
-          lgOffset={0}
-          xs={12}
-          sm={12}
-          md={4}
-          lg={2}
-        >
-          <div>
-            <h5>
-              <PostLink
-                to={`/${moment(date).format("YYYY")}/${moment(date)
-                  .format("MMMM")
-                  .toLowerCase()}/`}
-              >
-                <FaCalendarDay /> {date}
-              </PostLink>
-            </h5>
-            <h5>
-              <PostLink to={`/countries/${kebabCase(country)}/`}>
-                <FaMapMarkerAlt /> {city}, {country}
-              </PostLink>
-            </h5>
-            {template === "writing" ? (
-              <h5>
-                <PostLink to={`/${template}`}>
-                  <FaBook /> {upperFirst(template)}
-                </PostLink>
-              </h5>
-            ) : (
-              <h5>
-                <PostLink to={`/${template}`}>
-                  <FaHeadphones /> {upperFirst(template)}
-                </PostLink>
-              </h5>
-            )}
-          </div>
-          <div>
-            {tags.map(tag => (
-              <PostLink to={`/tags/${kebabCase(tag)}/`}>
-                <h5 class="tag">{tag}</h5>
-              </PostLink>
-            ))}
-          </div>
-        </ReverseCol>
-      </StyledRow>
-      <Spacer height={60} xsHeight={10} />
-
-      <Row>
         <Col
           xsOffset={0}
           xs={12}
@@ -163,13 +157,12 @@ function PageTemplate({ data }) {
           lgOffset={3}
           lg={6}
         >
-          <div className="blog-post-body">
-            <div>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </div>
+          <Spacer height={80} xsHeight={20} />
+          <div>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
           </div>
         </Col>
-      </Row>
+      </StyledRow>
       <Spacer height={100} />
     </Layout>
   )

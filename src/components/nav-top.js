@@ -7,7 +7,7 @@ import logo from "../../content/images/logo.gif"
 
 const Nav = styled.div`
   position: sticky;
-  top: 0;
+  top: 0px;
   transition: top 0.2s;
   background-color: white;
   height: 66px;
@@ -43,7 +43,7 @@ const Hide = styled.div`
 var prevScrollPos
 
 class Navbar extends React.Component {
-  state = { scrollingUp: false }
+  state = { scrollingUp: true }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)

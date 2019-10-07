@@ -101,7 +101,9 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               name: filter_tag,
               filter: {
-                frontmatter: { tags: { in: [filter_tag] } },
+                frontmatter: {
+                  tags: { in: [filter_tag] },
+                },
               },
             },
           })
