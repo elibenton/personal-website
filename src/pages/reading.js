@@ -340,7 +340,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            subTitle
+            # subTitle
             author
             ISBN
             rating
