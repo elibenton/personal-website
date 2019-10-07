@@ -1,431 +1,208 @@
-// core libraries
 import React from "react"
 import { Link, graphql } from "gatsby"
-
-// yarn packages
 import { Row, Col } from "react-flexbox-grid"
-import Collapsible from "react-collapsible"
-import Helmet from "react-helmet"
+import logo from "../../content/images/logo.gif"
+
 import styled from "styled-components"
-
-// components and utils
-import Layout from "../components/layout"
 import Spacer from "../utils/spacer"
-import Nav from "../components/nav-left"
 
-// ancillary libraries
-import moment from "moment"
-import kebabCase from "lodash/kebabCase"
-
-const Button = styled.h4`
-  margin: 12px 0 30px 0;
-  font-weight: 600;
-  font-size: 15px;
-  :hover,
-  :active {
-    color: #ffd666;
-  }
-  @media screen and (max-width: 767px) {
-    padding-left: 12px;
-  }
-`
-const MobileRowOuter = styled(Row)`
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2px;
-  justify-content: space-between;
-  cursor: pointer;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-  @media screen and (max-width: 767px) {
-    flex-direction: column !important;
-    margin-left: 12px !important;
-  }
-`
-const MobileRowInner = styled(Row)`
-  display: flex;
-  flex-direction: row;
-  @media screen and (max-width: 767px) {
-    font-style: italic;
-    margin: 0px 0px 8px -4px !important;
-    flex-direction: row-reverse !important;
-    justify-content: flex-end;
-  }
-`
-const MobileTitle = styled.h4`
-  letter-spacing: 0.7px;
-  :hover,
-  :active {
-    color: #ffd666;
-  }
-  @media screen and (max-width: 767px) {
-    font-size: 16px;
-    :hover,
-    :active {
-      color: black;
-    }
-  }
-`
-
-const MobileContainer = styled.h4`
-  width: 70%;
-  @media screen and (max-width: 767px) {
-    width: 90%;
-    margin-left: 8px !important;
-    padding-left: 4px;
-  }
-`
-
-const MobileHeader = styled.h3`
-  margin: 0px 0px 6px 0px;
-  padding-bottom: 4px;
+const Title = styled.h1`
+  margin-top: 0px;
+  text-align: left;
+  line-height: 9.5vw;
+  font-size: 8.5vw;
   font-weight: 500;
-  border-bottom: double;
+  letter-spacing: -5px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  margin-bottom: 4px;
   @media screen and (max-width: 767px) {
-    padding-left: 12px;
-    margin-right: -8px;
+    line-height: 14vw;
+    font-size: 13.2vw;
+    letter-spacing: -1px;
+    margin: 0 0 0 0;
+  }
+`
+
+const SubTitle = styled.h2`
+  margin-top: 0px;
+  text-align: left;
+  line-height: 4.5vw;
+  font-size: 4.3vw;
+  font-style: italic;
+  font-weight: lighter;
+  color: grey;
+  width: 80%;
+  @media screen and (max-width: 767px) {
     margin-top: 24px;
+    line-height: 8vw;
+    font-size: 7vw;
+    width: 100%;
+  }
+`
+
+const Container = styled(Row)`
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  @media screen and (max-width: 767px) {
   }
 `
 
 const BetterLink = styled(Link)`
   text-decoration: none;
-  @media screen and (max-width: 767px) {
-    :hover,
-    :active {
-      color: black;
-    }
-  }
-`
-const Divider = styled(Col)`
-  z-index: 100;
-  @media screen and (max-width: 767px) {
-    position: sticky;
-    top: 0px;
-  }
-`
-const CustomRow = styled(Row)`
-  margin: 0 0 0 0 !important;
 `
 
-const CustomCol = styled(Col)`
-  margin-left: 50px;
+const A = styled.a`
+  text-decoration: none;
+`
+
+const InnerInnerDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 15vh;
+  border-top: double;
+  padding: 4px 0 0 0;
   @media screen and (max-width: 767px) {
-    margin-left: 0;
-    padding: 0 !important;
+    border-top: none;
+    flex-direction: column;
+    /* margin-left: -32px;
+    padding-left: 32px;
+    margin-right: -32px;
+    padding-right: 32px; */
   }
 `
 
-class HomePrototype extends React.Component {
+const TitleContainer = styled.div`
+  display: inline-flex;
+  flex-direction: row;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  @media screen and (max-width: 767px) {
+    border-left: solid 4px;
+    padding-left: 18px;
+    flex-direction: column;
+  }
+`
+const List = styled.h4`
+  margin: 4px 0 4px 0;
+`
+
+const ReverseHide = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: inline;
+  }
+`
+
+const Hide = styled.div`
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`
+const Img = styled.img`
+  margin-top: -50px;
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
+`
+const ImgCol = styled(Col)`
+  @media screen and (max-width: 767px) {
+    display: flexbox;
+    justify-content: center;
+  }
+`
+const Inline = styled(Row)`
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: row;
+  }
+`
+
+class Home extends React.Component {
   render() {
-    const recently = this.props.data.recently.edges
-    const featured = this.props.data.featured.edges
-
     return (
-      <Layout>
-        <Helmet title={"Home"} />
-        <Spacer height={60} xsHeight={0} />
-        <CustomRow>
-          <Divider xs={12} sm={12} md={3} lg={3}>
-            <Nav />
-          </Divider>
-          <CustomCol xs={12} sm={12} md={8} lg={8}>
-            <MobileHeader>Featured</MobileHeader>
-            {featured.map(({ node }) => {
-              const {
-                title,
-                date,
-                city,
-                country,
-                description,
-                template,
-              } = node.frontmatter
-              const { slug, month } = node.fields
+      <div>
+        <Spacer height={130} xsHeight={20} />
 
-              return (
-                <Collapsible
-                  easing="ease-in-out"
-                  open={false}
-                  transitionTime={200}
-                  trigger={
-                    <div>
-                      <MobileRowOuter>
-                        <MobileTitle
-                          css={{
-                            fontSize: "15px",
-                            marginLeft: "0px",
-                            marginBottom: "0px",
-                          }}
-                        >
-                          {title}
-                        </MobileTitle>
-                        <MobileRowInner>
-                          <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
-                              {city}, {country}
-                            </BetterLink>
-                          </h5>
-                          <h5>&middot;</h5>
-                          <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink
-                              to={`/${moment(month).format("YYYY")}/${moment(
-                                month
-                              )
-                                .format("MMMM")
-                                .toLowerCase()}/`}
-                            >
-                              {date}
-                            </BetterLink>
-                          </h5>
-                        </MobileRowInner>
-                      </MobileRowOuter>
-                    </div>
-                  }
-                  triggerWhenOpen={
-                    <div>
-                      <MobileRowOuter
-                        css={{
-                          justifyContent: "space-between",
-                          cursor: "pointer",
-                          borderBottom: "dotted",
-                          borderBottomWidth: "2px",
-                          borderBottomColor: "#ffd666",
-                          // marginLeft: "0px !important",
-                          // marginRight: "0px !important",
-                        }}
-                      >
-                        <MobileTitle
-                          css={{
-                            fontSize: "15px",
-                            // fontWeight: "500",
-                            marginLeft: "0px",
-                            marginBottom: "0px",
-                          }}
-                        >
-                          {title}
-                        </MobileTitle>
-                        <MobileRowInner>
-                          <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
-                              {city}, {country}
-                            </BetterLink>
-                          </h5>
-                          <h5>&middot;</h5>
-                          <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink
-                              to={`/${moment(month).format("YYYY")}/${moment(
-                                month
-                              )
-                                .format("MMMM")
-                                .toLowerCase()}/`}
-                            >
-                              {date}
-                            </BetterLink>
-                          </h5>
-                        </MobileRowInner>
-                      </MobileRowOuter>
-                    </div>
-                  }
-                >
-                  <MobileContainer
-                    css={{
-                      marginLeft: "0px",
-                      fontSize: "15px",
-                    }}
-                  >
-                    {description}
-                  </MobileContainer>
-                  <BetterLink
-                    to={`/${template}${slug}`}
-                    css={{ textDecoration: "none" }}
-                  >
-                    <Button>Read More&nbsp;&nbsp;➔</Button>
-                  </BetterLink>
-                </Collapsible>
-              )
-            })}
-            <MobileHeader css={{ marginTop: "24px !important" }}>
-              Recently
-            </MobileHeader>
-            {recently.map(({ node }) => {
-              const {
-                title,
-                date,
-                city,
-                country,
-                description,
-                template,
-              } = node.frontmatter
-              const { slug, month } = node.fields
-
-              return (
-                <Collapsible
-                  easing="ease-in-out"
-                  open={false}
-                  transitionTime={200}
-                  trigger={
-                    <div>
-                      <MobileRowOuter>
-                        <MobileTitle
-                          css={{
-                            fontSize: "15px",
-                            // fontWeight: "500",
-                            marginLeft: "0px",
-                            marginBottom: "0px",
-                          }}
-                        >
-                          {title}
-                        </MobileTitle>
-                        <MobileRowInner>
-                          <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
-                              {city}, {country}
-                            </BetterLink>
-                          </h5>
-                          <h5>&middot;</h5>
-                          <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink
-                              to={`/${moment(month).format("YYYY")}/${moment(
-                                month
-                              )
-                                .format("MMMM")
-                                .toLowerCase()}/`}
-                            >
-                              {date}
-                            </BetterLink>
-                          </h5>
-                        </MobileRowInner>
-                      </MobileRowOuter>
-                    </div>
-                  }
-                  triggerWhenOpen={
-                    <div>
-                      <MobileRowOuter
-                        css={{
-                          justifyContent: "space-between",
-                          cursor: "pointer",
-                          borderBottom: "dotted",
-                          borderBottomWidth: "2px",
-                          borderBottomColor: "#ffd666",
-                          marginLeft: "0px !important",
-                          marginRight: "0px !important",
-                        }}
-                      >
-                        <MobileTitle
-                          css={{
-                            fontSize: "15px",
-                            // fontWeight: "500",
-                            marginLeft: "0px",
-                            marginBottom: "0px",
-                          }}
-                        >
-                          {title}
-                        </MobileTitle>
-                        <MobileRowInner>
-                          <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
-                              {city}, {country}
-                            </BetterLink>
-                          </h5>
-                          <h5>&middot;</h5>
-                          <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink
-                              to={`/${moment(month).format("YYYY")}/${moment(
-                                month
-                              )
-                                .format("MMMM")
-                                .toLowerCase()}/`}
-                            >
-                              {date}
-                            </BetterLink>
-                          </h5>
-                        </MobileRowInner>
-                      </MobileRowOuter>
-                    </div>
-                  }
-                >
-                  <MobileContainer
-                    css={{
-                      marginLeft: "0px",
-                      fontSize: "15px",
-                    }}
-                  >
-                    {description}
-                  </MobileContainer>
-                  <BetterLink
-                    to={`/${template}${slug}`}
-                    css={{ textDecoration: "none" }}
-                  >
-                    <Button>Read More&nbsp;&nbsp;➔</Button>
-                  </BetterLink>
-                </Collapsible>
-              )
-            })}
-          </CustomCol>
-        </CustomRow>
-        <Spacer height={140} xsHeight={40} />
-      </Layout>
+        <Container>
+          <ImgCol
+            xsOffset={0}
+            smOffset={0}
+            mdOffset={1}
+            lgOffset={1}
+            xs={12}
+            sm={12}
+            md={2}
+            lg={2}
+          >
+            <Hide>
+              <Img src={logo} alt="Logo" width="155" height="200" />
+            </Hide>
+          </ImgCol>
+          <Col
+            xsOffset={1}
+            smOffset={1}
+            mdOffset={0}
+            lgOffset={0}
+            xs={10}
+            sm={10}
+            md={8}
+            lg={8}
+          >
+            <Inline>
+              <ReverseHide>
+                <img
+                  src={logo}
+                  alt="Logo"
+                  width="54"
+                  height="70"
+                  css={{ marginRight: "18px" }}
+                />
+              </ReverseHide>
+              <TitleContainer>
+                <Title>Eli&nbsp;</Title>
+                <Title>Benton&nbsp;</Title>
+                <Title>Cohen</Title>
+              </TitleContainer>
+            </Inline>
+            <SubTitle>
+              Traveling the world to understand the politics of digitally
+              networked life
+            </SubTitle>
+            <Spacer height={10} xsHeight={10} />
+            <InnerInnerDiv>
+              <BetterLink
+                to="/about"
+                css={{ textDecoration: "none", textTransform: "uppercase" }}
+              >
+                <List>about</List>
+              </BetterLink>
+              <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              <BetterLink
+                to="/blog"
+                css={{ textDecoration: "none", textTransform: "uppercase" }}
+              >
+                <List>blog</List>
+              </BetterLink>
+              <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              <A
+                href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
+                css={{ textDecoration: "none", textTransform: "uppercase" }}
+              >
+                <List>reading</List>
+              </A>
+              <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              <BetterLink
+                to={`/tags/`}
+                css={{ textDecoration: "none", textTransform: "uppercase" }}
+              >
+                <List>topics</List>
+              </BetterLink>
+            </InnerInnerDiv>
+          </Col>
+        </Container>
+      </div>
     )
   }
 }
 
-export default HomePrototype
-
-export const pageQuery = graphql`
-  query {
-    recently: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { template: { ne: "reading" } } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            city
-            country
-            date(formatString: "MM-DD-YYYY")
-            description
-            tags
-            template
-          }
-          fields {
-            slug
-            month
-          }
-        }
-      }
-    }
-    featured: allMdx(
-      sort: { fields: [frontmatter___date], order: ASC }
-      filter: { frontmatter: { tags: { eq: "Title IX" } } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            city
-            country
-            date(formatString: "MM-DD-YYYY")
-            description
-            tags
-            template
-          }
-          fields {
-            slug
-            month
-          }
-        }
-      }
-    }
-  }
-`
+export default Home

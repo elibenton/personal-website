@@ -5,17 +5,16 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
+import moment from "moment"
 
-const Name = styled.h3`
+const Name = styled.h1`
   display: flex;
-  font-weight: 600;
   text-transform: none;
-  font-size: 22px;
+  font-size: 26px;
   margin-top: 0;
-  margin-left: 4px;
+  margin-bottom: 8px;
   line-height: 1.1em;
   @media screen and (max-width: 767px) {
-    margin-bottom: 0px;
     margin-top: 16px;
   }
 `
@@ -71,6 +70,18 @@ const InnerInnerDiv = styled.div`
   }
 `
 
+const SubTitle = styled.h2`
+  margin-top: 0px;
+  text-align: left;
+  line-height: 18px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: lighter;
+  margin-bottom: 32px;
+  color: grey;
+  width: 75%;
+`
+
 export default () => (
   <StaticQuery
     query={graphql`
@@ -104,10 +115,10 @@ export default () => (
         <InnerDiv>
           <Name>{data.site.siteMetadata.title}</Name>
           <Hide>
-            <h4 css={{ fontStyle: "italic" }}>
+            <SubTitle>
               Traveling the world to understand the politics of digitally
               networked life
-            </h4>
+            </SubTitle>
           </Hide>
           <BetterLink to="/">
             <Hide>
@@ -126,6 +137,12 @@ export default () => (
               css={{ textDecoration: "none", textTransform: "uppercase" }}
             >
               <h4>about</h4>
+            </BetterLink>
+            <BetterLink
+              to="/blog"
+              css={{ textDecoration: "none", textTransform: "uppercase" }}
+            >
+              <h4>blog</h4>
             </BetterLink>
             <A
               href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
@@ -146,7 +163,7 @@ export default () => (
         <Hide>
           <Collapsible
             easing="ease-in-out"
-            open={true}
+            open={false}
             transitionTime={200}
             trigger={
               <Topic css={{ textTransform: "uppercase", cursor: "pointer" }}>
@@ -182,23 +199,6 @@ export default () => (
               )}
             </div>
           </Collapsible>
-          <br />
-          <br />
-          <h4>
-            <span>
-              <A href="https://github.com/elibenton/personal-website">
-                Codebase
-              </A>
-              ,&nbsp;
-              <A href="https://www.elibenton.co/sitemap.xml">Sitemap</A>,
-              &&nbsp;
-              <A href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                CC License
-              </A>
-            </span>
-            <br />
-            ©️{new Date().getFullYear()} Eli Cohen
-          </h4>
         </Hide>
         <Spacer height={80} xsHeight={0} />
       </Div>

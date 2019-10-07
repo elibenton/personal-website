@@ -7,6 +7,7 @@ import Spacer from "../utils/spacer"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Nav from "../components/nav-left"
+import Footer from "../components/footer"
 
 const About = styled.p`
   font-size: 19px;
@@ -90,6 +91,7 @@ class AboutPrototype extends React.Component {
             <Spacer height={135} xsHeight={20} />
           </CustomCol>
         </CustomRow>
+        <Footer />
       </Layout>
     )
   }

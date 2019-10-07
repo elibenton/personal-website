@@ -45,11 +45,10 @@ ul {
 }
 
 h1 {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 500;
   line-height: 70px;
   font-size: 72px;
-  letter-spacing: -2px;
 }
 
 @media screen and (max-width: 767px) {
@@ -61,8 +60,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Roboto Condensed", "Helvetica Condensed", "Helvetica Neue",
-    Helvetica, sans-serif;
+  font-family: "Merriweather", Georgia, serif;
   font-weight: 500;
   font-size: 36px;
   line-height: 36px;
@@ -72,7 +70,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -80,7 +78,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Helvetica Neue Condensed", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.3em;

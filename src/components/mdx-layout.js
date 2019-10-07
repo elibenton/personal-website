@@ -28,7 +28,7 @@ const PostLink = styled(Link)`
   }
 `
 
-const Title = styled.h1`
+const Title = styled.h2`
   margin-top: 0px;
   text-align: left;
   line-height: 9vw;

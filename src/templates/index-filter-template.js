@@ -12,6 +12,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Spacer from "../utils/spacer"
 import Nav from "../components/nav-left"
+import Footer from "../components/footer"
 
 // ancillary libraries
 import moment from "moment"
@@ -341,7 +342,8 @@ const IndexFiltered = ({ pageContext, data }) => {
           })}
         </CustomCol>
       </CustomRow>
-      <Spacer height={140} xsHeight={40} />
+      <Spacer height={100} xsHeight={40} />
+      <Footer />
     </Layout>
   )
 }
