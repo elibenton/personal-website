@@ -19,9 +19,11 @@ import moment from "moment"
 import kebabCase from "lodash/kebabCase"
 
 const Button = styled.h4`
-  margin: 12px 0 30px 0;
+  margin: 16px 0 30px 0;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   /* font-style: italic; */
   :hover,
   :active {
@@ -126,7 +128,7 @@ class HomePrototype extends React.Component {
 
     return (
       <Layout>
-        <Helmet title={"Home"} />
+        <Helmet title={"Blog"} />
         <Spacer height={60} xsHeight={0} />
         <CustomRow>
           <Divider xs={12} sm={12} md={3} lg={3}>
@@ -247,7 +249,7 @@ class HomePrototype extends React.Component {
                     to={`/${template}${slug}`}
                     css={{ textDecoration: "none" }}
                   >
-                    <Button>Read More&nbsp;&nbsp;➔</Button>
+                    <Button>Read More&nbsp;➤</Button>
                   </BetterLink>
                 </Collapsible>
               )
@@ -277,7 +279,6 @@ class HomePrototype extends React.Component {
                         <MobileTitle
                           css={{
                             fontSize: "15px",
-                            // fontWeight: "500",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}
@@ -317,8 +318,8 @@ class HomePrototype extends React.Component {
                           borderBottom: "dotted",
                           borderBottomWidth: "2px",
                           borderBottomColor: "#ffd666",
-                          marginLeft: "0px !important",
-                          marginRight: "0px !important",
+                          // marginLeft: "0px !important",
+                          // marginRight: "0px !important",
                         }}
                       >
                         <MobileTitle
@@ -368,7 +369,7 @@ class HomePrototype extends React.Component {
                     to={`/${template}${slug}`}
                     css={{ textDecoration: "none" }}
                   >
-                    <Button>Read More&nbsp;&nbsp;➔</Button>
+                    <Button>Read More&nbsp;➤</Button>
                   </BetterLink>
                 </Collapsible>
               )

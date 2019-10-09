@@ -38,6 +38,7 @@ const CustomCol = styled(Col)`
   margin-left: 50px;
   @media screen and (max-width: 767px) {
     padding: 0 !important;
+    margin-left: 0;
   }
 `
 const Divider = styled(Col)`
@@ -67,7 +68,7 @@ class AboutPrototype extends React.Component {
               As a 2019-2020{" "}
               <a href="https://watson.foundation/">Watson Fellow</a>, I am
               traveling the world to explore the politics of technology. I hope
-              to see how life online—and off—shape our understanding of the
+              to see how life online—and off—shapes our understanding of the
               world around us. This website is where I write about my journey,
               discuss what I am reading, and release audio and photos
               documenting the year.

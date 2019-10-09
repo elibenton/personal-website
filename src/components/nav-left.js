@@ -15,7 +15,7 @@ const Name = styled.h1`
   margin-bottom: 8px;
   line-height: 1.1em;
   @media screen and (max-width: 767px) {
-    margin-top: 16px;
+    margin: 16px 0 0 4px;
   }
 `
 

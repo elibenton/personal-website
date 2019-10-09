@@ -19,9 +19,12 @@ import moment from "moment"
 import { kebabCase, upperFirst } from "lodash"
 
 const Button = styled.h4`
-  margin: 12px 0 30px 0;
-  font-weight: 600;
-  font-size: 15px;
+  margin: 16px 0 30px 0;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* font-style: italic; */
   :hover,
   :active {
     color: #ffd666;
@@ -55,6 +58,7 @@ const MobileRowInner = styled(Row)`
 `
 const MobileTitle = styled.h4`
   letter-spacing: 0.7px;
+  font-weight: 500;
   :hover,
   :active {
     color: #ffd666;
@@ -78,14 +82,17 @@ const MobileContainer = styled.h4`
 `
 
 const MobileHeader = styled.h3`
-  margin: 0px 0px 6px 0px;
-  padding-bottom: 4px;
+  font-size: 32px;
+  margin: 0px 0px 8px 0px;
+  padding-bottom: 10px;
   font-weight: 500;
-  border-bottom: double;
+  border-bottom: solid;
   @media screen and (max-width: 767px) {
     padding-left: 12px;
     margin-right: -8px;
     margin-top: 24px;
+    border-bottom: none;
+    padding-bottom: 16px;
   }
 `
 
@@ -240,7 +247,7 @@ const IndexFiltered = ({ pageContext, data }) => {
             return (
               <Collapsible
                 easing="ease-in-out"
-                open={false}
+                open={true}
                 transitionTime={200}
                 trigger={
                   <div>
@@ -248,7 +255,6 @@ const IndexFiltered = ({ pageContext, data }) => {
                       <MobileTitle
                         css={{
                           fontSize: "15px",
-                          // fontWeight: "500",
                           marginLeft: "0px",
                           marginBottom: "0px",
                         }}
@@ -286,8 +292,8 @@ const IndexFiltered = ({ pageContext, data }) => {
                         borderBottom: "dotted",
                         borderBottomWidth: "2px",
                         borderBottomColor: "#ffd666",
-                        marginLeft: "0px !important",
-                        marginRight: "0px !important",
+                        // marginLeft: "0px !important",
+                        // marginRight: "0px !important",
                       }}
                     >
                       <MobileTitle
@@ -335,7 +341,7 @@ const IndexFiltered = ({ pageContext, data }) => {
                   to={`/${template}${slug}`}
                   css={{ textDecoration: "none" }}
                 >
-                  <Button>Read More&nbsp;&nbsp;➔</Button>
+                  <Button>Read More&nbsp;➤</Button>
                 </BetterLink>
               </Collapsible>
             )

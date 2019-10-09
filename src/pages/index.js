@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Row, Col } from "react-flexbox-grid"
+import Helmet from "react-helmet"
 import logo from "../../content/images/logo.gif"
 
 import styled from "styled-components"
@@ -9,8 +10,8 @@ import Spacer from "../utils/spacer"
 const Title = styled.h1`
   margin-top: 0px;
   text-align: left;
-  line-height: 9.5vw;
-  font-size: 8.5vw;
+  line-height: 7.5vw;
+  font-size: 6.5vw;
   font-weight: 500;
   letter-spacing: -5px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -26,8 +27,8 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
   margin-top: 0px;
   text-align: left;
-  line-height: 4.5vw;
-  font-size: 4.3vw;
+  line-height: 3.5vw;
+  font-size: 3.3vw;
   font-style: italic;
   font-weight: lighter;
   color: grey;
@@ -59,8 +60,8 @@ const A = styled.a`
 const InnerInnerDiv = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 15vh;
-  border-top: double;
+  margin-top: 13vh;
+  border-top: solid;
   padding: 4px 0 0 0;
   @media screen and (max-width: 767px) {
     border-top: none;
@@ -100,6 +101,7 @@ const Hide = styled.div`
 `
 const Img = styled.img`
   margin-top: -50px;
+  margin-left: 40px;
   @media screen and (max-width: 767px) {
     margin-top: 10px;
   }
@@ -121,6 +123,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <Helmet title={"Home | Eli Benton Cohen"} />
         <Spacer height={130} xsHeight={20} />
 
         <Container>
@@ -135,7 +138,7 @@ class Home extends React.Component {
             lg={2}
           >
             <Hide>
-              <Img src={logo} alt="Logo" width="155" height="200" />
+              <Img src={logo} alt="Logo" width="124" height="160" />
             </Hide>
           </ImgCol>
           <Col
@@ -145,8 +148,8 @@ class Home extends React.Component {
             lgOffset={0}
             xs={10}
             sm={10}
-            md={8}
-            lg={8}
+            md={6}
+            lg={6}
           >
             <Inline>
               <ReverseHide>
@@ -192,7 +195,7 @@ class Home extends React.Component {
               </A>
               <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
               <BetterLink
-                to={`/tags/`}
+                to={`/blog/`}
                 css={{ textDecoration: "none", textTransform: "uppercase" }}
               >
                 <List>topics</List>
