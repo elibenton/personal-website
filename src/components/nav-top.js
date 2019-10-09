@@ -40,6 +40,13 @@ const Hide = styled.div`
     display: none;
   }
 `
+
+const Img = styled.img`
+  margin: 16px 80px 8px 8px;
+  @media screen and (max-width: 767px) {
+    margin: 16px 12px 8px 8px;
+  }
+`
 var prevScrollPos
 
 class Navbar extends React.Component {
@@ -70,13 +77,7 @@ class Navbar extends React.Component {
         style={{ top: this.state.scrollingUp ? "0px" : "-66px" }}
       >
         <NavLink to="/blog/">
-          <img
-            src={logo}
-            alt="Logo"
-            width="31"
-            height="40"
-            css={{ margin: "16px 12px 8px 8px" }}
-          />
+          <Img src={logo} alt="Logo" width="31" height="40" />
         </NavLink>
         <h3 css={{ fontSize: "1.2em", lineHeight: "1.1em" }}>
           {this.props.title}
