@@ -45,10 +45,10 @@ const TagsPage = ({
       </Divider>
       <Col xs={12} sm={12} md={7} lg={6}>
         <Spacer height={0} xsHeight={10} />
-
         <div
           css={{
             display: "inline-block",
+            lineHeight: "1.2em",
           }}
         >
           {group.map((tag, index) =>
