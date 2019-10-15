@@ -46,13 +46,6 @@ const StyledRow = styled(Row)`
   }
 `
 
-const ReverseCol = styled(Col)`
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-`
-
 export const TagSpan = styled.div`
   color: #999;
   @media screen and (max-width: 767px) {

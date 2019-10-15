@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { Row, Col } from "react-flexbox-grid"
 import Helmet from "react-helmet"
 import logo from "../../content/images/logo.gif"
