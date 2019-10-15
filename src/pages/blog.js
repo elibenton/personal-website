@@ -102,7 +102,7 @@ const CustomRow = styled(Row)`
 `
 
 const CustomCol = styled(Col)`
-  margin-left: 50px;
+  margin-left: 30px !important;
   @media screen and (max-width: 767px) {
     margin-left: 0;
     padding: 0 !important;
@@ -119,11 +119,19 @@ class HomePrototype extends React.Component {
         <Helmet title={"Blog"} />
         <Spacer height={60} xsHeight={0} />
         <CustomRow>
-          <Divider xs={12} sm={12} md={3} lg={3}>
+          <Divider xs={12} sm={12} md={4} lg={3}>
             <Nav />
           </Divider>
-          <CustomCol xs={12} sm={12} md={8} lg={8}>
-            {/* <MobileHeader>Recently</MobileHeader> */}
+          <CustomCol
+            xsOffset={1}
+            xs={10}
+            smOffset={1}
+            sm={10}
+            mdOffset={0}
+            md={7}
+            lgOffset={0}
+            lg={8}
+          >
             <Spacer height={0} xsHeight={15} />
             {recently.map(({ node }) => {
               const {

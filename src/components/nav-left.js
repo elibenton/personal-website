@@ -173,6 +173,7 @@ export default () => (
             <div
               css={{
                 display: "inline-block",
+                lineHeight: "1.3em",
               }}
             >
               {data.allMdx.group.map((tag, index) =>
