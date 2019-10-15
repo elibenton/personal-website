@@ -81,18 +81,6 @@ const MobileContainer = styled.h4`
   }
 `
 
-const MobileHeader = styled.h3`
-  margin: 0px 0px 6px 0px;
-  padding-bottom: 4px;
-  font-weight: 500;
-  border-bottom: double;
-  @media screen and (max-width: 767px) {
-    padding-left: 12px;
-    margin-right: -8px;
-    margin-top: 24px;
-  }
-`
-
 const BetterLink = styled(Link)`
   text-decoration: none;
   @media screen and (max-width: 767px) {

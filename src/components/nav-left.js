@@ -5,7 +5,6 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
 import styled from "styled-components"
-import moment from "moment"
 
 const Name = styled.h1`
   display: flex;

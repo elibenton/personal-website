@@ -1,7 +1,8 @@
 {
   "name": "elis-personal-website",
   "private": true,
-  "description": "",
+  "license": "MIT",
+  "description": "Traveling the world to understand the politics of digitally networked life.",
   "version": "1.0.0",
   "author": "Eli Benton Cohen <eliunited@gmail.com>",
   "bugs": {
@@ -19,7 +20,6 @@
     "gatsby-plugin-mdx": "^1.0.9",
     "gatsby-plugin-netlify": "^2.0.17",
     "gatsby-plugin-netlify-cache": "^1.2.0",
-    "gatsby-plugin-netlify-cms": "^4.0.3",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-remove-trailing-slashes": "^2.1.2",
@@ -38,7 +38,6 @@
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
     "moment": "^2.24.0",
-    "netlify-cms-app": "^2.9.3",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-click-outside": "^3.0.1",
@@ -60,7 +59,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
