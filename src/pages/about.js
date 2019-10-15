@@ -35,7 +35,7 @@ const CustomRow = styled(Row)`
 `
 
 const CustomCol = styled(Col)`
-  margin-left: 50px;
+  margin-left: 30px !important;
   @media screen and (max-width: 767px) {
     padding: 0 !important;
     margin-left: 0;
@@ -59,7 +59,16 @@ class AboutPrototype extends React.Component {
           <Divider xs={12} sm={12} md={3} lg={3}>
             <Nav />
           </Divider>
-          <CustomCol xsOffset={1} xs={10} smOffset={1} sm={10} md={7} lg={6}>
+          <CustomCol
+            xsOffset={1}
+            xs={10}
+            smOffset={1}
+            sm={10}
+            mdOffset={1}
+            md={7}
+            lgOffset={1}
+            lg={6}
+          >
             <Spacer height={0} xsHeight={30} />
             <AboutContainer>
               <Img fluid={this.props.data.file.childImageSharp.fluid} />

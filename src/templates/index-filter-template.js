@@ -182,57 +182,98 @@ const IndexFiltered = ({ pageContext, data }) => {
       <Helmet title={`${name}`} />
       <Spacer height={60} xsHeight={0} />
       <CustomRow>
-        <Divider xs={12} sm={12} md={3} lg={3}>
+        <Divider xs={12} sm={12} md={4} lg={3}>
           <Nav />
         </Divider>
-        <CustomCol xs={12} sm={12} md={8} lg={8}>
+        <CustomCol
+          xsOffset={1}
+          xs={10}
+          smOffset={1}
+          sm={10}
+          mdOffset={0}
+          md={7}
+          lgOffset={0}
+          lg={8}
+        >
           {name === "Title IX" ? (
-            <BlogTitleWrapper>
-              <TagCount>Title IX Today</TagCount>
-              <SubTitle>A Discussion Collective three part series</SubTitle>
-              <Spacer height={40} />
-
-              <BlogTitle>
-                <TagHeader>
-                  Pomona College, like most elite liberal arts universities
-                  across the country, is a hotbed for student activism and
-                  political dissent. But there was one cry that rose above the
-                  rest during the college’s 126ᵗʰ academic year: end sexual
-                  violence.
-                  <br />
-                  <br />
-                  It began as year of firsts and ended in mostly retractions.
-                  For the first time, students openly banned accused assailants
-                  from campus gatherings, invoking accusations of “blacklists”
-                  and vigilante justice. Half a year later, the Pomona
-                  administration disbanded{" "}
-                  <i>The Advocates for Survivors of Sexual Assault</i>, the
-                  student group tasked with helping victims navigate their
-                  process of recovery, prompting a new wave of outrage and
-                  furthering resolve that students alone had to solve this
-                  problem.
-                  <br />
-                  <br />
-                  The backdrop to it all was Title IX, the 1972 law barring sex
-                  discrimination on college campuses that is being
-                  systematically dismantled by Education Secretary Betsy Devos.
-                  These legal uncertainties—stemming from both executive orders
-                  and court rulings—forced the college to make hasty decisions,
-                  which were only explained in vague, circumspect language.
-                  This, of course, compounded the already volatile situation.
-                  <br />
-                  <br />
-                  This three part series tried to make sense of the events in
-                  real time, bringing to the fore voices of student activists,
-                  college administrators, and even accused perpetrators. Here is
-                  a window one college's ongoing battle to end sexual assault.
-                </TagHeader>
-              </BlogTitle>
-            </BlogTitleWrapper>
+            <div>
+              <MobileHeader>Title IX Today</MobileHeader>
+              <h4 css={{ fontSize: "16px" }}>
+                Pomona College, like most elite liberal arts universities across
+                the country, is a hotbed for student activism and political
+                dissent. But there was one cry that rose above the rest during
+                the college’s 126ᵗʰ academic year: end sexual violence.
+                <br />
+                <br />
+                It began as year of firsts and ended in mostly retractions. For
+                the first time, students openly banned accused assailants from
+                campus gatherings, invoking accusations of “blacklists” and
+                vigilante justice. Half a year later, the Pomona administration
+                disbanded <i>The Advocates for Survivors of Sexual Assault</i>,
+                the student group tasked with helping victims navigate their
+                process of recovery, prompting a new wave of outrage and
+                furthering resolve that students alone had to solve this
+                problem.
+                <br />
+                <br />
+                The backdrop to it all was Title IX, the 1972 law barring sex
+                discrimination on college campuses that is being systematically
+                dismantled by Education Secretary Betsy Devos. These legal
+                uncertainties—stemming from both executive orders and court
+                rulings—forced the college to make hasty decisions, which were
+                only explained in vague, circumspect language. This, of course,
+                compounded the already volatile situation.
+                <br />
+                <br />
+                This three part series tried to make sense of the events in real
+                time, bringing to the fore voices of student activists, college
+                administrators, and even accused perpetrators. Here is a window
+                one college's ongoing battle to end sexual assault.
+                <br />
+                <br />
+              </h4>
+            </div>
+          ) : name === "Digital India" ? (
+            <div>
+              <MobileHeader>Digital India</MobileHeader>
+              <h4 css={{ fontSize: "16px" }}>
+                Pomona College, like most elite liberal arts universities across
+                the country, is a hotbed for student activism and political
+                dissent. But there was one cry that rose above the rest during
+                the college’s 126ᵗʰ academic year: end sexual violence.
+                <br />
+                <br />
+                It began as year of firsts and ended in mostly retractions. For
+                the first time, students openly banned accused assailants from
+                campus gatherings, invoking accusations of “blacklists” and
+                vigilante justice. Half a year later, the Pomona administration
+                disbanded <i>The Advocates for Survivors of Sexual Assault</i>,
+                the student group tasked with helping victims navigate their
+                process of recovery, prompting a new wave of outrage and
+                furthering resolve that students alone had to solve this
+                problem.
+                <br />
+                <br />
+                The backdrop to it all was Title IX, the 1972 law barring sex
+                discrimination on college campuses that is being systematically
+                dismantled by Education Secretary Betsy Devos. These legal
+                uncertainties—stemming from both executive orders and court
+                rulings—forced the college to make hasty decisions, which were
+                only explained in vague, circumspect language. This, of course,
+                compounded the already volatile situation.
+                <br />
+                <br />
+                This three part series tried to make sense of the events in real
+                time, bringing to the fore voices of student activists, college
+                administrators, and even accused perpetrators. Here is a window
+                one college's ongoing battle to end sexual assault.
+                <br />
+                <br />
+              </h4>
+            </div>
           ) : (
-            <div></div>
+            <MobileHeader>{upperFirst(name)}</MobileHeader>
           )}
-          <MobileHeader>{upperFirst(name)}</MobileHeader>
           {filtered.map(({ node }) => {
             const {
               title,
@@ -247,7 +288,7 @@ const IndexFiltered = ({ pageContext, data }) => {
             return (
               <Collapsible
                 easing="ease-in-out"
-                open={true}
+                open={false}
                 transitionTime={200}
                 trigger={
                   <div>
