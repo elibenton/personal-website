@@ -30,7 +30,7 @@ const Button = styled.h4`
     color: #ffd666;
   }
   @media screen and (max-width: 767px) {
-    padding-left: 12px;
+    /* padding-left: 12px; */
   }
 `
 const MobileRowOuter = styled(Row)`
@@ -43,7 +43,7 @@ const MobileRowOuter = styled(Row)`
   margin-right: 0px !important;
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
-    margin-left: 12px !important;
+    /* margin-left: 12px !important; */
   }
 `
 const MobileRowInner = styled(Row)`
@@ -75,9 +75,9 @@ const MobileTitle = styled.h4`
 const MobileContainer = styled.h4`
   width: 70%;
   @media screen and (max-width: 767px) {
-    width: 90%;
-    margin-left: 8px !important;
-    padding-left: 4px;
+    width: 100%;
+    /* margin-left: 8px !important; */
+    /* padding-left: 4px; */
   }
 `
 

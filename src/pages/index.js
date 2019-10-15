@@ -95,12 +95,13 @@ const ReverseHide = styled.div`
 `
 
 const Hide = styled.div`
+  font-size: 16px;
   @media screen and (max-width: 767px) {
     display: none;
   }
 `
 const Img = styled.img`
-  margin-top: -50px;
+  margin-top: -40px;
   margin-left: 40px;
   @media screen and (max-width: 767px) {
     margin-top: 10px;
@@ -144,7 +145,7 @@ class Home extends React.Component {
           <Col
             xsOffset={1}
             smOffset={1}
-            mdOffset={0}
+            mdOffset={1}
             lgOffset={0}
             xs={10}
             sm={10}
@@ -179,21 +180,27 @@ class Home extends React.Component {
               >
                 <List>about</List>
               </BetterLink>
-              <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              <List>
+                <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              </List>
               <BetterLink
                 to="/blog"
                 css={{ textDecoration: "none", textTransform: "uppercase" }}
               >
                 <List>blog</List>
               </BetterLink>
-              <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              <List>
+                <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              </List>
               <A
                 href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
                 css={{ textDecoration: "none", textTransform: "uppercase" }}
               >
                 <List>reading</List>
               </A>
-              <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              <List>
+                <Hide>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</Hide>
+              </List>
               <BetterLink
                 to={`/blog/`}
                 css={{ textDecoration: "none", textTransform: "uppercase" }}

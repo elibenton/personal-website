@@ -83,8 +83,8 @@ const MobileContainer = styled.h4`
 
 const MobileHeader = styled.h3`
   font-size: 32px;
-  margin: 0px 0px 8px 0px;
-  padding-bottom: 10px;
+  margin: 0px 0px 16px 0px;
+  padding-bottom: 16px;
   font-weight: 500;
   border-bottom: solid;
   @media screen and (max-width: 767px) {
@@ -93,6 +93,7 @@ const MobileHeader = styled.h3`
     margin-top: 24px;
     border-bottom: none;
     padding-bottom: 16px;
+    line-height: 1.2em;
   }
 `
 
@@ -123,55 +124,12 @@ const CustomCol = styled(Col)`
     padding: 0 !important;
   }
 `
-const TagCount = styled.h1`
-  font-size: 120px;
-  margin: 90px 60px 55px 0;
-  text-shadow: 2px 4px #ffd666;
+const MobileText = styled.h4`
+  font-size: 16px;
+  margin-left: 0px;
   @media screen and (max-width: 767px) {
-    font-size: 50px;
-    line-height: 54px;
-    margin: 10px 0px 10px 20px;
+    padding-left: 12px;
   }
-`
-const SubTitle = styled.h2`
-  font-size: 28px;
-  line-height: 26px;
-  margin: 5px 5px 0px 0;
-  font-style: italic;
-  text-decoration-color: #ffd666;
-  @media screen and (max-width: 767px) {
-    font-size: 16px;
-    line-height: 18px;
-    margin: 2px 2px 0px 30px;
-  }
-`
-const TagHeader = styled.p`
-  font-size: 23px;
-  line-height: 28px;
-  margin-top: 12px;
-  width: 100%;
-  @media screen and (max-width: 767px) {
-    margin-left: 5%;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 4px;
-    width: 100%;
-  }
-`
-const BlogTitleWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  @media screen and (max-width: 767px) {
-    justify-content: center;
-    padding-top: 1em;
-    width: 90%;
-  }
-`
-const BlogTitle = styled.div`
-  display: block;
-  flex-direction: row;
-  align-items: left;
 `
 const IndexFiltered = ({ pageContext, data }) => {
   const { name } = pageContext
@@ -198,7 +156,7 @@ const IndexFiltered = ({ pageContext, data }) => {
           {name === "Title IX" ? (
             <div>
               <MobileHeader>Title IX Today</MobileHeader>
-              <h4 css={{ fontSize: "16px" }}>
+              <MobileText>
                 Pomona College, like most elite liberal arts universities across
                 the country, is a hotbed for student activism and political
                 dissent. But there was one cry that rose above the rest during
@@ -231,45 +189,50 @@ const IndexFiltered = ({ pageContext, data }) => {
                 one college's ongoing battle to end sexual assault.
                 <br />
                 <br />
-              </h4>
+              </MobileText>
             </div>
           ) : name === "Digital India" ? (
             <div>
               <MobileHeader>Digital India</MobileHeader>
-              <h4 css={{ fontSize: "16px" }}>
-                Pomona College, like most elite liberal arts universities across
-                the country, is a hotbed for student activism and political
-                dissent. But there was one cry that rose above the rest during
-                the college’s 126ᵗʰ academic year: end sexual violence.
+              <MobileText>
+                I didn't think my investigation of the internet would lead me to
+                the remote mountain towns of India, to a place where people walk
+                for five kilometers just to find a road, a place where the
+                government ships in rice because, if it rains, making it to the
+                weekly market becomes impossible. But the location actually
+                makes perfect sense. To investigate the networked world, one
+                follows the network—and here, the network was perfect.
                 <br />
                 <br />
-                It began as year of firsts and ended in mostly retractions. For
-                the first time, students openly banned accused assailants from
-                campus gatherings, invoking accusations of “blacklists” and
-                vigilante justice. Half a year later, the Pomona administration
-                disbanded <i>The Advocates for Survivors of Sexual Assault</i>,
-                the student group tasked with helping victims navigate their
-                process of recovery, prompting a new wave of outrage and
-                furthering resolve that students alone had to solve this
-                problem.
+                The discrepancy between India's physical and digital
+                infrastructure boggles my mind. Here, public sanitation is still
+                a political concern of the highest priority, but mobile
+                broadband is so passé it's only three US cents per gigabyte.
+                Nandan Nilekani, sometimes called “The CEO of India,” has said
+                the country will be “data rich before it'll be economically
+                rich.” He would know.
                 <br />
                 <br />
-                The backdrop to it all was Title IX, the 1972 law barring sex
-                discrimination on college campuses that is being systematically
-                dismantled by Education Secretary Betsy Devos. These legal
-                uncertainties—stemming from both executive orders and court
-                rulings—forced the college to make hasty decisions, which were
-                only explained in vague, circumspect language. This, of course,
-                compounded the already volatile situation.
+                Creator of Aadhaar, the world's largest biometric-based ID
+                system, Nilekani conjured 1.2 billion new data points by
+                digitizing the second largest population in the world. In recent
+                years, Aadhaar has faced mounting criticism from privacy
+                activists, civil society groups, and the Supreme Court, but it
+                has not tempered the Aadhaar fever. The High Court of Tamil Nadu
+                recommended Aadhaar be linked to Facebook to fight fake news.
+                The Excise Department of Karnataka considered requiring the ID
+                to purchase alcohol, to cut down on litter.
                 <br />
                 <br />
-                This three part series tried to make sense of the events in real
-                time, bringing to the fore voices of student activists, college
-                administrators, and even accused perpetrators. Here is a window
-                one college's ongoing battle to end sexual assault.
+                Nothing appears off limits in India's digital experiment, even
+                under unfavorable conditions: a still developing economy,
+                massive cultural and linguistic diversity, and almost no digital
+                literacy. People here say, “If it works it India, it could be
+                the next global standard.” The globe might want to start paying
+                attention.
                 <br />
                 <br />
-              </h4>
+              </MobileText>
             </div>
           ) : (
             <MobileHeader>{upperFirst(name)}</MobileHeader>
