@@ -207,5 +207,13 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-source-ghost`,
+      options: {
+        apiUrl: `https://blog.elibenton.co`,
+        contentApiKey: `b3ca830fe5e50c1133c73e14b7`,
+        version: `v3`,
+      },
+    },
   ],
 }
