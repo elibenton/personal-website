@@ -186,7 +186,7 @@ const IndexFiltered = ({ pageContext, data }) => {
                 This three part series tried to make sense of the events in real
                 time, bringing to the fore voices of student activists, college
                 administrators, and even accused perpetrators. Here is a window
-                one college's ongoing battle to end sexual assault.
+                into one college's ongoing battle to end sexual assault.
                 <br />
                 <br />
               </MobileText>

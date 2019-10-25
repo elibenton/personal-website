@@ -44,7 +44,7 @@ const Topic = styled.h4`
   }
 `
 const Div = styled.div`
-  padding-left: 50px;
+  padding-left: 30px;
   background: white;
   @media screen and (max-width: 767px) {
     margin: 0 -16px 0 -16px;

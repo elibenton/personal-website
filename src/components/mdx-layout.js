@@ -151,7 +151,7 @@ function PageTemplate({ data }) {
           lg={6}
         >
           <Spacer height={80} xsHeight={20} />
-          <div>
+          <div css={{ lineHeight: "1.6em" }}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </div>
         </Col>
