@@ -14,6 +14,15 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           query allPages {
+            allGhostPost(sort: { order: ASC, fields: published_at }) {
+              edges {
+                node {
+                  slug
+                  url
+                  id
+                }
+              }
+            }
             allMdx {
               edges {
                 node {
@@ -49,6 +58,8 @@ exports.createPages = ({ graphql, actions }) => {
         // Collect all MDX and MD pages
         const mdxs = result.data.allMdx.edges
 
+        const ghosts = result.data.allGhostPost.edges
+
         // We'll call `createPage` for each result
         mdxs.forEach(mdx => {
           const { template } = mdx.node.frontmatter
@@ -58,6 +69,17 @@ exports.createPages = ({ graphql, actions }) => {
             component: path.resolve(`./src/components/mdx-layout.js`),
             context: {
               id: mdx.node.id,
+            },
+          })
+        })
+
+        ghosts.forEach(ghost => {
+          const { slug } = ghost.node
+          createPage({
+            path: `/ghost/${slug}`,
+            component: path.resolve(`./src/templates/ghost-post.js`),
+            context: {
+              slug: ghost.node.slug,
             },
           })
         })

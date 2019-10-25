@@ -70,8 +70,11 @@ class AboutPrototype extends React.Component {
             lg={6}
           >
             <Spacer height={0} xsHeight={30} />
-            <h1>{this.props.data.allGhostPost.totalCount}</h1>
-            <h1>{this.props.data.allGhostPost.nodes.excerpt}</h1>
+            <section
+              dangerouslySetInnerHTML={{
+                __html: this.props.data.ghostPost.html,
+              }}
+            />
             <Spacer height={135} xsHeight={20} />
           </CustomCol>
         </CustomRow>
@@ -83,13 +86,11 @@ class AboutPrototype extends React.Component {
 
 export default AboutPrototype
 
-export const pageQuery = graphql`
-  query MyQuery {
-    allGhostPost {
-      totalCount
-      nodes {
-        excerpt
-      }
+export const postQuery = graphql`
+  query($slug: String!) {
+    ghostPost(slug: { eq: $slug }) {
+      html
+      id
     }
   }
 `
