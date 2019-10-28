@@ -18,6 +18,8 @@ import Footer from "../components/footer"
 import moment from "moment"
 import kebabCase from "lodash/kebabCase"
 
+import Popup from "../components/popup"
+
 const Button = styled.h4`
   margin: 16px 0 30px 0;
   font-weight: 400;
@@ -372,6 +374,7 @@ class HomePrototype extends React.Component {
             })}
           </CustomCol>
         </CustomRow>
+        <Popup />
         <Spacer height={100} xsHeight={40} />
         <Footer />
       </Layout>

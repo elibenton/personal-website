@@ -7,6 +7,8 @@ import logo from "../../content/images/logo.gif"
 import styled from "styled-components"
 import Spacer from "../utils/spacer"
 
+import Popup from "../components/popup"
+
 const Title = styled.h1`
   margin-top: 0px;
   text-align: left;
@@ -210,6 +212,7 @@ class Home extends React.Component {
             </InnerInnerDiv>
           </Col>
         </Container>
+        <Popup />
       </div>
     )
   }
