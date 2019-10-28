@@ -113,6 +113,8 @@ class HomePrototype extends React.Component {
   render() {
     const recently = this.props.data.recently.edges
     const everything = this.props.data.everything.edges
+    const ghost = this.props.data.ghost.edges
+    console.log(ghost)
 
     return (
       <Layout>
@@ -133,6 +135,7 @@ class HomePrototype extends React.Component {
             lg={8}
           >
             <Spacer height={0} xsHeight={15} />
+            {/* {ghost.map} */}
             {recently.map(({ node }) => {
               const {
                 title,
@@ -428,6 +431,15 @@ export const pageQuery = graphql`
             slug
             month
           }
+        }
+      }
+    }
+    ghost: allGhostPost(sort: { order: ASC, fields: published_at }) {
+      edges {
+        node {
+          slug
+          url
+          id
         }
       }
     }
