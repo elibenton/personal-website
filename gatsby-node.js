@@ -117,7 +117,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Make tag pages
         tags.forEach(filter_tag => {
           createPage({
-            path: `/tags/${_.kebabCase(filter_tag)}/`,
+            path: `/${_.kebabCase(filter_tag)}/`,
             component: indexFiltered,
             context: {
               name: filter_tag,
@@ -133,7 +133,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Make country pages
         countries.forEach(filter_country => {
           createPage({
-            path: `/countries/${_.kebabCase(filter_country)}/`,
+            path: `/${_.kebabCase(filter_country)}/`,
             component: indexFiltered,
             context: {
               name: filter_country,
