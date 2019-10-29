@@ -76,7 +76,7 @@ class Navbar extends React.Component {
         onScroll={this.handleScroll}
         style={{ top: this.state.scrollingUp ? "0px" : "-66px" }}
       >
-        <NavLink to="/blog/">
+        <NavLink to="/">
           <Img src={logo} alt="Logo" width="31" height="40" />
         </NavLink>
         <h3 css={{ fontSize: "1.2em", lineHeight: "1.1em" }}>

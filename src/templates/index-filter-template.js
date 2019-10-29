@@ -82,7 +82,7 @@ const MobileContainer = styled.h4`
 `
 
 const MobileHeader = styled.h3`
-  font-size: 32px;
+  font-size: 28px;
   margin: 0px 0px 16px 0px;
   padding-bottom: 16px;
   font-weight: 500;
@@ -118,7 +118,7 @@ const CustomRow = styled(Row)`
 `
 
 const CustomCol = styled(Col)`
-  margin-left: 50px;
+  margin-left: 70px !important;
   @media screen and (max-width: 767px) {
     margin-left: 0;
     padding: 0 !important;
@@ -352,7 +352,7 @@ const IndexFiltered = ({ pageContext, data }) => {
           })}
         </CustomCol>
       </CustomRow>
-      <Spacer height={100} xsHeight={40} />
+      <Spacer height={40} xsHeight={20} />
       <Footer />
     </Layout>
   )

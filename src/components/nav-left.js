@@ -2,16 +2,17 @@ import React from "react"
 import logo from "../../content/images/logo.gif"
 import Collapsible from "react-collapsible"
 import { Link, StaticQuery, graphql } from "gatsby"
-import Spacer from "../utils/spacer"
 import kebabCase from "lodash/kebabCase"
+import upperFirst from "lodash/upperFirst"
 import styled from "styled-components"
+import Spacer from "../utils/spacer"
 
 const Name = styled.h1`
   display: flex;
   text-transform: none;
-  font-size: 26px;
+  font-size: 34px;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   line-height: 1.1em;
   @media screen and (max-width: 767px) {
     margin: 16px 0 0 4px;
@@ -46,6 +47,7 @@ const Topic = styled.h4`
 const Div = styled.div`
   padding-left: 30px;
   background: white;
+  width: 108%;
   @media screen and (max-width: 767px) {
     margin: 0 -16px 0 -16px;
     border-bottom: double;
@@ -55,30 +57,29 @@ const Div = styled.div`
   }
 `
 
-const InnerDiv = styled.div`
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const InnerInnerDiv = styled.div`
+const Col = styled.div`
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: row;
   }
 `
 
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: -4px;
+`
+
 const SubTitle = styled.h2`
-  margin-top: 0px;
+  margin-top: 24px;
   text-align: left;
-  line-height: 18px;
-  font-size: 14px;
+  line-height: 22px;
+  font-size: 18px;
   font-style: italic;
   font-weight: lighter;
-  margin-bottom: 32px;
+  margin-bottom: 6px;
   color: grey;
-  width: 75%;
+  width: 65%;
 `
 
 export default () => (
@@ -91,7 +92,15 @@ export default () => (
           }
         }
         allMdx(limit: 2000) {
-          group(field: frontmatter___tags) {
+          tags: group(field: frontmatter___tags) {
+            fieldValue
+            totalCount
+          }
+          templates: group(field: frontmatter___template) {
+            fieldValue
+            totalCount
+          }
+          countries: group(field: frontmatter___country) {
             fieldValue
             totalCount
           }
@@ -100,107 +109,93 @@ export default () => (
     `}
     render={data => (
       <Div>
-        <ReverseHide>
+        <Row css={{ alignItems: "center" }}>
           <BetterLink to="/">
             <img
               src={logo}
               alt="Logo"
-              width="31"
-              height="40"
-              css={{ margin: "16px 12px 8px 8px" }}
+              width="39"
+              height="50"
+              css={{ margin: "8px 20px 8px 8px" }}
             />
           </BetterLink>
-        </ReverseHide>
-        <InnerDiv>
-          <Name>{data.site.siteMetadata.title}</Name>
-          <Hide>
-            <SubTitle>
-              Traveling the world to understand the politics of digitally
-              networked life
-            </SubTitle>
-          </Hide>
-          <BetterLink to="/">
-            <Hide>
-              <img
-                src={logo}
-                alt="Logo"
-                width="115"
-                height="150"
-                css={{ marginTop: "50px", marginBottom: "35px" }}
-              />
-            </Hide>
-          </BetterLink>
-          <InnerInnerDiv>
-            <BetterLink
-              to="/about"
-              css={{ textDecoration: "none", textTransform: "uppercase" }}
-            >
-              <h4>about</h4>
-            </BetterLink>
-            <BetterLink
-              to="/blog"
-              css={{ textDecoration: "none", textTransform: "uppercase" }}
-            >
-              <h4>blog</h4>
-            </BetterLink>
-            <A
-              href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
-              css={{ textDecoration: "none", textTransform: "uppercase" }}
-            >
-              <h4>reading</h4>
-            </A>
-            <ReverseHide>
+          <Col>
+            <Name>{data.site.siteMetadata.title}</Name>
+            <Row>
               <BetterLink
-                to={`/tags/`}
+                to={`/`}
                 css={{ textDecoration: "none", textTransform: "uppercase" }}
               >
-                <h4>topics</h4>
+                <h4>home</h4>
               </BetterLink>
-            </ReverseHide>
-          </InnerInnerDiv>
-        </InnerDiv>
+              <h4>&middot;</h4>
+              <BetterLink
+                to="/about"
+                css={{ textDecoration: "none", textTransform: "uppercase" }}
+              >
+                <h4>about</h4>
+              </BetterLink>
+              <h4>&middot;</h4>
+              <A
+                href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
+                css={{ textDecoration: "none", textTransform: "uppercase" }}
+              >
+                <h4>reading</h4>
+              </A>
+            </Row>
+          </Col>
+        </Row>
+        <Row></Row>
         <Hide>
-          <Collapsible
-            easing="ease-in-out"
-            open={false}
-            transitionTime={200}
-            trigger={
-              <Topic css={{ textTransform: "uppercase", cursor: "pointer" }}>
-                topics
-              </Topic>
-            }
-          >
-            <div
-              css={{
-                display: "inline-block",
-                lineHeight: "1.3em",
-              }}
-            >
-              {data.allMdx.group.map((tag, index) =>
-                index === data.allMdx.group.length - 1 ? (
-                  <BetterLink
-                    to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                    css={{ textDecoration: "none" }}
-                  >
-                    <span class="tag">
-                      {tag.fieldValue} ({tag.totalCount})
-                    </span>
-                  </BetterLink>
-                ) : (
-                  <BetterLink
-                    to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                    css={{ textDecoration: "none" }}
-                  >
-                    <span class="tag">
-                      {tag.fieldValue} ({tag.totalCount})
-                    </span>
-                  </BetterLink>
-                )
-              )}
-            </div>
-          </Collapsible>
+          <SubTitle>
+            Traveling the world to understand the politics of digitally
+            networked life
+          </SubTitle>
         </Hide>
-        <Spacer height={80} xsHeight={0} />
+        <Hide>
+          <div
+            css={{
+              marginTop: "36px",
+              marginLeft: "-6px",
+              display: "inline-block",
+              lineHeight: "1.3em",
+            }}
+          >
+            {data.allMdx.templates.map(template => (
+              <BetterLink
+                to={`/${kebabCase(template.fieldValue)}/`}
+                css={{ textDecoration: "none" }}
+              >
+                <span class="tag-blue">
+                  {upperFirst(template.fieldValue)} ({template.totalCount})
+                </span>
+              </BetterLink>
+            ))}
+            <Spacer height={10} xsHeight={5} />
+
+            {data.allMdx.countries.map(country => (
+              <BetterLink
+                to={`/countries/${kebabCase(country.fieldValue)}/`}
+                css={{ textDecoration: "none" }}
+              >
+                <span class="tag-green">
+                  {country.fieldValue} ({country.totalCount})
+                </span>
+              </BetterLink>
+            ))}
+            <Spacer height={10} xsHeight={5} />
+            {data.allMdx.tags.map(tag => (
+              <BetterLink
+                to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                css={{ textDecoration: "none" }}
+              >
+                <span class="tag-red">
+                  {tag.fieldValue} ({tag.totalCount})
+                </span>
+              </BetterLink>
+            ))}
+          </div>
+        </Hide>
       </Div>
     )}
   />

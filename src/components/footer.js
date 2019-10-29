@@ -6,7 +6,7 @@ import moment from "moment"
 const FooterWrapper = styled(Row)`
   display: flex;
   background-color: white;
-  padding-left: 50px;
+  padding-left: 30px;
   margin-bottom: 30px;
   @media screen and (max-width: 767px) {
     display: none !important;
