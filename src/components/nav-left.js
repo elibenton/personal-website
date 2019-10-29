@@ -73,15 +73,14 @@ const Row = styled.div`
 `
 
 const SubTitle = styled.h2`
-  margin-top: 24px;
+  margin-top: 30px;
   text-align: left;
-  line-height: 22px;
+  line-height: 24px;
   font-size: 18px;
   font-style: italic;
   font-weight: lighter;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   color: grey;
-  width: 75%;
 `
 
 export default () => (
@@ -163,18 +162,6 @@ export default () => (
               lineHeight: "1.3em",
             }}
           >
-            {data.allMdx.templates.map(template => (
-              <BetterLink
-                to={`/${kebabCase(template.fieldValue)}/`}
-                css={{ textDecoration: "none" }}
-              >
-                <span class="tag-blue">
-                  {upperFirst(template.fieldValue)} ({template.totalCount})
-                </span>
-              </BetterLink>
-            ))}
-            <Spacer height={10} xsHeight={5} />
-
             {data.allMdx.countries.map(country => (
               <BetterLink
                 to={`/countries/${kebabCase(country.fieldValue)}/`}
@@ -182,6 +169,17 @@ export default () => (
               >
                 <span class="tag-green">
                   {country.fieldValue} ({country.totalCount})
+                </span>
+              </BetterLink>
+            ))}
+            <Spacer height={10} xsHeight={5} />
+            {data.allMdx.templates.map(template => (
+              <BetterLink
+                to={`/${kebabCase(template.fieldValue)}/`}
+                css={{ textDecoration: "none" }}
+              >
+                <span class="tag-blue">
+                  {upperFirst(template.fieldValue)} ({template.totalCount})
                 </span>
               </BetterLink>
             ))}

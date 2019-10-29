@@ -1,6 +1,7 @@
 ---
 template:
-- writing
+  - writing
+  - reading
 
 title: Content Consumption
 date: 2019-08-21
