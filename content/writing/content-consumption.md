@@ -1,5 +1,6 @@
 ---
-template: writing
+template:
+- writing
 
 title: Content Consumption
 date: 2019-08-21

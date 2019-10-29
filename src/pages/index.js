@@ -19,11 +19,11 @@ import moment from "moment"
 import kebabCase from "lodash/kebabCase"
 
 const MobileHeader = styled.h3`
-  font-size: 28px;
-  margin: 0px 0px 16px 0px;
-  padding-bottom: 16px;
+  font-size: 22px;
+  margin: 0px 0px 12px 0px;
+  padding-bottom: 10px;
   font-weight: 500;
-  border-bottom: solid;
+  border-bottom: solid 2px;
   @media screen and (max-width: 767px) {
     padding-left: 12px;
     margin-right: -8px;
@@ -403,7 +403,7 @@ export const pageQuery = graphql`
   query {
     everything: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { template: { ne: "reading" } } }
+      # filter: { frontmatter: { template: { ne: "reading" } } }
       skip: 3
     ) {
       edges {
@@ -427,7 +427,7 @@ export const pageQuery = graphql`
     }
     recently: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { template: { ne: "reading" } } }
+      # filter: { frontmatter: { template: { ne: "reading" } } }
       limit: 3
     ) {
       edges {

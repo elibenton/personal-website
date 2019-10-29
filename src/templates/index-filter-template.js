@@ -82,11 +82,11 @@ const MobileContainer = styled.h4`
 `
 
 const MobileHeader = styled.h3`
-  font-size: 28px;
-  margin: 0px 0px 16px 0px;
-  padding-bottom: 16px;
+  font-size: 22px;
+  margin: 0px 0px 12px 0px;
+  padding-bottom: 10px;
   font-weight: 500;
-  border-bottom: solid;
+  border-bottom: solid 2px;
   @media screen and (max-width: 767px) {
     padding-left: 12px;
     margin-right: -8px;

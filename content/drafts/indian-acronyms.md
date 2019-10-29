@@ -1,5 +1,6 @@
 ---
-template: writing
+template:
+- writing
 
 title: "I.L.A."
 date: 2019-09-02

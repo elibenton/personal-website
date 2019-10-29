@@ -1,5 +1,6 @@
 ---
-template: audio
+template:
+- audio
 
 title: Named But Never Heard
 date: 2018-11-27

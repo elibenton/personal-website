@@ -6,7 +6,6 @@ const moment = require("moment")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const specialTopic = path.resolve(`./src/templates/special-topic-template.js`)
   const indexFiltered = path.resolve(`./src/templates/index-filter-template.js`)
 
   return new Promise((resolve, reject) => {

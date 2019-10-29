@@ -10,10 +10,12 @@ import Spacer from "../utils/spacer"
 const Name = styled.h1`
   display: flex;
   text-transform: none;
-  font-size: 34px;
+  font-weight: 600;
+  font-size: 29px;
   margin-top: 0;
   margin-bottom: 2px;
   line-height: 1.1em;
+  width: 108%;
   @media screen and (max-width: 767px) {
     margin: 16px 0 0 4px;
   }
@@ -45,7 +47,7 @@ const Topic = styled.h4`
   }
 `
 const Div = styled.div`
-  padding-left: 30px;
+  padding-left: 25px;
   background: white;
   width: 108%;
   @media screen and (max-width: 767px) {
@@ -79,7 +81,7 @@ const SubTitle = styled.h2`
   font-weight: lighter;
   margin-bottom: 6px;
   color: grey;
-  width: 65%;
+  width: 75%;
 `
 
 export default () => (
@@ -116,7 +118,7 @@ export default () => (
               alt="Logo"
               width="39"
               height="50"
-              css={{ margin: "8px 20px 8px 8px" }}
+              css={{ margin: "8px 16px 8px 8px" }}
             />
           </BetterLink>
           <Col>
