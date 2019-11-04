@@ -1,6 +1,5 @@
 import React from "react"
 import logo from "../../content/images/logo.gif"
-import Collapsible from "react-collapsible"
 import { Link, StaticQuery, graphql } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 import upperFirst from "lodash/upperFirst"
@@ -39,12 +38,6 @@ const ReverseHide = styled.div`
   display: none;
   @media screen and (max-width: 767px) {
     display: inline;
-  }
-`
-const Topic = styled.h4`
-  :hover,
-  :active {
-    color: #ffd666;
   }
 `
 const Div = styled.div`

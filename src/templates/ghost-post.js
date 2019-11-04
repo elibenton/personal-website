@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { Row, Col } from "react-flexbox-grid"
 import Helmet from "react-helmet"
 import Spacer from "../utils/spacer"
@@ -9,27 +9,27 @@ import Layout from "../components/layout"
 import Nav from "../components/nav-left"
 import Footer from "../components/footer"
 
-const About = styled.p`
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 1.4em;
-`
-const AboutContainer = styled.div`
-  margin-bottom: 2em;
-  max-width: 370px;
-  @media screen and (max-width: 767px) {
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-`
-const Header = styled.h2`
-  margin-top: 0;
-  font-size: 18px;
-  line-height: 1.5em;
-`
-const Bold = styled.span`
-  font-weight: bold;
-`
+// const About = styled.p`
+//   font-size: 19px;
+//   font-weight: 400;
+//   line-height: 1.4em;
+// `
+// const AboutContainer = styled.div`
+//   margin-bottom: 2em;
+//   max-width: 370px;
+//   @media screen and (max-width: 767px) {
+//     justify-content: flex-start;
+//     flex-direction: column;
+//   }
+// `
+// const Header = styled.h2`
+//   margin-top: 0;
+//   font-size: 18px;
+//   line-height: 1.5em;
+// `
+// const Bold = styled.span`
+//   font-weight: bold;
+// `
 const CustomRow = styled(Row)`
   margin: 0 0 0 0 !important;
 `
