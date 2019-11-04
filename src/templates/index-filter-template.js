@@ -18,6 +18,23 @@ import Footer from "../components/footer"
 import moment from "moment"
 import { kebabCase, upperFirst } from "lodash"
 
+const MobileHeader = styled.h3`
+  font-size: 22px;
+  margin: 0px 0px 12px 0px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  border-bottom: solid 2px;
+  @media screen and (max-width: 767px) {
+    margin-left: -8px;
+    padding-left: 8px;
+    margin-right: -8px;
+    margin-top: 24px;
+    /* border-bottom: none; */
+    padding-bottom: 6px;
+    line-height: 1.2em;
+  }
+`
+
 const Button = styled.h4`
   margin: 16px 0 30px 0;
   font-weight: 400;
@@ -30,7 +47,7 @@ const Button = styled.h4`
     color: #ffd666;
   }
   @media screen and (max-width: 767px) {
-    padding-left: 12px;
+    /* padding-left: 12px; */
   }
 `
 const MobileRowOuter = styled(Row)`
@@ -43,7 +60,7 @@ const MobileRowOuter = styled(Row)`
   margin-right: 0px !important;
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
-    margin-left: 12px !important;
+    /* margin-left: 12px !important; */
   }
 `
 const MobileRowInner = styled(Row)`
@@ -75,25 +92,9 @@ const MobileTitle = styled.h4`
 const MobileContainer = styled.h4`
   width: 70%;
   @media screen and (max-width: 767px) {
-    width: 90%;
-    margin-left: 8px !important;
-    padding-left: 4px;
-  }
-`
-
-const MobileHeader = styled.h3`
-  font-size: 22px;
-  margin: 0px 0px 12px 0px;
-  padding-bottom: 10px;
-  font-weight: 500;
-  border-bottom: solid 2px;
-  @media screen and (max-width: 767px) {
-    padding-left: 12px;
-    margin-right: -8px;
-    margin-top: 24px;
-    border-bottom: none;
-    padding-bottom: 16px;
-    line-height: 1.2em;
+    width: 100%;
+    /* margin-left: 8px !important; */
+    /* padding-left: 4px; */
   }
 `
 
@@ -120,10 +121,10 @@ const CustomRow = styled(Row)`
 const CustomCol = styled(Col)`
   margin-left: 70px !important;
   @media screen and (max-width: 767px) {
-    margin-left: 0;
-    padding: 0 !important;
+    margin-left: 0 !important;
   }
 `
+
 const MobileText = styled.h4`
   font-size: 16px;
   margin-left: 0px;
@@ -131,6 +132,7 @@ const MobileText = styled.h4`
     padding-left: 12px;
   }
 `
+
 const IndexFiltered = ({ pageContext, data }) => {
   const { name } = pageContext
   const filtered = data.filtered.edges
@@ -144,10 +146,10 @@ const IndexFiltered = ({ pageContext, data }) => {
           <Nav />
         </Divider>
         <CustomCol
-          xsOffset={1}
-          xs={10}
-          smOffset={1}
-          sm={10}
+          xsOffset={0}
+          xs={12}
+          smOffset={0}
+          sm={12}
           mdOffset={0}
           md={7}
           lgOffset={0}

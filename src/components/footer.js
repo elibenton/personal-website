@@ -31,7 +31,7 @@ const Footer = () => {
             </A>
           </span>
           <br />
-          ©️{moment().year()} Eli Cohen
+          ©️ {moment().year()} Eli Cohen
         </h4>
       </Col>
     </FooterWrapper>

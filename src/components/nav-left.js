@@ -18,6 +18,7 @@ const Name = styled.h1`
   width: 108%;
   @media screen and (max-width: 767px) {
     margin: 16px 0 0 4px;
+    font-weight: 500;
   }
 `
 
@@ -52,7 +53,7 @@ const Div = styled.div`
   width: 108%;
   @media screen and (max-width: 767px) {
     margin: 0 -16px 0 -16px;
-    border-bottom: double;
+    border-bottom: solid 3px;
     padding-left: 16px;
     display: flex;
     flex-direction: row;
@@ -62,7 +63,7 @@ const Div = styled.div`
 const Col = styled.div`
   @media screen and (max-width: 767px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 `
 
@@ -72,15 +73,31 @@ const Row = styled.div`
   margin-left: -4px;
 `
 
+const InnerRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: -4px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0px;
+  }
+`
+
 const SubTitle = styled.h2`
   margin-top: 30px;
   text-align: left;
   line-height: 24px;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
-  font-weight: lighter;
+  font-weight: 200;
   margin-bottom: 10px;
   color: grey;
+`
+
+const Image = styled.img`
+  margin: 4px 16px 8px 8px;
+  @media screen and (max-width: 767px) {
+    margin-top: 16px;
+  }
 `
 
 export default () => (
@@ -112,41 +129,42 @@ export default () => (
       <Div>
         <Row css={{ alignItems: "center" }}>
           <BetterLink to="/">
-            <img
-              src={logo}
-              alt="Logo"
-              width="39"
-              height="50"
-              css={{ margin: "8px 16px 8px 8px" }}
-            />
+            <Image src={logo} alt="Logo" width="39" height="50" />
           </BetterLink>
           <Col>
             <Name>{data.site.siteMetadata.title}</Name>
-            <Row>
-              <BetterLink
-                to={`/`}
-                css={{ textDecoration: "none", textTransform: "uppercase" }}
-              >
-                <h4>home</h4>
-              </BetterLink>
-              <h4>&middot;</h4>
+            <InnerRow>
+              <Hide>
+                <BetterLink
+                  to={`/`}
+                  css={{ textDecoration: "none", textTransform: "uppercase" }}
+                >
+                  <h4>home&nbsp;</h4>
+                </BetterLink>
+              </Hide>
               <BetterLink
                 to="/about"
                 css={{ textDecoration: "none", textTransform: "uppercase" }}
               >
-                <h4>about</h4>
+                <h4>about&nbsp;</h4>
               </BetterLink>
-              <h4>&middot;</h4>
+              <ReverseHide>
+                <BetterLink
+                  to={`/tags`}
+                  css={{ textDecoration: "none", textTransform: "uppercase" }}
+                >
+                  <h4>tags&nbsp;</h4>
+                </BetterLink>
+              </ReverseHide>
               <A
                 href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
                 css={{ textDecoration: "none", textTransform: "uppercase" }}
               >
                 <h4>reading</h4>
               </A>
-            </Row>
+            </InnerRow>
           </Col>
         </Row>
-        <Row></Row>
         <Hide>
           <SubTitle>
             Traveling the world to understand the politics of digitally
@@ -164,11 +182,11 @@ export default () => (
           >
             {data.allMdx.countries.map(country => (
               <BetterLink
-                to={`/countries/${kebabCase(country.fieldValue)}/`}
+                to={`/${kebabCase(country.fieldValue)}/`}
                 css={{ textDecoration: "none" }}
               >
                 <span class="tag-green">
-                  {country.fieldValue} ({country.totalCount})
+                  {country.fieldValue}: {country.totalCount}
                 </span>
               </BetterLink>
             ))}
@@ -179,18 +197,18 @@ export default () => (
                 css={{ textDecoration: "none" }}
               >
                 <span class="tag-blue">
-                  {upperFirst(template.fieldValue)} ({template.totalCount})
+                  {upperFirst(template.fieldValue)}: {template.totalCount}
                 </span>
               </BetterLink>
             ))}
             <Spacer height={10} xsHeight={5} />
             {data.allMdx.tags.map(tag => (
               <BetterLink
-                to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                to={`/${kebabCase(tag.fieldValue)}/`}
                 css={{ textDecoration: "none" }}
               >
                 <span class="tag-red">
-                  {tag.fieldValue} ({tag.totalCount})
+                  {tag.fieldValue}: {tag.totalCount}
                 </span>
               </BetterLink>
             ))}

@@ -35,10 +35,10 @@ const CustomRow = styled(Row)`
 `
 
 const CustomCol = styled(Col)`
-  margin-left: 120px !important;
+  margin-left: 120px;
   @media screen and (max-width: 767px) {
     padding: 0 !important;
-    margin-left: 0;
+    /* margin-left: 0 !important; */
   }
 `
 const Divider = styled(Col)`

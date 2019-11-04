@@ -25,11 +25,12 @@ const MobileHeader = styled.h3`
   font-weight: 500;
   border-bottom: solid 2px;
   @media screen and (max-width: 767px) {
-    padding-left: 12px;
+    margin-left: -8px;
+    padding-left: 8px;
     margin-right: -8px;
     margin-top: 24px;
-    border-bottom: none;
-    padding-bottom: 16px;
+    /* border-bottom: none; */
+    padding-bottom: 6px;
     line-height: 1.2em;
   }
 `
@@ -120,8 +121,7 @@ const CustomRow = styled(Row)`
 const CustomCol = styled(Col)`
   margin-left: 70px !important;
   @media screen and (max-width: 767px) {
-    margin-left: 0;
-    padding: 0 !important;
+    margin-left: 0 !important;
   }
 `
 
@@ -130,7 +130,10 @@ class HomePrototype extends React.Component {
     const recently = this.props.data.recently.edges
     const everything = this.props.data.everything.edges
     const ghost = this.props.data.ghost.edges
-    console.log(ghost)
+    const god = everything.concat(ghost)
+    console.log("Everything", everything)
+
+    console.log("God", god)
 
     return (
       <Layout>
@@ -141,10 +144,10 @@ class HomePrototype extends React.Component {
             <Nav />
           </Divider>
           <CustomCol
-            xsOffset={1}
-            xs={10}
-            smOffset={1}
-            sm={10}
+            xsOffset={0}
+            xs={12}
+            smOffset={0}
+            sm={12}
             mdOffset={0}
             md={7}
             lgOffset={0}
@@ -181,9 +184,7 @@ class HomePrototype extends React.Component {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
+                            <BetterLink to={`/${kebabCase(country)}/`}>
                               {city}, {country}
                             </BetterLink>
                           </h5>
@@ -228,9 +229,7 @@ class HomePrototype extends React.Component {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
+                            <BetterLink to={`/${kebabCase(country)}/`}>
                               {city}, {country}
                             </BetterLink>
                           </h5>
@@ -301,9 +300,7 @@ class HomePrototype extends React.Component {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
+                            <BetterLink to={`/${kebabCase(country)}/`}>
                               {city}, {country}
                             </BetterLink>
                           </h5>
@@ -348,9 +345,7 @@ class HomePrototype extends React.Component {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink
-                              to={`/countries/${kebabCase(country)}/`}
-                            >
+                            <BetterLink to={`/${kebabCase(country)}/`}>
                               {city}, {country}
                             </BetterLink>
                           </h5>

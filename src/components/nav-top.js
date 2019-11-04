@@ -95,7 +95,7 @@ class Navbar extends React.Component {
             </NavLink>
           </h5>
           <h5>
-            <NavLink to={`/countries/${kebabCase(this.props.country)}`}>
+            <NavLink to={`/${kebabCase(this.props.country)}`}>
               {this.props.city}, {this.props.country}
             </NavLink>
           </h5>
