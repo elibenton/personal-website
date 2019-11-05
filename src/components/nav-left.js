@@ -87,7 +87,7 @@ const SubTitle = styled.h2`
 `
 
 const Image = styled.img`
-  margin: 4px 16px 8px 8px;
+  /* margin: 2px px 4px 4px; */
   @media screen and (max-width: 767px) {
     margin-top: 16px;
   }
@@ -122,7 +122,7 @@ export default () => (
       <Div>
         <Row css={{ alignItems: "center" }}>
           <BetterLink to="/">
-            <Image src={logo} alt="Logo" width="39" height="50" />
+            <Image src={logo} alt="Logo" width="70" height="70" />
           </BetterLink>
           <Col>
             <Name>{data.site.siteMetadata.title}</Name>
