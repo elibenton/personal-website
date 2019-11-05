@@ -14,9 +14,12 @@ const Input = styled.input`
   font-size: 14px;
 `
 
-const FormTitle = styled.h2`
+const FormTitle = styled.h1`
   margin-top: 0.2em;
   font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2em;
+  letter-spacing: -0.4px;
 `
 
 class EmailPopup extends React.Component {
