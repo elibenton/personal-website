@@ -60,6 +60,7 @@ const MobileRowOuter = styled(Row)`
 const MobileRowInner = styled(Row)`
 	display: flex;
 	flex-direction: row;
+	margin-left: -4px !important;
 	@media screen and (max-width: 767px) {
 		font-style: italic;
 		margin: 0px 0px 8px -4px !important;
@@ -100,6 +101,13 @@ const BetterLink = styled(Link)`
 	}
 `
 
+const MarginCol = styled(Col)`
+	margin-left: 25px;
+	@media screen and (max-width: 767px) {
+		margin-left: 0;
+	}
+`
+
 const IndexFiltered = ({ pageContext, data }) => {
 	const { name } = pageContext
 	const posts = data.filtered.edges
@@ -108,17 +116,17 @@ const IndexFiltered = ({ pageContext, data }) => {
 		<Layout>
 			<Helmet title={`${upperFirst(name)}`} />
 			<Row>
-				<Col xs={12} sm={12} md={4} lg={3}>
+				<Col xs={12} sm={12} md={4} lg={4}>
 					<Nav />
 				</Col>
-				<Col
-					xsOffset={0}
+				<MarginCol
+					// xsOffset={0}
 					xs={12}
-					smOffset={0}
+					// smOffset={0}
 					sm={12}
-					mdOffset={0}
+					// mdOffset={0}
 					md={7}
-					lgOffset={0}
+					// lgOffset={1}
 					lg={8}
 				>
 					<Spacer height={0} xsHeight={15} />
@@ -232,7 +240,7 @@ const IndexFiltered = ({ pageContext, data }) => {
 							</Collapsible>
 						)
 					})}
-				</Col>
+				</MarginCol>
 			</Row>
 			<Spacer height={40} xsHeight={40} />
 			<Footer />

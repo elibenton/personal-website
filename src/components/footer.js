@@ -19,7 +19,7 @@ const A = styled.a`
 const Footer = () => {
 	return (
 		<FooterWrapper>
-			<Col md={3} lg={3}>
+			<Col css={{ paddingLeft: "0 !important" }} md={3} lg={3}>
 				<h4>
 					<span>
 						<A href='https://github.com/elibenton/personal-website'>Codebase</A>

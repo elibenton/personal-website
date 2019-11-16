@@ -30,24 +30,6 @@ const Header = styled.h2`
 const Bold = styled.span`
 	font-weight: bold;
 `
-// const CustomRow = styled(Row)`
-// 	margin: 0 0 0 0 !important;
-// `
-
-// const CustomCol = styled(Col)`
-// 	margin-left: 120px;
-// 	@media screen and (max-width: 767px) {
-// 		padding: 0 !important;
-// 		/* margin-left: 0 !important; */
-// 	}
-// `
-// const Divider = styled(Col)`
-// 	z-index: 100;
-// 	@media screen and (max-width: 767px) {
-// 		position: sticky;
-// 		top: 0px;
-// 	}
-// `
 
 class AboutPrototype extends React.Component {
 	render() {
