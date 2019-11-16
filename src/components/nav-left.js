@@ -14,7 +14,6 @@ const Name = styled.h1`
 	margin-top: 0;
 	margin-bottom: 2px;
 	line-height: 1.1em;
-	width: 108%;
 	@media screen and (max-width: 767px) {
 		margin: 16px 0 0 4px;
 		font-weight: 500;
@@ -52,6 +51,7 @@ const Row = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin-left: -4px;
+	align-items: center;
 `
 
 const InnerRow = styled.div`

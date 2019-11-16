@@ -2,20 +2,9 @@ import React from "react"
 import "./layout.css"
 import Helmet from "react-helmet"
 import SEO from "../components/seo"
-import Spacer from "../utils/spacer"
-import styled from "styled-components"
-import { Grid } from "react-flexbox-grid"
-
-const Padding = styled.div`
-	padding-left: 25px;
-	padding-right: 25px;
-	@media screen and (max-width: 767px) {
-		padding: 0;
-	}
-`
 
 export default ({ children }) => (
-	<Grid fluid>
+	<div>
 		<Helmet>
 			<meta
 				name='viewport'
@@ -32,9 +21,6 @@ export default ({ children }) => (
 			/>
 		</Helmet>
 		<SEO />
-		<Padding>
-			<Spacer height={50} xsHeight={0} />
-			{children}
-		</Padding>
-	</Grid>
+		{children}
+	</div>
 )

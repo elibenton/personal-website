@@ -13,10 +13,19 @@ import Layout from "../components/layout"
 import Spacer from "../utils/spacer"
 import Nav from "../components/nav-left"
 import Footer from "../components/footer"
+import YAMLData from "../../content/tag-descriptions.yaml"
 
 // ancillary libraries
 import moment from "moment"
 import { kebabCase, upperFirst } from "lodash"
+
+const Padding = styled.div`
+	padding-left: 25px;
+	padding-right: 25px;
+	@media screen and (max-width: 767px) {
+		padding: 0;
+	}
+`
 
 const MobileHeader = styled.h3`
 	font-size: 22px;
@@ -25,9 +34,9 @@ const MobileHeader = styled.h3`
 	font-weight: 500;
 	border-bottom: solid 2px;
 	@media screen and (max-width: 767px) {
-		margin-left: -8px;
-		padding-left: 8px;
-		margin-right: -8px;
+		margin-left: -16px;
+		padding-left: 16px;
+		margin-right: -16px;
 		margin-top: 24px;
 		padding-bottom: 6px;
 		line-height: 1.2em;
@@ -102,7 +111,7 @@ const BetterLink = styled(Link)`
 `
 
 const MarginCol = styled(Col)`
-	margin-left: 25px;
+	margin-left: 50px;
 	@media screen and (max-width: 767px) {
 		margin-left: 0;
 	}
@@ -114,136 +123,130 @@ const IndexFiltered = ({ pageContext, data }) => {
 
 	return (
 		<Layout>
-			<Helmet title={`${upperFirst(name)}`} />
-			<Row>
-				<Col xs={12} sm={12} md={4} lg={4}>
-					<Nav />
-				</Col>
-				<MarginCol
-					// xsOffset={0}
-					xs={12}
-					// smOffset={0}
-					sm={12}
-					// mdOffset={0}
-					md={7}
-					// lgOffset={1}
-					lg={8}
-				>
-					<Spacer height={0} xsHeight={15} />
-					<MobileHeader>{upperFirst(name)}</MobileHeader>
-					{posts.map(({ node }) => {
-						const {
-							title,
-							date,
-							city,
-							country,
-							description,
-							template,
-						} = node.frontmatter
-						const { slug, month } = node.fields
-						return (
-							<Collapsible
-								easing='ease-in-out'
-								open={false}
-								transitionTime={200}
-								trigger={
-									<div>
-										<MobileRowOuter>
-											<MobileTitle
+			<Padding>
+				<Spacer height={50} xsHeight={15} />
+				<Helmet title={`${upperFirst(name)}`} />
+				<Row>
+					<Col xs={12} sm={12} md={4} lg={3}>
+						<Nav />
+					</Col>
+					<MarginCol xs={12} sm={12} md={7} lg={8}>
+						<Spacer height={0} xsHeight={15} />
+						<MobileHeader>{upperFirst(name)}</MobileHeader>
+						{posts.map(({ node }) => {
+							const {
+								title,
+								date,
+								city,
+								country,
+								description,
+								template,
+							} = node.frontmatter
+							const { slug, month } = node.fields
+							return (
+								<Collapsible
+									easing='ease-in-out'
+									open={false}
+									transitionTime={200}
+									trigger={
+										<div>
+											<MobileRowOuter>
+												<MobileTitle
+													css={{
+														fontSize: "15px",
+														marginLeft: "0px",
+														marginBottom: "0px",
+													}}
+												>
+													{title}
+												</MobileTitle>
+												<MobileRowInner>
+													<h5>
+														<BetterLink to={`/${kebabCase(country)}/`}>
+															{city}, {country}
+														</BetterLink>
+													</h5>
+													<h5>&middot;</h5>
+													<h5 css={{ paddingRight: "4px" }}>
+														<BetterLink
+															to={`/${moment(month).format("YYYY")}/${moment(
+																month
+															)
+																.format("MMMM")
+																.toLowerCase()}/`}
+														>
+															{date}
+														</BetterLink>
+													</h5>
+												</MobileRowInner>
+											</MobileRowOuter>
+										</div>
+									}
+									triggerWhenOpen={
+										<div>
+											<MobileRowOuter
 												css={{
-													fontSize: "15px",
-													marginLeft: "0px",
-													marginBottom: "0px",
+													justifyContent: "space-between",
+													cursor: "pointer",
+													borderBottom: "dotted",
+													borderBottomWidth: "2px",
+													borderBottomColor: "#ffd666",
 												}}
 											>
-												{title}
-											</MobileTitle>
-											<MobileRowInner>
-												<h5>
-													<BetterLink to={`/${kebabCase(country)}/`}>
-														{city}, {country}
-													</BetterLink>
-												</h5>
-												<h5>&middot;</h5>
-												<h5 css={{ paddingRight: "4px" }}>
-													<BetterLink
-														to={`/${moment(month).format("YYYY")}/${moment(
-															month
-														)
-															.format("MMMM")
-															.toLowerCase()}/`}
-													>
-														{date}
-													</BetterLink>
-												</h5>
-											</MobileRowInner>
-										</MobileRowOuter>
-									</div>
-								}
-								triggerWhenOpen={
-									<div>
-										<MobileRowOuter
-											css={{
-												justifyContent: "space-between",
-												cursor: "pointer",
-												borderBottom: "dotted",
-												borderBottomWidth: "2px",
-												borderBottomColor: "#ffd666",
-											}}
-										>
-											<MobileTitle
-												css={{
-													fontSize: "15px",
-													marginLeft: "0px",
-													marginBottom: "0px",
-												}}
-											>
-												{title}
-											</MobileTitle>
-											<MobileRowInner>
-												<h5>
-													<BetterLink to={`/${kebabCase(country)}/`}>
-														{city}, {country}
-													</BetterLink>
-												</h5>
-												<h5>&middot;</h5>
-												<h5 css={{ paddingRight: "4px" }}>
-													<BetterLink
-														to={`/${moment(month).format("YYYY")}/${moment(
-															month
-														)
-															.format("MMMM")
-															.toLowerCase()}/`}
-													>
-														{date}
-													</BetterLink>
-												</h5>
-											</MobileRowInner>
-										</MobileRowOuter>
-									</div>
-								}
-							>
-								<MobileContainer
-									css={{
-										marginLeft: "0px",
-										fontSize: "15px",
-									}}
+												<MobileTitle
+													css={{
+														fontSize: "15px",
+														marginLeft: "0px",
+														marginBottom: "0px",
+													}}
+												>
+													{title}
+												</MobileTitle>
+												<MobileRowInner>
+													<h5>
+														<BetterLink to={`/${kebabCase(country)}/`}>
+															{city}, {country}
+														</BetterLink>
+													</h5>
+													<h5>&middot;</h5>
+													<h5 css={{ paddingRight: "4px" }}>
+														<BetterLink
+															to={`/${moment(month).format("YYYY")}/${moment(
+																month
+															)
+																.format("MMMM")
+																.toLowerCase()}/`}
+														>
+															{date}
+														</BetterLink>
+													</h5>
+												</MobileRowInner>
+											</MobileRowOuter>
+										</div>
+									}
 								>
-									{description}
-								</MobileContainer>
-								<BetterLink
-									to={`/${template}${slug}`}
-									css={{ textDecoration: "none" }}
-								>
-									<Button>Read More&nbsp;➤</Button>
-								</BetterLink>
-							</Collapsible>
-						)
-					})}
-				</MarginCol>
-			</Row>
-			<Spacer height={40} xsHeight={40} />
-			<Footer />
+									<MobileContainer
+										css={{
+											marginLeft: "0px",
+											fontSize: "15px",
+										}}
+									>
+										{description}
+									</MobileContainer>
+									<BetterLink
+										to={`/${template}${slug}`}
+										css={{ textDecoration: "none" }}
+									>
+										<Button>Read More&nbsp;➤</Button>
+									</BetterLink>
+								</Collapsible>
+							)
+						})}
+					</MarginCol>
+				</Row>
+				<Spacer height={40} xsHeight={40} />
+				<Footer />
+			</Padding>
 		</Layout>
 	)
 }

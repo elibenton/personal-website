@@ -10,21 +10,17 @@ import { Link, StaticQuery, graphql } from "gatsby"
 
 import styled from "styled-components"
 import Nav from "../components/nav-left"
+import Layout from "../components/layout"
 import { Row, Col } from "react-flexbox-grid"
 import Spacer from "../utils/spacer"
 
 const BetterLink = styled(Link)`
 	text-decoration: none;
 `
-
-const CustomRow = styled(Row)`
-	margin: 0 0 0 0 !important;
-`
-const Divider = styled(Col)`
-	z-index: 100;
+const MarginCol = styled(Col)`
+	margin-left: 50px;
 	@media screen and (max-width: 767px) {
-		position: sticky;
-		top: 0px;
+		margin-left: 0;
 	}
 `
 
@@ -54,14 +50,23 @@ export default () => (
 			}
 		`}
 		render={data => (
-			<div>
+			<Layout>
 				<Helmet title={`Topics`} />
-				<CustomRow>
-					<Divider xs={12} sm={12} md={3} lg={3}>
+				<Row>
+					<Col xs={12} sm={12} md={3} lg={3}>
 						<Nav />
-					</Divider>
-					<Col xs={12} sm={12} md={7} lg={6}>
-						<Spacer height={0} xsHeight={10} />
+					</Col>
+					<MarginCol
+						xsOffset={1}
+						smOffset={1}
+						mdOffset={0}
+						lgOffset={0}
+						xs={10}
+						sm={10}
+						md={7}
+						lg={6}
+					>
+						<Spacer height={0} xsHeight={30} />
 						<div
 							css={{
 								marginLeft: "-6px",
@@ -102,10 +107,10 @@ export default () => (
 								</BetterLink>
 							))}
 						</div>
-					</Col>
-				</CustomRow>
+					</MarginCol>
+				</Row>
 				<Spacer height={20} xsHeight={20} />
-			</div>
+			</Layout>
 		)}
 	/>
 )

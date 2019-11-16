@@ -1,8 +1,3 @@
-/* TAKING MANUAL CONTROL OVER COLUMN WIDTH */
-.col-lg-4 {
-	flex-basis: 28%;
-}
-
 body {
 	position: relative;
 	font-family: "Georgia";
