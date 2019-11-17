@@ -1,7 +1,6 @@
 // Core Libraries
 import React from "react"
 import { graphql, Link } from "gatsby"
-import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
@@ -56,23 +55,30 @@ export const TagSpan = styled.div`
 	}
 `
 
-function PageTemplate({ data }) {
+function PostTemplate({ data }) {
 	const siteTitle = data.site.siteMetadata.title
-	const { mdx } = data
-	const {
-		title,
-		description,
-		date,
-		city,
-		country,
-		tags,
-		template,
-	} = mdx.frontmatter
+	const post = data.ghostPost
+	const { html, title, updated_at, posted_at, tags, excerpt } = post
+	const template = tags[0].name
+	const city = tags[1].name
+	const country = tags[2].name
+
+	console.log("TEMPLATE:", template)
+
+	// const {
+	// 	title,
+	// 	description,
+	// 	date,
+	// 	city,
+	// 	country,
+	// 	tags,
+	// 	template,
+	// } = post.frontmatter
 
 	return (
 		<Layout location={data.location} title={siteTitle}>
 			<Helmet title={title} />
-			<Nav title={title} date={date} city={city} country={country} />
+			<Nav title={title} date={posted_at} city={city} country={country} />
 			<Spacer height={60} xsHeight={30} />
 			<StyledRow>
 				<Col
@@ -100,27 +106,27 @@ function PageTemplate({ data }) {
 				>
 					<Spacer height={30} xsHeight={0} />
 					<Col>
-						<h4 css={{ fontSize: "15px" }}>{description}</h4>
+						<h4 css={{ fontSize: "15px" }}>{excerpt}</h4>
 					</Col>
 					<Col>
 						<div>
-							{tags.map(tag => (
+							{/* {tags.map(tag => (
 								<PostLink to={`/${kebabCase(tag)}/`}>
 									<h5 class='tag'>{tag}</h5>
 								</PostLink>
-							))}
+							))} */}
 						</div>
 						<div>
 							<h5>
 								<PostLink
-									to={`/${moment(date, "YYYY").format("YYYY")}/${moment(
-										date,
+									to={`/${moment(posted_at, "YYYY").format("YYYY")}/${moment(
+										posted_at,
 										"MMMM"
 									)
 										.format("MMMM")
 										.toLowerCase()}/`}
 								>
-									<FaCalendarDay /> {date}
+									<FaCalendarDay /> {posted_at}
 								</PostLink>
 							</h5>
 							<h5>
@@ -154,10 +160,13 @@ function PageTemplate({ data }) {
 					lgOffset={3}
 					lg={6}
 				>
-					<Spacer height={80} xsHeight={20} />
-					<div css={{ lineHeight: "1.6em" }}>
-						<MDXRenderer>{mdx.body}</MDXRenderer>
-					</div>
+					<Spacer height={0} xsHeight={30} />
+					<section
+						dangerouslySetInnerHTML={{
+							__html: html,
+						}}
+					/>
+					<Spacer height={135} xsHeight={20} />
 				</Col>
 			</StyledRow>
 			<Spacer height={100} />
@@ -165,28 +174,23 @@ function PageTemplate({ data }) {
 	)
 }
 
-export default PageTemplate
+export default PostTemplate
 
-export const pageQuery = graphql`
-	query MdxPostQuery($id: String) {
+export const postQuery = graphql`
+	query($slug: String!) {
 		site {
 			siteMetadata {
 				title
-				author
 			}
 		}
-		mdx(id: { eq: $id }) {
+		ghostPost(slug: { eq: $slug }) {
+			html
 			id
-			frontmatter {
-				title
-				description
-				date(formatString: "MMMM DD, YYYY")
-				city
-				country
-				tags
-				template
+			updated_at(formatString: "MMMM DD, YYYY")
+			published_at(formatString: "MMMM DD, YYYY")
+			tags {
+				name
 			}
-			body
 		}
 	}
 `

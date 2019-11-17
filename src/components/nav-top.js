@@ -89,7 +89,9 @@ class Navbar extends React.Component {
 				<Hide>
 					<h5>
 						<NavLink
-							to={`/${moment(this.props.date, "YYYY")}/${moment(this.props.date)
+							to={`/${moment(this.props.date, "YYYY").format("YYYYY")}/${moment(
+								this.props.date
+							)
 								.format("YYYY")
 								.toLowerCase()}/`}
 						>

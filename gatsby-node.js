@@ -85,7 +85,7 @@ exports.createPages = ({ graphql, actions }) => {
 					const { slug } = ghost.node
 					createPage({
 						path: `/ghost/${slug}`,
-						component: path.resolve(`./src/templates/ghost-post.js`),
+						component: path.resolve(`./src/templates/post.js`),
 						context: {
 							slug: ghost.node.slug,
 						},
