@@ -1,6 +1,13 @@
+// Core Libraries
 import React from "react"
+
+// Base Stylesheet
 import "./layout.css"
+
+// Yarn Packages
 import Helmet from "react-helmet"
+
+// Components
 import SEO from "../components/seo"
 
 export default ({ children }) => (

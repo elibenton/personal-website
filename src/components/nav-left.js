@@ -1,10 +1,16 @@
+// Core Libraries
 import React from "react"
-import logo from "../../content/images/tinhat.gif"
 import { Link, StaticQuery, graphql } from "gatsby"
-import kebabCase from "lodash/kebabCase"
-import upperFirst from "lodash/upperFirst"
+
+// Static Content
+import logo from "../../content/images/tinhat.gif"
+
+// Yarn Packages
 import styled from "styled-components"
+
+// Utilities and Ancillary Libraries
 import Spacer from "../utils/spacer"
+import { kebabCase, upperFirst } from "lodash"
 
 const Name = styled.h1`
 	display: flex;
@@ -19,15 +25,6 @@ const Name = styled.h1`
 		font-weight: 500;
 	}
 `
-
-const BetterLink = styled(Link)`
-	text-decoration: none;
-`
-
-const A = styled.a`
-	text-decoration: none;
-`
-
 const Hide = styled.div`
 	@media screen and (max-width: 767px) {
 		display: none;
@@ -39,21 +36,18 @@ const ReverseHide = styled.div`
 		display: inline;
 	}
 `
-
 const Col = styled.div`
 	@media screen and (max-width: 767px) {
 		display: flex;
 		flex-direction: column;
 	}
 `
-
 const Row = styled.div`
 	display: flex;
 	flex-direction: row;
 	margin-left: -4px;
 	align-items: center;
 `
-
 const InnerRow = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -62,7 +56,6 @@ const InnerRow = styled.div`
 		margin-left: 0px;
 	}
 `
-
 const SubTitle = styled.h2`
 	margin-top: 30px;
 	text-align: left;
@@ -102,7 +95,7 @@ export default () => (
 		render={data => (
 			<div>
 				<Row>
-					<BetterLink to='/'>
+					<Link css={{ textDecoration: "none" }} to='/'>
 						<img
 							css={{ marginRight: "10px" }}
 							src={logo}
@@ -110,38 +103,38 @@ export default () => (
 							width='60'
 							height='60'
 						/>
-					</BetterLink>
+					</Link>
 					<Col>
 						<Name>{data.site.siteMetadata.title}</Name>
 						<InnerRow>
 							<Hide>
-								<BetterLink
+								<Link
 									to={`/`}
 									css={{ textDecoration: "none", textTransform: "uppercase" }}
 								>
 									<h4>home&nbsp;</h4>
-								</BetterLink>
+								</Link>
 							</Hide>
-							<BetterLink
+							<Link
 								to='/about'
 								css={{ textDecoration: "none", textTransform: "uppercase" }}
 							>
 								<h4>about&nbsp;</h4>
-							</BetterLink>
+							</Link>
 							<ReverseHide>
-								<BetterLink
+								<Link
 									to={`/tags`}
 									css={{ textDecoration: "none", textTransform: "uppercase" }}
 								>
 									<h4>tags&nbsp;</h4>
-								</BetterLink>
+								</Link>
 							</ReverseHide>
-							<A
+							<a
 								href='https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a'
 								css={{ textDecoration: "none", textTransform: "uppercase" }}
 							>
 								<h4>reading</h4>
-							</A>
+							</a>
 						</InnerRow>
 					</Col>
 				</Row>
@@ -161,36 +154,36 @@ export default () => (
 						}}
 					>
 						{data.allMdx.countries.map(country => (
-							<BetterLink
+							<Link
 								to={`/${kebabCase(country.fieldValue)}/`}
 								css={{ textDecoration: "none" }}
 							>
 								<span class='tag-green'>
 									{country.fieldValue}: {country.totalCount}
 								</span>
-							</BetterLink>
+							</Link>
 						))}
 						<Spacer height={10} xsHeight={5} />
 						{data.allMdx.templates.map(template => (
-							<BetterLink
+							<Link
 								to={`/${kebabCase(template.fieldValue)}/`}
 								css={{ textDecoration: "none" }}
 							>
 								<span class='tag-blue'>
 									{upperFirst(template.fieldValue)}: {template.totalCount}
 								</span>
-							</BetterLink>
+							</Link>
 						))}
 						<Spacer height={10} xsHeight={5} />
 						{data.allMdx.tags.map(tag => (
-							<BetterLink
+							<Link
 								to={`/${kebabCase(tag.fieldValue)}/`}
 								css={{ textDecoration: "none" }}
 							>
 								<span class='tag-red'>
 									{tag.fieldValue}: {tag.totalCount}
 								</span>
-							</BetterLink>
+							</Link>
 						))}
 					</div>
 				</Hide>

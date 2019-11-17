@@ -1,13 +1,20 @@
+// Core Libraries
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+
+// Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
 import Helmet from "react-helmet"
-import Spacer from "../utils/spacer"
 import styled from "styled-components"
+
+// Components
 import Layout from "../components/layout"
 import Nav from "../components/nav-left"
 import Footer from "../components/footer"
+
+// Utilities
+import Spacer from "../utils/spacer"
 
 const About = styled.p`
 	font-size: 19px;
@@ -22,15 +29,11 @@ const AboutContainer = styled.div`
 		flex-direction: column;
 	}
 `
-const Header = styled.h2`
+const Header = styled.h3`
 	margin-top: 0;
 	font-size: 18px;
-	line-height: 1.5em;
+	line-height: 0.8em;
 `
-const Bold = styled.span`
-	font-weight: bold;
-`
-
 const MarginCol = styled(Col)`
 	margin-left: 50px;
 	@media screen and (max-width: 767px) {
@@ -38,7 +41,7 @@ const MarginCol = styled(Col)`
 	}
 `
 const Padding = styled.div`
-	padding-left: 25px;
+	padding-left: 45px;
 	padding-right: 25px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
@@ -56,16 +59,7 @@ class AboutPrototype extends React.Component {
 						<Col xs={12} sm={12} md={4} lg={3}>
 							<Nav />
 						</Col>
-						<MarginCol
-							xsOffset={1}
-							smOffset={1}
-							mdOffset={0}
-							lgOffset={0}
-							xs={10}
-							sm={10}
-							md={7}
-							lg={6}
-						>
+						<MarginCol xsOffset={1} xs={10} sm={10} md={7} lg={6}>
 							<Spacer height={0} xsHeight={30} />
 							<AboutContainer>
 								<Img fluid={this.props.data.file.childImageSharp.fluid} />
@@ -91,11 +85,11 @@ class AboutPrototype extends React.Component {
 							</About>
 							<br />
 							<Header>
-								<Bold>Email: </Bold>
+								<b>Email: </b>
 								<a href='mailto:eliunited@gmail.com'>eliunited@gmail.com</a>
 							</Header>
 							<Header>
-								<Bold>WhatsApp: </Bold>+1 (205) 876-3367
+								<b>WhatsApp: </b>+1 (205) 876-3367
 							</Header>
 							<Spacer height={135} xsHeight={20} />
 						</MarginCol>

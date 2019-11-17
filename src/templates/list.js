@@ -1,32 +1,33 @@
-// core libraries
+// Core Libraries
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-// yarn packages
+// YAML Data
+// import YAMLData from "../../content/tag-descriptions.yaml"
+
+// Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
 import Collapsible from "react-collapsible"
 import Helmet from "react-helmet"
 import styled from "styled-components"
 
-// components and utils
+// Components
 import Layout from "../components/layout"
-import Spacer from "../utils/spacer"
 import Nav from "../components/nav-left"
 import Footer from "../components/footer"
-import YAMLData from "../../content/tag-descriptions.yaml"
 
-// ancillary libraries
-import moment from "moment"
+// Utilities and Ancillary Libraries
 import { kebabCase, upperFirst } from "lodash"
+import moment from "moment"
+import Spacer from "../utils/spacer"
 
 const Padding = styled.div`
-	padding-left: 25px;
+	padding-left: 45px;
 	padding-right: 25px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
 	}
 `
-
 const MobileHeader = styled.h3`
 	font-size: 22px;
 	margin: 0px 0px 12px 0px;
@@ -42,7 +43,6 @@ const MobileHeader = styled.h3`
 		line-height: 1.2em;
 	}
 `
-
 const Button = styled.h4`
 	margin: 16px 0 30px 0;
 	font-weight: 400;
@@ -92,14 +92,12 @@ const MobileTitle = styled.h4`
 		}
 	}
 `
-
 const MobileContainer = styled.h4`
 	width: 70%;
 	@media screen and (max-width: 767px) {
 		width: 100%;
 	}
 `
-
 const BetterLink = styled(Link)`
 	text-decoration: none;
 	@media screen and (max-width: 767px) {
@@ -109,18 +107,15 @@ const BetterLink = styled(Link)`
 		}
 	}
 `
-
 const MarginCol = styled(Col)`
 	margin-left: 50px;
 	@media screen and (max-width: 767px) {
 		margin-left: 0;
 	}
 `
-
 const IndexFiltered = ({ pageContext, data }) => {
 	const { name } = pageContext
 	const posts = data.filtered.edges
-
 	return (
 		<Layout>
 			<Padding>
@@ -211,8 +206,9 @@ const IndexFiltered = ({ pageContext, data }) => {
 													<h5>&middot;</h5>
 													<h5 css={{ paddingRight: "4px" }}>
 														<BetterLink
-															to={`/${moment(month).format("YYYY")}/${moment(
-																month
+															to={`/${moment(month, "YYYY")}/${moment(
+																month,
+																"MMMM"
 															)
 																.format("MMMM")
 																.toLowerCase()}/`}

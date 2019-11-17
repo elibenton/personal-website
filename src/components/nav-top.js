@@ -1,9 +1,16 @@
+// Core Libraries
 import React from "react"
 import { Link } from "gatsby"
+
+// Static Content
+import logo from "../../content/images/tinhat.gif"
+
+// Yarn Packages
 import styled from "styled-components"
+
+// Utilities and Ancillary Libraries
 import { kebabCase } from "lodash"
 import moment from "moment"
-import logo from "../../content/images/tinhat.gif"
 
 const Nav = styled.div`
 	position: sticky;
@@ -26,7 +33,6 @@ const Nav = styled.div`
 		padding-right: 16px;
 	}
 `
-
 const NavLink = styled(Link)`
 	text-decoration: none;
 	color: black;
@@ -36,33 +42,29 @@ const NavLink = styled(Link)`
 		padding-right: 5px;
 	}
 `
-
 const Hide = styled.div`
 	flex-direction: column;
 	@media screen and (max-width: 767px) {
 		display: none;
 	}
 `
-
 const Img = styled.img`
 	margin: 16px 80px 8px 0;
 	@media screen and (max-width: 767px) {
 		margin: 0 8px 4px 0;
 	}
 `
+
 var prevScrollPos
 
 class Navbar extends React.Component {
 	state = { scrollingUp: true }
-
 	componentDidMount() {
 		window.addEventListener("scroll", this.handleScroll)
 	}
-
 	componentWillUnmount() {
 		window.removeEventListener("scroll", this.handleScroll)
 	}
-
 	handleScroll = () => {
 		var currentScrollPos = window.pageYOffset
 		if (prevScrollPos > currentScrollPos) {
@@ -72,7 +74,6 @@ class Navbar extends React.Component {
 		}
 		prevScrollPos = currentScrollPos
 	}
-
 	render() {
 		return (
 			<Nav
@@ -88,10 +89,8 @@ class Navbar extends React.Component {
 				<Hide>
 					<h5>
 						<NavLink
-							to={`/${moment(this.props.date).format("YYYY")}/${moment(
-								this.props.date
-							)
-								.format("MMMM")
+							to={`/${moment(this.props.date, "YYYY")}/${moment(this.props.date)
+								.format("YYYY")
 								.toLowerCase()}/`}
 						>
 							{this.props.date}

@@ -1,17 +1,18 @@
+// Core Libraries
 import React from "react"
-
-// Utilities
-import kebabCase from "lodash/kebabCase"
-import upperFirst from "lodash/upperFirst"
-
-// Components
-import { Helmet } from "react-helmet"
 import { Link, StaticQuery, graphql } from "gatsby"
 
-import styled from "styled-components"
+// Components
 import Nav from "../components/nav-left"
 import Layout from "../components/layout"
+
+// Yarn Packages
+import styled from "styled-components"
 import { Row, Col } from "react-flexbox-grid"
+import Helmet from "react-helmet"
+
+// Utilities and Ancillary Libraries
+import { kebabCase, upperFirst } from "lodash"
 import Spacer from "../utils/spacer"
 
 const BetterLink = styled(Link)`
