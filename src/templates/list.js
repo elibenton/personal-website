@@ -125,7 +125,7 @@ const IndexFiltered = ({ pageContext, data }) => {
 					<MarginCol xs={12} sm={12} md={7} lg={8}>
 						<Spacer height={0} xsHeight={15} />
 						<MobileHeader>{startCase(name)}</MobileHeader>
-						{YAMLData.map(tag => {
+						{/* {YAMLData.map(tag => {
 							console.log(
 								"Page:",
 								name,
@@ -147,7 +147,7 @@ const IndexFiltered = ({ pageContext, data }) => {
 									)}
 								</div>
 							)
-						})}
+						})} */}
 						{posts.map(({ node }) => {
 							const {
 								title,
