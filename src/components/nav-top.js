@@ -83,7 +83,7 @@ class Navbar extends React.Component {
 				<NavLink to='/'>
 					<Img src={logo} alt='Logo' width='40' height='40' />
 				</NavLink>
-				<h3 css={{ fontSize: "1.1em", lineHeight: "1.1em", margin: "0" }}>
+				<h3 css={{ fontSize: "1.2em", lineHeight: "1.1em", margin: "0" }}>
 					{this.props.title}
 				</h3>
 				<Hide>

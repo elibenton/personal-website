@@ -157,6 +157,21 @@ function PostTemplate({ data }) {
 				</Col>
 			</StyledRow>
 			<Spacer height={100} />
+			<script
+				type='text/javascript'
+				src='//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js'
+				data-dojo-config='usePlainJson: true, isDebug: false'
+			></script>
+			<script type='text/javascript'>
+				window.dojoRequire(["mojo/signup-forms/Loader"], function(L){" "}
+				{L.start({
+					baseUrl: "mc.us3.list-manage.com",
+					uuid: "d1b94901dc20703c70ecddf85",
+					lid: "e8d93b9cc3",
+					uniqueMethods: true,
+				})}
+				)
+			</script>
 		</Layout>
 	)
 }
