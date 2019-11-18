@@ -63,7 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
 					path: `/`,
 					component: list,
 					context: {
-						name: "blog",
+						name: "All Posts",
 						filter: {},
 					},
 				})

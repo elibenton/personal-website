@@ -58,27 +58,17 @@ export const TagSpan = styled.div`
 function PostTemplate({ data }) {
 	const siteTitle = data.site.siteMetadata.title
 	const post = data.ghostPost
-	const { html, title, updated_at, posted_at, tags, excerpt } = post
+	const { html, title, updated_at, published_at, tags, excerpt } = post
 	const template = tags[0].name
 	const city = tags[1].name
 	const country = tags[2].name
 
-	console.log("TEMPLATE:", template)
-
-	// const {
-	// 	title,
-	// 	description,
-	// 	date,
-	// 	city,
-	// 	country,
-	// 	tags,
-	// 	template,
-	// } = post.frontmatter
+	console.log("TITLE:", title)
 
 	return (
 		<Layout location={data.location} title={siteTitle}>
 			<Helmet title={title} />
-			<Nav title={title} date={posted_at} city={city} country={country} />
+			<Nav title={title} date={published_at} city={city} country={country} />
 			<Spacer height={60} xsHeight={30} />
 			<StyledRow>
 				<Col
@@ -119,14 +109,11 @@ function PostTemplate({ data }) {
 						<div>
 							<h5>
 								<PostLink
-									to={`/${moment(posted_at, "YYYY").format("YYYY")}/${moment(
-										posted_at,
-										"MMMM"
-									)
+									to={`/${moment().format("YYYY")}/${moment(published_at)
 										.format("MMMM")
 										.toLowerCase()}/`}
 								>
-									<FaCalendarDay /> {posted_at}
+									<FaCalendarDay /> {published_at}
 								</PostLink>
 							</h5>
 							<h5>
@@ -184,6 +171,8 @@ export const postQuery = graphql`
 			}
 		}
 		ghostPost(slug: { eq: $slug }) {
+			excerpt
+			title
 			html
 			id
 			updated_at(formatString: "MMMM DD, YYYY")

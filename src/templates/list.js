@@ -3,7 +3,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 // YAML Data
-// import YAMLData from "../../content/tag-descriptions.yaml"
+import YAMLData from "../../content/tag-descriptions.yaml"
 
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
@@ -17,7 +17,7 @@ import Nav from "../components/nav-left"
 import Footer from "../components/footer"
 
 // Utilities and Ancillary Libraries
-import { kebabCase, upperFirst } from "lodash"
+import { kebabCase, startCase } from "lodash"
 import moment from "moment"
 import Spacer from "../utils/spacer"
 
@@ -78,18 +78,15 @@ const MobileRowInner = styled(Row)`
 	}
 `
 const MobileTitle = styled.h4`
-	letter-spacing: 0.7px;
+	letter-spacing: 0.8px;
 	font-weight: 500;
-	:hover,
-	:active {
-		color: #ffd666;
-	}
+	margin: 0;
+`
+const MobileText = styled.h4`
+	font-size: 16px;
+	margin-left: 0px;
 	@media screen and (max-width: 767px) {
-		font-size: 16px;
-		:hover,
-		:active {
-			color: black;
-		}
+		padding-left: 12px;
 	}
 `
 const MobileContainer = styled.h4`
@@ -120,14 +117,37 @@ const IndexFiltered = ({ pageContext, data }) => {
 		<Layout>
 			<Padding>
 				<Spacer height={50} xsHeight={15} />
-				<Helmet title={`${upperFirst(name)}`} />
+				<Helmet title={`${startCase(name)}`} />
 				<Row>
 					<Col xs={12} sm={12} md={4} lg={3}>
 						<Nav />
 					</Col>
 					<MarginCol xs={12} sm={12} md={7} lg={8}>
 						<Spacer height={0} xsHeight={15} />
-						<MobileHeader>{upperFirst(name)}</MobileHeader>
+						<MobileHeader>{startCase(name)}</MobileHeader>
+						{YAMLData.map(tag => {
+							console.log(
+								"Page:",
+								name,
+								"\nTag:",
+								tag.name,
+								"\nDescription:",
+								tag.description
+							)
+
+							return (
+								<div>
+									{tag.name === name ? (
+										<div>
+											<MobileText>{tag.description}</MobileText>
+											<br />
+										</div>
+									) : (
+										<div />
+									)}
+								</div>
+							)
+						})}
 						{posts.map(({ node }) => {
 							const {
 								title,
@@ -184,7 +204,7 @@ const IndexFiltered = ({ pageContext, data }) => {
 													justifyContent: "space-between",
 													cursor: "pointer",
 													borderBottom: "dotted",
-													borderBottomWidth: "2px",
+													borderBottomWidth: "2.2px",
 													borderBottomColor: "#ffd666",
 												}}
 											>
