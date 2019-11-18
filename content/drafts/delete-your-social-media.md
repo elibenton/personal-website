@@ -1,1 +1,0 @@
-Instagram was really quite simple to let go. Once I was fully repatriated in real life, the platform's promise of simulacrum-as-reality  is quickly unveiled. Each user’s personal celebration exposed as distraught aspiration. 
