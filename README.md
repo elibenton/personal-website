@@ -1,8 +1,8 @@
-_As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I write about the journey, reviews the works I am studying, and update a podcast documenting the year._
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/350d5dbd-f00e-404a-b13d-3c46627ed351/deploy-status)](https://app.netlify.com/sites/elibenton/deploys)
 
-# Website Structure
+**As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I write about the journey, reviews the works I am studying, and update a podcast documenting the year.**
+
+## Website Structure
 
     .
     ├── /src
@@ -63,7 +63,7 @@ _As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of
 - [x] ~~Publish-to-Medium~~
 - [x] ~~Publish-to-Mailchimp~~
 
-## 🌲Branches
+## 🌲 Branches
 
 #### version-3
 
@@ -108,18 +108,15 @@ users
 
 ## 🌏 Principles & Ideas
 
-[JAMStack](https://jamstack.org/)
+#### [JAMStack](https://jamstack.org/)
 
-[PWA's](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1)
+#### [PWA's](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1)
 
-[DRY](https://blog.usejournal.com the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
+#### [DRY](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
 
-## 🙏 Thank You's
+## 🙏 Thank You
 
 Jimmy Chion
-
 Brian Barbour
-
 Simon Posada
-
 Liam Duffy
