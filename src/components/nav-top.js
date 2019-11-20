@@ -51,7 +51,7 @@ const Hide = styled.div`
 const Img = styled.img`
 	margin: 16px 80px 8px 0;
 	@media screen and (max-width: 767px) {
-		margin: 0 8px 4px 0;
+		margin: 0 6px 0 2px;
 	}
 `
 
@@ -83,7 +83,7 @@ class Navbar extends React.Component {
 				<NavLink to='/'>
 					<Img src={logo} alt='Logo' width='40' height='40' />
 				</NavLink>
-				<h3 css={{ fontSize: "1.2em", lineHeight: "1.1em", margin: "0" }}>
+				<h3 css={{ fontSize: "6vw", lineHeight: "1.1em", margin: "0" }}>
 					{this.props.title}
 				</h3>
 				<Hide>

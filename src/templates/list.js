@@ -4,6 +4,29 @@ import { Link, graphql } from "gatsby"
 
 // YAML Data
 // import YAMLData from "../../content/tag-descriptions.yaml"
+/* {YAMLData.map(tag => {
+							console.log(
+								"Page:",
+								name,
+								"\nTag:",
+								tag.name,
+								"\nDescription:",
+								tag.description
+							)
+
+							return (
+								<div>
+									{tag.name === name ? (
+										<div>
+											<MobileText>{tag.description}</MobileText>
+											<br />
+										</div>
+									) : (
+										<div />
+									)}
+								</div>
+							)
+						})} */
 
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
@@ -132,29 +155,6 @@ const IndexFiltered = ({ pageContext, data }) => {
 					<MarginCol xs={12} sm={12} md={7} lg={8}>
 						<Spacer height={0} xsHeight={15} />
 						<MobileHeader>{startCase(name)}</MobileHeader>
-						{/* {YAMLData.map(tag => {
-							console.log(
-								"Page:",
-								name,
-								"\nTag:",
-								tag.name,
-								"\nDescription:",
-								tag.description
-							)
-
-							return (
-								<div>
-									{tag.name === name ? (
-										<div>
-											<MobileText>{tag.description}</MobileText>
-											<br />
-										</div>
-									) : (
-										<div />
-									)}
-								</div>
-							)
-						})} */}
 						{posts.map(({ node }) => {
 							const {
 								title,
