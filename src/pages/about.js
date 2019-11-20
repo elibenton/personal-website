@@ -32,7 +32,7 @@ const AboutContainer = styled.div`
 const Header = styled.h3`
 	margin-top: 0;
 	font-size: 18px;
-	line-height: 0.8em;
+	line-height: 1.2em;
 `
 const MarginCol = styled(Col)`
 	margin-left: 50px;
@@ -41,7 +41,7 @@ const MarginCol = styled(Col)`
 	}
 `
 const Padding = styled.div`
-	padding-left: 45px;
+	padding-left: 35px;
 	padding-right: 25px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
@@ -86,20 +86,11 @@ class AboutPrototype extends React.Component {
 							<br />
 							<Header>
 								<b>Email: </b>
-								If you'd like to converse, please write me at:
 								<a href='mailto:eliunited@gmail.com'>eliunited@gmail.com</a>
 							</Header>
 							<Header>
-								If you'd like to speak more immediately, call me at:
 								<b>WhatsApp: </b>+1 (205) 876-3367
 							</Header>
-							<Header>
-								If you'd like to meet in person, come stay with me at:
-								<b>Couchsurfing: </b>______
-							</Header>
-							<Header>
-								I don't 
-							</Header>have any social media, a practice that I believe brings a host of benefits, such as this, this, and this.
 							<Spacer height={135} xsHeight={20} />
 						</MarginCol>
 					</Row>

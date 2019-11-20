@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/350d5dbd-f00e-404a-b13d-3c46627ed351/deploy-status)](https://app.netlify.com/sites/elibenton/deploys)
 
-### _As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I write about the journey, reviews the works I am studying, and update a podcast documenting the year._
+_As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I write about the journey, reviews the works I am studying, and update a podcast documenting the year._
 
 ## Website Structure
 
@@ -51,13 +51,13 @@
 - [ ] Observable NPM packages
 - [ ] Comments through Netlify Lambda Functions
 
-#### Portfolio / Resume
+### Portfolio / Resume
 
 - [x] ~~Toggle Hover Headers~~
 - [ ] Failure Resume Toggle
 - [ ] Download Resume PDF
 
-#### RSS
+### RSS
 
 - [x] ~~Podcast Feed~~
 - [x] ~~Publish-to-Medium~~
@@ -65,49 +65,12 @@
 
 ## 📜 Pages
 
-#### post.js
+### post.js
 
-`post.js` is my template for all single page posts on the website. Whether its a podcast page or blog entry or reference to published or academic writing, the template is the same. The elements of the `GraphQL` are explained below. **Bold** is required for the page to render. _Italic_ means the tag is optional.
+`post.js` is my template for all single page posts on the website. Whether its a podcast page or blog entry or reference to published or academic writing, the template is the same. The elements of the `GraphQL` are explained below. **Bold is required for the page to render.** _Italic means the tag is optional._
 
 ```javascript
 export const postQuery = graphql`
-	query($slug: String!) {
-		ghostPost(slug: { eq: $slug }) {
-			### For rendering the page content ###
-			html
-			id
-
-			### Book name and book subtitle ###
-			title
-			excerpt
-
-			### Pages ordered by date book read, updates optional ###
-			updated_at(formatString: "MMMM DD, YYYY")
-			published_at(formatString: "MMMM DD, YYYY")
-
-			### All frontmatter is coded in the tags, explained below. ###
-			tags {
-				name
-			}
-		}
-	}
-`
-```
-
-`tags[0].name`: **Template (Writing, Audio, Academic, Photo)**
-
-`tags[1].name`: **Location**
-
-`tags[2].name`: **Region**
-
-`tags[3].name`: **Country**
-
-`tags[3:].name`: _Tags (Multiple)_
-
-#### book.js
-
-```javascript
-export const bookQuery = graphql`
 	query($slug: String!) {
 		ghostPost(slug: { eq: $slug }) {
 			### For rendering the page content ###
@@ -131,6 +94,45 @@ export const bookQuery = graphql`
 `
 ```
 
+`tags[0].name`: **Template (Writing, Audio, Academic, Photo)**
+
+`tags[1].name`: **Location**
+
+`tags[2].name`: **Region**
+
+`tags[3].name`: **Country**
+
+`tags[3:].name`: _Tags (Multiple)_
+
+### book.js
+
+`book.js` is my template for all book reviews I write. It has different formatting from other single page posts, so it needs its own data schema. The elements of the `GraphQL` are explained below. **Bold is required for the page to render.** _Italic means the tag is optional._
+
+```javascript
+export const bookQuery = graphql`
+	query($slug: String!) {
+		ghostPost(slug: { eq: $slug }) {
+			### For rendering the page content ###
+			html
+			id
+
+			### Book name and book subtitle ###
+			title
+			excerpt
+
+			### Pages ordered by date book read, updates optional ###
+			updated_at(formatString: "MMMM DD, YYYY")
+			published_at(formatString: "MMMM DD, YYYY")
+
+			### All frontmatter is coded in the tags, explained below. ###
+			tags {
+				name
+			}
+		}
+	}
+`
+```
+
 `tags[0].name`: **Title**
 
 `tags[1].name`: **Primary Author**
@@ -143,19 +145,19 @@ export const bookQuery = graphql`
 
 ## 🌲 Branches
 
-#### version-3
+### version-3
 
 `version-3` is the default branch for this repository. As such, Netlify automatically publishes a production build every time this branch is updated. For all intents and purposes, this branch acts like "master."
 
-#### version-2
+### version-2
 
 `version-2` was the second version of my website. It is published to https://version-2.elibenton.co/ subdomain. It was my first attempt to build a site with Gatsby. It is no longer actively maintained.
 
-#### version-1
+### version-1
 
 `version-1` is the branch of my first site's codebase. It is published to https://version-1.elibenton.co/ subdomain. Keep in mind that this site is build with Hugo rather than Gatsby, and as such, it has a different build command set in "netlify.toml." It is no longer actively maintained.
 
-#### dev
+### dev
 
 `dev` is my development branch. It can be found at https://dev.elibenton.co/. I always push commits to `dev` first, so I can ensure they work once hosted publicly on netlify. Once I am confident I like the changes, I open a pull request and then merge `dev` with `version-3`. Soon, I would prefer to close this branch and use [Netlify Dev](https://www.netlify.com/products/dev/) or [Gatsby Cloud](https://www.gatsbyjs.com/cloud/) instead.
 
@@ -186,11 +188,11 @@ users
 
 ## 🌏 Principles & Ideas
 
-#### [JAMStack](https://jamstack.org/)
+[JAMStack](https://jamstack.org/)
 
-#### [PWA's](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1)
+[PWA's](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1)
 
-#### [DRY](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
+[DRY](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
 
 ## 🙏 Thank You
 

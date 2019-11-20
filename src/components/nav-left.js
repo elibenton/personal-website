@@ -18,11 +18,11 @@ const Name = styled.h1`
 	font-weight: 600;
 	font-size: 2.7vw;
 	margin-top: 0;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 	line-height: 1.1em;
 	@media screen and (max-width: 767px) {
-		font-size: 36px;
-		margin: 16px 0 0 4px;
+		font-size: 10vw;
+		margin: 16px 0 16px 4px;
 		font-weight: 500;
 	}
 `
@@ -45,9 +45,13 @@ const Col = styled.div`
 `
 const Row = styled.div`
 	display: flex;
-	flex-direction: row;
+
 	margin-left: -4px;
 	align-items: center;
+	@media screen and (max-width: 767px) {
+		margin: 12px;
+		flex-direction: row;
+	}
 `
 const InnerRow = styled.div`
 	display: flex;
@@ -61,12 +65,15 @@ const InnerRow = styled.div`
 const SubTitle = styled.h2`
 	margin-top: 8px;
 	text-align: left;
-	line-height: 24px;
-	font-size: 15px;
+	line-height: 22px;
+	font-size: 14px;
 	font-style: italic;
 	font-weight: 200;
 	margin-bottom: 10px;
 	color: grey;
+	@media screen and (max-width: 767px) {
+		width: 70%;
+	}
 `
 
 export default () => (
@@ -115,39 +122,40 @@ export default () => (
 						</InnerRow>
 					</Col>
 				</Row>
-				<Hide>
-					<Spacer xsHeight={0} height={30} />
-					{/* <Row> */}
+				<Spacer xsHeight={0} height={30} />
+				<Row>
 					<Hide>
 						<Link
 							to={`/`}
 							css={{ textDecoration: "none", textTransform: "uppercase" }}
 						>
-							<h4>home&nbsp;</h4>
+							<h4>home</h4>
 						</Link>
 					</Hide>
+					<Hide>&nbsp;/&nbsp;</Hide>
 					<Link
 						to='/about'
 						css={{ textDecoration: "none", textTransform: "uppercase" }}
 					>
-						<h4>about&nbsp;</h4>
+						<h4>about</h4>
 					</Link>
+					<ReverseHide>&nbsp;/&nbsp;</ReverseHide>
 					<ReverseHide>
 						<Link
 							to={`/tags`}
 							css={{ textDecoration: "none", textTransform: "uppercase" }}
 						>
-							<h4>tags&nbsp;</h4>
+							<h4>tags</h4>
 						</Link>
 					</ReverseHide>
+					&nbsp;/&nbsp;
 					<a
 						href='https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a'
 						css={{ textDecoration: "none", textTransform: "uppercase" }}
 					>
 						<h4>reading</h4>
 					</a>
-					{/* </Row> */}
-				</Hide>
+				</Row>
 				<Hide>
 					<div
 						css={{

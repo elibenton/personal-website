@@ -57,20 +57,11 @@ export default () => (
 					<Col xs={12} sm={12} md={3} lg={3}>
 						<Nav />
 					</Col>
-					<MarginCol
-						xsOffset={1}
-						smOffset={1}
-						mdOffset={0}
-						lgOffset={0}
-						xs={10}
-						sm={10}
-						md={7}
-						lg={6}
-					>
+					<MarginCol xs={12} sm={12} md={7} lg={6}>
 						<Spacer height={0} xsHeight={30} />
 						<div
 							css={{
-								marginLeft: "-6px",
+								marginLeft: "6px",
 								display: "inline-block",
 								lineHeight: "1.3em",
 							}}

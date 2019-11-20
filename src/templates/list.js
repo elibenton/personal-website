@@ -3,7 +3,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 // YAML Data
-import YAMLData from "../../content/tag-descriptions.yaml"
+// import YAMLData from "../../content/tag-descriptions.yaml"
 
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
@@ -22,7 +22,7 @@ import moment from "moment"
 import Spacer from "../utils/spacer"
 
 const Padding = styled.div`
-	padding-left: 45px;
+	padding-left: 35px;
 	padding-right: 25px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
@@ -35,8 +35,8 @@ const MobileHeader = styled.h3`
 	font-weight: 500;
 	border-bottom: solid 2px;
 	@media screen and (max-width: 767px) {
-		margin-left: -16px;
-		padding-left: 16px;
+		margin-left: 0px;
+		padding-left: 8px;
 		margin-right: -16px;
 		margin-top: 24px;
 		padding-bottom: 6px;
@@ -53,6 +53,9 @@ const Button = styled.h4`
 	:active {
 		color: #ffd666;
 	}
+	@media screen and (max-width: 767px) {
+		margin-left: 8px;
+	}
 `
 const MobileRowOuter = styled(Row)`
 	display: flex;
@@ -64,6 +67,8 @@ const MobileRowOuter = styled(Row)`
 	margin-right: 0px !important;
 	@media screen and (max-width: 767px) {
 		flex-direction: column !important;
+		margin-left: 8px !important;
+		margin-right: 8px !important;
 	}
 `
 const MobileRowInner = styled(Row)`
@@ -92,7 +97,9 @@ const MobileText = styled.h4`
 const MobileContainer = styled.h4`
 	width: 70%;
 	@media screen and (max-width: 767px) {
-		width: 100%;
+		width: 95%;
+		margin-left: 8px;
+		/* margin-right: 24px; */
 	}
 `
 const BetterLink = styled(Link)`
@@ -116,7 +123,7 @@ const IndexFiltered = ({ pageContext, data }) => {
 	return (
 		<Layout>
 			<Padding>
-				<Spacer height={50} xsHeight={15} />
+				<Spacer height={50} xsHeight={0} />
 				<Helmet title={`${startCase(name)}`} />
 				<Row>
 					<Col xs={12} sm={12} md={4} lg={3}>
