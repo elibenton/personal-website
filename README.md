@@ -71,7 +71,7 @@
 
 #### version-2
 
-`version-2` is a second version of my website. It is published to https://version-2.elibenton.co/ subdomain. It was my first attempt to build a site with Gatsby. It is no longer actively maintained.
+`version-2` was the second version of my website. It is published to https://version-2.elibenton.co/ subdomain. It was my first attempt to build a site with Gatsby. It is no longer actively maintained.
 
 #### version-1
 
@@ -116,7 +116,7 @@ users
 
 ## 🙏 Thank You
 
-Jimmy Chion
-Brian Barbour
-Simon Posada
-Liam Duffy
+- Jimmy Chion
+- Brian Barbour
+- Simon Posada
+- Liam Duffy
