@@ -189,7 +189,7 @@ export default () => (
 						<Spacer height={10} xsHeight={5} />
 						{data.allMdx.tags.map(tag => (
 							<Link
-								to={`/${kebabCase(tag.fieldValue)}/`}
+								to={`/tags/${kebabCase(tag.fieldValue)}/`}
 								css={{ textDecoration: "none" }}
 							>
 								<span class='tag-red'>
