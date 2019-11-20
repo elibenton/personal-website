@@ -71,26 +71,26 @@ _As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of
 
 ```javascript
 export const postQuery = graphql`
-	query($slug: String!) {
-		ghostPost(slug: { eq: $slug }) {
-			### For rendering the page content ###
-			html
-			id
+  query($slug: String!) {
+    ghostPost(slug: { eq: $slug }) {
+      ### For rendering the page content ###
+      html
+      id
 
-			### Page name and introduction ###
-			title
-			excerpt
+      ### Page name and introduction ###
+      title
+      excerpt
 
-			### Pages ordered by publication, updates optional ###
-			published_at(formatString: "MMMM DD, YYYY")
-			updated_at(formatString: "MMMM DD, YYYY")
+      ### Pages ordered by publication, updates optional ###
+      published_at(formatString: "MMMM DD, YYYY")
+      updated_at(formatString: "MMMM DD, YYYY")
 
-			### All frontmatter is coded in the tags, explained below. ###
-			tags {
-				name
-			}
-		}
-	}
+      ### All frontmatter is coded in the tags, explained below. ###
+      tags {
+        name
+      }
+    }
+  }
 `
 ```
 
@@ -110,26 +110,26 @@ export const postQuery = graphql`
 
 ```javascript
 export const bookQuery = graphql`
-	query($slug: String!) {
-		ghostPost(slug: { eq: $slug }) {
-			### For rendering the page content ###
-			html
-			id
+  query($slug: String!) {
+    ghostPost(slug: { eq: $slug }) {
+      ### For rendering the page content ###
+      html
+      id
 
-			### Book name and book subtitle ###
-			title
-			excerpt
+      ### Book name and book subtitle ###
+      title
+      excerpt
 
-			### Pages ordered by date book read, updates optional ###
-			updated_at(formatString: "MMMM DD, YYYY")
-			published_at(formatString: "MMMM DD, YYYY")
+      ### Pages ordered by date book read, updates optional ###
+      updated_at(formatString: "MMMM DD, YYYY")
+      published_at(formatString: "MMMM DD, YYYY")
 
-			### All frontmatter is coded in the tags, explained below. ###
-			tags {
-				name
-			}
-		}
-	}
+      ### All frontmatter is coded in the tags, explained below. ###
+      tags {
+        name
+      }
+    }
+  }
 `
 ```
 
@@ -185,6 +185,8 @@ users
 [Gatsby Cloud](https://www.gatsbyjs.com/cloud/): Realtime preview and build chain management for rapid development
 
 [Backtracks](https://backtracks.fm/): Podcast hosting, embedding, and analytics
+
+[Digital Ocean](https://backtracks.fm/): Server space for the Ghost CMS
 
 ## 🌏 Principles & Ideas
 
