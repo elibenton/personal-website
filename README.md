@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/350d5dbd-f00e-404a-b13d-3c46627ed351/deploy-status)](https://app.netlify.com/sites/elibenton/deploys)
 
-**As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I write about the journey, reviews the works I am studying, and update a podcast documenting the year.**
+### _As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of digital technology. This website is where I write about the journey, reviews the works I am studying, and update a podcast documenting the year._
 
 ## Website Structure
 
@@ -18,7 +18,7 @@
     |
     ├── /content
     │   ├── /images
-    │   └── /posts
+    │   └── tag-descriptions.yaml
     |
     ├── /static
     |    ├── _redirects
@@ -62,6 +62,69 @@
 - [x] ~~Podcast Feed~~
 - [x] ~~Publish-to-Medium~~
 - [x] ~~Publish-to-Mailchimp~~
+
+## 📜 Pages
+
+#### post.js
+
+`post.js` is my template for all single page posts on the website. Whether its a podcast page or blog entry or reference to published or academic writing, the template is the same. The elements of the `GraphQL` are explained below. **Bold** is required for the page to render. *Italic* means the tag is optional.
+
+```javascript
+export const postQuery = graphql`
+	query($slug: String!) {
+		site {
+			siteMetadata {
+				title
+			}
+		}
+		ghostPost(slug: { eq: $slug }) {
+			excerpt
+			title
+			html
+			id
+			updated_at(formatString: "MMMM DD, YYYY")
+			published_at(formatString: "MMMM DD, YYYY")
+			tags {
+				name
+			}
+		}
+	}
+`
+```
+
+`title`: **Title**
+
+`published_at`: **Date First Read**
+
+`updated_at`: *Date Updated*
+
+`tags[0]`: **Template (Writing, Audio, Academic, Photo)**
+
+`tags[1]`: **Location**
+
+`tags[2]`: **Region**
+
+`tags[3]`: **Country**
+
+`tags[3:]`: *Tags (Multiple)*
+
+#### book.js
+
+`title`: **Title**
+
+`published_at`: **Date First Read**
+
+`updated_at`: *Date Updated*
+
+`tags[0]`: **Title**
+
+`tags[1]`: **Primary Author**
+
+`tags[2]`: **Publication Year**
+
+`tags[3]`: **Country**
+
+`tags[3:]`: *Additional Author (Multiple)*
 
 ## 🌲 Branches
 
@@ -116,7 +179,10 @@ users
 
 ## 🙏 Thank You
 
-- Jimmy Chion
-- Brian Barbour
-- Simon Posada
-- Liam Duffy
+[Jimmy Chion](https://github.com/cjimmy)
+
+[Tom MacWainright](https://github.com/tmcw)
+
+[Brian Barbour](https://github.com/steelvoltage)
+
+[Simon Posada](https://github.com/simonpfish)
