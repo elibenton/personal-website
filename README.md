@@ -67,23 +67,25 @@
 
 #### post.js
 
-`post.js` is my template for all single page posts on the website. Whether its a podcast page or blog entry or reference to published or academic writing, the template is the same. The elements of the `GraphQL` are explained below. **Bold** is required for the page to render. *Italic* means the tag is optional.
+`post.js` is my template for all single page posts on the website. Whether its a podcast page or blog entry or reference to published or academic writing, the template is the same. The elements of the `GraphQL` are explained below. **Bold** is required for the page to render. _Italic_ means the tag is optional.
 
 ```javascript
 export const postQuery = graphql`
 	query($slug: String!) {
-		site {
-			siteMetadata {
-				title
-			}
-		}
 		ghostPost(slug: { eq: $slug }) {
-			excerpt
-			title
+			### For rendering the page content ###
 			html
 			id
+
+			### Book name and book subtitle ###
+			title
+			excerpt
+
+			### Pages ordered by date book read, updates optional ###
 			updated_at(formatString: "MMMM DD, YYYY")
 			published_at(formatString: "MMMM DD, YYYY")
+
+			### All frontmatter is coded in the tags, explained below. ###
 			tags {
 				name
 			}
@@ -92,39 +94,52 @@ export const postQuery = graphql`
 `
 ```
 
-`title`: **Title**
+`tags[0].name`: **Template (Writing, Audio, Academic, Photo)**
 
-`published_at`: **Date First Read**
+`tags[1].name`: **Location**
 
-`updated_at`: *Date Updated*
+`tags[2].name`: **Region**
 
-`tags[0]`: **Template (Writing, Audio, Academic, Photo)**
+`tags[3].name`: **Country**
 
-`tags[1]`: **Location**
-
-`tags[2]`: **Region**
-
-`tags[3]`: **Country**
-
-`tags[3:]`: *Tags (Multiple)*
+`tags[3:].name`: _Tags (Multiple)_
 
 #### book.js
 
-`title`: **Title**
+```javascript
+export const bookQuery = graphql`
+	query($slug: String!) {
+		ghostPost(slug: { eq: $slug }) {
+			### For rendering the page content ###
+			html
+			id
 
-`published_at`: **Date First Read**
+			### Page name and introduction ###
+			title
+			excerpt
 
-`updated_at`: *Date Updated*
+			### Pages ordered by publication, updates optional ###
+			published_at(formatString: "MMMM DD, YYYY")
+			updated_at(formatString: "MMMM DD, YYYY")
 
-`tags[0]`: **Title**
+			### All frontmatter is coded in the tags, explained below. ###
+			tags {
+				name
+			}
+		}
+	}
+`
+```
 
-`tags[1]`: **Primary Author**
+`tags[0].name`: **Title**
 
-`tags[2]`: **Publication Year**
+`tags[1].name`: **Primary Author**
 
-`tags[3]`: **Country**
+`tags[2].name`: **Publication Year**
 
-`tags[3:]`: *Additional Author (Multiple)*
+`tags[3].name`: **Country**
+
+`tags[3:].name`: _Additional Author (Multiple)_
 
 ## 🌲 Branches
 
