@@ -51,6 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // We'll call `createPage` for each result
         ghosts.forEach(ghost => {
+          // console.log(ghost.node)
           const { slug } = ghost.node
           createPage({
             path: `/post/${slug}`,

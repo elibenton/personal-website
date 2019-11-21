@@ -161,7 +161,16 @@ const IndexFiltered = ({ pageContext, data }) => {
                 slug,
               } = node
 
-              console.log("Hello", node.tags)
+              console.log(
+                "Title:",
+                title,
+                "\n",
+                tags[1].name,
+                "\n",
+                tags[2].name,
+                "\n",
+                tags[3].name
+              )
 
               const monthYear = tags[3].name
               const city = tags[1].name
