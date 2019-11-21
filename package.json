@@ -39,12 +39,15 @@
     "gatsby-source-ghost": "^4.0.0",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.21",
+    "js-yaml": "^3.13.1",
     "moment": "^2.24.0",
     "netlify-cli": "^2.21.0",
+    "npm": "^6.13.1",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-click-outside": "^3.0.1",
     "react-collapsible": "^2.6.0",
+    "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.8.6",
     "react-flexbox-grid": "^2.1.2",
     "react-helmet": "^5.2.1",
@@ -75,5 +78,27 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "config": {
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 600
+      },
+      "l": {
+        "width": 1000
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
   }
 }

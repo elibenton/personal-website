@@ -11,16 +11,17 @@ Feel free to delete all this.
 const ColorMap = new Map([
   ["orange", "hsla(29, 100%, 62%,1)"], //'rgba(255,155,60,1)', //#FF9B3C
   ["teal", "hsla(177,54%,67%,1)"], //'rgba(111,179,190,1)', // #6FB3BE
-  ["red", "hsla(360,100%,69%,1)"], //'rgba(255,97,98,1)',// #FF6162
+  ["red", "hsla(6, 80%, 46%,1)"], //'rgba(255,97,98,1)',// #FF6162
   ["tan", "hsla(59,100%,89%,1)"], //'rgb(255, 254, 201)', // #FFFEC9
   ["mint", "hsla(167,100%,89%,1)"], //'rgb(201, 255, 243)', // #C9FFF3
   ["pink", "hsla(0,100%,93%,1)"], //'rgb(255, 218, 218)', // #FFDADA
   ["yellow", "hsla(44, 100%, 70%,1)"], //'rgb(255, 214, 102)',// #ffd666
   ["lightblue", "hsla(197,100%,87%,1)"],
-  ["blue", "hsla(219,87%,66%,1)"], //'rgba(92,144,244,1)', // #5C90F4
+  ["blue", "hsla(240, 63%, 45%,1)"], //'rgba(92,144,244,1)', // #5C90F4
   ["lightpurple", "hsla(253, 100%, 74%,1)"], //'rgb(150, 122, 255)', // #967aff
   ["purple", "hsla(258, 100%, 69%,1)"], //'rgb(145, 97, 255)', // #9161FF
   ["darkpurple", "hsla(272, 99%, 54%,1)"], //'rgb(144, 19, 254)', // #9013FE
+  ["green", "hsla(120, 50%, 29%,1)"],
 ])
 
 const Color = (name, deltaSaturation = 0, deltaTint = 0, opacity = 1) => {

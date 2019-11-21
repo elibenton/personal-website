@@ -3,30 +3,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 // YAML Data
-// import YAMLData from "../../content/tag-descriptions.yaml"
-/* {YAMLData.map(tag => {
-							console.log(
-								"Page:",
-								name,
-								"\nTag:",
-								tag.name,
-								"\nDescription:",
-								tag.description
-							)
-
-							return (
-								<div>
-									{tag.name === name ? (
-										<div>
-											<MobileText>{tag.description}</MobileText>
-											<br />
-										</div>
-									) : (
-										<div />
-									)}
-								</div>
-							)
-						})} */
+import YAMLData from "../../content/tag-descriptions.yaml"
 
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
@@ -154,95 +131,24 @@ const IndexFiltered = ({ pageContext, data }) => {
           </Col>
           <MarginCol xs={12} sm={12} md={7} lg={8}>
             <Spacer height={0} xsHeight={15} />
-            {name === "Title IX" ? (
-              <div>
-                <MobileHeader>Title IX Today</MobileHeader>
-                <MobileText>
-                  Pomona College, like most elite liberal arts universities
-                  across the country, is a hotbed for student activism and
-                  political dissent. But there was one cry that rose above the
-                  rest during the college’s 126ᵗʰ academic year: end sexual
-                  violence.
-                  <br />
-                  <br />
-                  It began as year of firsts and ended in mostly retractions.
-                  For the first time, students openly banned accused assailants
-                  from campus gatherings, invoking accusations of “blacklists”
-                  and vigilante justice. Half a year later, the Pomona
-                  administration disbanded{" "}
-                  <i>The Advocates for Survivors of Sexual Assault</i>, the
-                  student group tasked with helping victims navigate their
-                  process of recovery, prompting a new wave of outrage and
-                  furthering resolve that students alone had to solve this
-                  problem.
-                  <br />
-                  <br />
-                  The backdrop to it all was Title IX, the 1972 law barring sex
-                  discrimination on college campuses that is being
-                  systematically dismantled by Education Secretary Betsy Devos.
-                  These legal uncertainties—stemming from both executive orders
-                  and court rulings—forced the college to make hasty decisions,
-                  which were only explained in vague, circumspect language.
-                  This, of course, compounded the already volatile situation.
-                  <br />
-                  <br />
-                  This three part series tried to make sense of the events in
-                  real time, bringing to the fore voices of student activists,
-                  college administrators, and even accused perpetrators. Here is
-                  a window into one college's ongoing battle to end sexual
-                  assault.
-                  <br />
-                  <br />
-                </MobileText>
-              </div>
-            ) : name === "Digital India" ? (
-              <div>
-                <MobileHeader>Digital India</MobileHeader>
-                <MobileText>
-                  I didn't think my investigation of the internet would lead me
-                  to the remote mountain towns of India, to a place where people
-                  walk for five kilometers just to find a road, a place where
-                  the government ships in rice because, if it rains, making it
-                  to the weekly market becomes impossible. But the location
-                  actually makes perfect sense. To investigate the networked
-                  world, one follows the network—and here, the network was
-                  perfect.
-                  <br />
-                  <br />
-                  The discrepancy between India's physical and digital
-                  infrastructure boggles my mind. Here, public sanitation is
-                  still a political concern of the highest priority, but mobile
-                  broadband is so passé it's only three US cents per gigabyte.
-                  Nandan Nilekani, sometimes called “The CEO of India,” has said
-                  the country will be “data rich before it'll be economically
-                  rich.” He would know.
-                  <br />
-                  <br />
-                  Creator of Aadhaar, the world's largest biometric-based ID
-                  system, Nilekani conjured 1.2 billion new data points by
-                  digitizing the second largest population in the world. In
-                  recent years, Aadhaar has faced mounting criticism from
-                  privacy activists, civil society groups, and the Supreme
-                  Court, but it has not tempered the Aadhaar fever. The High
-                  Court of Tamil Nadu recommended Aadhaar be linked to Facebook
-                  to fight fake news. The Excise Department of Karnataka
-                  considered requiring the ID to purchase alcohol, to cut down
-                  on litter.
-                  <br />
-                  <br />
-                  Nothing appears off limits in India's digital experiment, even
-                  under unfavorable conditions: a still developing economy,
-                  massive cultural and linguistic diversity, and almost no
-                  digital literacy. People here say, “If it works it India, it
-                  could be the next global standard.” The globe might want to
-                  start paying attention.
-                  <br />
-                  <br />
-                </MobileText>
-              </div>
-            ) : (
-              <MobileHeader>{startCase(name)}</MobileHeader>
-            )}
+            <MobileHeader>{startCase(name)}</MobileHeader>
+
+            {YAMLData.map(tag => {
+              return (
+                <div>
+                  {tag.name === name ? (
+                    <div>
+                      <MobileText css={{ whiteSpace: "pre-wrap" }}>
+                        {tag.description}
+                      </MobileText>
+                      <br />
+                    </div>
+                  ) : (
+                    <div />
+                  )}
+                </div>
+              )
+            })}
             {posts.map(({ node }) => {
               const {
                 title,

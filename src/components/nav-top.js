@@ -7,17 +7,21 @@ import logo from "../../content/images/tinhat.gif"
 
 // Yarn Packages
 import styled from "styled-components"
+import { CopyToClipboard } from "react-copy-to-clipboard"
 
 // Utilities and Ancillary Libraries
 import { kebabCase } from "lodash"
 import moment from "moment"
+import { FaLink } from "react-icons/fa"
 
 const Title = styled.h4`
-  font-size: 1.6vw;
+  font-size: 1.4em;
+  padding-right: 15px;
+  border-right: solid 2px;
   @media screen and (max-width: 767px) {
-    font-size: 6vw;
-    line-height: 1.1em;
+    font-size: 1.2em;
     margin: 0;
+    border: none;
   }
 `
 
@@ -45,7 +49,7 @@ const Nav = styled.div`
 const NavLink = styled(Link)`
   text-decoration: none;
   color: black;
-  padding: 5px 20px;
+  padding: 0 10px;
   @media screen and (max-width: 600px) {
     padding-left: 8px;
     padding-right: 5px;
@@ -58,16 +62,37 @@ const Hide = styled.div`
   }
 `
 const Img = styled.img`
-  margin: 16px 80px 8px 0;
+  margin: 16px 100px 8px 0;
   @media screen and (max-width: 767px) {
     margin: 0 6px 0 2px;
+  }
+`
+const Center = styled.div`
+  display: inline-flex;
+  flex-direction: row;
+`
+
+const StyledLink = styled.h3`
+  margin: 0 2vw;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  :active {
+    color: gray;
+  }
+`
+
+const LinkImage = styled(CopyToClipboard)`
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `
 
 var prevScrollPos
 
 class Navbar extends React.Component {
-  state = { scrollingUp: true }
+  state = { scrollingUp: true, value: "", copied: false }
+
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll)
   }
@@ -84,6 +109,11 @@ class Navbar extends React.Component {
     prevScrollPos = currentScrollPos
   }
   render() {
+    console.log(
+      `/${moment(this.props.date).format("YYYY")}/${moment(this.props.date)
+        .format("MMMM")
+        .toLowerCase()}/`
+    )
     return (
       <Nav
         onScroll={this.handleScroll}
@@ -92,25 +122,48 @@ class Navbar extends React.Component {
         <NavLink to="/">
           <Img src={logo} alt="Logo" width="40" height="40" />
         </NavLink>
-        <Title>{this.props.title}</Title>
-        <Hide>
-          <h5>
-            <NavLink
-              to={`/${moment(this.props.date, "YYYY").format("YYYYY")}/${moment(
-                this.props.date
-              )
-                .format("YYYY")
-                .toLowerCase()}/`}
-            >
-              {this.props.date}
-            </NavLink>
-          </h5>
-          <h5>
-            <NavLink to={`/${kebabCase(this.props.country)}`}>
-              {this.props.city}, {this.props.country}
-            </NavLink>
-          </h5>
-        </Hide>
+        <Center>
+          <Title>{this.props.title}</Title>
+          <Hide>
+            <h5>
+              <NavLink
+                to={`/${moment(this.props.date).format("YYYY")}/${moment(
+                  this.props.date
+                )
+                  .format("MMMM")
+                  .toLowerCase()}/`}
+              >
+                {this.props.date}
+              </NavLink>
+            </h5>
+            <h5>
+              <NavLink to={`/${kebabCase(this.props.country)}`}>
+                {this.props.city}, {this.props.country}
+              </NavLink>
+            </h5>
+          </Hide>
+        </Center>
+
+        <LinkImage
+          text={`${this.props.siteUrl}/${kebabCase(this.props.template)}/${
+            this.props.slug
+          }`}
+          onCopy={() => this.setState({ copied: true })}
+        >
+          <StyledLink>
+            {this.state.copied ? (
+              <div>
+                <span css={{ color: "black" }}>Link Copied&nbsp;&nbsp;</span>{" "}
+                <FaLink />{" "}
+              </div>
+            ) : (
+              <div>
+                <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span>{" "}
+                <FaLink />{" "}
+              </div>
+            )}
+          </StyledLink>
+        </LinkImage>
       </Nav>
     )
   }

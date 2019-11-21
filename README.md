@@ -45,7 +45,8 @@ _As a 2019-2020 Watson Fellow, I am traveling the world to study the politics of
 
 ## 🎁 Wish List
 
-- [ ] Dark Mode
+- [ ] Styled System and Styled Components (No Global CSS)
+- [ ] Dark Mode (Achieved with Styled System)
 - [ ] Interactive Reference Component
 - [ ] Mapbox Integration
 - [ ] Observable NPM packages
