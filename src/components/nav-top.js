@@ -126,18 +126,12 @@ class Navbar extends React.Component {
           <Title>{this.props.title}</Title>
           <Hide>
             <h5>
-              <NavLink
-                to={`/${moment(this.props.date).format("YYYY")}/${moment(
-                  this.props.date
-                )
-                  .format("MMMM")
-                  .toLowerCase()}/`}
-              >
+              <NavLink to={`/tag/${kebabCase(this.props.date)}/`}>
                 {this.props.date}
               </NavLink>
             </h5>
             <h5>
-              <NavLink to={`/${kebabCase(this.props.country)}`}>
+              <NavLink to={`/tag/${kebabCase(this.props.country)}`}>
                 {this.props.city}, {this.props.country}
               </NavLink>
             </h5>
@@ -145,9 +139,7 @@ class Navbar extends React.Component {
         </Center>
 
         <LinkImage
-          text={`${this.props.siteUrl}/${kebabCase(this.props.template)}/${
-            this.props.slug
-          }`}
+          text={`${this.props.siteUrl}/post/${this.props.slug}`}
           onCopy={() => this.setState({ copied: true })}
         >
           <StyledLink>

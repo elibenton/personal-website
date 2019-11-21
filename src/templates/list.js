@@ -153,12 +153,20 @@ const IndexFiltered = ({ pageContext, data }) => {
               const {
                 title,
                 date,
-                city,
-                country,
-                description,
-                template,
-              } = node.frontmatter
-              const { slug, month } = node.fields
+                month,
+                year,
+                // updated_at,
+                tags,
+                excerpt,
+                slug,
+              } = node
+
+              console.log("Hello", node.tags)
+
+              const monthYear = tags[3].name
+              const city = tags[1].name
+              const country = tags[2].name
+
               return (
                 <Collapsible
                   easing="ease-in-out"
@@ -178,19 +186,13 @@ const IndexFiltered = ({ pageContext, data }) => {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink to={`/${kebabCase(country)}/`}>
+                            <BetterLink to={`/tag/${kebabCase(country)}/`}>
                               {city}, {country}
                             </BetterLink>
                           </h5>
                           <h5>&middot;</h5>
                           <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink
-                              to={`/${moment(month).format("YYYY")}/${moment(
-                                month
-                              )
-                                .format("MMMM")
-                                .toLowerCase()}/`}
-                            >
+                            <BetterLink to={`/tag/${kebabCase(monthYear)}/`}>
                               {date}
                             </BetterLink>
                           </h5>
@@ -220,19 +222,13 @@ const IndexFiltered = ({ pageContext, data }) => {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink to={`/${kebabCase(country)}/`}>
+                            <BetterLink to={`/tag/${kebabCase(country)}/`}>
                               {city}, {country}
                             </BetterLink>
                           </h5>
                           <h5>&middot;</h5>
                           <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink
-                              to={`/${moment(month).format("YYYY")}/${moment(
-                                month
-                              )
-                                .format("MMMM")
-                                .toLowerCase()}/`}
-                            >
+                            <BetterLink to={`/tag/${kebabCase(monthYear)}/`}>
                               {date}
                             </BetterLink>
                           </h5>
@@ -247,10 +243,10 @@ const IndexFiltered = ({ pageContext, data }) => {
                       fontSize: "15px",
                     }}
                   >
-                    {description}
+                    {excerpt}
                   </MobileContainer>
                   <BetterLink
-                    to={`/${template}${slug}`}
+                    to={`/post/${slug}`}
                     css={{ textDecoration: "none" }}
                   >
                     <Button>Read More&nbsp;➤</Button>
@@ -270,26 +266,24 @@ const IndexFiltered = ({ pageContext, data }) => {
 export default IndexFiltered
 
 export const pageQuery = graphql`
-  query($filter: MdxFilterInput) {
-    filtered: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+  query($filter: GhostPostFilterInput) {
+    filtered: allGhostPost(
+      sort: { order: DESC, fields: published_at }
       filter: $filter
     ) {
       edges {
         node {
+          excerpt
+          title
           id
-          frontmatter {
-            title
-            city
-            country
-            date(formatString: "MM-DD-YYYY")
-            description
-            tags
-            template
-          }
-          fields {
-            slug
-            month
+          slug
+          updated_at(formatString: "MM-DD-YYYY")
+          date: published_at(formatString: "MM-DD-YYYY")
+          month: published_at(formatString: "MMMM")
+          year: published_at(formatString: "YYYY")
+          monthYear: published_at(formatString: "MMMM-YYYY")
+          tags {
+            name
           }
         }
       }

@@ -19,9 +19,7 @@ import Nav from "../components/nav-top"
 
 // Utilities and Ancillary Libraries
 import { kebabCase, upperFirst } from "lodash"
-import moment from "moment"
 import Spacer from "../utils/spacer"
-import Tag from "../utils/tag"
 
 // Created locally-scoped styled components
 const PostLink = styled(Link)`
@@ -64,16 +62,14 @@ function PostTemplate({ data }) {
   const template = tags[0].name
   const city = tags[1].name
   const country = tags[2].name
-
-  // console.log("TITLE:", title)
-  // console.log(siteUrl)
+  const monthYear = tags[3].name
 
   return (
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />
       <Nav
         title={title}
-        date={published_at}
+        date={monthYear}
         city={city}
         country={country}
         slug={slug}
@@ -111,37 +107,26 @@ function PostTemplate({ data }) {
           </Col>
           <Spacer xsHeight={10} height={20} />
           <Col>
-            {/* <div>
-              {tags.map(tag => (
-                <Tag color={"red"}>
-                  <PostLink to={`/tags/${kebabCase(tag.name)}/`}>{tag}</PostLink>
-                </Tag>
-              ))}
-            </div> */}
             <div>
               <h5>
-                <PostLink
-                  to={`/${moment().format("YYYY")}/${moment(published_at)
-                    .format("MMMM")
-                    .toLowerCase()}/`}
-                >
+                <PostLink to={`/tag/${kebabCase(monthYear)}`}>
                   <FaCalendarDay /> {published_at}
                 </PostLink>
               </h5>
               <h5>
-                <PostLink to={`/${kebabCase(country)}/`}>
+                <PostLink to={`/tag/${kebabCase(country)}/`}>
                   <FaMapMarkerAlt /> {city}, {country}
                 </PostLink>
               </h5>
               {template === "writing" ? (
                 <h5>
-                  <PostLink to={`/${template}`}>
+                  <PostLink to={`/tag/${kebabCase(template)}`}>
                     <FaBook /> {upperFirst(template)}
                   </PostLink>
                 </h5>
               ) : (
                 <h5>
-                  <PostLink to={`/${template}`}>
+                  <PostLink to={`/tag/${kebabCase(template)}`}>
                     <FaHeadphones /> {upperFirst(template)}
                   </PostLink>
                 </h5>

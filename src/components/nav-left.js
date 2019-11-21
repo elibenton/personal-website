@@ -87,18 +87,34 @@ export default () => (
             description
           }
         }
-        allMdx(limit: 2000) {
-          tags: group(field: frontmatter___tags) {
+        locations: allGhostTag(filter: { meta_title: { eq: "Location" } }) {
+          totalCount
+          group(field: name) {
             fieldValue
-            totalCount
           }
-          templates: group(field: frontmatter___template) {
+        }
+        states: allGhostTag(filter: { meta_title: { eq: "State" } }) {
+          totalCount
+          group(field: name) {
             fieldValue
-            totalCount
           }
-          countries: group(field: frontmatter___country) {
+        }
+        countries: allGhostTag(filter: { meta_title: { eq: "Country" } }) {
+          totalCount
+          group(field: name) {
             fieldValue
-            totalCount
+          }
+        }
+        types: allGhostTag(filter: { meta_title: { eq: "Type" } }) {
+          totalCount
+          group(field: name) {
+            fieldValue
+          }
+        }
+        topics: allGhostTag(filter: { meta_title: { eq: "Topic" } }) {
+          totalCount
+          group(field: name) {
+            fieldValue
           }
         }
       }
@@ -166,36 +182,30 @@ export default () => (
               lineHeight: "1.3em",
             }}
           >
-            {data.allMdx.countries.map(country => (
+            {data.countries.group.map(country => (
               <Link
-                to={`/${kebabCase(country.fieldValue)}/`}
+                to={`/tag/${kebabCase(country.fieldValue)}/`}
                 css={{ textDecoration: "none" }}
               >
-                <Tag color="green">
-                  {country.fieldValue}: {country.totalCount}
-                </Tag>
+                <Tag color="green">{country.fieldValue}</Tag>
               </Link>
             ))}
             <Spacer height={10} xsHeight={5} />
-            {data.allMdx.templates.map(template => (
+            {data.types.group.map(type => (
               <Link
-                to={`/${kebabCase(template.fieldValue)}/`}
+                to={`/tag/${kebabCase(type.fieldValue)}/`}
                 css={{ textDecoration: "none" }}
               >
-                <Tag color="blue">
-                  {upperFirst(template.fieldValue)}: {template.totalCount}
-                </Tag>
+                <Tag color="blue">{upperFirst(type.fieldValue)}</Tag>
               </Link>
             ))}
             <Spacer height={10} xsHeight={5} />
-            {data.allMdx.tags.map(tag => (
+            {data.topics.group.map(topic => (
               <Link
-                to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                to={`/tag/${kebabCase(topic.fieldValue)}/`}
                 css={{ textDecoration: "none" }}
               >
-                <Tag color={"red"}>
-                  {tag.fieldValue}: {tag.totalCount}
-                </Tag>
+                <Tag color={"red"}>{topic.fieldValue}</Tag>
               </Link>
             ))}
           </div>

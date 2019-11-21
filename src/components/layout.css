@@ -261,7 +261,7 @@ input[type="submit"] {
 }
 
 .kg-image {
-  max-width: 80%;
+  max-width: 60%;
   align-self: center;
   display: block;
   margin: 0 auto;

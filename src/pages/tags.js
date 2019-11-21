@@ -16,13 +16,10 @@ import { kebabCase, upperFirst } from "lodash"
 import Spacer from "../utils/spacer"
 import Tag from "../utils/tag"
 
-const BetterLink = styled(Link)`
-  text-decoration: none;
-`
 const MarginCol = styled(Col)`
   margin-left: 50px;
   @media screen and (max-width: 767px) {
-    margin-left: 0;
+    margin-left: 15px;
   }
 `
 
@@ -35,18 +32,34 @@ export default () => (
             title
           }
         }
-        allMdx(limit: 2000) {
-          tags: group(field: frontmatter___tags) {
+        locations: allGhostTag(filter: { meta_title: { eq: "Location" } }) {
+          totalCount
+          group(field: name) {
             fieldValue
-            totalCount
           }
-          templates: group(field: frontmatter___template) {
+        }
+        states: allGhostTag(filter: { meta_title: { eq: "State" } }) {
+          totalCount
+          group(field: name) {
             fieldValue
-            totalCount
           }
-          countries: group(field: frontmatter___country) {
+        }
+        countries: allGhostTag(filter: { meta_title: { eq: "Country" } }) {
+          totalCount
+          group(field: name) {
             fieldValue
-            totalCount
+          }
+        }
+        types: allGhostTag(filter: { meta_title: { eq: "Type" } }) {
+          totalCount
+          group(field: name) {
+            fieldValue
+          }
+        }
+        topics: allGhostTag(filter: { meta_title: { eq: "Topic" } }) {
+          totalCount
+          group(field: name) {
+            fieldValue
           }
         }
       }
@@ -62,42 +75,37 @@ export default () => (
             <Spacer height={0} xsHeight={30} />
             <div
               css={{
-                marginLeft: "6px",
+                marginTop: "30px",
+                marginLeft: "-6px",
                 display: "inline-block",
                 lineHeight: "1.3em",
               }}
             >
-              {data.allMdx.countries.map(country => (
-                <BetterLink
-                  to={`/${kebabCase(country.fieldValue)}/`}
+              {data.countries.group.map(country => (
+                <Link
+                  to={`/tag/${kebabCase(country.fieldValue)}/`}
                   css={{ textDecoration: "none" }}
                 >
-                  <Tag color={"green"}>
-                    {country.fieldValue}: {country.totalCount}
-                  </Tag>
-                </BetterLink>
+                  <Tag color="green">{country.fieldValue}</Tag>
+                </Link>
               ))}
               <Spacer height={10} xsHeight={5} />
-              {data.allMdx.templates.map(template => (
-                <BetterLink
-                  to={`/${kebabCase(template.fieldValue)}/`}
+              {data.types.group.map(type => (
+                <Link
+                  to={`/tag/${kebabCase(type.fieldValue)}/`}
                   css={{ textDecoration: "none" }}
                 >
-                  <Tag color={"blue"}>
-                    {upperFirst(template.fieldValue)}: {template.totalCount}
-                  </Tag>
-                </BetterLink>
+                  <Tag color="blue">{upperFirst(type.fieldValue)}</Tag>
+                </Link>
               ))}
               <Spacer height={10} xsHeight={5} />
-              {data.allMdx.tags.map(tag => (
-                <BetterLink
-                  to={`/tags/${kebabCase(tag.fieldValue)}/`}
+              {data.topics.group.map(topic => (
+                <Link
+                  to={`/tags/${kebabCase(topic.fieldValue)}/`}
                   css={{ textDecoration: "none" }}
                 >
-                  <Tag color={"red"}>
-                    {tag.fieldValue}: {tag.totalCount}
-                  </Tag>
-                </BetterLink>
+                  <Tag color={"red"}>{topic.fieldValue}</Tag>
+                </Link>
               ))}
             </div>
           </MarginCol>
