@@ -22,6 +22,15 @@ const MarginCol = styled(Col)`
     margin-left: 15px;
   }
 `
+//city:Bombay
+
+/*
+
+  tags[i]
+
+  const [city] = tags.filter(tag => tag.includes('city:'))
+*/
+
 
 export default () => (
   <StaticQuery

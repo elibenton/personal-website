@@ -117,6 +117,17 @@ const MarginCol = styled(Col)`
     margin-left: 0;
   }
 `
+
+/*
+
+  const cities = ["Bangalore", ""]
+
+
+
+  const [city] = tags.filter(tag => cities.includes(tag))
+  */
+
+
 const IndexFiltered = ({ pageContext, data }) => {
   const { name } = pageContext
   const posts = data.filtered.edges
@@ -161,16 +172,16 @@ const IndexFiltered = ({ pageContext, data }) => {
                 slug,
               } = node
 
-              console.log(
-                "Title:",
-                title,
-                "\n",
-                tags[1].name,
-                "\n",
-                tags[2].name,
-                "\n",
-                tags[3].name
-              )
+              // console.log(
+              //   "Title:",
+              //   title,
+              //   "\n",
+              //   tags[1].name,
+              //   "\n",
+              //   tags[2].name,
+              //   "\n",
+              //   tags[3].name
+              // )
 
               const monthYear = tags[3].name
               const city = tags[1].name
