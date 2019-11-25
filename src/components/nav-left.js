@@ -17,7 +17,7 @@ const Name = styled.h1`
   display: flex;
   text-transform: none;
   font-weight: 600;
-  font-size: 2.7vw;
+  font-size: 2.8vw;
   margin-top: 0;
   margin-bottom: 4px;
   line-height: 1.1em;

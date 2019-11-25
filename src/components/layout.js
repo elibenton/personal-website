@@ -13,10 +13,7 @@ import SEO from "../components/seo"
 export default ({ children }) => (
   <div>
     <Helmet>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-      ></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       <link rel="stylesheet" href="https://use.typekit.net/pls6imv.css " />
       <link
         href="https://fonts.googleapis.com/css?family=Merriweather&display=swap:300,600,800"

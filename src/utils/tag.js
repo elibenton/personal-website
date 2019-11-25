@@ -3,10 +3,8 @@ import Color from "./colors"
 
 const Tag = styled.span`
   color: ${props => (props.color ? Color(props.color) : "black")};
-  border-color: ${props =>
-    props.color ? Color(props.color, 10, 40, 0.75) : "white"};
-  background-color: ${props =>
-    props.color ? Color(props.color, 10, 40, 0.75) : "white"};
+  border-color: ${props => (props.color ? Color(props.color, 10, 40, 0.75) : "white")};
+  background-color: ${props => (props.color ? Color(props.color, 10, 40, 0.75) : "white")};
 
   font-family: sans-serif;
   border: solid;

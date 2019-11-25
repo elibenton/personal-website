@@ -11,7 +11,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 
 // Utilities and Ancillary Libraries
 import { kebabCase } from "lodash"
-import moment from "moment"
 import { FaLink } from "react-icons/fa"
 
 const Title = styled.h4`
@@ -109,18 +108,7 @@ class Navbar extends React.Component {
     prevScrollPos = currentScrollPos
   }
   render() {
-    const {
-      title,
-      published_at,
-      siteUrl,
-      slug,
-      months,
-      cities,
-      regions,
-      countries,
-      types,
-      topics,
-    } = this.props
+    const { title, published_at, siteUrl, slug, months, cities, regions, countries } = this.props
 
     console.log(this.props)
 
@@ -136,7 +124,7 @@ class Navbar extends React.Component {
               <NavLink to={`/tag/${kebabCase(months)}/`}>{published_at}</NavLink>
             </h5>
             <h5>
-              <NavLink to={`/tag/${kebabCase(countries)}`}>
+              <NavLink to={`/tag/${kebabCase(regions)}`}>
                 {cities}, {countries}
               </NavLink>
             </h5>
@@ -146,11 +134,11 @@ class Navbar extends React.Component {
         <LinkImage text={`${siteUrl}/post/${slug}`} onCopy={() => this.setState({ copied: true })}>
           <StyledLink>
             {this.state.copied ? (
-              <div>
+              <div css={{ display: "flex", alignItems: "center" }}>
                 <span css={{ color: "black" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
               </div>
             ) : (
-              <div>
+              <div css={{ display: "flex", alignItems: "center" }}>
                 <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
               </div>
             )}

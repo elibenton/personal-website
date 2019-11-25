@@ -6,7 +6,14 @@ import { graphql, Link } from "gatsby"
 import { Row, Col } from "react-flexbox-grid"
 import Helmet from "react-helmet"
 import styled from "styled-components"
-import { FaCalendarDay, FaMapMarkerAlt, FaBook, FaHeadphones } from "react-icons/fa"
+import {
+  FaCalendarDay,
+  FaMapMarkerAlt,
+  FaBook,
+  FaHeadphones,
+  FaHashtag,
+  FaCameraRetro,
+} from "react-icons/fa"
 
 // Components
 import Layout from "../components/layout"
@@ -15,14 +22,12 @@ import Nav from "../components/nav-top"
 // Utilities and Ancillary Libraries
 import { kebabCase, upperFirst } from "lodash"
 import Spacer from "../utils/spacer"
+import Tag from "../utils/tag"
 
 // Created locally-scoped styled components
 const PostLink = styled(Link)`
   text-decoration: none;
-  :hover,
-  :active {
-    color: #ffd666;
-  }
+  color: black !important;
 `
 const Title = styled.h2`
   margin-top: 0px;
@@ -54,31 +59,31 @@ function PostTemplate({ data }) {
   const { siteUrl } = data.site.siteMetadata
   const post = data.ghostPost
   const { html, title, updated_at, published_at, tags, excerpt, slug } = post
-  // const template = tags[0].name
-  // const city = tags[1].name
-  // const country = tags[2].name
-  // const monthYear = tags[3].name
 
   const [types] = tags.filter(tag => tag.name.includes("Type: "))
-  const [topics] = tags.filter(tag => tag.name.includes("Topic: "))
+  const topics = tags.filter(tag => tag.name.includes("Topic: "))
   const [months] = tags.filter(tag => tag.name.includes("Month: "))
   const [cities] = tags.filter(tag => tag.name.includes("City: "))
-  const [regions] = tags.filter(tag => tag.name.includes("Region: "))
+  const [states] = tags.filter(tag => tag.name.includes("State: "))
   const [countries] = tags.filter(tag => tag.name.includes("Country"))
 
+  const regions = states === undefined ? countries.name.split(": ")[1] : states.name.split(": ")[1]
+
+  console.log([types])
   return (
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />
+
       <Nav
         title={title}
         slug={slug}
         siteUrl={siteUrl}
         published_at={published_at}
         months={months.name.split(": ")[1]}
+        regions={regions}
         cities={cities.name.split(": ")[1]}
-        countries={countries.name.split(": ")[1]}
         types={types.name.split(": ")[1]}
-        // topics={topics.name.split(": ")[1]}
+        countries={countries.name.split(": ")[1]}
       />
       <Spacer height={60} xsHeight={30} />
       <StyledRow>
@@ -89,35 +94,63 @@ function PostTemplate({ data }) {
         <Col xsOffset={0} smOffset={0} mdOffset={1} lgOffset={1} xs={12} sm={12} md={6} lg={3}>
           <Spacer height={20} xsHeight={0} />
           <Col>
-            <h4 css={{ fontSize: "15px" }}>{excerpt}</h4>
+            <h4 css={{ fontSize: "15px", margin: "0" }}>{excerpt}</h4>
           </Col>
-          <Spacer xsHeight={10} height={20} />
+          <h3>
+            <PostLink to={`/tag/${kebabCase(months.name.split(": ")[1])}`}>{published_at}</PostLink>
+          </h3>
           <Col>
-            <div>
+            <div css={{ display: "flex", flexDirection: "row", marginBottom: "-5px" }}>
               <h5>
-                <PostLink to={`/tag/${kebabCase(months.name.split(": ")[1])}`}>
-                  <FaCalendarDay /> {published_at}
-                </PostLink>
+                <FaHashtag />{" "}
               </h5>
               <h5>
-                <PostLink to={`/tag/${kebabCase(countries.name.split(": ")[1])}/`}>
-                  <FaMapMarkerAlt /> {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
-                </PostLink>
+                {topics.map(topic => (
+                  <PostLink
+                    to={`/tag/${kebabCase(topic.name.split(": ")[1])}/`}
+                    css={{ textDecoration: "none" }}
+                  >
+                    <Tag color={"red"} css={{ margin: "2px 2px" }}>
+                      {topic.name.split(": ")[1]}
+                    </Tag>
+                  </PostLink>
+                ))}
               </h5>
-              {types.name.split(": ")[1] === "writing" ? (
-                <h5>
-                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
-                    <FaBook /> {upperFirst(types.name.split(": ")[1])}
-                  </PostLink>
-                </h5>
-              ) : (
-                <h5>
-                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
-                    <FaHeadphones /> {upperFirst(types.name.split(": ")[1])}
-                  </PostLink>
-                </h5>
-              )}
             </div>
+            <h5>
+              <PostLink to={`/tag/${kebabCase(regions)}/`}>
+                <FaMapMarkerAlt />{" "}
+                <Tag color={"green"}>
+                  {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
+                </Tag>
+              </PostLink>
+            </h5>
+            {types.name.split(": ")[1] === "Writing" ? (
+              <h5>
+                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                  <FaBook /> <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
+                </PostLink>
+              </h5>
+            ) : types.name.split(": ")[1] === "Academic" ? (
+              <h5>
+                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                  <FaBook /> <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
+                </PostLink>
+              </h5>
+            ) : types.name.split(": ")[1] === "Photo" ? (
+              <h5>
+                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                  <FaCameraRetro />{" "}
+                  <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
+                </PostLink>
+              </h5>
+            ) : (
+              <h5>
+                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                  <FaHeadphones /> <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
+                </PostLink>
+              </h5>
+            )}
           </Col>
         </Col>
         <Col

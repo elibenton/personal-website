@@ -2,9 +2,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-// YAML Data
-import YAMLData from "../../content/tag-descriptions.yaml"
-
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
 import Collapsible from "react-collapsible"
@@ -18,9 +15,7 @@ import Footer from "../components/footer"
 
 // Utilities and Ancillary Libraries
 import { kebabCase, startCase } from "lodash"
-import moment from "moment"
 import Spacer from "../utils/spacer"
-import { type } from "os"
 
 const Padding = styled.div`
   padding-left: 35px;
@@ -119,13 +114,6 @@ const MarginCol = styled(Col)`
   }
 `
 
-/*
-
-
-
-
-  */
-
 const IndexFiltered = ({ pageContext, data }) => {
   const { name } = pageContext
   const posts = data.filtered.edges
@@ -141,30 +129,20 @@ const IndexFiltered = ({ pageContext, data }) => {
           <MarginCol xs={12} sm={12} md={7} lg={8}>
             <Spacer height={0} xsHeight={15} />
             <MobileHeader>{startCase(name)}</MobileHeader>
-            {/* 
-            {YAMLData.map(tag => {
-              return (
-                <div>
-                  {tag.name === name ? (
-                    <div>
-                      <MobileText css={{ whiteSpace: "pre-wrap" }}>{tag.description}</MobileText>
-                      <br />
-                    </div>
-                  ) : (
-                    <div />
-                  )}
-                </div>
-              )
-            })} */}
+
             {posts.map(({ node }) => {
               const { title, published_at, updated_at, excerpt, slug, tags } = node
 
               const [types] = tags.filter(tag => tag.name.includes("Type: "))
-              // const [topics] = tags.filter(tag => tag.name.includes("Topic: "))
+              const [topics] = tags.filter(tag => tag.name.includes("Topic: "))
               const [months] = tags.filter(tag => tag.name.includes("Month: "))
               const [cities] = tags.filter(tag => tag.name.includes("City: "))
-              const [regions] = tags.filter(tag => tag.name.includes("Region: "))
+              const [states] = tags.filter(tag => tag.name.includes("State: "))
+
               const [countries] = tags.filter(tag => tag.name.includes("Country"))
+
+              const regions =
+                states === undefined ? countries.name.split(": ")[1] : states.name.split(": ")[1]
 
               console.log(types.name)
 
@@ -187,7 +165,7 @@ const IndexFiltered = ({ pageContext, data }) => {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink to={`/tag/${kebabCase(countries.name.split(": ")[1])}/`}>
+                            <BetterLink to={`/tag/${kebabCase(regions)}/`}>
                               {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
                             </BetterLink>
                           </h5>
@@ -223,7 +201,7 @@ const IndexFiltered = ({ pageContext, data }) => {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink to={`/tag/${kebabCase(countries.name.split(": ")[1])}/`}>
+                            <BetterLink to={`/tag/${kebabCase(regions)}/`}>
                               {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
                             </BetterLink>
                           </h5>
