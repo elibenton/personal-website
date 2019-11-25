@@ -38,6 +38,7 @@ export default () => (
         site {
           siteMetadata {
             title
+            description
           }
         }
         city: allGhostTag(filter: { name: { regex: "/City: /" } }) {
@@ -46,7 +47,7 @@ export default () => (
             fieldValue
           }
         }
-        region: allGhostTag(filter: { name: { regex: "/Region: /" } }) {
+        countryOrState: allGhostTag(filter: { name: { regex: "/Country: |State: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
@@ -89,21 +90,21 @@ export default () => (
                 lineHeight: "1.3em",
               }}
             >
-              {data.countries.group.map(country => (
-                <Link
-                  to={`/tag/${kebabCase(country.fieldValue.split(": ")[1])}/`}
-                  css={{ textDecoration: "none" }}
-                >
-                  <Tag color="green">{country.fieldValue.split(": ")[1]}</Tag>
-                </Link>
-              ))}
-              <Spacer height={10} xsHeight={5} />
               {data.types.group.map(type => (
                 <Link
                   to={`/tag/${kebabCase(type.fieldValue.split(": ")[1])}/`}
                   css={{ textDecoration: "none" }}
                 >
                   <Tag color="blue">{upperFirst(type.fieldValue.split(": ")[1])}</Tag>
+                </Link>
+              ))}
+              <Spacer height={10} xsHeight={5} />
+              {data.countryOrState.group.map(region => (
+                <Link
+                  to={`/tag/${kebabCase(region.fieldValue.split(": ")[1])}/`}
+                  css={{ textDecoration: "none" }}
+                >
+                  <Tag color="green">{region.fieldValue.split(": ")[1]}</Tag>
                 </Link>
               ))}
               <Spacer height={10} xsHeight={5} />

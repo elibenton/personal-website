@@ -206,3 +206,5 @@ users
 [Brian Barbour](https://github.com/steelvoltage)
 
 [Simon Posada](https://github.com/simonpfish)
+
+[Liam Duffy](http://www.liamdanielduffy.com/)
