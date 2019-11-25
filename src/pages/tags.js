@@ -31,7 +31,6 @@ const MarginCol = styled(Col)`
   const [city] = tags.filter(tag => tag.includes('city:'))
 */
 
-
 export default () => (
   <StaticQuery
     query={graphql`
@@ -41,31 +40,31 @@ export default () => (
             title
           }
         }
-        locations: allGhostTag(filter: { meta_title: { eq: "Location" } }) {
+        city: allGhostTag(filter: { name: { regex: "/City: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        states: allGhostTag(filter: { meta_title: { eq: "State" } }) {
+        region: allGhostTag(filter: { name: { regex: "/Region: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        countries: allGhostTag(filter: { meta_title: { eq: "Country" } }) {
+        countries: allGhostTag(filter: { name: { regex: "/Country: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        types: allGhostTag(filter: { meta_title: { eq: "Type" } }) {
+        types: allGhostTag(filter: { name: { regex: "/Type: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        topics: allGhostTag(filter: { meta_title: { eq: "Topic" } }) {
+        topics: allGhostTag(filter: { name: { regex: "/Topic: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
@@ -92,28 +91,28 @@ export default () => (
             >
               {data.countries.group.map(country => (
                 <Link
-                  to={`/tag/${kebabCase(country.fieldValue)}/`}
+                  to={`/tag/${kebabCase(country.fieldValue.split(": ")[1])}/`}
                   css={{ textDecoration: "none" }}
                 >
-                  <Tag color="green">{country.fieldValue}</Tag>
+                  <Tag color="green">{country.fieldValue.split(": ")[1]}</Tag>
                 </Link>
               ))}
               <Spacer height={10} xsHeight={5} />
               {data.types.group.map(type => (
                 <Link
-                  to={`/tag/${kebabCase(type.fieldValue)}/`}
+                  to={`/tag/${kebabCase(type.fieldValue.split(": ")[1])}/`}
                   css={{ textDecoration: "none" }}
                 >
-                  <Tag color="blue">{upperFirst(type.fieldValue)}</Tag>
+                  <Tag color="blue">{upperFirst(type.fieldValue.split(": ")[1])}</Tag>
                 </Link>
               ))}
               <Spacer height={10} xsHeight={5} />
               {data.topics.group.map(topic => (
                 <Link
-                  to={`/tags/${kebabCase(topic.fieldValue)}/`}
+                  to={`/tag/${kebabCase(topic.fieldValue.split(": ")[1])}/`}
                   css={{ textDecoration: "none" }}
                 >
-                  <Tag color={"red"}>{topic.fieldValue}</Tag>
+                  <Tag color={"red"}>{topic.fieldValue.split(": ")[1]}</Tag>
                 </Link>
               ))}
             </div>

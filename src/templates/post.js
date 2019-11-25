@@ -6,12 +6,7 @@ import { graphql, Link } from "gatsby"
 import { Row, Col } from "react-flexbox-grid"
 import Helmet from "react-helmet"
 import styled from "styled-components"
-import {
-  FaCalendarDay,
-  FaMapMarkerAlt,
-  FaBook,
-  FaHeadphones,
-} from "react-icons/fa"
+import { FaCalendarDay, FaMapMarkerAlt, FaBook, FaHeadphones } from "react-icons/fa"
 
 // Components
 import Layout from "../components/layout"
@@ -59,48 +54,39 @@ function PostTemplate({ data }) {
   const { siteUrl } = data.site.siteMetadata
   const post = data.ghostPost
   const { html, title, updated_at, published_at, tags, excerpt, slug } = post
-  const template = tags[0].name
-  const city = tags[1].name
-  const country = tags[2].name
-  const monthYear = tags[3].name
+  // const template = tags[0].name
+  // const city = tags[1].name
+  // const country = tags[2].name
+  // const monthYear = tags[3].name
+
+  const [types] = tags.filter(tag => tag.name.includes("Type: "))
+  const [topics] = tags.filter(tag => tag.name.includes("Topic: "))
+  const [months] = tags.filter(tag => tag.name.includes("Month: "))
+  const [cities] = tags.filter(tag => tag.name.includes("City: "))
+  const [regions] = tags.filter(tag => tag.name.includes("Region: "))
+  const [countries] = tags.filter(tag => tag.name.includes("Country"))
 
   return (
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />
       <Nav
         title={title}
-        date={monthYear}
-        city={city}
-        country={country}
         slug={slug}
         siteUrl={siteUrl}
-        template={template}
+        published_at={published_at}
+        months={months.name.split(": ")[1]}
+        cities={cities.name.split(": ")[1]}
+        countries={countries.name.split(": ")[1]}
+        types={types.name.split(": ")[1]}
+        // topics={topics.name.split(": ")[1]}
       />
       <Spacer height={60} xsHeight={30} />
       <StyledRow>
-        <Col
-          xsOffset={0}
-          smOffset={0}
-          mdOffset={1}
-          lgOffset={1}
-          xs={12}
-          sm={12}
-          md={6}
-          lg={6}
-        >
+        <Col xsOffset={0} smOffset={0} mdOffset={1} lgOffset={1} xs={12} sm={12} md={6} lg={6}>
           <Title>{title}</Title>
         </Col>
         <br />
-        <Col
-          xsOffset={0}
-          smOffset={0}
-          mdOffset={1}
-          lgOffset={1}
-          xs={12}
-          sm={12}
-          md={6}
-          lg={3}
-        >
+        <Col xsOffset={0} smOffset={0} mdOffset={1} lgOffset={1} xs={12} sm={12} md={6} lg={3}>
           <Spacer height={20} xsHeight={0} />
           <Col>
             <h4 css={{ fontSize: "15px" }}>{excerpt}</h4>
@@ -109,25 +95,25 @@ function PostTemplate({ data }) {
           <Col>
             <div>
               <h5>
-                <PostLink to={`/tag/${kebabCase(monthYear)}`}>
+                <PostLink to={`/tag/${kebabCase(months.name.split(": ")[1])}`}>
                   <FaCalendarDay /> {published_at}
                 </PostLink>
               </h5>
               <h5>
-                <PostLink to={`/tag/${kebabCase(country)}/`}>
-                  <FaMapMarkerAlt /> {city}, {country}
+                <PostLink to={`/tag/${kebabCase(countries.name.split(": ")[1])}/`}>
+                  <FaMapMarkerAlt /> {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
                 </PostLink>
               </h5>
-              {template === "writing" ? (
+              {types.name.split(": ")[1] === "writing" ? (
                 <h5>
-                  <PostLink to={`/tag/${kebabCase(template)}`}>
-                    <FaBook /> {upperFirst(template)}
+                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                    <FaBook /> {upperFirst(types.name.split(": ")[1])}
                   </PostLink>
                 </h5>
               ) : (
                 <h5>
-                  <PostLink to={`/tag/${kebabCase(template)}`}>
-                    <FaHeadphones /> {upperFirst(template)}
+                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                    <FaHeadphones /> {upperFirst(types.name.split(": ")[1])}
                   </PostLink>
                 </h5>
               )}

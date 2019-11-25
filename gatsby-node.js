@@ -79,10 +79,10 @@ exports.createPages = ({ graphql, actions }) => {
         tags.forEach(filter_tag => {
           console.log(filter_tag)
           createPage({
-            path: `/tag/${_.kebabCase(filter_tag)}/`,
+            path: `/tag/${_.kebabCase(filter_tag.split(": ")[1])}/`,
             component: list,
             context: {
-              name: filter_tag,
+              name: filter_tag.split(": ")[1],
               filter: {
                 tags: { elemMatch: { name: { eq: filter_tag } } },
               },

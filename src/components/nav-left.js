@@ -87,31 +87,31 @@ export default () => (
             description
           }
         }
-        locations: allGhostTag(filter: { meta_title: { eq: "Location" } }) {
+        city: allGhostTag(filter: { name: { regex: "/City: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        states: allGhostTag(filter: { meta_title: { eq: "State" } }) {
+        region: allGhostTag(filter: { name: { regex: "/Region: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        countries: allGhostTag(filter: { meta_title: { eq: "Country" } }) {
+        countries: allGhostTag(filter: { name: { regex: "/Country: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        types: allGhostTag(filter: { meta_title: { eq: "Type" } }) {
+        types: allGhostTag(filter: { name: { regex: "/Type: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
           }
         }
-        topics: allGhostTag(filter: { meta_title: { eq: "Topic" } }) {
+        topics: allGhostTag(filter: { name: { regex: "/Topic: /" } }) {
           totalCount
           group(field: name) {
             fieldValue
@@ -127,13 +127,7 @@ export default () => (
             <Spacer xsHeight={0} height={8} />
             <InnerRow>
               <Link css={{ textDecoration: "none" }} to="/">
-                <img
-                  css={{ marginRight: "10px" }}
-                  src={logo}
-                  alt="Logo"
-                  width="55"
-                  height="55"
-                />
+                <img css={{ marginRight: "10px" }} src={logo} alt="Logo" width="55" height="55" />
               </Link>
               <SubTitle>{data.site.siteMetadata.description}</SubTitle>
             </InnerRow>
@@ -142,26 +136,17 @@ export default () => (
         <Spacer xsHeight={0} height={30} />
         <Row>
           <Hide>
-            <Link
-              to={`/`}
-              css={{ textDecoration: "none", textTransform: "uppercase" }}
-            >
+            <Link to={`/`} css={{ textDecoration: "none", textTransform: "uppercase" }}>
               <h4>home</h4>
             </Link>
           </Hide>
           <Hide>&nbsp;/&nbsp;</Hide>
-          <Link
-            to="/about"
-            css={{ textDecoration: "none", textTransform: "uppercase" }}
-          >
+          <Link to="/about" css={{ textDecoration: "none", textTransform: "uppercase" }}>
             <h4>about</h4>
           </Link>
           <ReverseHide>&nbsp;/&nbsp;</ReverseHide>
           <ReverseHide>
-            <Link
-              to={`/tags`}
-              css={{ textDecoration: "none", textTransform: "uppercase" }}
-            >
+            <Link to={`/tags`} css={{ textDecoration: "none", textTransform: "uppercase" }}>
               <h4>tags</h4>
             </Link>
           </ReverseHide>
@@ -184,28 +169,28 @@ export default () => (
           >
             {data.countries.group.map(country => (
               <Link
-                to={`/tag/${kebabCase(country.fieldValue)}/`}
+                to={`/tag/${kebabCase(country.fieldValue.split(": ")[1])}/`}
                 css={{ textDecoration: "none" }}
               >
-                <Tag color="green">{country.fieldValue}</Tag>
+                <Tag color="green">{country.fieldValue.split(": ")[1]}</Tag>
               </Link>
             ))}
             <Spacer height={10} xsHeight={5} />
             {data.types.group.map(type => (
               <Link
-                to={`/tag/${kebabCase(type.fieldValue)}/`}
+                to={`/tag/${kebabCase(type.fieldValue.split(": ")[1])}/`}
                 css={{ textDecoration: "none" }}
               >
-                <Tag color="blue">{upperFirst(type.fieldValue)}</Tag>
+                <Tag color="blue">{upperFirst(type.fieldValue.split(": ")[1])}</Tag>
               </Link>
             ))}
             <Spacer height={10} xsHeight={5} />
             {data.topics.group.map(topic => (
               <Link
-                to={`/tag/${kebabCase(topic.fieldValue)}/`}
+                to={`/tag/${kebabCase(topic.fieldValue.split(": ")[1])}/`}
                 css={{ textDecoration: "none" }}
               >
-                <Tag color={"red"}>{topic.fieldValue}</Tag>
+                <Tag color={"red"}>{topic.fieldValue.split(": ")[1]}</Tag>
               </Link>
             ))}
           </div>

@@ -109,49 +109,49 @@ class Navbar extends React.Component {
     prevScrollPos = currentScrollPos
   }
   render() {
-    console.log(
-      `/${moment(this.props.date).format("YYYY")}/${moment(this.props.date)
-        .format("MMMM")
-        .toLowerCase()}/`
-    )
+    const {
+      title,
+      published_at,
+      siteUrl,
+      slug,
+      months,
+      cities,
+      regions,
+      countries,
+      types,
+      topics,
+    } = this.props
+
+    console.log(this.props)
+
     return (
-      <Nav
-        onScroll={this.handleScroll}
-        style={{ top: this.state.scrollingUp ? "0px" : "-66px" }}
-      >
+      <Nav onScroll={this.handleScroll} style={{ top: this.state.scrollingUp ? "0px" : "-66px" }}>
         <NavLink to="/">
           <Img src={logo} alt="Logo" width="40" height="40" />
         </NavLink>
         <Center>
-          <Title>{this.props.title}</Title>
+          <Title>{title}</Title>
           <Hide>
             <h5>
-              <NavLink to={`/tag/${kebabCase(this.props.date)}/`}>
-                {this.props.date}
-              </NavLink>
+              <NavLink to={`/tag/${kebabCase(months)}/`}>{published_at}</NavLink>
             </h5>
             <h5>
-              <NavLink to={`/tag/${kebabCase(this.props.country)}`}>
-                {this.props.city}, {this.props.country}
+              <NavLink to={`/tag/${kebabCase(countries)}`}>
+                {cities}, {countries}
               </NavLink>
             </h5>
           </Hide>
         </Center>
 
-        <LinkImage
-          text={`${this.props.siteUrl}/post/${this.props.slug}`}
-          onCopy={() => this.setState({ copied: true })}
-        >
+        <LinkImage text={`${siteUrl}/post/${slug}`} onCopy={() => this.setState({ copied: true })}>
           <StyledLink>
             {this.state.copied ? (
               <div>
-                <span css={{ color: "black" }}>Link Copied&nbsp;&nbsp;</span>{" "}
-                <FaLink />{" "}
+                <span css={{ color: "black" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
               </div>
             ) : (
               <div>
-                <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span>{" "}
-                <FaLink />{" "}
+                <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
               </div>
             )}
           </StyledLink>

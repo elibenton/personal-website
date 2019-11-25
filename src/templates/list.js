@@ -20,6 +20,7 @@ import Footer from "../components/footer"
 import { kebabCase, startCase } from "lodash"
 import moment from "moment"
 import Spacer from "../utils/spacer"
+import { type } from "os"
 
 const Padding = styled.div`
   padding-left: 35px;
@@ -120,13 +121,10 @@ const MarginCol = styled(Col)`
 
 /*
 
-  const cities = ["Bangalore", ""]
 
 
 
-  const [city] = tags.filter(tag => cities.includes(tag))
   */
-
 
 const IndexFiltered = ({ pageContext, data }) => {
   const { name } = pageContext
@@ -143,15 +141,13 @@ const IndexFiltered = ({ pageContext, data }) => {
           <MarginCol xs={12} sm={12} md={7} lg={8}>
             <Spacer height={0} xsHeight={15} />
             <MobileHeader>{startCase(name)}</MobileHeader>
-
+            {/* 
             {YAMLData.map(tag => {
               return (
                 <div>
                   {tag.name === name ? (
                     <div>
-                      <MobileText css={{ whiteSpace: "pre-wrap" }}>
-                        {tag.description}
-                      </MobileText>
+                      <MobileText css={{ whiteSpace: "pre-wrap" }}>{tag.description}</MobileText>
                       <br />
                     </div>
                   ) : (
@@ -159,33 +155,18 @@ const IndexFiltered = ({ pageContext, data }) => {
                   )}
                 </div>
               )
-            })}
+            })} */}
             {posts.map(({ node }) => {
-              const {
-                title,
-                date,
-                month,
-                year,
-                // updated_at,
-                tags,
-                excerpt,
-                slug,
-              } = node
+              const { title, published_at, updated_at, excerpt, slug, tags } = node
 
-              // console.log(
-              //   "Title:",
-              //   title,
-              //   "\n",
-              //   tags[1].name,
-              //   "\n",
-              //   tags[2].name,
-              //   "\n",
-              //   tags[3].name
-              // )
+              const [types] = tags.filter(tag => tag.name.includes("Type: "))
+              // const [topics] = tags.filter(tag => tag.name.includes("Topic: "))
+              const [months] = tags.filter(tag => tag.name.includes("Month: "))
+              const [cities] = tags.filter(tag => tag.name.includes("City: "))
+              const [regions] = tags.filter(tag => tag.name.includes("Region: "))
+              const [countries] = tags.filter(tag => tag.name.includes("Country"))
 
-              const monthYear = tags[3].name
-              const city = tags[1].name
-              const country = tags[2].name
+              console.log(types.name)
 
               return (
                 <Collapsible
@@ -206,14 +187,14 @@ const IndexFiltered = ({ pageContext, data }) => {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink to={`/tag/${kebabCase(country)}/`}>
-                              {city}, {country}
+                            <BetterLink to={`/tag/${kebabCase(countries.name.split(": ")[1])}/`}>
+                              {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
                             </BetterLink>
                           </h5>
                           <h5>&middot;</h5>
                           <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink to={`/tag/${kebabCase(monthYear)}/`}>
-                              {date}
+                            <BetterLink to={`/tag/${kebabCase(months.name.split(": ")[1])}/`}>
+                              {published_at}
                             </BetterLink>
                           </h5>
                         </MobileRowInner>
@@ -242,14 +223,14 @@ const IndexFiltered = ({ pageContext, data }) => {
                         </MobileTitle>
                         <MobileRowInner>
                           <h5>
-                            <BetterLink to={`/tag/${kebabCase(country)}/`}>
-                              {city}, {country}
+                            <BetterLink to={`/tag/${kebabCase(countries.name.split(": ")[1])}/`}>
+                              {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
                             </BetterLink>
                           </h5>
                           <h5>&middot;</h5>
                           <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink to={`/tag/${kebabCase(monthYear)}/`}>
-                              {date}
+                            <BetterLink to={`/tag/${kebabCase(months.name.split(": ")[1])}/`}>
+                              {published_at}
                             </BetterLink>
                           </h5>
                         </MobileRowInner>
@@ -265,10 +246,7 @@ const IndexFiltered = ({ pageContext, data }) => {
                   >
                     {excerpt}
                   </MobileContainer>
-                  <BetterLink
-                    to={`/post/${slug}`}
-                    css={{ textDecoration: "none" }}
-                  >
+                  <BetterLink to={`/post/${slug}`} css={{ textDecoration: "none" }}>
                     <Button>Read More&nbsp;➤</Button>
                   </BetterLink>
                 </Collapsible>
@@ -287,10 +265,7 @@ export default IndexFiltered
 
 export const pageQuery = graphql`
   query($filter: GhostPostFilterInput) {
-    filtered: allGhostPost(
-      sort: { order: DESC, fields: published_at }
-      filter: $filter
-    ) {
+    filtered: allGhostPost(sort: { order: DESC, fields: published_at }, filter: $filter) {
       edges {
         node {
           excerpt
@@ -298,10 +273,7 @@ export const pageQuery = graphql`
           id
           slug
           updated_at(formatString: "MM-DD-YYYY")
-          date: published_at(formatString: "MM-DD-YYYY")
-          month: published_at(formatString: "MMMM")
-          year: published_at(formatString: "YYYY")
-          monthYear: published_at(formatString: "MMMM-YYYY")
+          published_at(formatString: "MM-DD-YYYY")
           tags {
             name
           }
