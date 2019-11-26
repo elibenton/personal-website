@@ -135,21 +135,9 @@ export default () => (
         </Row>
         <Spacer xsHeight={0} height={30} />
         <Row>
-          <Hide>
-            <Link to={`/`} css={{ textDecoration: "none", textTransform: "uppercase" }}>
-              <h4>home</h4>
-            </Link>
-          </Hide>
-          <Hide>&nbsp;/&nbsp;</Hide>
           <Link to="/about" css={{ textDecoration: "none", textTransform: "uppercase" }}>
             <h4>about</h4>
           </Link>
-          <ReverseHide>&nbsp;/&nbsp;</ReverseHide>
-          <ReverseHide>
-            <Link to={`/tags`} css={{ textDecoration: "none", textTransform: "uppercase" }}>
-              <h4>tags</h4>
-            </Link>
-          </ReverseHide>
           &nbsp;/&nbsp;
           <a
             href="https://www.notion.so/elibentoncohen/911170cb13cb42b291e4801d553a71bc?v=7fa7960e9a5147168060fd09e7b0ae2a"
@@ -157,6 +145,19 @@ export default () => (
           >
             <h4>reading</h4>
           </a>
+          &nbsp;/&nbsp;
+          <a
+            href="https://mailchi.mp/4071967161b9/elis-watson-blog"
+            css={{ textDecoration: "none", textTransform: "uppercase" }}
+          >
+            <h4>subscribe</h4>
+          </a>
+          <ReverseHide>&nbsp;/&nbsp;</ReverseHide>
+          <ReverseHide>
+            <Link to={`/tags`} css={{ textDecoration: "none", textTransform: "uppercase" }}>
+              <h4>tags</h4>
+            </Link>
+          </ReverseHide>
         </Row>
         <Hide>
           <div

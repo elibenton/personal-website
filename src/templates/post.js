@@ -32,7 +32,7 @@ const PostLink = styled(Link)`
 const Title = styled.h2`
   margin-top: 0px;
   text-align: left;
-  line-height: 9.5vw;
+  line-height: 9vw;
   font-size: 7.5vw;
   @media screen and (max-width: 767px) {
     line-height: 15vw;
@@ -51,6 +51,13 @@ export const TagSpan = styled.div`
     margin-top: 0;
     margin-left: 5%;
     margin-right: 5%;
+  }
+`
+const StyledCol = styled(Col)`
+  position: relative;
+  right: 8px;
+  @media screen and (max-width: 767px) {
+    right: 5px;
   }
 `
 
@@ -91,67 +98,95 @@ function PostTemplate({ data }) {
           <Title>{title}</Title>
         </Col>
         <br />
-        <Col xsOffset={0} smOffset={0} mdOffset={1} lgOffset={1} xs={12} sm={12} md={6} lg={3}>
-          <Spacer height={20} xsHeight={0} />
-          <Col>
-            <h4 css={{ fontSize: "15px", margin: "0" }}>{excerpt}</h4>
-          </Col>
-          <h3>
-            <PostLink to={`/tag/${kebabCase(months.name.split(": ")[1])}`}>{published_at}</PostLink>
-          </h3>
-          <Col>
-            <div css={{ display: "flex", flexDirection: "row", marginBottom: "-5px" }}>
+        <Col xsOffset={0} smOffset={0} mdOffset={1} lgOffset={1} xs={12} sm={12} md={6} lg={4}>
+          <Spacer height={20} xsHeight={40} />
+          <div css={{ width: "90%" }}>
+            <Col>
+              <h3>
+                <PostLink
+                  css={{
+                    fontWeight: "500",
+                    // position: "relative",
+                    // left: "-20px",
+                  }}
+                  to={`/tag/${kebabCase(months.name.split(": ")[1])}`}
+                >
+                  {published_at}
+                </PostLink>
+              </h3>
+              <Spacer height={10} xsHeight={10} />
+
+              <h4
+                css={{
+                  fontSize: "15px",
+                  margin: "0",
+                  borderLeft: "solid 2px",
+                  paddingLeft: "20px",
+                  // position: "relative",
+                  // left: "-20px",
+                }}
+              >
+                {excerpt}
+              </h4>
+            </Col>
+            <Spacer height={30} xsHeight={30} />
+            <StyledCol>
+              <div css={{ display: "flex", flexDirection: "row", marginBottom: "-5px" }}>
+                <h5>
+                  <FaHashtag css={{ position: "relative", top: "4px" }} />{" "}
+                </h5>
+                <h5>
+                  {topics.map(topic => (
+                    <PostLink
+                      to={`/tag/${kebabCase(topic.name.split(": ")[1])}/`}
+                      css={{ textDecoration: "none" }}
+                    >
+                      <Tag color={"red"} css={{ margin: "2px 2px" }}>
+                        {topic.name.split(": ")[1]}
+                      </Tag>
+                    </PostLink>
+                  ))}
+                </h5>
+              </div>
               <h5>
-                <FaHashtag />{" "}
+                <PostLink to={`/tag/${kebabCase(regions)}/`}>
+                  <FaMapMarkerAlt css={{ position: "relative", top: "4px" }} />{" "}
+                  <Tag color={"green"}>
+                    {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
+                  </Tag>
+                </PostLink>
               </h5>
-              <h5>
-                {topics.map(topic => (
-                  <PostLink
-                    to={`/tag/${kebabCase(topic.name.split(": ")[1])}/`}
-                    css={{ textDecoration: "none" }}
-                  >
-                    <Tag color={"red"} css={{ margin: "2px 2px" }}>
-                      {topic.name.split(": ")[1]}
-                    </Tag>
+              {types.name.split(": ")[1] === "Writing" ? (
+                <h5>
+                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                    <FaBook css={{ position: "relative", top: "4px" }} />{" "}
+                    <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
                   </PostLink>
-                ))}
-              </h5>
-            </div>
-            <h5>
-              <PostLink to={`/tag/${kebabCase(regions)}/`}>
-                <FaMapMarkerAlt />{" "}
-                <Tag color={"green"}>
-                  {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
-                </Tag>
-              </PostLink>
-            </h5>
-            {types.name.split(": ")[1] === "Writing" ? (
-              <h5>
-                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
-                  <FaBook /> <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
-                </PostLink>
-              </h5>
-            ) : types.name.split(": ")[1] === "Academic" ? (
-              <h5>
-                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
-                  <FaBook /> <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
-                </PostLink>
-              </h5>
-            ) : types.name.split(": ")[1] === "Photo" ? (
-              <h5>
-                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
-                  <FaCameraRetro />{" "}
-                  <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
-                </PostLink>
-              </h5>
-            ) : (
-              <h5>
-                <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
-                  <FaHeadphones /> <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
-                </PostLink>
-              </h5>
-            )}
-          </Col>
+                </h5>
+              ) : types.name.split(": ")[1] === "Academic" ? (
+                <h5>
+                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                    <FaBook css={{ position: "relative", top: "4px" }} />{" "}
+                    <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
+                  </PostLink>
+                </h5>
+              ) : types.name.split(": ")[1] === "Photo" ? (
+                <h5>
+                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                    <FaCameraRetro css={{ position: "relative", top: "4px" }} />{" "}
+                    <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
+                  </PostLink>
+                </h5>
+              ) : (
+                <h5>
+                  <PostLink to={`/tag/${kebabCase(types.name.split(": ")[1])}`}>
+                    <FaHeadphones css={{ position: "relative", top: "4px" }} />{" "}
+                    <Tag color={"blue"}>{upperFirst(types.name.split(": ")[1])}</Tag>
+                  </PostLink>
+                </h5>
+              )}
+            </StyledCol>
+          </div>
         </Col>
         <Col
           xsOffset={0}

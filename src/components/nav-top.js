@@ -11,7 +11,8 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 
 // Utilities and Ancillary Libraries
 import { kebabCase } from "lodash"
-import { FaLink } from "react-icons/fa"
+import { FaLink, FaEnvelope } from "react-icons/fa"
+import Color from "../utils/colors"
 
 const Title = styled.h4`
   font-size: 1.4em;
@@ -61,7 +62,7 @@ const Hide = styled.div`
   }
 `
 const Img = styled.img`
-  margin: 16px 100px 8px 0;
+  margin: 16px 130px 8px 8px;
   @media screen and (max-width: 767px) {
     margin: 0 6px 0 2px;
   }
@@ -76,9 +77,6 @@ const StyledLink = styled.h3`
   align-content: center;
   display: flex;
   align-items: center;
-  :active {
-    color: gray;
-  }
 `
 
 const LinkImage = styled(CopyToClipboard)`
@@ -130,20 +128,31 @@ class Navbar extends React.Component {
             </h5>
           </Hide>
         </Center>
-
-        <LinkImage text={`${siteUrl}/post/${slug}`} onCopy={() => this.setState({ copied: true })}>
-          <StyledLink>
-            {this.state.copied ? (
-              <div css={{ display: "flex", alignItems: "center" }}>
-                <span css={{ color: "black" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
-              </div>
-            ) : (
-              <div css={{ display: "flex", alignItems: "center" }}>
-                <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
-              </div>
-            )}
-          </StyledLink>
-        </LinkImage>
+        <Center>
+          <LinkImage
+            text={`${siteUrl}/post/${slug}`}
+            onCopy={() => this.setState({ copied: true })}
+          >
+            <StyledLink>
+              {this.state.copied ? (
+                <div css={{ display: "flex", alignItems: "center" }}>
+                  <span css={{ position: "relative", top: "2px" }}>Link Copied&nbsp;&nbsp;</span>{" "}
+                  <FaLink />{" "}
+                </div>
+              ) : (
+                <div css={{ display: "flex", alignItems: "center" }}>
+                  <span css={{ color: "white", position: "relative", top: "2px" }}>
+                    Link Copied&nbsp;&nbsp;
+                  </span>{" "}
+                  <FaLink />{" "}
+                </div>
+              )}
+            </StyledLink>
+          </LinkImage>
+          <a href="https://mailchi.mp/4071967161b9/elis-watson-blog">
+            <FaEnvelope css={{ position: "relative", top: "2px", marginRight: "2vw" }} />
+          </a>
+        </Center>
       </Nav>
     )
   }
