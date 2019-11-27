@@ -48,7 +48,7 @@ const Nav = styled.div`
 `
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  /* color: black; */
   padding: 0 10px;
   @media screen and (max-width: 600px) {
     padding-left: 8px;
@@ -134,19 +134,17 @@ class Navbar extends React.Component {
             onCopy={() => this.setState({ copied: true })}
           >
             <StyledLink>
-              {this.state.copied ? (
-                <div css={{ display: "flex", alignItems: "center" }}>
-                  <span css={{ position: "relative", top: "2px" }}>Link Copied&nbsp;&nbsp;</span>{" "}
-                  <FaLink />{" "}
-                </div>
-              ) : (
-                <div css={{ display: "flex", alignItems: "center" }}>
-                  <span css={{ color: "white", position: "relative", top: "2px" }}>
-                    Link Copied&nbsp;&nbsp;
-                  </span>{" "}
-                  <FaLink />{" "}
-                </div>
-              )}
+              <a css={{ textDecoration: "none" }}>
+                {this.state.copied ? (
+                  <div css={{ display: "flex", alignItems: "center" }}>
+                    <span>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
+                  </div>
+                ) : (
+                  <div css={{ display: "flex", alignItems: "center" }}>
+                    <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
+                  </div>
+                )}
+              </a>
             </StyledLink>
           </LinkImage>
           <a href="https://mailchi.mp/4071967161b9/elis-watson-blog">

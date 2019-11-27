@@ -16,6 +16,7 @@ import Footer from "../components/footer"
 // Utilities and Ancillary Libraries
 import { kebabCase, startCase } from "lodash"
 import Spacer from "../utils/spacer"
+import Color from "../utils/colors"
 
 const Padding = styled.div`
   padding-left: 35px;
@@ -61,6 +62,10 @@ const MobileRowOuter = styled(Row)`
   cursor: pointer;
   margin-left: 0px !important;
   margin-right: 0px !important;
+  /* :hover,
+  :active {
+    color: Color("yellow");
+  } */
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
     margin-left: 8px !important;
@@ -71,6 +76,7 @@ const MobileRowInner = styled(Row)`
   display: flex;
   flex-direction: row;
   margin-left: -4px !important;
+
   @media screen and (max-width: 767px) {
     font-style: italic;
     margin: 0px 0px 8px -4px !important;
@@ -133,16 +139,16 @@ const IndexFiltered = ({ pageContext, data }) => {
             {posts.map(({ node }) => {
               const { title, published_at, updated_at, excerpt, slug, tags } = node
 
-              const [types] = tags.filter(tag => tag.name.includes("Type: "))
-              const [topics] = tags.filter(tag => tag.name.includes("Topic: "))
-              const [months] = tags.filter(tag => tag.name.includes("Month: "))
-              const [cities] = tags.filter(tag => tag.name.includes("City: "))
-              const [states] = tags.filter(tag => tag.name.includes("State: "))
-
-              const [countries] = tags.filter(tag => tag.name.includes("Country"))
-
+              const [types = {}] = tags.filter(tag => tag.name.includes("Type: "))
+              const [months = {}] = tags.filter(tag => tag.name.includes("Month: "))
+              const [cities = {}] = tags.filter(tag => tag.name.includes("City: "))
+              const [states = {}] = tags.filter(tag => tag.name.includes("State: "))
+              const [countries = {}] = tags.filter(tag => tag.name.includes("Country"))
+              const topics = tags.filter(tag => tag.name.includes("Topic: "))
               const regions =
-                states === undefined ? countries.name.split(": ")[1] : states.name.split(": ")[1]
+                states.name === undefined
+                  ? countries.name.split(": ")[1]
+                  : states.name.split(": ")[1]
 
               console.log(types.name)
 

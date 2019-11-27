@@ -34,6 +34,7 @@ const Title = styled.h2`
   text-align: left;
   line-height: 9vw;
   font-size: 7.5vw;
+
   @media screen and (max-width: 767px) {
     line-height: 15vw;
     font-size: 14.2vw;
@@ -67,14 +68,14 @@ function PostTemplate({ data }) {
   const post = data.ghostPost
   const { html, title, updated_at, published_at, tags, excerpt, slug } = post
 
-  const [types] = tags.filter(tag => tag.name.includes("Type: "))
+  const [types = {}] = tags.filter(tag => tag.name.includes("Type: "))
+  const [months = {}] = tags.filter(tag => tag.name.includes("Month: "))
+  const [cities = {}] = tags.filter(tag => tag.name.includes("City: "))
+  const [states = {}] = tags.filter(tag => tag.name.includes("State: "))
+  const [countries = {}] = tags.filter(tag => tag.name.includes("Country"))
   const topics = tags.filter(tag => tag.name.includes("Topic: "))
-  const [months] = tags.filter(tag => tag.name.includes("Month: "))
-  const [cities] = tags.filter(tag => tag.name.includes("City: "))
-  const [states] = tags.filter(tag => tag.name.includes("State: "))
-  const [countries] = tags.filter(tag => tag.name.includes("Country"))
-
-  const regions = states === undefined ? countries.name.split(": ")[1] : states.name.split(": ")[1]
+  const regions =
+    states.name === undefined ? countries.name.split(": ")[1] : states.name.split(": ")[1]
 
   console.log([types])
   return (
@@ -103,16 +104,17 @@ function PostTemplate({ data }) {
           <div css={{ width: "90%" }}>
             <Col>
               <h3>
-                <PostLink
+                <Link
                   css={{
                     fontWeight: "500",
                     // position: "relative",
                     // left: "-20px",
+                    textDecoration: "none",
                   }}
                   to={`/tag/${kebabCase(months.name.split(": ")[1])}`}
                 >
                   {published_at}
-                </PostLink>
+                </Link>
               </h3>
               <Spacer height={10} xsHeight={10} />
 
