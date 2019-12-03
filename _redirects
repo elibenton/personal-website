@@ -3,3 +3,6 @@
 /audio/:slug      /post/:slug
 /academic/:slug   /post/:slug
 /photos/:slug     /post/:slug
+
+# Testing
+writing/the-foundation-aadhaar/       post/the-foundation-aadhaar/ 
