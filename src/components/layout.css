@@ -289,7 +289,12 @@ figcaption {
   letter-spacing: -0.2px;
   color: gray;
   font-size: 15px;
-  line-height: 2.5em;
+}
+
+@media screen and (max-width: 767px) {
+  figcaption {
+    width: 90%;
+  }
 }
 
 .kg-image-card,
