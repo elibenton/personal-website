@@ -4,29 +4,6 @@ const _ = require("lodash")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
-  // Generally you create redirects while creating pages.
-
-  createRedirect({
-    fromPath: "/writing/",
-    toPath: "/post/",
-    isPermanent: true,
-  })
-  createRedirect({
-    fromPath: "/audio/",
-    toPath: "/post/",
-    isPermanent: true,
-  })
-  createRedirect({
-    fromPath: "/academic/",
-    toPath: "/post/",
-    isPermanent: true,
-  })
-  createRedirect({
-    fromPath: "/photo/",
-    toPath: "/post/",
-    isPermanent: true,
-  })
-
   const list = path.resolve(`./src/templates/list.js`)
 
   return new Promise((resolve, reject) => {
