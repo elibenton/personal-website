@@ -1,5 +1,5 @@
 # Redirects from what the browser requests to what we serve
-/writing    /post
-/audio      /post
-/academic   /post
-/photos     /post
+/writing/*    /post/:splat
+/audio/*      /post/:splat
+/academic/*   /post/:splat
+/photos/*     /post/:splat
