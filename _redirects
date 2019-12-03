@@ -1,5 +1,4 @@
 # Redirects from what the browser requests to what we serve
-/news/:slug       /post/:slug
 /writing/:slug    /post/:slug
 /audio/:slug      /post/:slug
 /academic/:slug   /post/:slug
