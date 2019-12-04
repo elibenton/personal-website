@@ -1,31 +1,93 @@
+// Core Libraries
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 
+// Yarn Packages
+import { Row, Col } from "react-flexbox-grid"
+import Helmet from "react-helmet"
+import styled from "styled-components"
+
+// Components
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Nav from "../components/nav-left"
+import Footer from "../components/footer"
 
-class NotFoundPage extends React.Component {
+// Utilities
+import Spacer from "../utils/spacer"
+
+const About = styled.p`
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.4em;
+`
+const AboutContainer = styled.div`
+  margin-bottom: 2em;
+  max-width: 370px;
+  @media screen and (max-width: 767px) {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+`
+const Header = styled.h3`
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 1.2em;
+`
+const Padding = styled.div`
+  padding-left: 35px;
+  padding-right: 25px;
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+`
+
+class AboutPrototype extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Layout>
+        <Padding>
+          <Helmet title={"404: Not Found"} />
+          <Spacer height={50} xsHeight={0} />
+          <Row>
+            <Col xs={12} sm={12} md={4} lg={3}>
+              <Nav />
+            </Col>
+            <Col xsOffset={1} xs={10} sm={10} md={7} lg={8}>
+              <Spacer height={0} xsHeight={30} />
+              <h1 css={{ lineHeight: "1.2em", margin: "0", fontSize: "90px" }}>404: Not Found</h1>
+              <Spacer height={50} xsHeight={15} />
+              <Col xs={12} sm={12} md={8} lg={8}>
+                <About>Oh no! This page no longer exists!</About>
+                <About>
+                  Well it probably does <i>exist</i>; it's just been moved somewhere else. Sometimes
+                  I move things around and then forget where I put them.
+                </About>
+                <About>Sad. Apologies about that</About>
+                <About>
+                  Click this <Link to="/">link</Link> to view all posts. Or refer to the tags to
+                  browse different topics. Remember, clicking the spinning globe always takes you
+                  home.
+                </About>
+              </Col>
+              <Spacer height={135} xsHeight={20} />
+            </Col>
+          </Row>
+          <Footer />
+        </Padding>
       </Layout>
     )
   }
 }
 
-export default NotFoundPage
+export default AboutPrototype
 
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
+        author
       }
     }
   }

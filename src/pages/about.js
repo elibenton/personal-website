@@ -47,7 +47,7 @@ class AboutPrototype extends React.Component {
     return (
       <Layout>
         <Padding>
-          <Spacer height={50} xsHeight={15} />
+          <Spacer height={50} xsHeight={0} />
           <Helmet title={"About"} />
           <Row>
             <Col xs={12} sm={12} md={4} lg={3}>
@@ -59,23 +59,18 @@ class AboutPrototype extends React.Component {
                 <Img fluid={this.props.data.file.childImageSharp.fluid} />
               </AboutContainer>
               <About>
-                As a 2019-2020{" "}
-                <a href="https://watson.foundation/">Watson Fellow</a>, I am
-                traveling the world to explore the politics of technology. I
-                hope to see how life online—and off—shapes our understanding of
-                the world around us. This website is where I write about my
-                journey, discuss what I am reading, and release audio and photos
-                documenting the year.
+                As a 2019-2020 <a href="https://watson.foundation/">Watson Fellow</a>, I am
+                traveling the world to explore the politics of technology. I hope to see how life
+                online—and off—shapes our understanding of the world around us. This website is
+                where I write about my journey, discuss what I am reading, and release audio and
+                photos documenting the year.
                 <br /> <br />
-                Previously, I produced public radio at{" "}
-                <a href="https://www.kqed.org/">KQED</a> in San Francisco and
-                researched the US Congress at{" "}
-                <a href="https://www.brookings.edu/">
-                  The Brookings Institution
-                </a>{" "}
-                in Washington D.C.
-                <br /> <br />I graduated from Pomona College in Los Angeles,
-                where I studied politics and computer science.
+                Previously, I produced public radio at <a href="https://www.kqed.org/">KQED</a> in
+                San Francisco and researched the US Congress at{" "}
+                <a href="https://www.brookings.edu/">The Brookings Institution</a> in Washington
+                D.C.
+                <br /> <br />I graduated from Pomona College in Los Angeles, where I studied
+                politics and computer science.
               </About>
               <br />
               <Header>
