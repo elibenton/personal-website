@@ -58,5 +58,60 @@ module.exports = {
         version: `v3`,
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allGhostPost } }) => {
+              return allGhostPost.edges.map(edge => {
+                return Object.assign({}, edge.node, {
+                  description: edge.node.excerpt,
+                  date: edge.node.date,
+                  url: "post/" + edge.node.slug,
+                  guid: "post/" + edge.node.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: ` 
+            {
+              allGhostPost(sort: { order: DESC, fields: published_at }) {
+                edges {
+                  node {
+                    excerpt
+                    title
+                    html
+                    id
+                    slug
+                    updated_at(formatString: "MM-DD-YYYY")
+                    date: published_at(formatString: "MM-DD-YYYY")
+                    tags {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: "/posts.xml",
+            title: "Traveling the world to understand the politics of digitally networked life",
+            match: "^/",
+          },
+        ],
+      },
+    },
   ],
 }

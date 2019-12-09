@@ -63,7 +63,7 @@ class AboutPrototype extends React.Component {
                   Well it probably does <i>exist</i>; it's just been moved somewhere else. Sometimes
                   I move things around and then forget where I put them.
                 </About>
-                <About>Sad. Apologies about that</About>
+                <About>Apologies about that.</About>
                 <About>
                   Click this <Link to="/">link</Link> to view all posts. Or refer to the tags to
                   browse different topics. Remember, clicking the spinning globe always takes you
@@ -73,6 +73,7 @@ class AboutPrototype extends React.Component {
               <Spacer height={135} xsHeight={20} />
             </Col>
           </Row>
+          <Spacer height={40} xsHeight={40} />
           <Footer />
         </Padding>
       </Layout>
