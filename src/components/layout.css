@@ -482,3 +482,20 @@ figcaption {
 .react-icons {
   vertical-align: middle;
 }
+
+/* Observable  */
+.observable {
+  overflow-x: auto;
+  width: 191%;
+  right: 50%;
+  position: relative;
+  margin: 1em;
+}
+
+@media screen and (max-width: 767px) {
+    .observable {
+    width: 100%;
+    right: 0;
+    margin: 0;
+  }
+}
