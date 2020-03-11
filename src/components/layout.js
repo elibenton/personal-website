@@ -20,7 +20,7 @@ export default ({ children }) => (
         rel="stylesheet"
       ></link>
       <meta
-        name="Eli Benton Cohen"
+        name="Colander World"
         content="Traveling the world to understand the politics of digitally networked life"
       />
     </Helmet>

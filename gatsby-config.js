@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Eli Benton Cohen`,
-    shortTitle: `Eli B. Cohen`,
+    title: `Colander World`,
+    shortTitle: `Coldander`,
     author: `Eli Benton Cohen`,
-    description: `Traveling the world to understand the politics of digitally networked life`,
+    description: `Pandemic got you worked up? Then you might enjoy the web's most paranoid blog.`,
     siteUrl: `https://elibenton.co/`,
   },
   plugins: [
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Eli Benton Cohen`,
-        short_name: `Eli B. Cohen`,
+        name: `Colander World`,
+        short_name: `Colander World`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,

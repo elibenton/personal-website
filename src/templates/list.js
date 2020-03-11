@@ -26,7 +26,7 @@ const Padding = styled.div`
   }
 `
 const MobileHeader = styled.h3`
-  font-size: 22px;
+  font-size: 24px;
   margin: 0px 0px 12px 0px;
   padding-bottom: 10px;
   font-weight: 500;
@@ -126,15 +126,21 @@ const IndexFiltered = ({ pageContext, data }) => {
   return (
     <Layout>
       <Padding>
-        <Spacer height={50} xsHeight={0} />
         <Helmet title={`${startCase(name)}`} />
         <Row>
-          <Col xs={12} sm={12} md={4} lg={3}>
+          <Col
+            xs={12}
+            sm={12}
+            md={4}
+            lg={3}
+            css={{ position: "sticky", top: "0", alignSelf: "flex-start" }}
+          >
+            <Spacer height={50} xsHeight={0} />
             <Nav />
           </Col>
           <MarginCol xs={12} sm={12} md={7} lg={8}>
-            <Spacer height={0} xsHeight={15} />
-            <MobileHeader>{startCase(name)}</MobileHeader>
+            <Spacer height={50} xsHeight={0} />
+            {/* <MobileHeader>{startCase(name)}</MobileHeader> */}
 
             {posts.map(({ node }) => {
               const { title, published_at, updated_at, excerpt, slug, tags } = node
@@ -155,14 +161,14 @@ const IndexFiltered = ({ pageContext, data }) => {
               return (
                 <Collapsible
                   easing="ease-in-out"
-                  open={false}
+                  open={true}
                   transitionTime={200}
                   trigger={
                     <div>
                       <MobileRowOuter>
                         <MobileTitle
                           css={{
-                            fontSize: "15px",
+                            fontSize: "16px",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}
@@ -192,13 +198,13 @@ const IndexFiltered = ({ pageContext, data }) => {
                           justifyContent: "space-between",
                           cursor: "pointer",
                           borderBottom: "dotted",
-                          borderBottomWidth: "2.2px",
+                          borderBottomWidth: "2px",
                           borderBottomColor: "#ffd666",
                         }}
                       >
                         <MobileTitle
                           css={{
-                            fontSize: "15px",
+                            fontSize: "16px",
                             marginLeft: "0px",
                             marginBottom: "0px",
                           }}
@@ -230,8 +236,9 @@ const IndexFiltered = ({ pageContext, data }) => {
                   >
                     {excerpt}
                   </MobileContainer>
+                  <Spacer height={30} xsHeight={30} />
                   <BetterLink to={`/post/${slug}`} css={{ textDecoration: "none" }}>
-                    <Button>Read More&nbsp;➤</Button>
+                    {/* <Button>Read More&nbsp;➤</Button> */}
                   </BetterLink>
                 </Collapsible>
               )

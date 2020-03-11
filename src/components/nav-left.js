@@ -16,8 +16,9 @@ import { kebabCase, upperFirst } from "lodash"
 const Name = styled.h1`
   display: flex;
   text-transform: none;
+  text-align: left;
   font-weight: 600;
-  font-size: 2.8vw;
+  font-size: 3.4vw;
   margin-top: 0;
   margin-bottom: 4px;
   line-height: 1.1em;
@@ -76,6 +77,19 @@ const SubTitle = styled.h2`
     width: 70%;
   }
 `
+const Rotate = styled.h4`
+  /* transform-origin: 0 0; */
+  font-family: ibm-plex-mono, "Courier New", Courier, monospace;
+  font-weight: 500;
+  font-size: 16px;
+  /* border-bottom: double 1px; */
+  padding-bottom: 4px;
+  /* transform: rotate(-90deg); */
+  /* display: block;
+  position: relative;
+  margin-left: -20px;
+  top: 70px; */
+`
 
 export default () => (
   <StaticQuery
@@ -123,18 +137,20 @@ export default () => (
       <div>
         <Row>
           <Col>
-            <Name>{data.site.siteMetadata.title}</Name>
-            <Spacer xsHeight={0} height={8} />
             <InnerRow>
               <Link css={{ textDecoration: "none" }} to="/">
-                <img css={{ marginRight: "10px" }} src={logo} alt="Logo" width="55" height="55" />
+                <img css={{ marginRight: "10px" }} src={logo} alt="Logo" width="90" height="90" />
               </Link>
-              <SubTitle>{data.site.siteMetadata.description}</SubTitle>
+              <Name css={{ fontFamily: "ibm-plex-mono, Courier, monospace" }}>
+                {data.site.siteMetadata.title}
+              </Name>
             </InnerRow>
+            {/* <Spacer xsHeight={0} height={20} /> */}
+            {/* <SubTitle>{data.site.siteMetadata.description}</SubTitle> */}
           </Col>
         </Row>
         <Spacer xsHeight={0} height={30} />
-        <Row>
+        {/* <Row>
           <Link to="/about" css={{ textDecoration: "none", textTransform: "uppercase" }}>
             <h4>about</h4>
           </Link>
@@ -158,7 +174,7 @@ export default () => (
               <h4>tags</h4>
             </Link>
           </ReverseHide>
-        </Row>
+        </Row> */}
         <Hide>
           <div
             css={{
@@ -168,6 +184,7 @@ export default () => (
               lineHeight: "1.3em",
             }}
           >
+            {/* <Rotate>Types</Rotate> */}
             {data.types.group.map(type => (
               <Link
                 to={`/tag/${kebabCase(type.fieldValue.split(": ")[1])}/`}
@@ -177,6 +194,8 @@ export default () => (
               </Link>
             ))}
             <Spacer height={10} xsHeight={5} />
+            {/* <Rotate>Places</Rotate> */}
+
             {data.countryOrState.group.map(region => (
               <Link
                 to={`/tag/${kebabCase(region.fieldValue.split(": ")[1])}/`}
@@ -186,6 +205,8 @@ export default () => (
               </Link>
             ))}
             <Spacer height={10} xsHeight={5} />
+            {/* <Rotate>Topics</Rotate> */}
+
             {data.topics.group.map(topic => (
               <Link
                 to={`/tag/${kebabCase(topic.fieldValue.split(": ")[1])}/`}

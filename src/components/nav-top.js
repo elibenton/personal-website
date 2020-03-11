@@ -15,7 +15,8 @@ import { FaLink, FaEnvelope } from "react-icons/fa"
 import Color from "../utils/colors"
 
 const Title = styled.h4`
-  font-size: 1.4em;
+  font-size: 1.1em;
+  align-self: center;
   padding-right: 15px;
   border-right: solid 2px;
   @media screen and (max-width: 767px) {
@@ -30,7 +31,7 @@ const Nav = styled.div`
   top: 0px;
   transition: top 0.2s;
   background-color: white;
-  height: 66px;
+  height: 55px;
   z-index: 10;
   width: 100%;
   display: flex;
@@ -101,6 +102,9 @@ class Navbar extends React.Component {
     if (prevScrollPos > currentScrollPos) {
       this.setState({ scrollingUp: true })
     } else {
+
+
+      
       this.setState({ scrollingUp: false })
     }
     prevScrollPos = currentScrollPos
@@ -113,7 +117,7 @@ class Navbar extends React.Component {
     return (
       <Nav onScroll={this.handleScroll} style={{ top: this.state.scrollingUp ? "0px" : "-66px" }}>
         <NavLink to="/">
-          <Img src={logo} alt="Logo" width="40" height="40" />
+          <Img src={logo} alt="Logo" width="35" height="35" />
         </NavLink>
         <Center>
           <Title>{title}</Title>

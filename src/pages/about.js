@@ -60,10 +60,9 @@ class AboutPrototype extends React.Component {
               </AboutContainer>
               <About>
                 As a 2019-2020 <a href="https://watson.foundation/">Watson Fellow</a>, I am
-                traveling the world to explore the politics of technology. I hope to see how life
-                online—and off—shapes our understanding of the world around us. This website is
-                where I write about my journey, discuss what I am reading, and release audio and
-                photos documenting the year.
+                traveling the world to explore the politics of technology. <span css={{fontFamily: "ibm-plex-mono", backgroundColor: "hsla(44, 100%, 70%,1)"}}
+                >colander world</span> is where I write about my journey, discuss what I am reading, and release audio and
+                photos documenting the year. My hope is to see how life online—and off—shapes our understanding of the world around us.
                 <br /> <br />
                 Previously, I produced public radio at <a href="https://www.kqed.org/">KQED</a> in
                 San Francisco and researched the US Congress at{" "}
