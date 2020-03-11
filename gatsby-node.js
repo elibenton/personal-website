@@ -77,7 +77,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Make tag pages
         tags.forEach(filter_tag => {
-          console.log(filter_tag)
+          // console.log(filter_tag)
           createPage({
             path: `/tag/${_.kebabCase(filter_tag.split(": ")[1])}/`,
             component: list,

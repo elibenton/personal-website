@@ -7,34 +7,9 @@ module.exports = {
     siteUrl: `https://elibenton.co/`,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-use-dark-mode",
-      options: {
-        classNameDark: "dark-mode",
-        classNameLight: "light-mode",
-        storageKey: "darkMode",
-        minify: true,
-      },
-    },
-    "gatsby-plugin-netlify-cache",
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-styled-components",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/images`,
-        name: `images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        base64: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-      },
-    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

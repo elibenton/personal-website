@@ -3,7 +3,7 @@ import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 
 // Static Content
-import logo from "../../content/images/tinhat.gif"
+import logo from "../../content/images/logo.gif"
 
 // Yarn Packages
 import styled from "styled-components"
@@ -28,17 +28,18 @@ const Name = styled.h1`
     font-weight: 500;
   }
 `
-const Hide = styled.div`
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-`
 const ReverseHide = styled.div`
   display: none;
   @media screen and (max-width: 767px) {
     display: inline;
   }
 `
+const Hide = styled.div`
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`
+
 const Col = styled.div`
   @media screen and (max-width: 767px) {
     display: flex;
@@ -47,7 +48,6 @@ const Col = styled.div`
 `
 const Row = styled.div`
   display: flex;
-
   margin-left: -4px;
   align-items: center;
   @media screen and (max-width: 767px) {
@@ -63,32 +63,6 @@ const InnerRow = styled.div`
   @media screen and (max-width: 767px) {
     margin-left: 0px;
   }
-`
-const SubTitle = styled.h2`
-  margin-top: 8px;
-  text-align: left;
-  line-height: 22px;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 200;
-  margin-bottom: 10px;
-  color: grey;
-  @media screen and (max-width: 767px) {
-    width: 70%;
-  }
-`
-const Rotate = styled.h4`
-  /* transform-origin: 0 0; */
-  font-family: ibm-plex-mono, "Courier New", Courier, monospace;
-  font-weight: 500;
-  font-size: 16px;
-  /* border-bottom: double 1px; */
-  padding-bottom: 4px;
-  /* transform: rotate(-90deg); */
-  /* display: block;
-  position: relative;
-  margin-left: -20px;
-  top: 70px; */
 `
 
 export default () => (
@@ -150,7 +124,7 @@ export default () => (
           </Col>
         </Row>
         <Spacer xsHeight={0} height={30} />
-        {/* <Row>
+        <Row>
           <Link to="/about" css={{ textDecoration: "none", textTransform: "uppercase" }}>
             <h4>about</h4>
           </Link>
@@ -174,7 +148,7 @@ export default () => (
               <h4>tags</h4>
             </Link>
           </ReverseHide>
-        </Row> */}
+        </Row>
         <Hide>
           <div
             css={{

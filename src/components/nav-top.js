@@ -3,7 +3,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 // Static Content
-import logo from "../../content/images/tinhat.gif"
+import logo from "../../content/images/logo.gif"
 
 // Yarn Packages
 import styled from "styled-components"
@@ -12,7 +12,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 // Utilities and Ancillary Libraries
 import { kebabCase } from "lodash"
 import { FaLink, FaEnvelope } from "react-icons/fa"
-import Color from "../utils/colors"
 
 const Title = styled.h4`
   font-size: 1.1em;
@@ -102,9 +101,6 @@ class Navbar extends React.Component {
     if (prevScrollPos > currentScrollPos) {
       this.setState({ scrollingUp: true })
     } else {
-
-
-      
       this.setState({ scrollingUp: false })
     }
     prevScrollPos = currentScrollPos
@@ -112,7 +108,7 @@ class Navbar extends React.Component {
   render() {
     const { title, published_at, siteUrl, slug, months, cities, regions, countries } = this.props
 
-    console.log(this.props)
+    // console.log(this.props)
 
     return (
       <Nav onScroll={this.handleScroll} style={{ top: this.state.scrollingUp ? "0px" : "-66px" }}>

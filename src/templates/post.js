@@ -6,14 +6,7 @@ import { graphql, Link } from "gatsby"
 import { Row, Col } from "react-flexbox-grid"
 import Helmet from "react-helmet"
 import styled from "styled-components"
-import {
-  FaCalendarDay,
-  FaMapMarkerAlt,
-  FaBook,
-  FaHeadphones,
-  FaHashtag,
-  FaCameraRetro,
-} from "react-icons/fa"
+import { FaMapMarkerAlt, FaBook, FaHeadphones, FaHashtag, FaCameraRetro } from "react-icons/fa"
 
 // Components
 import Layout from "../components/layout"
@@ -77,7 +70,7 @@ function PostTemplate({ data }) {
   const regions =
     states.name === undefined ? countries.name.split(": ")[1] : states.name.split(": ")[1]
 
-  console.log([types])
+  // console.log([types])
   return (
     <Layout location={data.location} title={siteTitle}>
       <Helmet title={title} />

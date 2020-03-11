@@ -1,7 +1,6 @@
 // Core Libraries
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
 
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
@@ -20,19 +19,6 @@ const About = styled.p`
   font-size: 19px;
   font-weight: 400;
   line-height: 1.4em;
-`
-const AboutContainer = styled.div`
-  margin-bottom: 2em;
-  max-width: 370px;
-  @media screen and (max-width: 767px) {
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-`
-const Header = styled.h3`
-  margin-top: 0;
-  font-size: 18px;
-  line-height: 1.2em;
 `
 const Padding = styled.div`
   padding-left: 35px;

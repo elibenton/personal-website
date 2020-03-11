@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 
 // Yarn Packages
 import { Row, Col } from "react-flexbox-grid"
-import Collapsible from "react-collapsible"
 import Helmet from "react-helmet"
 import styled from "styled-components"
 
@@ -16,42 +15,12 @@ import Footer from "../components/footer"
 // Utilities and Ancillary Libraries
 import { kebabCase, startCase } from "lodash"
 import Spacer from "../utils/spacer"
-import Color from "../utils/colors"
 
 const Padding = styled.div`
   padding-left: 35px;
   padding-right: 25px;
   @media screen and (max-width: 767px) {
     padding: 0;
-  }
-`
-const MobileHeader = styled.h3`
-  font-size: 24px;
-  margin: 0px 0px 12px 0px;
-  padding-bottom: 10px;
-  font-weight: 500;
-  border-bottom: solid 2px;
-  @media screen and (max-width: 767px) {
-    margin-left: 0px;
-    padding-left: 8px;
-    margin-right: -16px;
-    margin-top: 24px;
-    padding-bottom: 6px;
-    line-height: 1.2em;
-  }
-`
-const Button = styled.h4`
-  margin: 16px 0 30px 0;
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  :hover,
-  :active {
-    color: #ffd666;
-  }
-  @media screen and (max-width: 767px) {
-    margin-left: 8px;
   }
 `
 const MobileRowOuter = styled(Row)`
@@ -62,10 +31,6 @@ const MobileRowOuter = styled(Row)`
   cursor: pointer;
   margin-left: 0px !important;
   margin-right: 0px !important;
-  /* :hover,
-  :active {
-    color: Color("yellow");
-  } */
   @media screen and (max-width: 767px) {
     flex-direction: column !important;
     margin-left: 8px !important;
@@ -88,13 +53,6 @@ const MobileTitle = styled.h4`
   letter-spacing: 0.8px;
   font-weight: 500;
   margin: 0;
-`
-const MobileText = styled.h4`
-  font-size: 16px;
-  margin-left: 0px;
-  @media screen and (max-width: 767px) {
-    padding-left: 12px;
-  }
 `
 const MobileContainer = styled.h4`
   width: 70%;
@@ -156,78 +114,42 @@ const IndexFiltered = ({ pageContext, data }) => {
                   ? countries.name.split(": ")[1]
                   : states.name.split(": ")[1]
 
-              console.log(types.name)
+              // console.log(types.name)
 
               return (
-                <Collapsible
-                  easing="ease-in-out"
-                  open={true}
-                  transitionTime={200}
-                  trigger={
-                    <div>
-                      <MobileRowOuter>
-                        <MobileTitle
-                          css={{
-                            fontSize: "16px",
-                            marginLeft: "0px",
-                            marginBottom: "0px",
-                          }}
-                        >
-                          {title}
-                        </MobileTitle>
-                        <MobileRowInner>
-                          <h5>
-                            <BetterLink to={`/tag/${kebabCase(regions)}/`}>
-                              {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
-                            </BetterLink>
-                          </h5>
-                          <h5>&middot;</h5>
-                          <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink to={`/tag/${kebabCase(months.name.split(": ")[1])}/`}>
-                              {published_at}
-                            </BetterLink>
-                          </h5>
-                        </MobileRowInner>
-                      </MobileRowOuter>
-                    </div>
-                  }
-                  triggerWhenOpen={
-                    <div>
-                      <MobileRowOuter
-                        css={{
-                          justifyContent: "space-between",
-                          cursor: "pointer",
-                          borderBottom: "dotted",
-                          borderBottomWidth: "2px",
-                          borderBottomColor: "#ffd666",
-                        }}
-                      >
-                        <MobileTitle
-                          css={{
-                            fontSize: "16px",
-                            marginLeft: "0px",
-                            marginBottom: "0px",
-                          }}
-                        >
-                          {title}
-                        </MobileTitle>
-                        <MobileRowInner>
-                          <h5>
-                            <BetterLink to={`/tag/${kebabCase(regions)}/`}>
-                              {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
-                            </BetterLink>
-                          </h5>
-                          <h5>&middot;</h5>
-                          <h5 css={{ paddingRight: "4px" }}>
-                            <BetterLink to={`/tag/${kebabCase(months.name.split(": ")[1])}/`}>
-                              {published_at}
-                            </BetterLink>
-                          </h5>
-                        </MobileRowInner>
-                      </MobileRowOuter>
-                    </div>
-                  }
-                >
+                <div>
+                  <MobileRowOuter
+                    css={{
+                      justifyContent: "space-between",
+                      cursor: "pointer",
+                      borderBottom: "dotted",
+                      borderBottomWidth: "2px",
+                      borderBottomColor: "#ffd666",
+                    }}
+                  >
+                    <MobileTitle
+                      css={{
+                        fontSize: "16px",
+                        marginLeft: "0px",
+                        marginBottom: "0px",
+                      }}
+                    >
+                      {title}
+                    </MobileTitle>
+                    <MobileRowInner>
+                      <h5>
+                        <BetterLink to={`/tag/${kebabCase(regions)}/`}>
+                          {cities.name.split(": ")[1]}, {countries.name.split(": ")[1]}
+                        </BetterLink>
+                      </h5>
+                      <h5>&middot;</h5>
+                      <h5 css={{ paddingRight: "4px" }}>
+                        <BetterLink to={`/tag/${kebabCase(months.name.split(": ")[1])}/`}>
+                          {published_at}
+                        </BetterLink>
+                      </h5>
+                    </MobileRowInner>
+                  </MobileRowOuter>
                   <MobileContainer
                     css={{
                       marginLeft: "0px",
@@ -237,10 +159,7 @@ const IndexFiltered = ({ pageContext, data }) => {
                     {excerpt}
                   </MobileContainer>
                   <Spacer height={30} xsHeight={30} />
-                  <BetterLink to={`/post/${slug}`} css={{ textDecoration: "none" }}>
-                    {/* <Button>Read More&nbsp;➤</Button> */}
-                  </BetterLink>
-                </Collapsible>
+                </div>
               )
             })}
           </MarginCol>

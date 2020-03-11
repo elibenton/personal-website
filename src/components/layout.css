@@ -493,7 +493,7 @@ figcaption {
 }
 
 @media screen and (max-width: 767px) {
-    .observablehq {
+  .observablehq {
     width: 100%;
     right: 0;
     margin: 0;
