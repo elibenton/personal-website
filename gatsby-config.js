@@ -9,7 +9,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-styled-components",
-
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/images`,
+        name: `images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        stripMetadata: true,
+        defaultQuality: 50,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

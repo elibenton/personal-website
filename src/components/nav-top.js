@@ -26,8 +26,6 @@ const Title = styled.h4`
 `
 
 const Nav = styled.div`
-  position: sticky;
-  top: 0px;
   transition: top 0.2s;
   background-color: white;
   height: 55px;

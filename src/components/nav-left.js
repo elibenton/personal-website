@@ -21,6 +21,7 @@ const Name = styled.h1`
   font-size: 3.4vw;
   margin-top: 0;
   margin-bottom: 4px;
+  margin-left: 8px;
   line-height: 1.1em;
   @media screen and (max-width: 767px) {
     font-size: 10vw;
@@ -113,11 +114,9 @@ export default () => (
           <Col>
             <InnerRow>
               <Link css={{ textDecoration: "none" }} to="/">
-                <img css={{ marginRight: "10px" }} src={logo} alt="Logo" width="90" height="90" />
+                <img css={{ marginRight: "10px" }} src={logo} alt="Logo" width="70" height="90" />
               </Link>
-              <Name css={{ fontFamily: "ibm-plex-mono, Courier, monospace" }}>
-                {data.site.siteMetadata.title}
-              </Name>
+              <Name css={{ fontFamily: "monospace" }}>{data.site.siteMetadata.title}</Name>
             </InnerRow>
             {/* <Spacer xsHeight={0} height={20} /> */}
             {/* <SubTitle>{data.site.siteMetadata.description}</SubTitle> */}

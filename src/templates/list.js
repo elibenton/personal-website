@@ -77,6 +77,14 @@ const MarginCol = styled(Col)`
     margin-left: 0;
   }
 `
+const StyledCol = styled(Col)`
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+`
 
 const IndexFiltered = ({ pageContext, data }) => {
   const { name } = pageContext
@@ -86,16 +94,10 @@ const IndexFiltered = ({ pageContext, data }) => {
       <Padding>
         <Helmet title={`${startCase(name)}`} />
         <Row>
-          <Col
-            xs={12}
-            sm={12}
-            md={4}
-            lg={3}
-            css={{ position: "sticky", top: "0", alignSelf: "flex-start" }}
-          >
+          <StyledCol xs={12} sm={12} md={4} lg={3}>
             <Spacer height={50} xsHeight={0} />
             <Nav />
-          </Col>
+          </StyledCol>
           <MarginCol xs={12} sm={12} md={7} lg={8}>
             <Spacer height={50} xsHeight={0} />
             {/* <MobileHeader>{startCase(name)}</MobileHeader> */}
