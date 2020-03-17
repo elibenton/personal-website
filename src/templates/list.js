@@ -129,15 +129,17 @@ const IndexFiltered = ({ pageContext, data }) => {
                       borderBottomColor: "#ffd666",
                     }}
                   >
-                    <MobileTitle
-                      css={{
-                        fontSize: "16px",
-                        marginLeft: "0px",
-                        marginBottom: "0px",
-                      }}
-                    >
-                      {title}
-                    </MobileTitle>
+                    <BetterLink to={`post/${slug}`}>
+                      <MobileTitle
+                        css={{
+                          fontSize: "16px",
+                          marginLeft: "0px",
+                          marginBottom: "0px",
+                        }}
+                      >
+                        {title}
+                      </MobileTitle>
+                    </BetterLink>
                     <MobileRowInner>
                       <h5>
                         <BetterLink to={`/tag/${kebabCase(regions)}/`}>

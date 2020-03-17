@@ -118,7 +118,7 @@ export default () => (
               </Link>
               <Name css={{ fontFamily: "ibm-plex-mono, Courier, monospace" }}>
                 {/* {data.site.siteMetadata.title} */}
-                Eli Benton Cohen
+                Eli&nbsp;B. Cohen
               </Name>
             </InnerRow>
             {/* <Spacer xsHeight={0} height={20} /> */}
