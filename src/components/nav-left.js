@@ -116,7 +116,10 @@ export default () => (
               <Link css={{ textDecoration: "none" }} to="/">
                 <img css={{ marginRight: "10px" }} src={logo} alt="Logo" width="70" height="90" />
               </Link>
-              <Name css={{ fontFamily: "monospace" }}>{data.site.siteMetadata.title}</Name>
+              <Name css={{ fontFamily: "ibm-plex-mono, Courier, monospace" }}>
+                {/* {data.site.siteMetadata.title} */}
+                Eli Benton Cohen
+              </Name>
             </InnerRow>
             {/* <Spacer xsHeight={0} height={20} /> */}
             {/* <SubTitle>{data.site.siteMetadata.description}</SubTitle> */}
