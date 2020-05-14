@@ -14,7 +14,7 @@ import { kebabCase } from "lodash"
 import { FaLink, FaEnvelope } from "react-icons/fa"
 
 const Title = styled.h4`
-  font-size: 1.1em;
+  font-size: 0.9em;
   align-self: center;
   padding-right: 15px;
   border-right: solid 2px;
@@ -26,6 +26,8 @@ const Title = styled.h4`
 `
 
 const Nav = styled.div`
+  top: 0;
+  position: sticky;
   transition: top 0.2s;
   background-color: white;
   height: 55px;
@@ -109,9 +111,9 @@ class Navbar extends React.Component {
     // console.log(this.props)
 
     return (
-      <Nav onScroll={this.handleScroll} style={{ top: this.state.scrollingUp ? "0px" : "-66px" }}>
+      <Nav onScroll={this.handleScroll} style={{ top: this.state.scrollingUp ? "0px" : "-55px" }}>
         <NavLink to="/">
-          <Img src={logo} alt="Logo" width="35" height="35" />
+          <Img src={logo} alt="Logo" width="28" height="35" />
         </NavLink>
         <Center>
           <Title>{title}</Title>
@@ -127,27 +129,29 @@ class Navbar extends React.Component {
           </Hide>
         </Center>
         <Center>
-          <LinkImage
-            text={`${siteUrl}/post/${slug}`}
-            onCopy={() => this.setState({ copied: true })}
-          >
-            <StyledLink>
-              <a css={{ textDecoration: "none" }}>
-                {this.state.copied ? (
-                  <div css={{ display: "flex", alignItems: "center" }}>
-                    <span>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
-                  </div>
-                ) : (
-                  <div css={{ display: "flex", alignItems: "center" }}>
-                    <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
-                  </div>
-                )}
-              </a>
-            </StyledLink>
-          </LinkImage>
-          <a href="https://mailchi.mp/4071967161b9/elis-watson-blog">
-            <FaEnvelope css={{ position: "relative", top: "2px", marginRight: "2vw" }} />
-          </a>
+          <Hide>
+            <LinkImage
+              text={`${siteUrl}/post/${slug}`}
+              onCopy={() => this.setState({ copied: true })}
+            >
+              <StyledLink>
+                <a css={{ textDecoration: "none" }}>
+                  {this.state.copied ? (
+                    <div css={{ display: "flex", alignItems: "center" }}>
+                      <span>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
+                    </div>
+                  ) : (
+                    <div css={{ display: "flex", alignItems: "center" }}>
+                      <span css={{ color: "white" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
+                    </div>
+                  )}
+                </a>
+              </StyledLink>
+            </LinkImage>
+            <a href="https://mailchi.mp/4071967161b9/elis-watson-blog">
+              <FaEnvelope css={{ position: "relative", top: "2px", marginRight: "2vw" }} />
+            </a>
+          </Hide>
         </Center>
       </Nav>
     )

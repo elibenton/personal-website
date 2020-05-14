@@ -59,12 +59,19 @@ class AboutPrototype extends React.Component {
                 <Img fluid={this.props.data.file.childImageSharp.fluid} />
               </AboutContainer>
               <About>
-                As a 2019-2020 <a href="https://watson.foundation/">Watson Fellow</a>, I am
-                traveling the world to explore the politics of technology.{" "}
-                <span css={{ fontFamily: "ibm-plex-mono" }}>colander world</span> is where I write
-                about my journey, discuss what I am reading, and release audio and photos
-                documenting the year. My hope is to see how life online—and off—shapes our
-                understanding of the world around us.
+                As a 2019-2020 <a href="https://watson.foundation/">Watson Fellow</a>, I <i>was</i>{" "}
+                traveling the world to explore the politics of technology. Then the plague arrived.
+                Now I chafe at confinement, obsessively track my running habits, and ramble into the
+                infinite tube that is the internet!
+                <br /> <br />
+                Yeah, that's this website:{" "}
+                <span css={{ fontFamily: "ibm-plex-mono" }}>
+                  <i>~colander~world~</i>
+                </span>
+                <br /> <br />
+                On the best days, I'll write about my travels, discuss what I am reading, and post
+                audio and photos documenting the exploration. My hope is to see how life online—and
+                off—shapes our understanding of the world around us.
                 <br /> <br />
                 Previously, I produced public radio at <a href="https://www.kqed.org/">KQED</a> in
                 San Francisco and researched the US Congress at{" "}

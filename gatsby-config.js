@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Colander World`,
-    shortTitle: `Coldander`,
+    shortTitle: `CoWo`,
     author: `Eli Benton Cohen`,
-    description: `Pandemic got you worked up? Then you might enjoy the web's most paranoid blog.`,
-    siteUrl: `https://elibenton.co/`,
+    subTitle: `Reporting on the politics of digitally networked life.`,
+    description: `Reporting on the politics of digitally networked life.`,
+    siteUrl: `https://colanderworld.com/`,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -96,7 +97,7 @@ module.exports = {
             }
           `,
             output: "/posts.xml",
-            title: "Traveling the world to understand the politics of digitally networked life",
+            title: "Reporting on the politics of digitally networked life.",
             match: "^/",
           },
         ],

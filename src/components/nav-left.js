@@ -18,16 +18,11 @@ const Name = styled.h1`
   text-transform: none;
   text-align: left;
   font-weight: 600;
-  font-size: 3.4vw;
+  font-size: 38px;
   margin-top: 0;
   margin-bottom: 4px;
-  margin-left: 8px;
+  margin-left: 10px;
   line-height: 1.1em;
-  @media screen and (max-width: 767px) {
-    font-size: 10vw;
-    margin: 16px 0 16px 4px;
-    font-weight: 500;
-  }
 `
 const ReverseHide = styled.div`
   display: none;
@@ -63,6 +58,13 @@ const InnerRow = styled.div`
   margin-left: -4px;
   @media screen and (max-width: 767px) {
     margin-left: 0px;
+  }
+`
+
+const Wrapper = styled.div`
+  @media screen and (max-width: 767px) {
+    border-bottom: 1px black solid;
+    margin-bottom: 24px;
   }
 `
 
@@ -109,7 +111,7 @@ export default () => (
       }
     `}
     render={data => (
-      <div>
+      <Wrapper>
         <Row>
           <Col>
             <InnerRow>
@@ -117,12 +119,11 @@ export default () => (
                 <img css={{ marginRight: "10px" }} src={logo} alt="Logo" width="70" height="90" />
               </Link>
               <Name css={{ fontFamily: "ibm-plex-mono, Courier, monospace" }}>
-                {/* {data.site.siteMetadata.title} */}
-                Eli&nbsp;B. Cohen
+                {data.site.siteMetadata.title}
               </Name>
             </InnerRow>
-            {/* <Spacer xsHeight={0} height={20} /> */}
-            {/* <SubTitle>{data.site.siteMetadata.description}</SubTitle> */}
+            <Spacer xsHeight={0} height={20} />
+            {/* <h2>{data.site.siteMetadata.description}</h2> */}
           </Col>
         </Row>
         <Spacer xsHeight={0} height={30} />
@@ -193,7 +194,7 @@ export default () => (
             ))}
           </div>
         </Hide>
-      </div>
+      </Wrapper>
     )}
   />
 )
