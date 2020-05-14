@@ -69,9 +69,9 @@ class AboutPrototype extends React.Component {
                   <i>~colander~world~</i>
                 </span>
                 <br /> <br />
-                On the best days, I'll write about my travels, discuss what I am reading, and post
-                audio and photos documenting the exploration. My hope is to see how life online—and
-                off—shapes our understanding of the world around us.
+                I write about my travels, discuss what I am reading, and post audio and photos
+                documenting the exploration. My hope is to see how life online (so... everything)
+                shapes our understanding of the world around us.
                 <br /> <br />
                 Previously, I produced public radio at <a href="https://www.kqed.org/">KQED</a> in
                 San Francisco and researched the US Congress at{" "}
