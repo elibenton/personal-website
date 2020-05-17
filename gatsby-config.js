@@ -8,6 +8,20 @@ module.exports = {
     siteUrl: `https://colanderworld.com/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://wbhm.org/sections/news/feed`,
+        name: `WbhmNews`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        parserOption: {
+          customFields: {
+            item: ["itunes:duration"],
+          },
+        },
+      },
+    },
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-styled-components",
     {

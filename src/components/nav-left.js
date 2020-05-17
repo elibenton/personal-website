@@ -140,7 +140,7 @@ export default () => (
           </a>
           &nbsp;/&nbsp;
           <a
-            href="https://mailchi.mp/4071967161b9/elis-watson-blog"
+            href="https://join.colanderworld.com/newsletter"
             css={{ textDecoration: "none", textTransform: "uppercase" }}
           >
             <h4>subscribe</h4>

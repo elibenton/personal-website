@@ -24,6 +24,7 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-source-ghost": "^4.0.0",
+    "gatsby-source-rss-feed": "^1.2.0",
     "gatsby-transformer-sharp": "^2.3.19",
     "netlify-cli": "^2.21.0",
     "react": "^16.8.6",
