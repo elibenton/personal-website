@@ -42,19 +42,28 @@ const Padding = styled.div`
   }
 `
 
+const StyledCol = styled(Col)`
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+`
+
 class AboutPrototype extends React.Component {
   render() {
     return (
       <Layout>
         <Padding>
-          <Spacer height={50} xsHeight={0} />
           <Helmet title={"About"} />
           <Row>
-            <Col xs={12} sm={12} md={4} lg={3}>
+            <StyledCol xs={12} sm={12} md={4} lg={3}>
+              <Spacer height={50} xsHeight={0} />
               <Nav />
-            </Col>
+            </StyledCol>
             <Col xsOffset={1} xs={10} sm={10} md={7} lg={6}>
-              <Spacer height={0} xsHeight={30} />
+              <Spacer height={50} xsHeight={30} />
               <AboutContainer>
                 <Img fluid={this.props.data.file.childImageSharp.fluid} />
               </AboutContainer>

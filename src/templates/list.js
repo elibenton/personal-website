@@ -49,6 +49,24 @@ const MobileRowInner = styled(Row)`
     justify-content: flex-end;
   }
 `
+const MobileHeader = styled.h3`
+  font-size: 22px;
+  margin: 0px 0px 24px 0px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  border-bottom: solid 2px;
+  @media screen and (max-width: 767px) {
+    margin-left: -24px;
+    padding-left: 32px;
+    margin-right: -16px;
+    margin-top: 24px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    line-height: 1.2em;
+    border-top: solid 2px;
+  }
+`
+
 const MobileTitle = styled.h4`
   letter-spacing: 0.8px;
   font-weight: 500;
@@ -100,7 +118,7 @@ const IndexFiltered = ({ pageContext, data }) => {
           </StyledCol>
           <MarginCol xs={12} sm={12} md={7} lg={8}>
             <Spacer height={50} xsHeight={0} />
-            {/* <MobileHeader>{startCase(name)}</MobileHeader> */}
+            <MobileHeader>{startCase(name)}</MobileHeader>
 
             {posts.map(({ node }) => {
               const { title, published_at, updated_at, excerpt, slug, tags } = node

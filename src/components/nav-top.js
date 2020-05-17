@@ -14,7 +14,7 @@ import { kebabCase } from "lodash"
 import { FaLink, FaEnvelope } from "react-icons/fa"
 
 const Title = styled.h4`
-  font-size: 0.9em;
+  font-size: 1.2em;
   align-self: center;
   padding-right: 15px;
   border-right: solid 2px;
@@ -129,7 +129,7 @@ class Navbar extends React.Component {
           </Hide>
         </Center>
         <Center>
-          <Hide>
+          <Hide css={{ display: "flex", flexDirection: "row" }}>
             <LinkImage
               text={`${siteUrl}/post/${slug}`}
               onCopy={() => this.setState({ copied: true })}
@@ -138,7 +138,7 @@ class Navbar extends React.Component {
                 <a css={{ textDecoration: "none" }}>
                   {this.state.copied ? (
                     <div css={{ display: "flex", alignItems: "center" }}>
-                      <span>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
+                      <span css={{ color: "black" }}>Link Copied&nbsp;&nbsp;</span> <FaLink />{" "}
                     </div>
                   ) : (
                     <div css={{ display: "flex", alignItems: "center" }}>

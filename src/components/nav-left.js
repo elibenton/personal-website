@@ -63,7 +63,7 @@ const InnerRow = styled.div`
 
 const Wrapper = styled.div`
   @media screen and (max-width: 767px) {
-    border-bottom: 1px black solid;
+    /* border-bottom: 1px black solid; */
     margin-bottom: 24px;
   }
 `
