@@ -148,7 +148,7 @@ class Navbar extends React.Component {
                 </a>
               </StyledLink>
             </LinkImage>
-            <a href="https://mailchi.mp/4071967161b9/elis-watson-blog">
+            <a href="https://join.colanderworld.com/newsletter">
               <FaEnvelope css={{ position: "relative", top: "2px", marginRight: "2vw" }} />
             </a>
           </Hide>

@@ -485,11 +485,10 @@ figcaption {
 
 /* Observable  */
 .observablehq {
-  overflow-x: auto;
-  width: 191%;
-  right: 50%;
+  /* overflow-x: auto; */
+  width: 200%;
+  left: 50%;
   position: relative;
-  margin: 1em;
 }
 
 @media screen and (max-width: 767px) {
