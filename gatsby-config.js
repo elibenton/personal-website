@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-source-ghost`,
       options: {
-        apiUrl: `https://blog.elibenton.co`,
-        contentApiKey: `e8f1d1580c7832c8ffb4eed769`,
+        apiUrl: `https://blog.colanderworld.com`,
+        contentApiKey: `ee567ce344d0f4f003e0d466a3`,
         version: `v3`,
       },
     },
