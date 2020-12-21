@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/eli_benton
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://elibenton.co
+  * I am eli_benton (https://keybase.io/eli_benton) on keybase.
+  * I have a public key ASAhmGVCZRan2SjTo_-X72AcbSSnZMSCsf8V4SP74Q2KWQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01018d5be5ddceb651a83bbd51431a5bae27a33f473c645e41fa823a1821fa914dee0a",
+      "host": "keybase.io",
+      "kid": "0120219865426516a7d928d3a3ff97ef601c6d24a764c482b1ff15e123fbe10d8a590a",
+      "uid": "7ded62fbecdd9af742fce2de19305919",
+      "username": "eli_benton"
+    },
+    "merkle_root": {
+      "ctime": 1608574415,
+      "hash": "6245f091d2ea92c1b7fad1de0ec8b4bcdcfef63d916033e8be7fdcac0b12fa99d557339223ba3c3d658e35e0d028c7bf8f1998795241144b65583d8140f0d391",
+      "hash_meta": "fc96ef7084b55fe1ced5ebd59cf0609cc18198ce0fd02f2370fc456fc62b5195",
+      "seqno": 18468794
+    },
+    "service": {
+      "entropy": "TdvVF8YvUp33xjKG+0DjHq2A",
+      "hostname": "elibenton.co",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1608574437,
+  "expire_in": 504576000,
+  "prev": "298b988fbbb5374819031440c84c8454c154354b57f27d50b70cdb9ce4112480",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIZhlQmUWp9ko06P/l+9gHG0kp2TEgrH/FeEj++ENilkKp3BheWxvYWTESpcCCsQgKYuYj7u1N0gZAxRAyEyEVMFUNUtX8n1QtwzbnOQRJIDEIJdKwXJ1OEDqoFHdKAmx/gRoAGXPpbF42dcwHRqON5RHAgHCo3NpZ8RAZmJCJN+s7KgY6Nodb0QL+rkpFdDsZUtaoSllRuAlFJ1JdOv94mm2PNknHIBuEyEXyuum+2YFa8SDgNFvc4FHAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIL1MuZd6ykXEfiXD2skzcA5as/IfujDnelX0862TYHXXo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/eli_benton
+
+==================================================================
